@@ -1,4 +1,6 @@
-package monopoly.modele;
+package monopoly.modele.cases;
+
+import monopoly.modele.Joueur;
 
 public abstract class Case {
     private Case suivante;
