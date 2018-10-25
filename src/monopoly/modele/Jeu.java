@@ -82,6 +82,10 @@ public class Jeu {
         return 3;
     }
 
+    public int getArgentCaseDepart() {
+        return 200;
+    }
+
     public Joueur getVainqueur() {
         // TODO : Déterminer le vainqueur
         throw new NotImplementedException();
