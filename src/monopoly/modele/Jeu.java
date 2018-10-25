@@ -17,7 +17,7 @@ public class Jeu {
     /**
      * Instance
      */
-    private Jeu instance;
+    private static Jeu instance;
 
     private ArrayList<Joueur> joueurs;
 
@@ -32,7 +32,7 @@ public class Jeu {
      * Renvoie une instance du jeu
      * @return Le jeu.
      */
-    public Jeu getInstance() {
+    public static Jeu getInstance() {
         if(instance == null) {
             instance = new Jeu();
         }
