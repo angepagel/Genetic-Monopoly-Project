@@ -12,17 +12,12 @@ public class Case_Impots extends Case_Paiement {
 
     @Override
     public int getPrix() {
-        return 0;
-    }
-
-    @Override
-    public String getNom() {
-        return null;
+        return prix;
     }
 
     @Override
     public void action(Joueur j) {
-
+        j.getSolde().payer(getPrix());
     }
 
     @Override
