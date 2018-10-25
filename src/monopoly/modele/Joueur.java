@@ -1,5 +1,10 @@
 package monopoly.modele;
 
+import monopoly.modele.cases.Case_Achat;
+
+import java.util.ArrayList;
+import java.util.Objects;
+
 /**
  * Classe représentant un joueur.
  */
@@ -10,6 +15,7 @@ public abstract class Joueur {
     private int toursEnPrison;
     private Pion pion;
     private Solde solde;
+    private ArrayList<Case_Achat> proprietes;
 
     public Joueur(String nom) {
         this.nom = nom;
@@ -49,5 +55,24 @@ public abstract class Joueur {
 
     public Solde getSolde() {
         return solde;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Joueur joueur = (Joueur) o;
+        return faillite == joueur.faillite &&
+                nbDoubles == joueur.nbDoubles &&
+                toursEnPrison == joueur.toursEnPrison &&
+                Objects.equals(nom, joueur.nom) &&
+                Objects.equals(pion, joueur.pion) &&
+                Objects.equals(solde, joueur.solde) &&
+                Objects.equals(proprietes, joueur.proprietes);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nom, faillite, nbDoubles, toursEnPrison, pion, solde, proprietes);
     }
 }

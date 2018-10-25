@@ -3,13 +3,17 @@ package monopoly.modele.cases;
 import monopoly.modele.Joueur;
 
 public abstract class Case {
+    private String nom;
     private Case suivante;
 
-    public Case() {
-        // TODO : Constructeur
+    public Case(String nom, Case suivante) {
+        this.nom = nom;
+        this.suivante = suivante;
     }
 
-    public abstract String getNom();
+    public String getNom() {
+        return nom;
+    }
 
     public Case getSuivante() {
         return suivante;
