@@ -21,6 +21,8 @@ public class Jeu {
 
     private ArrayList<Joueur> joueurs;
 
+    private Plateau plateau;
+
     /**
      * Constructeur du jeu, ne prenant pas de paramètres puisqu'il s'agit d'un singleton.
      */
