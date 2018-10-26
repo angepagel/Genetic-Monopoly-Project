@@ -31,8 +31,11 @@ public class PrixLocation {
 
     public int getPrixMaison(int nb) {
         int prix = 0;
-        if(nb <= maisons.size()) {
-            prix= maisons.get(nb-1);
+        if(nb == 0) {
+            prix = terrainNu;
+        }
+        else if(nb <= maisons.size()) {
+            prix = maisons.get(nb-1);
         }
 
         return prix;

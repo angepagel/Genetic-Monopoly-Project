@@ -2,26 +2,41 @@ package monopoly.modele.cases;
 
 public class Case_Terrain extends Case_Achat {
     private int nbMaisons;
+    private int prix;
     private int prixMaison;
     private boolean hotel;
     private CouleurTerrain couleur;
+    private PrixLocation tarifs;
 
-    public Case_Terrain(String nom, CouleurTerrain couleur, int prixMaison, Case suivante) {
+    public Case_Terrain(String nom, CouleurTerrain couleur, int prix, int prixMaison, PrixLocation tarifs, Case suivante) {
         super(nom, suivante);
         this.couleur = couleur;
         this.prixMaison = prixMaison;
+        this.tarifs = tarifs;
+        this.prix = prix;
         hotel = false;
         nbMaisons = 0;
     }
 
     @Override
     public int getLoyer() {
-        return 0;
+        int loyer = tarifs.getPrixTerrainNu();
+        if(nbMaisons == 0 && couleur.aUnProprietaire()) {
+            loyer *= 2;
+        }
+        else if(!hotel) {
+            loyer = tarifs.getPrixMaison(nbMaisons);
+        }
+        else {
+            loyer = tarifs.getPrixHotel();
+        }
+
+        return loyer;
     }
 
     @Override
     public int getPrix() {
-        return 0;
+        return prix;
     }
 
     @Override
