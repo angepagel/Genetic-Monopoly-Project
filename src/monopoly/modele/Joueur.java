@@ -1,6 +1,7 @@
 package monopoly.modele;
 
 import monopoly.modele.cases.Case_Achat;
+import monopoly.modele.cases.ECase;
 
 import java.util.ArrayList;
 import java.util.Objects;
@@ -56,6 +57,29 @@ public abstract class Joueur {
     public Solde getSolde() {
         return solde;
     }
+
+    public int getNbGares() {
+        int nbGares = 0;
+        for(Case_Achat propriete : proprietes) {
+            if(propriete.getType() == ECase.Gare) {
+                ++nbGares;
+            }
+        }
+
+        return nbGares;
+    }
+
+    public int getNbCompagnies() {
+        int nbCompagnies = 0;
+        for(Case_Achat propriete: proprietes) {
+            if(propriete.getType() == ECase.Compagnie) {
+                ++nbCompagnies;
+            }
+        }
+
+        return nbCompagnies;
+    }
+
 
     @Override
     public boolean equals(Object o) {
