@@ -1,5 +1,7 @@
 package monopoly.modele.cases;
 
+import monopoly.modele.Jeu;
+
 public class Case_Compagnie extends Case_Achat {
     public Case_Compagnie(String nom, Case suivante) {
         super(nom, suivante);
@@ -7,12 +9,25 @@ public class Case_Compagnie extends Case_Achat {
 
     @Override
     public int getLoyer() {
-        return 0;
+        int loyer;
+        if(getProprietaire().getNbCompagnies() == 1) {
+            loyer = 4;
+        }
+        else if(getProprietaire().getNbCompagnies() == 2) {
+            loyer = 10;
+        }
+        else {
+            loyer = 0;
+        }
+
+        loyer *= Jeu.getInstance().getDes().sommeDes();
+
+        return loyer;
     }
 
     @Override
     public int getPrix() {
-        return 0;
+        return 150;
     }
 
     @Override

@@ -22,12 +22,16 @@ public class Jeu {
     private ArrayList<Joueur> joueurs;
 
     private Plateau plateau;
+    private Des des;
 
     /**
      * Constructeur du jeu, ne prenant pas de paramètres puisqu'il s'agit d'un singleton.
      */
     private Jeu() {
         // TODO : Initialiser les attributs
+        joueurs = new ArrayList<>();
+        plateau = new Plateau();
+        des = new Des();
     }
 
     /**
@@ -64,6 +68,7 @@ public class Jeu {
 
     public void initialisation() {
         // TODO : Initialiser la partie
+        nbTours = 0;
     }
 
     public void encheres() {
@@ -89,5 +94,9 @@ public class Jeu {
     public Joueur getVainqueur() {
         // TODO : Déterminer le vainqueur
         throw new NotImplementedException();
+    }
+
+    public Des getDes() {
+        return des;
     }
 }
