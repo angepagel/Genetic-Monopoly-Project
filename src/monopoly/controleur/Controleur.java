@@ -1,4 +1,4 @@
 package monopoly.controleur;
 
-public class Controller {
+public class Controleur {
 }
