@@ -1,4 +1,4 @@
-package sample;
+package monopoly.controleur;
 
 public class Controller {
 }
