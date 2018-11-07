@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.text.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
@@ -9,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <MenuBar VBox.vgrow="NEVER">
          <menus>
@@ -45,13 +51,82 @@
             </Menu>
          </menus>
       </MenuBar>
-      <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+      <AnchorPane prefHeight="708.0" prefWidth="1080.0">
          <children>
-            <Label alignment="CENTER" layoutX="319.0" layoutY="334.0" style="&#10;" text="Ici seront placés les composants de la fenêtre principale" textAlignment="CENTER" textFill="#9f9f9f" wrapText="false">
-               <font>
-                  <Font size="18.0" />
-               </font>
-            </Label>
+            <AnchorPane layoutY="-1.0" prefHeight="695.0" prefWidth="719.0">
+               <children>
+                  <Label layoutX="344.0" layoutY="335.0" prefHeight="25.0" prefWidth="61.0" text="Plateau" textAlignment="CENTER" />
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="713.0" prefHeight="695.0" prefWidth="367.0">
+               <children>
+                  <AnchorPane prefHeight="123.0" prefWidth="367.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="103.0" layoutX="16.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
+                        <Label layoutX="40.0" layoutY="2.0" style="-fx-background-color: white;" text="Informations de jeu" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="123.0" prefHeight="130.0" prefWidth="367.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="116.0" layoutX="16.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
+                        <Button layoutX="40.0" layoutY="91.0" mnemonicParsing="false" text="Voir mes propriétés" />
+                        <Button layoutX="204.0" layoutY="91.0" mnemonicParsing="false" text="Voir les propriétés" />
+                        <Label layoutX="40.0" layoutY="1.0" style="-fx-background-color: white;" text="Joueurs" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutY="249.0" prefHeight="447.0" prefWidth="367.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="401.0" layoutX="15.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="337.0" />
+                        <Label layoutX="37.0" layoutY="15.0" style="-fx-background-color: white;" text="Tour" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="123.0" layoutX="36.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="123.0" layoutX="36.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
+                        <Button layoutX="36.0" layoutY="375.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="296.0" text="Terminer mon tour" />
+                        <Button layoutX="191.0" layoutY="199.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Echanger" />
+                        <Button layoutX="37.0" layoutY="199.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="142.0" text="Gérer mes propriétés" />
+                        <Button layoutX="217.0" layoutY="125.0" mnemonicParsing="false" text="Lancer de dés" />
+                        <Button layoutX="217.0" layoutY="269.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="89.0" text="Acheter" />
+                        <Button layoutX="217.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Enchérir" />
+                        <Label layoutX="56.0" layoutY="50.0" style="-fx-background-color: white;" text="Tirage des dés" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="60.0" layoutY="229.0" style="-fx-background-color: white;" text="Case actuelle" textAlignment="CENTER">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
          </children>
       </AnchorPane>
    </children>
