@@ -29,6 +29,7 @@ public abstract class Joueur {
 
     public void choisirPion(Pion p) {
         pion = p;
+        p.setJoueur(this);
     }
 
     public void incNbDoubles() {
