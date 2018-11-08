@@ -15,9 +15,9 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="720.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: f9f9f9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <MenuBar VBox.vgrow="NEVER">
+      <MenuBar style="-fx-background-color: white;" VBox.vgrow="NEVER">
          <menus>
             <Menu mnemonicParsing="false" text="Jeu">
                <items>
@@ -63,7 +63,7 @@
                   <AnchorPane prefHeight="123.0" prefWidth="367.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="103.0" layoutX="16.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
-                        <Label layoutX="40.0" layoutY="2.0" style="-fx-background-color: white;" text="Informations de jeu" textAlignment="CENTER">
+                        <Label layoutX="40.0" layoutY="2.0" style="-fx-background-color: f9f9f9;" text="Informations de jeu" textAlignment="CENTER">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -78,7 +78,7 @@
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="116.0" layoutX="16.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
                         <Button layoutX="40.0" layoutY="91.0" mnemonicParsing="false" text="Voir mes propriétés" />
                         <Button layoutX="204.0" layoutY="91.0" mnemonicParsing="false" text="Voir les propriétés" />
-                        <Label layoutX="40.0" layoutY="1.0" style="-fx-background-color: white;" text="Joueurs" textAlignment="CENTER">
+                        <Label layoutX="40.0" layoutY="1.0" style="-fx-background-color: f9f9f9;" text="Joueurs" textAlignment="CENTER">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -91,7 +91,7 @@
                   <AnchorPane layoutY="249.0" prefHeight="447.0" prefWidth="367.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="401.0" layoutX="15.0" layoutY="28.0" stroke="BLACK" strokeType="INSIDE" width="337.0" />
-                        <Label layoutX="37.0" layoutY="15.0" style="-fx-background-color: white;" text="Tour" textAlignment="CENTER">
+                        <Label layoutX="37.0" layoutY="15.0" style="-fx-background-color: f9f9f9;" text="Tour" textAlignment="CENTER">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
@@ -107,7 +107,7 @@
                         <Button layoutX="217.0" layoutY="125.0" mnemonicParsing="false" text="Lancer de dés" />
                         <Button layoutX="217.0" layoutY="269.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="89.0" text="Acheter" />
                         <Button layoutX="217.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Enchérir" />
-                        <Label layoutX="56.0" layoutY="50.0" style="-fx-background-color: white;" text="Tirage des dés" textAlignment="CENTER">
+                        <Label layoutX="56.0" layoutY="50.0" style="-fx-background-color: f9f9f9;" text="Tirage des dés" textAlignment="CENTER">
                            <font>
                               <Font size="14.0" />
                            </font>
@@ -115,7 +115,7 @@
                               <Insets />
                            </opaqueInsets>
                         </Label>
-                        <Label layoutX="60.0" layoutY="229.0" style="-fx-background-color: white;" text="Case actuelle" textAlignment="CENTER">
+                        <Label layoutX="60.0" layoutY="229.0" style="-fx-background-color: f9f9f9;" text="Case actuelle" textAlignment="CENTER">
                            <font>
                               <Font size="14.0" />
                            </font>
