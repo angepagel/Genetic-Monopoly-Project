@@ -234,6 +234,22 @@
                               <Image url="@sprites/dice_2.png" />
                            </image>
                         </ImageView>
+                        <Label layoutX="57.0" layoutY="271.0" style="-fx-background-color: f9f9f9;" text="Rue de la paix" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="57.0" layoutY="295.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
                      </children>
                   </AnchorPane>
                </children>
