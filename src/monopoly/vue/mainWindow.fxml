@@ -72,6 +72,26 @@
                               <Font size="18.0" />
                            </font>
                         </Label>
+                        <Label layoutX="43.0" layoutY="35.0" style="-fx-background-color: f9f9f9;" text="Temps de jeu :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="43.0" layoutY="55.0" style="-fx-background-color: f9f9f9;" text="Nombre de tours :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="125.0" layoutY="35.0" style="-fx-background-color: f9f9f9;" text="02:38" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="148.0" layoutY="55.0" style="-fx-background-color: f9f9f9;" text="27" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
                      </children>
                   </AnchorPane>
                   <AnchorPane layoutY="123.0" prefHeight="130.0" prefWidth="367.0">
@@ -206,10 +226,14 @@
                         </Label>
                         <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="56.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="./sprites/dice_5.png" />
+                              <Image url="@sprites/dice_5.png" />
                            </image>
                         </ImageView>
-                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="124.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="124.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@sprites/dice_2.png" />
+                           </image>
+                        </ImageView>
                      </children>
                   </AnchorPane>
                </children>
