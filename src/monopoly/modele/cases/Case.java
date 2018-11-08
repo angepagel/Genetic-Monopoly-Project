@@ -19,6 +19,10 @@ public abstract class Case {
         return suivante;
     }
 
+    protected void setSuivante(Case suivante) {
+        this.suivante = suivante;
+    }
+
     public abstract void action(Joueur j);
 
     public abstract ECase getType();

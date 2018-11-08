@@ -21,11 +21,15 @@ public class Pion {
             }
         }
 
-        position.getSuivante().action(getJoueur());
+        position.action(getJoueur());
     }
 
     public Case getPosition() {
         return position;
+    }
+
+    public void setPosition(Case position) {
+        this.position = position;
     }
 
     public String getNom() {

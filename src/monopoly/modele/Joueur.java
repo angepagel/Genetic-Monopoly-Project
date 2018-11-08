@@ -58,6 +58,10 @@ public abstract class Joueur {
         return solde;
     }
 
+    public Pion getPion() {
+        return pion;
+    }
+
     public int getNbGares() {
         int nbGares = 0;
         for(Case_Achat propriete : proprietes) {
@@ -78,6 +82,10 @@ public abstract class Joueur {
         }
 
         return nbCompagnies;
+    }
+
+    private boolean isEnPrison() {
+        return pion.getPosition().getType() == ECase.Prison;
     }
 
 

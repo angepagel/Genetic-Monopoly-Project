@@ -30,8 +30,8 @@ public class Jeu {
     private Jeu() {
         // TODO : Initialiser les attributs
         joueurs = new ArrayList<>();
-        plateau = new Plateau();
         des = new Des();
+        initialisation();
     }
 
     /**
@@ -69,6 +69,7 @@ public class Jeu {
     public void initialisation() {
         // TODO : Initialiser la partie
         nbTours = 0;
+        plateau = new Plateau();
     }
 
     public void encheres() {
