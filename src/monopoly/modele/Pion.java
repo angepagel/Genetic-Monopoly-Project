@@ -23,13 +23,59 @@ public class Pion {
     public void deplacer(int nbCases) {
         caseDepartLast = false;
         for(int i = 0; i < nbCases; ++i) {
-            position = position.getSuivante();
-            if(position.getType() == ECase.Depart && i < nbCases) {
-                position.action(getJoueur());
-            }
+            avancerUneCase(i+1 < nbCases);
         }
 
         position.action(getJoueur());
+    }
+
+    public void deplacer(String objectif) {
+        caseDepartLast = false;
+        while(!position.getNom().equals(objectif)) {
+            avancerUneCase(!objectif.equals("Case départ"));
+        }
+
+        position.action(getJoueur());
+    }
+
+    public void reculer(int nbCases) {
+        caseDepartLast = false;
+        for(int i = 0; i < nbCases; ++i) {
+            reculerUneCase(false);
+        }
+
+        position.action(getJoueur());
+    }
+
+    public void reculer(String objectif) {
+        caseDepartLast = false;
+        while(!position.getNom().equals(objectif)) {
+            reculerUneCase(false);
+        }
+
+        position.action(getJoueur());
+    }
+
+    /**
+     * Permet d'avancer d'une case, sans déclencher son effet (sauf sur la case départ)
+     * @param declencheDepart Permet de savoir si on déclenche la case départ si l'on passe dessus
+     */
+    private void avancerUneCase(boolean declencheDepart) {
+        position = position.getSuivante();
+        if(declencheDepart && position.getType() == ECase.Depart) {
+            position.action(getJoueur());
+        }
+    }
+
+    /**
+     * Permet de reculer d'une case, sans déclencher son effet (sauf sur la case départ)
+     * @param declencheDepart Permet de savoir si on doit déclencher la case départ.
+     */
+    private void reculerUneCase(boolean declencheDepart) {
+        position = position.getPrecedente();
+        if(declencheDepart && position.getType() == ECase.Depart) {
+            position.action(getJoueur());
+        }
     }
 
     public Case getPosition() {
