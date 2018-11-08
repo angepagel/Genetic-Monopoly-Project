@@ -62,7 +62,7 @@
                <children>
                   <AnchorPane prefHeight="123.0" prefWidth="367.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="103.0" layoutX="16.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="77.0" layoutX="16.0" layoutY="15.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
                         <Label layoutX="40.0" layoutY="2.0" style="-fx-background-color: f9f9f9;" text="Informations de jeu" textAlignment="CENTER">
                            <opaqueInsets>
                               <Insets />
@@ -75,16 +75,96 @@
                   </AnchorPane>
                   <AnchorPane layoutY="123.0" prefHeight="130.0" prefWidth="367.0">
                      <children>
-                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="116.0" layoutX="16.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="145.0" layoutX="16.0" layoutY="-15.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
                         <Button layoutX="40.0" layoutY="91.0" mnemonicParsing="false" text="Voir mes propriétés" />
                         <Button layoutX="204.0" layoutY="91.0" mnemonicParsing="false" text="Voir les propriétés" />
-                        <Label layoutX="40.0" layoutY="1.0" style="-fx-background-color: f9f9f9;" text="Joueurs" textAlignment="CENTER">
+                        <Label layoutX="40.0" layoutY="-28.0" style="-fx-background-color: f9f9f9;" text="Joueurs" textAlignment="CENTER">
                            <opaqueInsets>
                               <Insets />
                            </opaqueInsets>
                            <font>
                               <Font size="18.0" />
                            </font>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="5.0" style="-fx-background-color: f9f9f9;" text="Joueur1 :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="25.0" style="-fx-background-color: f9f9f9;" text="Joueur2 :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="45.0" style="-fx-background-color: f9f9f9;" text="Joueur3 :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="40.0" layoutY="65.0" style="-fx-background-color: f9f9f9;" text="Joueur4 :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="204.0" layoutY="5.0" style="-fx-background-color: f9f9f9;" text="Joueur5 :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="204.0" layoutY="25.0" style="-fx-background-color: f9f9f9;" text="Joueur6 :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="204.0" layoutY="45.0" style="-fx-background-color: f9f9f9;" text="Joueur7 :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="204.0" layoutY="65.0" style="-fx-background-color: f9f9f9;" text="Joueur8 :" textAlignment="CENTER">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="95.0" layoutY="5.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="95.0" layoutY="25.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="95.0" layoutY="45.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="95.0" layoutY="65.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="260.0" layoutY="5.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="260.0" layoutY="25.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="260.0" layoutY="45.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                        </Label>
+                        <Label layoutX="260.0" layoutY="65.0" style="-fx-background-color: f9f9f9;" text="\$500" textAlignment="CENTER" textFill="#3b7ef2">
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
                         </Label>
                      </children>
                   </AnchorPane>
