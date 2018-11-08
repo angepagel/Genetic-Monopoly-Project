@@ -56,7 +56,11 @@
          <children>
             <AnchorPane layoutY="-1.0" prefHeight="695.0" prefWidth="719.0">
                <children>
-                  <Label layoutX="344.0" layoutY="335.0" prefHeight="25.0" prefWidth="61.0" text="Plateau" textAlignment="CENTER" />
+                  <ImageView fitHeight="696.0" fitWidth="719.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@sprites/PlateauBeta.png" />
+                     </image>
+                  </ImageView>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="713.0" prefHeight="695.0" prefWidth="367.0">
