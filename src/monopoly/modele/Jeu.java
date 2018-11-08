@@ -2,7 +2,9 @@ package monopoly.modele;
 
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  * Représente le jeu
@@ -21,6 +23,8 @@ public class Jeu {
 
     private ArrayList<Joueur> joueurs;
 
+    private Joueur joueurEnCours;
+
     private Plateau plateau;
     private Des des;
 
@@ -31,7 +35,6 @@ public class Jeu {
         // TODO : Initialiser les attributs
         joueurs = new ArrayList<>();
         des = new Des();
-        initialisation();
     }
 
     /**
@@ -67,10 +70,10 @@ public class Jeu {
     }
 
     public void initialisation() {
-        // TODO : Initialiser la partie
         nbTours = 0;
         plateau = new Plateau();
     }
+
 
     public void encheres() {
         // TODO : Implémenter les enchères
@@ -99,5 +102,78 @@ public class Jeu {
 
     public Des getDes() {
         return des;
+    }
+
+    public Plateau getPlateau() {
+        return plateau;
+    }
+
+    public Joueur getJoueurEnCours() {
+        return joueurEnCours;
+    }
+
+    public void setJoueurEnCours(Joueur joueur) {
+        joueurEnCours = joueur;
+    }
+
+    /**
+     * Fonction main temporaire de test
+     */
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Jeu j = Jeu.getInstance();
+
+        j.initialisation();
+        Joueur j1 = new Humain("Yan");
+        j.joueurs.add(j1);
+        j1.choisirPion(new Pion("Canon"));
+
+        Joueur j2 = new Humain("Ange");
+        j.joueurs.add(j2);
+        j2.choisirPion(new Pion("Cheval"));
+
+        j.setJoueurEnCours(j1);
+
+        boolean continuer = true;
+
+        do {
+            boolean dbl = false;
+            System.out.println("À " + j.getJoueurEnCours().getNom() + " de jouer !");
+            j.getDes().lancer();
+            System.out.println("Un " + j.getDes().valDe1() + " et un " + j.getDes().valDe2() + " (Total : " + j.getDes().sommeDes() +") !");
+            if(j.getDes().estDouble()) {
+                System.out.println("C'est un double !");
+                dbl = true;
+            }
+
+            j.getJoueurEnCours().getPion().deplacer(j.getDes().sommeDes());
+
+            if(j.getJoueurEnCours().getPion().isCaseDepartLast()) {
+                System.out.println("Vous êtes passé par la case départ ! Vous avez reçu " + j.getArgentCaseDepart() + "€. Vous avez donc " + j.getJoueurEnCours().getSolde().getMonnaie() + "€");
+            }
+
+            System.out.println("Vous arrivez sur la case " + j.getJoueurEnCours().getPion().getPosition().getNom() + ".");
+            System.out.println("Vous possédez maintenant " + j.getJoueurEnCours().getSolde().getMonnaie() + "€.");
+
+            if(dbl) {
+                System.out.println(j.getJoueurEnCours().getNom() + " rejoue.");
+            }
+            else {
+                int nextIndex = (j.joueurs.indexOf(j.joueurEnCours) + 1) % j.joueurs.size();
+                j.setJoueurEnCours(j.joueurs.get(nextIndex));
+                System.out.println("C'est au tour de " + j.getJoueurEnCours().getNom() + " de jouer.");
+                System.out.println("Souhaitez-vous continuer ? [O/N]");
+                String saisie = sc.nextLine();
+                if(saisie.equals("N") || saisie.equals("n")) {
+                    continuer = false;
+                }
+            }
+        } while(continuer);
+
+        for(Joueur joueur : j.joueurs) {
+            System.out.println(joueur.getNom() + " a " + joueur.getSolde().getMonnaie() + "€.");
+        }
+
+        System.out.println("Merci d'avoir joué !");
     }
 }

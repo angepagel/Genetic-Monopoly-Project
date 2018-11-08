@@ -1,5 +1,6 @@
 package monopoly.modele.cases;
 
+import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 
 public class Case_Depart extends Case {
@@ -9,7 +10,8 @@ public class Case_Depart extends Case {
 
     @Override
     public void action(Joueur j) {
-        // Rien, ce n'est pas ici qu'on vérifie si le joueur passe par cette case
+        j.getSolde().ajouter(Jeu.getInstance().getArgentCaseDepart());
+        j.getPion().passeCaseDepart();
     }
 
     @Override
