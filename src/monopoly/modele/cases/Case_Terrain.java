@@ -2,18 +2,15 @@ package monopoly.modele.cases;
 
 public class Case_Terrain extends Case_Achat {
     private int nbMaisons;
-    private int prix;
-    private int prixMaison;
     private boolean hotel;
     private CouleurTerrain couleur;
-    private PrixLocation tarifs;
+    private Tarifs tarifs;
 
-    public Case_Terrain(String nom, CouleurTerrain couleur, int prix, int prixMaison, PrixLocation tarifs, Case suivante) {
+    public Case_Terrain(String nom, CouleurTerrain couleur, Tarifs tarifs, Case suivante) {
         super(nom, suivante);
         this.couleur = couleur;
-        this.prixMaison = prixMaison;
+        couleur.ajouterPropriete(this);
         this.tarifs = tarifs;
-        this.prix = prix;
         hotel = false;
         nbMaisons = 0;
     }
@@ -36,7 +33,7 @@ public class Case_Terrain extends Case_Achat {
 
     @Override
     public int getPrix() {
-        return prix;
+        return tarifs.getPrixAchat();
     }
 
     @Override
@@ -49,7 +46,7 @@ public class Case_Terrain extends Case_Achat {
     }
 
     public int getPrixMaison() {
-        return prixMaison;
+        return couleur.getPrixMaison();
     }
 
     public boolean isHotel() {

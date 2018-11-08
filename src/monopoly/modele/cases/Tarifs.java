@@ -2,12 +2,14 @@ package monopoly.modele.cases;
 
 import java.util.ArrayList;
 
-public class PrixLocation {
+public class Tarifs {
+    private int achat;
     private int terrainNu;
     private ArrayList<Integer> maisons;
     private int hotel;
 
-    public PrixLocation(int terrainNu, int m1, int m2, int m3, int m4, int hotel) {
+    public Tarifs(int achat, int terrainNu, int m1, int m2, int m3, int m4, int hotel) {
+        this.achat = achat;
         this.terrainNu = terrainNu;
         this.hotel = hotel;
         maisons = new ArrayList<>();
@@ -39,5 +41,9 @@ public class PrixLocation {
         }
 
         return prix;
+    }
+
+    public int getPrixAchat() {
+        return achat;
     }
 }

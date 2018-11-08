@@ -1,17 +1,27 @@
 package monopoly.modele.cases;
 
+import javafx.scene.paint.Color;
 import monopoly.modele.Joueur;
 
 import java.util.ArrayList;
 
 public class CouleurTerrain {
     private ArrayList<Case_Terrain> proprietes;
-    public CouleurTerrain() {
+    private Color couleur;
+    private int prixMaison;
+
+    public CouleurTerrain(Color couleur, int prixMaison) {
         proprietes = new ArrayList<>();
+        this.couleur = couleur;
+        this.prixMaison = prixMaison;
     }
 
     public int getNbTerrains() {
         return proprietes.size();
+    }
+
+    public void ajouterPropriete(Case_Terrain caseT) {
+        proprietes.add(caseT);
     }
 
     /**
@@ -79,5 +89,13 @@ public class CouleurTerrain {
         }
 
         return maximum;
+    }
+
+    public Color getCouleur() {
+        return couleur;
+    }
+
+    public int getPrixMaison() {
+        return prixMaison;
     }
 }

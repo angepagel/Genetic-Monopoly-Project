@@ -19,7 +19,7 @@ public abstract class Case {
         return suivante;
     }
 
-    protected void setSuivante(Case suivante) {
+    public void setSuivante(Case suivante) {
         this.suivante = suivante;
     }
 
