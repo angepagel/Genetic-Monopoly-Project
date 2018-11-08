@@ -44,11 +44,8 @@ public class Plateau {
         Case_Terrain breteuil = new Case_Terrain("Avenue de Breteuil", vert, minVert, foch);
         listeCases.add(breteuil);
 
-        Case_AllerEnPrison aep = null;
-        listeCases.add(aep);
-
         CouleurTerrain jaune = new CouleurTerrain(Color.YELLOW, 150);
-        Case_Terrain laFayette = new Case_Terrain("Rue La Fayette", jaune, new Tarifs(280,24, 120, 360, 850, 1020,1200), aep);
+        Case_Terrain laFayette = new Case_Terrain("Rue La Fayette", jaune, new Tarifs(280,24, 120, 360, 850, 1020,1200), null);
         listeCases.add(laFayette);
 
         Case_Compagnie compagnieEau = new Case_Compagnie("Compagnie de distribution des eaux", laFayette);
@@ -75,14 +72,14 @@ public class Plateau {
         Case_Chance c2 = new Case_Chance(malesherbes);
         listeCases.add(c2);
 
-        Case_Terrain matignon = new Case_Terrain("Matignoon", rouge, minRouge, c2);
+        Case_Terrain matignon = new Case_Terrain("Avenue Matignon", rouge, minRouge, c2);
         listeCases.add(matignon);
 
         Case_ParcGratuit parc = new Case_ParcGratuit(matignon);
         listeCases.add(parc);
 
         CouleurTerrain orange = new CouleurTerrain(Color.ORANGE, 100);
-        Case_Terrain pigalle = new Case_Terrain("Place Pigalle", orange, new Tarifs(200,16,80,220,600,800,1000), matignon);
+        Case_Terrain pigalle = new Case_Terrain("Place Pigalle", orange, new Tarifs(200,16,80,220,600,800,1000), parc);
         listeCases.add(pigalle);
 
         Tarifs minOrange = new Tarifs(180,14,70,200,550,750,950);
@@ -116,7 +113,10 @@ public class Plateau {
         listeCases.add(vep);
         Case_Prison prison = new Case_Prison(vep);
         listeCases.add(prison);
-        aep = new Case_AllerEnPrison(breteuil, prison);
+        Case_AllerEnPrison aep = new Case_AllerEnPrison(breteuil, prison);
+        listeCases.add(aep);
+
+        laFayette.setSuivante(aep);
 
         CouleurTerrain bleuDebut = new CouleurTerrain(Color.CYAN,50);
         Case_Terrain republique = new Case_Terrain("Avenue de la République", bleuDebut, new Tarifs(120,8,40,100,300,450,600), vep);
