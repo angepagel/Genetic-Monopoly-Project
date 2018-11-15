@@ -58,7 +58,7 @@
                <children>
                   <ImageView fitHeight="696.0" fitWidth="719.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@sprites/PlateauBeta.png" />
+                        <Image url="@sprites/Plateau.jpg" />
                      </image>
                   </ImageView>
                </children>

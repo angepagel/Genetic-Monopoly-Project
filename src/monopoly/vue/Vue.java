@@ -1,5 +1,7 @@
 package monopoly.vue;
 
-public class Vue {
+public abstract  class Vue {
+    private Image image;
+
 
 }
