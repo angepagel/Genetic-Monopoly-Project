@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.canvas.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.image.*?>
@@ -68,13 +69,21 @@
                   </ImageView>
                   <FlowPane layoutX="548.0" layoutY="605.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="BOULEVARD DE BELLEVILLE" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
                            </font>
                         </Label>
-                        <Label alignment="BOTTOM_CENTER" prefHeight="33.0" prefWidth="56.0" text="\$60">
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="16.0" prefWidth="56.0" text="\$60">
                            <font>
                               <Font name="Roboto Regular" size="7.0" />
                            </font>
@@ -83,13 +92,21 @@
                   </FlowPane>
                   <FlowPane layoutX="434.0" layoutY="605.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
-                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="BOULEVARD DE BELLEVILLE" textAlignment="CENTER" wrapText="true">
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="RUE LECOURBE" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
                            </font>
                         </Label>
-                        <Label alignment="BOTTOM_CENTER" prefHeight="33.0" prefWidth="56.0" text="\$60">
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="16.0" prefWidth="56.0" text="\$60">
                            <font>
                               <Font name="Roboto Regular" size="7.0" />
                            </font>
