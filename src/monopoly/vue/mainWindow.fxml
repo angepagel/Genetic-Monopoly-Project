@@ -21,7 +21,7 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.shape.Rectangle?>
 
-<VBox prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: f9f9f9;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.MainControleur">
+<VBox prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: f9f9f9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.MainControleur">
    <children>
       <MenuBar style="-fx-background-color: white;" VBox.vgrow="NEVER">
          <menus>
@@ -66,12 +66,32 @@
                         <Image url="@sprites/Plateau.jpg" />
                      </image>
                   </ImageView>
-                  <FlowPane layoutX="548.0" layoutY="605.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="92.0" prefWidth="58.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                  <FlowPane layoutX="548.0" layoutY="605.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 0px 0px;" />
-                        <Label prefHeight="29.0" prefWidth="56.0" text="BOULEVARD DE BELLEVILLE" textAlignment="CENTER" wrapText="true">
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="BOULEVARD DE BELLEVILLE" textAlignment="CENTER" wrapText="true">
                            <font>
-                              <Font name="System Bold" size="6.0" />
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" prefHeight="33.0" prefWidth="56.0" text="\$60">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="434.0" layoutY="605.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="22.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="BOULEVARD DE BELLEVILLE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <Label alignment="BOTTOM_CENTER" prefHeight="33.0" prefWidth="56.0" text="\$60">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
                            </font>
                         </Label>
                      </children>
