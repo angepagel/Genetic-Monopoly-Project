@@ -99,8 +99,8 @@
                   <AnchorPane layoutY="123.0" prefHeight="130.0" prefWidth="367.0">
                      <children>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="145.0" layoutX="16.0" layoutY="-15.0" stroke="BLACK" strokeType="INSIDE" width="335.0" />
-                        <Button fx:id="buttonMesProprietes" layoutX="40.0" layoutY="91.0" mnemonicParsing="false" onAction="#handleMesProprietes" text="Voir mes propriétés" />
-                        <Button layoutX="204.0" layoutY="91.0" mnemonicParsing="false" text="Voir les propriétés" />
+                        <Button fx:id="boutonVoirMesProprietes" layoutX="40.0" layoutY="91.0" mnemonicParsing="false" onAction="#actionVoirMesProprietes" text="Voir mes propriétés" />
+                        <Button fx:id="boutonVoirLesProprietes" layoutX="204.0" layoutY="91.0" mnemonicParsing="false" onAction="#actionVoirLesProprietes" text="Voir les propriétés" />
                         <Label layoutX="40.0" layoutY="-28.0" style="-fx-background-color: f9f9f9;" text="Joueurs" textAlignment="CENTER">
                            <opaqueInsets>
                               <Insets />
@@ -204,12 +204,12 @@
                         </Label>
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="123.0" layoutX="36.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
                         <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#1f93ff00" height="123.0" layoutX="36.0" layoutY="239.0" stroke="BLACK" strokeType="INSIDE" width="296.0" />
-                        <Button layoutX="36.0" layoutY="375.0" mnemonicParsing="false" prefHeight="43.0" prefWidth="296.0" text="Terminer mon tour" />
-                        <Button layoutX="191.0" layoutY="199.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="142.0" text="Echanger" />
-                        <Button layoutX="37.0" layoutY="199.0" mnemonicParsing="false" prefHeight="20.0" prefWidth="142.0" text="Gérer mes propriétés" />
-                        <Button layoutX="217.0" layoutY="125.0" mnemonicParsing="false" text="Lancer de dés" />
-                        <Button layoutX="217.0" layoutY="269.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="89.0" text="Acheter" />
-                        <Button layoutX="217.0" layoutY="312.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="89.0" text="Enchérir" />
+                        <Button fx:id="boutonTerminerTour" layoutX="36.0" layoutY="375.0" mnemonicParsing="false" onAction="#actionTerminerTour" prefHeight="43.0" prefWidth="296.0" text="Terminer mon tour" />
+                        <Button fx:id="boutonEchanger" layoutX="191.0" layoutY="199.0" mnemonicParsing="false" onAction="#actionEchanger" prefHeight="25.0" prefWidth="142.0" text="Echanger" />
+                        <Button fx:id="boutonGererMesProprietes" layoutX="37.0" layoutY="199.0" mnemonicParsing="false" onAction="#actionGererMesProprietes" prefHeight="20.0" prefWidth="142.0" text="Gérer mes propriétés" />
+                        <Button fx:id="boutonLancerDes" layoutX="217.0" layoutY="125.0" mnemonicParsing="false" onAction="#actionLancerDes" text="Lancer de dés" />
+                        <Button fx:id="BoutonAcheter" layoutX="217.0" layoutY="269.0" mnemonicParsing="false" onAction="#actionAcheter" prefHeight="27.0" prefWidth="89.0" text="Acheter" />
+                        <Button fx:id="boutonEncherir" layoutX="217.0" layoutY="312.0" mnemonicParsing="false" onAction="#actionEncherir" prefHeight="25.0" prefWidth="89.0" text="Enchérir" />
                         <Label layoutX="56.0" layoutY="50.0" style="-fx-background-color: f9f9f9;" text="Tirage des dés" textAlignment="CENTER">
                            <font>
                               <Font size="14.0" />
