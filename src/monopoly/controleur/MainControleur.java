@@ -2,6 +2,7 @@ package monopoly.controleur;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import monopoly.modele.Des;
 
 public class MainControleur {
 
@@ -18,6 +19,10 @@ public class MainControleur {
     @FXML
     public void actionLancerDes(ActionEvent action) {
         // TODO : Lancer les dés
+        Des LesDes = new Des();
+        int sommes = LesDes.lancer();
+        int de1 = LesDes.valDe1();
+        int de2 = LesDes.valDe2();
     }
 
     @FXML
