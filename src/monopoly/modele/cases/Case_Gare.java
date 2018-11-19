@@ -6,7 +6,7 @@ public class Case_Gare extends Case_Achat {
     }
 
     @Override
-    public int getLoyer() {
+    public Integer getLoyer() {
         switch(getProprietaire().getNbCompagnies()) {
             case 0:
             case 1:

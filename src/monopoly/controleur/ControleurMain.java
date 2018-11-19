@@ -5,11 +5,11 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import monopoly.modele.Des;
+import monopoly.modele.Jeu;
+import monopoly.modele.cases.Case;
+import monopoly.modele.cases.Case_Achat;
 import monopoly.vue.VueDe;
-import monopoly.vue.dialogue.DialogueEchanger;
-import monopoly.vue.dialogue.DialogueGererMesProprietes;
-import monopoly.vue.dialogue.DialogueVoirLesProprietes;
-import monopoly.vue.dialogue.DialogueVoirMesProprietes;
+import monopoly.vue.dialogue.*;
 
 import java.io.IOException;
 
@@ -80,6 +80,14 @@ public class ControleurMain {
     @FXML
     public void actionTerminerTour(ActionEvent action) {
         // TODO : Terminer le tour
+    }
+
+    @FXML
+    public void actionVoirProprieteBoulevardBelleville() throws IOException {
+        Jeu.getInstance().initialisation();
+        System.out.println((Case_Achat) Jeu.getInstance().getPlateau().getCase("Boulevard de Belleville"));
+
+        new DialogueVoirDetailsPropriete((Case_Achat) Jeu.getInstance().getPlateau().getCase("Boulevard de Belleville"));
     }
 
 }

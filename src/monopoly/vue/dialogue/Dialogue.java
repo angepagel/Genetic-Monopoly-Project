@@ -5,18 +5,29 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import monopoly.controleur.Controleur;
+import monopoly.controleur.ControleurVoirDetailsPropriete;
 
 import java.io.IOException;
 
 public class Dialogue {
 
+    private ControleurVoirDetailsPropriete controleur;
+
     public Dialogue(String titre, String fichierFxml) throws IOException {
-        Parent parent = FXMLLoader.load(getClass().getResource(fichierFxml));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource(fichierFxml));
+        Parent parent = loader.load();
         Scene scene = new Scene(parent);
         Stage stage = new Stage();
         stage.setTitle(titre);
         stage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         stage.setScene(scene);
-        stage.showAndWait();
+        stage.show();
+
+        this.controleur = loader.getController();
+    }
+
+    public ControleurVoirDetailsPropriete getControleur() {
+        return this.controleur;
     }
 }

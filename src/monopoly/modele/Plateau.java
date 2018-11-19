@@ -151,6 +151,18 @@ public class Plateau {
         caseDepart.setSuivante(belleville);
     }
 
+    public Case getCase(String nom) {
+        Case res = null;
+
+        for(Case c : listeCases) {
+            if (c.getNom() == nom) {
+                res = c;
+            }
+        }
+
+        return res;
+    }
+
     public Case_Depart getCaseDepart() {
         return caseDepart;
     }

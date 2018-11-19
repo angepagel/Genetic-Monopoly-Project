@@ -16,7 +16,7 @@ public class Case_Terrain extends Case_Achat {
     }
 
     @Override
-    public int getLoyer() {
+    public Integer getLoyer() {
         int loyer = tarifs.getPrixTerrainNu();
         if(nbMaisons == 0 && couleur.aUnProprietaire()) {
             loyer *= 2;

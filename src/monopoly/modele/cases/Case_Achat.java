@@ -27,7 +27,7 @@ public abstract class Case_Achat extends Case_Paiement {
         proprietaire.getSolde().ajouter(getLoyer());
     }
 
-    public abstract int getLoyer();
+    public abstract Integer getLoyer();
 
     @Override
     public void action(Joueur j) {
@@ -39,7 +39,7 @@ public abstract class Case_Achat extends Case_Paiement {
         }
     }
 
-    public int getValeurHypotheque() {
+    public Integer getValeurHypotheque() {
         return valeurHypotheque;
     }
 }

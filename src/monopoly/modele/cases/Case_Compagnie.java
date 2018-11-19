@@ -8,7 +8,7 @@ public class Case_Compagnie extends Case_Achat {
     }
 
     @Override
-    public int getLoyer() {
+    public Integer getLoyer() {
         int loyer;
         if(getProprietaire().getNbCompagnies() == 1) {
             loyer = 4;
