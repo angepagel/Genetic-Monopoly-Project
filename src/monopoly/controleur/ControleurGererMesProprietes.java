@@ -13,7 +13,7 @@ public class ControleurGererMesProprietes {
     // TODO : Remplir le tableau
 
     @FXML
-    private TableView tableauVoirMesProprietes;
+    private TableView tableauGererMesProprietes;
 
     @FXML
     private TableColumn colNom;
