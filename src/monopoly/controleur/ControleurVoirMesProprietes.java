@@ -10,6 +10,7 @@ import java.io.IOException;
 
 public class ControleurVoirMesProprietes {
 
+    // TODO : Remplir le tableau
 
     @FXML
     private TableView tableauVoirMesProprietes;
