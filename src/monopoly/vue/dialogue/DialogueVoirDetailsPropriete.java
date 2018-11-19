@@ -12,11 +12,11 @@ public class DialogueVoirDetailsPropriete extends Dialogue {
         super("Détails de la propriété", "dialogueVoirDetailsPropriete.fxml");
     }
 
-    public DialogueVoirDetailsPropriete(Case_Achat c) throws IOException {
+    public DialogueVoirDetailsPropriete(int a) throws IOException {
         super("Détails de la propriété", "dialogueVoirDetailsPropriete.fxml");
-        this.caseAchat = c;
+        //this.caseAchat = c;
 
-        this.getControleur().update(c);
+        this.getControleur().update(a);
 
     }
 

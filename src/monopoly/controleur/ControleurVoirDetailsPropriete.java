@@ -34,16 +34,31 @@ public class ControleurVoirDetailsPropriete extends Controleur{
     private Label labelHypotheque;
 
 
-    public void update(Case_Achat c) {
-        labelNom.setText("Boulevard de Belleville");
-        labelProprietaire.setText("Joueur1");
-        labelLoyer.setText("$60");
-        labelLoyerAmelioration1.setText("$100");
-        labelLoyerAmelioration2.setText("$140");
-        labelLoyerAmelioration3.setText("$180");
-        labelLoyerAmelioration4.setText("$220");
-        labelLoyerAmelioration5.setText("$260");
-        labelHypotheque.setText("$100");
+    public void update(int a) {
+
+        if (a == 1) {
+            labelNom.setText("Boulevard de Belleville");
+            labelProprietaire.setText("Joueur1");
+            labelLoyer.setText("$60");
+            labelLoyerAmelioration1.setText("$100");
+            labelLoyerAmelioration2.setText("$140");
+            labelLoyerAmelioration3.setText("$180");
+            labelLoyerAmelioration4.setText("$220");
+            labelLoyerAmelioration5.setText("$260");
+            labelHypotheque.setText("$100");
+        }
+        else if (a == 2) {
+            labelNom.setText("Boulevard de la Villette");
+            labelProprietaire.setText("Joueur1");
+            labelLoyer.setText("$140");
+            labelLoyerAmelioration1.setText("$180");
+            labelLoyerAmelioration2.setText("$220");
+            labelLoyerAmelioration3.setText("$260");
+            labelLoyerAmelioration4.setText("$300");
+            labelLoyerAmelioration5.setText("$340");
+            labelHypotheque.setText("$180");
+        }
+
 
     }
 

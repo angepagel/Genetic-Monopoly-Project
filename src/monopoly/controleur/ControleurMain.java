@@ -87,7 +87,14 @@ public class ControleurMain {
         Jeu.getInstance().initialisation();
         System.out.println((Case_Achat) Jeu.getInstance().getPlateau().getCase("Boulevard de Belleville"));
 
-        new DialogueVoirDetailsPropriete((Case_Achat) Jeu.getInstance().getPlateau().getCase("Boulevard de Belleville"));
+        new DialogueVoirDetailsPropriete(1);
+    }
+
+    @FXML
+    public void actionVoirProprieteBoulevardVillette() throws IOException {
+        System.out.println((Case_Achat) Jeu.getInstance().getPlateau().getCase("Boulevard de Belleville"));
+
+        new DialogueVoirDetailsPropriete(2);
     }
 
 }
