@@ -156,7 +156,7 @@
                   </FlowPane>
                   <FlowPane layoutX="262.0" layoutY="606.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="58.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #BEE4F9; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="RUE DE VAUGIRARD" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -179,7 +179,7 @@
                   </FlowPane>
                   <FlowPane layoutX="148.0" layoutY="606.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="58.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #BEE4F9; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="RUE DES COURCELLES" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -202,7 +202,7 @@
                   </FlowPane>
                   <FlowPane layoutX="91.0" layoutY="606.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="58.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #944828; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #BEE4F9; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="AVENUE DE LA REPUBLIQUE" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -271,7 +271,7 @@
                   </FlowPane>
                   <FlowPane layoutX="16.0" layoutY="246.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="90.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #F49102; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="AVENUE  MOZART" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -294,7 +294,7 @@
                   </FlowPane>
                   <FlowPane layoutX="16.0" layoutY="131.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="90.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #F49102; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="BOULEVARD SAINT-MICHEL" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -317,7 +317,7 @@
                   </FlowPane>
                   <FlowPane layoutX="16.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="90.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #F49102; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="PLACE PIGALLE" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -340,7 +340,7 @@
                   </FlowPane>
                   <FlowPane layoutX="91.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #E2010F; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="AVENUE MATIGNON" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -363,7 +363,7 @@
                   </FlowPane>
                   <FlowPane layoutX="204.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #E2010F; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="BOULEVARD MALESHERBES" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -386,7 +386,7 @@
                   </FlowPane>
                   <FlowPane layoutX="261.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #E2010F; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="AVENUE HENRI-MARTIN" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -409,7 +409,7 @@
                   </FlowPane>
                   <FlowPane layoutX="376.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #FBEE01; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="FAUBOURG SAINT-HONORE" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -432,7 +432,7 @@
                   </FlowPane>
                   <FlowPane layoutX="433.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #FBEE01; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="PLACE DE LA BOURSE" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -455,7 +455,7 @@
                   </FlowPane>
                   <FlowPane layoutX="547.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #FBEE01; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="RUE LA FAYETTE" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -478,7 +478,7 @@
                   </FlowPane>
                   <FlowPane layoutX="622.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #20A645; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="AVENUE DE BRETEUIL" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -501,7 +501,7 @@
                   </FlowPane>
                   <FlowPane layoutX="622.0" layoutY="131.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #20A645; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="AVENUE FOCH" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -524,7 +524,7 @@
                   </FlowPane>
                   <FlowPane layoutX="622.0" layoutY="246.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #20A645; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="BOULEVARD DES CAPUCINES" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -547,7 +547,7 @@
                   </FlowPane>
                   <FlowPane layoutX="622.0" layoutY="417.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #0168B3; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="AVENUE DES CHAMPS-ELYSEES" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
@@ -570,7 +570,7 @@
                   </FlowPane>
                   <FlowPane layoutX="622.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="58.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
                      <children>
-                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #da2d86; -fx-border-width: 0px 0px 1px 0px;" />
+                        <FlowPane layoutX="-100.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="17.0" prefWidth="56.0" style="-fx-border-color: black; -fx-background-color: #0168B3; -fx-border-width: 0px 0px 1px 0px;" />
                         <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="RUE DE LA PAIX" textAlignment="CENTER" wrapText="true">
                            <font>
                               <Font name="Roboto Bold" size="7.0" />
