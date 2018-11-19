@@ -5,6 +5,12 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import monopoly.modele.Des;
+import monopoly.vue.dialogue.DialogueEchanger;
+import monopoly.vue.dialogue.DialogueGererMesProprietes;
+import monopoly.vue.dialogue.DialogueVoirLesProprietes;
+import monopoly.vue.dialogue.DialogueVoirMesProprietes;
+
+import java.io.IOException;
 
 public class MainControleur {
 
@@ -15,13 +21,13 @@ public class MainControleur {
     private ImageView de_2;
 
     @FXML
-    public void actionVoirMesProprietes(ActionEvent event) {
-        // TODO : Afficher le dialogueVoirMesProprietes
+    public void actionVoirMesProprietes(ActionEvent event) throws IOException {
+        new DialogueVoirMesProprietes();
     }
 
     @FXML
-    public void actionVoirLesProprietes(ActionEvent action) {
-        // TODO : Afficher le dialogueVoirLesProprietes
+    public void actionVoirLesProprietes(ActionEvent action) throws IOException {
+        new DialogueVoirLesProprietes();
     }
 
     @FXML
@@ -37,13 +43,13 @@ public class MainControleur {
     }
 
     @FXML
-    public void actionGererMesProprietes(ActionEvent action) {
-        // TODO : Afficher le dialogueGererMesProprietes
+    public void actionGererMesProprietes(ActionEvent action) throws IOException {
+        new DialogueGererMesProprietes();
     }
 
     @FXML
-    public void actionEchanger(ActionEvent action) {
-        // TODO : Afficher le dialogueEchanger
+    public void actionEchanger(ActionEvent action) throws IOException {
+        new DialogueEchanger();
     }
 
     @FXML
