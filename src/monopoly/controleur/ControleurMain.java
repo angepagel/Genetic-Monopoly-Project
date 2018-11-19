@@ -15,11 +15,22 @@ import java.io.IOException;
 
 public class ControleurMain {
 
+    // Attributs
+
     @FXML
     private ImageView de_1;
 
     @FXML
     private ImageView de_2;
+
+
+
+
+
+
+
+
+    // Methodes
 
     @FXML
     public void actionVoirMesProprietes(ActionEvent event) throws IOException {

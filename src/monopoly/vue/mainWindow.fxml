@@ -777,7 +777,7 @@
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
-                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$200">
+                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$200" translateY="-3.0">
                            <font>
                               <Font name="Roboto Regular" size="7.0" />
                            </font>
@@ -900,7 +900,11 @@
                               <Font name="Roboto Bold" size="7.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" />
+                        <ImageView fitHeight="11.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true" translateX="21.0" translateY="6.0">
+                           <image>
+                              <Image url="@data/image/Impots.png" />
+                           </image>
+                        </ImageView>
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
@@ -909,6 +913,11 @@
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="16.0" prefWidth="56.0" text="\$60" translateY="3.0">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
                      </children>
                   </FlowPane>
                </children>
