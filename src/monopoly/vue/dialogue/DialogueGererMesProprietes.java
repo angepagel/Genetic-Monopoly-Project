@@ -5,7 +5,7 @@ import java.io.IOException;
 public class DialogueGererMesProprietes extends Dialogue {
 
     public DialogueGererMesProprietes() throws IOException {
-        super("dialogueGererMesProprietes.fxml");
+        super("Gérer mes propriétés", "dialogueGererMesProprietes.fxml");
     }
 
 }

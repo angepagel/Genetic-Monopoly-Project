@@ -5,7 +5,7 @@ import java.io.IOException;
 public class DialogueEchanger extends Dialogue {
 
     public DialogueEchanger() throws IOException {
-        super("dialogueEchanger.fxml");
+        super("Échanger", "dialogueEchanger.fxml");
     }
 
 }
