@@ -594,6 +594,226 @@
                         </Label>
                      </children>
                   </FlowPane>
+                  <FlowPane layoutX="16.0" layoutY="189.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="59.0" rotate="90.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="CAISSE DE COMMUNAUTE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="8.0">
+                           <image>
+                              <Image url="@data/image/Caisse.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="621.0" layoutY="188.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="59.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="CAISSE DE COMMUNAUTE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="8.0">
+                           <image>
+                              <Image url="@data/image/Caisse.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="622.0" layoutY="474.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="59.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="TAXE DE LUXE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="8.0">
+                           <image>
+                              <Image url="@data/image/Luxe.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="205.0" layoutY="605.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="59.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="CHANCE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="19.0">
+                           <image>
+                              <Image url="@data/image/InterrogationRose.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="148.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="CHANCE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="19.0">
+                           <image>
+                              <Image url="@data/image/InterrogationBleue.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="622.0" layoutY="360.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="CHANCE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="19.0">
+                           <image>
+                              <Image url="@data/image/InterrogationOrange.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="622.0" layoutY="303.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" rotate="270.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="GARE SAINT-LAZARE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="7.0">
+                           <image>
+                              <Image url="@data/image/Train.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="320.0" layoutY="605.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="GARE MONTPARNASSE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="7.0">
+                           <image>
+                              <Image url="@data/image/Train.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="17.0" layoutY="303.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" rotate="90.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="GARE DE LYON" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="7.0">
+                           <image>
+                              <Image url="@data/image/Train.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="GARE DU NORD" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="7.0">
+                           <image>
+                              <Image url="@data/image/Train.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
                </children>
             </AnchorPane>
             <AnchorPane layoutX="713.0" prefHeight="695.0" prefWidth="367.0">
