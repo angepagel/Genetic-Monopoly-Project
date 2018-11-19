@@ -12,7 +12,7 @@ import monopoly.vue.dialogue.DialogueVoirMesProprietes;
 
 import java.io.IOException;
 
-public class MainControleur {
+public class ControleurMain {
 
     @FXML
     private ImageView de_1;
