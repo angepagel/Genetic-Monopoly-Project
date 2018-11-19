@@ -5,6 +5,7 @@ import javafx.fxml.FXML;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import monopoly.modele.Des;
+import monopoly.vue.VueDe;
 import monopoly.vue.dialogue.DialogueEchanger;
 import monopoly.vue.dialogue.DialogueGererMesProprietes;
 import monopoly.vue.dialogue.DialogueVoirLesProprietes;
@@ -38,8 +39,11 @@ public class ControleurMain {
         int de1 = LesDes.valDe1();
         int de2 = LesDes.valDe2();
 
-        Image spr_de1 = new Image("file:src/monopoly/vue/sprites/dice_1.png", true);
-        this.de_1.setImage(spr_de1);
+        VueDe vueDe = new VueDe(LesDes, 1, this.de_1);
+        vueDe.miseAJour();
+
+        VueDe vueDe2 = new VueDe(LesDes, 2, this.de_2);
+        vueDe2.miseAJour();
     }
 
     @FXML

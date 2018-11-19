@@ -323,12 +323,12 @@
                         </Label>
                         <ImageView fx:id="de_1" fitHeight="60.0" fitWidth="60.0" layoutX="56.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@data/image/dice_5.png" />
+                              <Image url="@sprites/dice_5.png" />
                            </image>
                         </ImageView>
                         <ImageView fx:id="de_2" fitHeight="60.0" fitWidth="60.0" layoutX="124.0" layoutY="92.0" pickOnBounds="true" preserveRatio="true">
                            <image>
-                              <Image url="@data/image/dice_2.png" />
+                              <Image url="@sprites/dice_1.png" />
                            </image>
                         </ImageView>
                         <Label layoutX="57.0" layoutY="271.0" style="-fx-background-color: f9f9f9;" text="Rue de la paix" textAlignment="CENTER">
