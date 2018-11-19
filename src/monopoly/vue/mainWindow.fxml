@@ -655,6 +655,11 @@
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$100">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
@@ -741,6 +746,11 @@
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$200">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
@@ -755,7 +765,7 @@
                               <Font name="Roboto Bold" size="7.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="7.0">
+                        <ImageView fitHeight="24.0" fitWidth="29.0" layoutX="-1.0" pickOnBounds="true" preserveRatio="true" translateX="12.0">
                            <image>
                               <Image url="@data/image/Train.png" />
                            </image>
@@ -767,6 +777,11 @@
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$200">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                      </children>
                   </FlowPane>
@@ -777,7 +792,7 @@
                               <Font name="Roboto Bold" size="7.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="7.0">
+                        <ImageView fitHeight="17.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true" translateX="16.0">
                            <image>
                               <Image url="@data/image/Train.png" />
                            </image>
@@ -790,6 +805,11 @@
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$200">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
                      </children>
                   </FlowPane>
                   <FlowPane layoutX="319.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
@@ -804,6 +824,83 @@
                               <Image url="@data/image/Train.png" />
                            </image>
                         </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$200">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="17.0" layoutY="474.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" rotate="90.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="COMPAGNIE DE DISTRIBUTION d'ELECTRICITE" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="5.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="12.0">
+                           <image>
+                              <Image url="@data/image/Electricite.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$150">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="491.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" rotate="180.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="COMPAGINE DE DISTRIBUTION DES EAUX" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font size="5.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="12.0">
+                           <image>
+                              <Image url="@data/image/Electricite.png" />
+                           </image>
+                        </ImageView>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <Label alignment="CENTER" prefHeight="6.0" prefWidth="56.0" text="\$150">
+                           <font>
+                              <Font name="Roboto Regular" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
+                     </children>
+                  </FlowPane>
+                  <FlowPane layoutX="377.0" layoutY="605.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="91.0" prefWidth="57.0" style="-fx-border-color: black; -fx-background-color: dae9d4; -fx-border-width: 1px 1px 0px 1px;">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="29.0" prefWidth="56.0" text="IMPOTS SUR LE REVENU" textAlignment="CENTER" wrapText="true">
+                           <font>
+                              <Font name="Roboto Bold" size="7.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="7.0" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
