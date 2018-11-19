@@ -875,7 +875,7 @@
                         </Label>
                         <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="12.0">
                            <image>
-                              <Image url="@data/image/Electricite.png" />
+                              <Image url="@data/image/DistributionEaux.png" />
                            </image>
                         </ImageView>
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
