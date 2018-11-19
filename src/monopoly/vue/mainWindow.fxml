@@ -143,7 +143,10 @@
                               <Font name="Roboto Bold" size="7.0" />
                            </font>
                         </Label>
-                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" />
+                        <ImageView fitHeight="33.0" fitWidth="57.0" pickOnBounds="true" preserveRatio="true" translateX="8.0">
+                           <image>
+                              <Image url="@data/image/Caisse.png" />
+                           </image></ImageView>
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
                         <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true" />
