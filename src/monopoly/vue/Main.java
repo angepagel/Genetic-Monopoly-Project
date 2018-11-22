@@ -11,10 +11,10 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("mainWindow.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("VueMain.fxml"));
         primaryStage.setTitle("Monopoly Génétique");
         primaryStage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
-        primaryStage.setScene(new Scene(root, 1080, 720));
+        primaryStage.setScene(new Scene(root, 700, 700));
         primaryStage.setResizable(false);
         primaryStage.show();
     }
@@ -22,5 +22,7 @@ public class Main extends Application {
 
     public static void main(String[] args) {
         launch(args);
+        
     }
+    
 }

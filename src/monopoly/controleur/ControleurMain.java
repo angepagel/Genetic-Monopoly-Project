@@ -12,6 +12,8 @@ import monopoly.vue.VueDe;
 import monopoly.vue.dialogue.*;
 
 import java.io.IOException;
+import javax.swing.JOptionPane;
+import static monopoly.modele.Jeu.getInstance;
 
 public class ControleurMain {
 
@@ -24,10 +26,15 @@ public class ControleurMain {
     private ImageView de_2;
 
 
+    private Jeu jeu;
+    private Controleur_ChangementTour controleur_Tour ;
+    public void InitJeu(){
+        jeu= getInstance();
+        controleur_Tour=  new Controleur_ChangementTour(jeu);
+    }
 
 
-
-
+    
 
 
     // Methodes
@@ -79,7 +86,7 @@ public class ControleurMain {
 
     @FXML
     public void actionTerminerTour(ActionEvent action) {
-        // TODO : Terminer le tour
+        JOptionPane.showMessageDialog(null,"Le joueur  a terminé son tour \n C'est au tour du joueur de jouer !");
     }
 
     @FXML
