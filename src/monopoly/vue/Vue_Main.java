@@ -18,14 +18,27 @@ import static monopoly.modele.Jeu.getInstance;
  */
 public class Vue_Main {
     
-    public void lancerPartieClassique() throws Exception{
-        Vue_PartiePrinc partie = new Vue_PartiePrinc();
-        partie.start();
+    private boolean partieEnCours = false;
+    
+    public void lancerPartieClassique() throws Exception {
+        
+        if (!partieEnCours) {
+            partieEnCours = true;
+            Vue_PartiePrinc partie = new Vue_PartiePrinc();
+            partie.start();
+            partieEnCours = false;
+        }
+        
        
     }
     public void lancerPartieIAcontreIA() throws Exception{
-        Jeu jeu = getInstance();
-        jeu.run();
+        if(!partieEnCours) {
+            partieEnCours = true;
+            Jeu jeu = getInstance();
+            jeu.run();
+            partieEnCours = false;
+        }
+        
         
     }
     

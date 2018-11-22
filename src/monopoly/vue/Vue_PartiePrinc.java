@@ -24,7 +24,6 @@ public class Vue_PartiePrinc {
         primaryStage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         primaryStage.setScene(new Scene(root, 1080, 720));
         primaryStage.setResizable(false);
-        primaryStage.show();
-    }
-    
+        primaryStage.showAndWait();
+    } 
 }

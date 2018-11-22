@@ -14,7 +14,7 @@ public class Main extends Application {
         Parent root = FXMLLoader.load(getClass().getResource("VueMain.fxml"));
         primaryStage.setTitle("Monopoly Génétique");
         primaryStage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
-        primaryStage.setScene(new Scene(root, 700, 700));
+        primaryStage.setScene(new Scene(root, 650, 400));
         primaryStage.setResizable(false);
         primaryStage.show();
     }
