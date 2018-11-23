@@ -6,10 +6,7 @@ import monopoly.vue.Vue_Des;
 
 import javafx.scene.image.ImageView;
 
-/**
- * Created by maxim on 23/11/2018.
- */
-public class Controleur_De extends Controleur{
+public class Controleur_De extends Controleur {
 
     private Des des;
 

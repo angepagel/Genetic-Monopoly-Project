@@ -6,7 +6,7 @@ import monopoly.vue.dialogue.DialogueVoirDetailsPropriete;
 
 import java.io.IOException;
 
-public class ControleurEchanger {
+public class ControleurEchanger extends Controleur {
 
     @FXML
     private void actionDetailsPropriete1(ActionEvent event) throws IOException {

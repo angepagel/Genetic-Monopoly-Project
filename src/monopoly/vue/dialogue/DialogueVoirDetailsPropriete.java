@@ -14,10 +14,7 @@ public class DialogueVoirDetailsPropriete extends Dialogue {
 
     public DialogueVoirDetailsPropriete(int a) throws IOException {
         super("Détails de la propriété", "dialogueVoirDetailsPropriete.fxml");
-        //this.caseAchat = c;
-
-        this.getControleur().update(a);
-
+        // TODO :
     }
 
 }

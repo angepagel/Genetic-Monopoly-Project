@@ -11,7 +11,7 @@ import java.io.IOException;
 import javax.swing.JOptionPane;
 import static monopoly.modele.Jeu.getInstance;
 
-public class ControleurMain {
+public class ControleurMain extends Controleur {
 
     // Attributs
 

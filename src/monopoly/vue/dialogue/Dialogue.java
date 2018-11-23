@@ -12,7 +12,7 @@ import java.io.IOException;
 
 public class Dialogue {
 
-    private ControleurVoirDetailsPropriete controleur;
+    private Controleur controleur;
 
     public Dialogue(String titre, String fichierFxml) throws IOException {
         FXMLLoader loader = new FXMLLoader(getClass().getResource(fichierFxml));
@@ -27,7 +27,7 @@ public class Dialogue {
         this.controleur = loader.getController();
     }
 
-    public ControleurVoirDetailsPropriete getControleur() {
+    public Controleur getControleur() {
         return this.controleur;
     }
 }

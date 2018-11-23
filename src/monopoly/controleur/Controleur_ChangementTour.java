@@ -11,12 +11,8 @@ import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
 
-/**
- *
- * @author rg686289
- */
-public class Controleur_ChangementTour {
-    
+public class Controleur_ChangementTour extends Controleur {
+
     ArrayList<Joueur> joueurs;
     private Jeu modele;
     public Controleur_ChangementTour(Jeu modele){

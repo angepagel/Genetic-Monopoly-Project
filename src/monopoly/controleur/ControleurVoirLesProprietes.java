@@ -8,7 +8,7 @@ import monopoly.vue.dialogue.DialogueVoirDetailsPropriete;
 
 import java.io.IOException;
 
-public class ControleurVoirLesProprietes {
+public class ControleurVoirLesProprietes extends Controleur {
 
     // TODO : Remplir le tableau
 
@@ -30,6 +30,7 @@ public class ControleurVoirLesProprietes {
     @FXML
     public void actionDetailsPropriete(ActionEvent event) throws IOException {
         new DialogueVoirDetailsPropriete();
+        // TODO : Passer une propriété en paramètre
     }
 
 }
