@@ -25,6 +25,4 @@ public class Controleur_De extends Controleur{
         this.des.lancer();
         this.vueDes.miseAJour();
     }
-
-
 }
