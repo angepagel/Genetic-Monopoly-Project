@@ -2,16 +2,14 @@ package monopoly.controleur;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import monopoly.modele.Des;
 import monopoly.modele.Jeu;
-import monopoly.modele.cases.Case;
 import monopoly.modele.cases.Case_Achat;
-import monopoly.vue.VueDe;
 import monopoly.vue.dialogue.*;
 
 import java.io.IOException;
+import javax.swing.JOptionPane;
+import static monopoly.modele.Jeu.getInstance;
 
 public class ControleurMain {
 
@@ -24,11 +22,16 @@ public class ControleurMain {
     private ImageView de_2;
 
 
+    private Jeu jeu;
+    private Controleur_ChangementTour controleur_Tour ;
+    private Controleur_De controleur_de;
 
 
-
-
-
+    public void InitJeu(){
+        jeu= getInstance();
+        controleur_Tour=  new Controleur_ChangementTour(jeu);
+    }
+    
 
     // Methodes
 
@@ -44,17 +47,8 @@ public class ControleurMain {
 
     @FXML
     public void actionLancerDes(ActionEvent action) {
-        // TODO : Lancer les dés
-        Des LesDes = new Des();
-        int sommes = LesDes.lancer();
-        int de1 = LesDes.valDe1();
-        int de2 = LesDes.valDe2();
-
-        VueDe vueDe = new VueDe(LesDes, 1, this.de_1);
-        vueDe.miseAJour();
-
-        VueDe vueDe2 = new VueDe(LesDes, 2, this.de_2);
-        vueDe2.miseAJour();
+        this.controleur_de = new Controleur_De(de_1, de_2);
+        this.controleur_de.actionLancerDes(action);
     }
 
     @FXML
@@ -79,7 +73,7 @@ public class ControleurMain {
 
     @FXML
     public void actionTerminerTour(ActionEvent action) {
-        // TODO : Terminer le tour
+        JOptionPane.showMessageDialog(null,"Le joueur  a terminé son tour \n C'est au tour du joueur de jouer !");
     }
 
     @FXML
