@@ -3,10 +3,8 @@ package monopoly.controleur;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
-import monopoly.modele.Des;
 import monopoly.modele.Jeu;
 import monopoly.modele.cases.Case_Achat;
-import monopoly.vue.Vue_De;
 import monopoly.vue.dialogue.*;
 
 import java.io.IOException;
@@ -26,14 +24,14 @@ public class ControleurMain {
 
     private Jeu jeu;
     private Controleur_ChangementTour controleur_Tour ;
+    private Controleur_De controleur_de;
+
+
     public void InitJeu(){
         jeu= getInstance();
         controleur_Tour=  new Controleur_ChangementTour(jeu);
     }
-
-
     
-
 
     // Methodes
 
@@ -49,17 +47,8 @@ public class ControleurMain {
 
     @FXML
     public void actionLancerDes(ActionEvent action) {
-        // TODO : Lancer les dés
-        Des LesDes = new Des();
-        int sommes = LesDes.lancer();
-        int de1 = LesDes.valDe1();
-        int de2 = LesDes.valDe2();
-
-        Vue_De vueDe = new Vue_De(LesDes, 1, this.de_1);
-        vueDe.miseAJour();
-
-        Vue_De vueDe2 = new Vue_De(LesDes, 2, this.de_2);
-        vueDe2.miseAJour();
+        this.controleur_de = new Controleur_De(de_1, de_2);
+        this.controleur_de.actionLancerDes(action);
     }
 
     @FXML
