@@ -5,12 +5,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import monopoly.modele.Des;
 
-public class VueDe extends Vue {
+public class Vue_De extends Vue {
 
     private int num;
     private Des des;
 
-    public VueDe(Des des, int num, ImageView imgView) {
+    public Vue_De(Des des, int num, ImageView imgView) {
         super(imgView);
         this.des = des;
         this.num = num;

@@ -2,13 +2,11 @@ package monopoly.controleur;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import monopoly.modele.Des;
 import monopoly.modele.Jeu;
-import monopoly.modele.cases.Case;
 import monopoly.modele.cases.Case_Achat;
-import monopoly.vue.VueDe;
+import monopoly.vue.Vue_De;
 import monopoly.vue.dialogue.*;
 
 import java.io.IOException;
@@ -57,10 +55,10 @@ public class ControleurMain {
         int de1 = LesDes.valDe1();
         int de2 = LesDes.valDe2();
 
-        VueDe vueDe = new VueDe(LesDes, 1, this.de_1);
+        Vue_De vueDe = new Vue_De(LesDes, 1, this.de_1);
         vueDe.miseAJour();
 
-        VueDe vueDe2 = new VueDe(LesDes, 2, this.de_2);
+        Vue_De vueDe2 = new Vue_De(LesDes, 2, this.de_2);
         vueDe2.miseAJour();
     }
 

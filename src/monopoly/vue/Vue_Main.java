@@ -5,10 +5,6 @@
  */
 package monopoly.vue;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import monopoly.modele.Jeu;
 import static monopoly.modele.Jeu.getInstance;
 
@@ -24,7 +20,7 @@ public class Vue_Main {
         
         if (!partieEnCours) {
             partieEnCours = true;
-            Vue_PartiePrinc partie = new Vue_PartiePrinc();
+            Vue_Partie partie = new Vue_Partie();
             partie.start();
             partieEnCours = false;
         }
