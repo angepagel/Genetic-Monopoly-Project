@@ -3,24 +3,16 @@ package monopoly.vue;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.geometry.Insets;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.ComboBox;
-import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 
-import javafx.scene.layout.FlowPane;
 import javafx.stage.Stage;
 import monopoly.controleur.ControleurChoixPion;
 import monopoly.modele.Pion;
 
-import javax.swing.*;
-import java.awt.*;
-import java.util.ArrayList;
-
-public class Vue_LancementPartie {
+public class VueLancementPartie {
 
     @FXML
     private ComboBox<Pion> PionJoueurI;
@@ -36,7 +28,7 @@ public class Vue_LancementPartie {
     private boolean continuer = false;
 
 
-    public Vue_LancementPartie() {
+    public VueLancementPartie() {
         controleur = new ControleurChoixPion();
         PionJoueurI = new ComboBox<Pion>();
         PionJoueurII = new ComboBox<Pion>();
@@ -59,8 +51,8 @@ public class Vue_LancementPartie {
 
         this.InitComboBoxJoueurs();
         Stage choixPion = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("Vue_LancementPartie.fxml"));
-        //root.getChildrenUnmodifiable().addAll(new Panel_Case(0.0).getPane());
+        Parent root = FXMLLoader.load(getClass().getResource("VueLancementPartie.fxml"));
+        //root.getChildrenUnmodifiable().addAll(new PanelCase(0.0).getPane());
         choixPion.setTitle("Monopoly Génétique");
         choixPion.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         choixPion.setScene(new Scene(root, 650, 400));

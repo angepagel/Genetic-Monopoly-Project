@@ -21,11 +21,24 @@ public class Jeu {
      */
     private static Jeu instance;
 
+    /**
+     * Liste des joueurs.
+     */
     private ArrayList<Joueur> joueurs;
 
+    /**
+     * Joueur dont c'est le tour.
+     */
     private Joueur joueurEnCours;
 
+    /**
+     * Plateau de jeu
+     */
     private Plateau plateau;
+
+    /**
+     * Dés
+     */
     private Des des;
 
     /**
@@ -57,63 +70,123 @@ public class Jeu {
         throw new NotImplementedException();
     }
 
+    /**
+     * Permet de récupérer le nombre de joueurs de la partie
+     * @return Nombre de joueurs.
+     */
     public int getNbJoueurs() {
         return joueurs.size();
     }
 
+    /**
+     * Permet de récupérer le montant initial possédé par les joueurs au début de la partie.
+     * @return Montant initial.
+     */
     public int getMontantInitial() {
         return 1500;
     }
 
+    /**
+     * Permet de récupérer le nombre de tours qui se sont écoulés.
+     * @return Nombre de tours.
+     */
     public int getNbTours() {
         return nbTours;
     }
 
+    /**
+     * Permet d'initialiser la partie.
+     */
     public void initialisation() {
         nbTours = 0;
         plateau = new Plateau();
     }
 
-
+    /**
+     * Logique des enchères.
+     */
     public void encheres() {
         // TODO : Implémenter les enchères
     }
 
+    /**
+     * Permet de récupérer le nombre maximal de maisons sur une propriété avant un hôtel
+     * @return Le nombre maximal de maisons qu'une propriété peut avoir.
+     */
     public int getNbMaxMaisons() {
         return 4;
     }
 
+    /**
+     * Permet d'initialiser les joueurs.
+     */
     public void creerJoueurs() {
         // TODO : Implémenter la création des joueurs
     }
 
+    /**
+     * Permet de savoir le nombre maximal de doubles autorisé avant d'aller en prison.
+     * @return Le nombre maximal de doubles autorisés.
+     */
     public int getMaxDoubles() {
         return 3;
     }
 
+    /**
+     * Permet de savoir combien on gagne en passant par la case départ.
+     * @return L'argent gagné en passant par la case départ.
+     */
     public int getArgentCaseDepart() {
         return 200;
     }
 
+    /**
+     * Permet de savoir qui est le vainqueur.
+     * @return Récupère le vainqueur.
+     */
     public Joueur getVainqueur() {
         // TODO : Déterminer le vainqueur
         throw new NotImplementedException();
     }
 
+    /**
+     * Permet de récupérer les dés.
+     * @return Les dés.
+     */
     public Des getDes() {
         return des;
     }
 
+    /**
+     * Permet de récupérer le plateau.
+     * @return Le plateau
+     */
     public Plateau getPlateau() {
         return plateau;
     }
 
+    /**
+     * Permet de récupérer le joueur dont c'est le tour.
+     * @return Joueur dont c'est le tour
+     */
     public Joueur getJoueurEnCours() {
         return joueurEnCours;
     }
 
+    /**
+     * Permet de définir le joueur dont c'est le tour.
+     * @param joueur Joueur dont c'est le tour.
+     */
     public void setJoueurEnCours(Joueur joueur) {
         joueurEnCours = joueur;
+    }
+
+    /**
+     * Permet de faire passer le tour au prochain joueur dans l'ArrayList.
+     */
+    public void prochainJoueur() {
+        int nextIndex = (joueurs.indexOf(joueurEnCours) + 1) % joueurs.size();
+        setJoueurEnCours(joueurs.get(nextIndex));
     }
 
     /**

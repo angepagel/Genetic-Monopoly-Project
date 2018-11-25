@@ -11,11 +11,11 @@ import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
 
-public class Controleur_ChangementTour extends Controleur {
+public class ControleurChangementTour extends Controleur {
 
     ArrayList<Joueur> joueurs;
     private Jeu modele;
-    public Controleur_ChangementTour(Jeu modele){
+    public ControleurChangementTour(Jeu modele){
         joueurs= new ArrayList<Joueur>();
         this.modele=modele;
         InitJoueur();

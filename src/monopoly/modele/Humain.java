@@ -1,5 +1,8 @@
 package monopoly.modele;
 
+/**
+ * Représente un joueur humain (par opposition aux IAs).
+ */
 public class Humain extends Joueur {
     public Humain(String nom) {
         super(nom);

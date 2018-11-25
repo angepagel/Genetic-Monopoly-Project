@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import java.lang.String?>
 <?import javafx.collections.FXCollections?>
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.vue.Vue_LancementPartie">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.vue.VueLancementPartie">
    <children>
 
        <Label layoutX="233.0" layoutY="63.0" prefHeight="17.0" prefWidth="150.0" text="Veuillez choisir votre Pion: " />

@@ -2,19 +2,19 @@ package monopoly.controleur;
 
 import javafx.event.ActionEvent;
 import monopoly.modele.Des;
-import monopoly.vue.Vue_Des;
+import monopoly.vue.VueDes;
 
 import javafx.scene.image.ImageView;
 
-public class Controleur_De extends Controleur {
+public class ControleurDe extends Controleur {
 
     private Des des;
 
-    private Vue_Des vueDes;
+    private VueDes vueDes;
 
-    public Controleur_De(ImageView de1, ImageView de2) {
+    public ControleurDe(ImageView de1, ImageView de2) {
         this.des = new Des();
-        this.vueDes = new Vue_Des(this.des, de1, de2);
+        this.vueDes = new VueDes(this.des, de1, de2);
     }
 
     public void actionLancerDes(ActionEvent action) {

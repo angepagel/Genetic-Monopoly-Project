@@ -12,7 +12,7 @@ import static monopoly.modele.Jeu.getInstance;
  *
  * @author rg686289
  */
-public class Vue_Main {
+public class VueMain {
     
     private boolean partieEnCours = false;
     
@@ -20,9 +20,9 @@ public class Vue_Main {
         
         if (!partieEnCours) {
             partieEnCours = true;
-           // Vue_LancementPartie initPartie = new Vue_LancementPartie();
+           // VueLancementPartie initPartie = new VueLancementPartie();
            // initPartie.start();
-            Vue_Partie partie = new Vue_Partie();
+            VuePartie partie = new VuePartie();
             partie.start();
             partieEnCours = false;
         }
