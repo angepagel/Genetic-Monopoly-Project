@@ -1,5 +1,7 @@
 package monopoly.modele;
 
+import monopoly.modele.cartes.Carte_SortiePrison_Caisse;
+import monopoly.modele.cartes.Carte_SortiePrison_Chance;
 import monopoly.modele.cases.Case_Achat;
 import monopoly.modele.cases.Case_Terrain;
 import monopoly.modele.cases.ECase;
@@ -47,13 +49,57 @@ public abstract class Joueur {
     private ArrayList<Case_Achat> proprietes;
 
     /**
+     * Carte de sortie de prison de type chance. Si elle n'est pas possédée, vaut null.
+     */
+    private Carte_SortiePrison_Chance sortiePrisonChance;
+
+    /**
+     * Carte de sortie de prison de type caisse de communauté. Si elle n'est pas possédée, vaut null.
+     */
+    private Carte_SortiePrison_Caisse sortiePrisonCaisse;
+
+    /**
      * Permet d'initialiser le joueur.
      * @param nom Nom du joueur.
      */
     public Joueur(String nom) {
         this.nom = nom;
         solde = new Solde(this);
+        sortiePrisonChance = null;
     }
+
+    public Carte_SortiePrison_Chance getSortiePrisonChance() {
+        return sortiePrisonChance;
+    }
+
+    public void setSortiePrisonChance(Carte_SortiePrison_Chance sortiePrisonChance) {
+        this.sortiePrisonChance = sortiePrisonChance;
+    }
+
+    public boolean aSortiePrisonChance() {
+        return (sortiePrisonChance != null);
+    }
+
+    public Carte_SortiePrison_Caisse getSortiePrisonCaisse() {
+        return sortiePrisonCaisse;
+    }
+
+    public void setSortiePrisonCaisse(Carte_SortiePrison_Caisse sortiePrisonCaisse) {
+        this.sortiePrisonCaisse = sortiePrisonCaisse;
+    }
+
+    public boolean aSortiePrisonCaisse() {
+        return (sortiePrisonCaisse != null);
+    }
+
+    /**
+     * Permet de savoir si le joueur dispose de l'une des deux cartes de sortie de prison.
+     * @return Vrai s'il en possède une.
+     */
+    public boolean aSortiePrison() {
+        return aSortiePrisonCaisse() || aSortiePrisonChance();
+    }
+
 
     /**
      * Logique du tour du joueur.

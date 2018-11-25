@@ -3,8 +3,8 @@ package monopoly.modele.cartes;
 import monopoly.modele.Joueur;
 
 public abstract class Carte_DeplacementVers extends Carte {
-    String objectif;
-    public Carte_DeplacementVers(String texte, String objectif) {
+    private String objectif;
+    public Carte_DeplacementVers(String objectif, String texte) {
         super(texte);
         this.objectif = objectif;
     }

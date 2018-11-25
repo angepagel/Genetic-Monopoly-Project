@@ -42,12 +42,17 @@ public class Jeu {
     private Des des;
 
     /**
+     * Gestionnaire des cartes du jeu.
+     */
+    private GestionnaireCartes gestionnaireCartes;
+
+    /**
      * Constructeur du jeu, ne prenant pas de paramètres puisqu'il s'agit d'un singleton.
      */
     private Jeu() {
-        // TODO : Initialiser les attributs
         joueurs = new ArrayList<>();
         des = new Des();
+        gestionnaireCartes = new GestionnaireCartes();
     }
 
     /**
@@ -190,12 +195,31 @@ public class Jeu {
     }
 
     /**
+     * Permet de récupérer le gestionnaire de cartes.
+     * @return Gestionnaire de cartes.
+     */
+    public GestionnaireCartes getGestionnaireCartes() {
+        return gestionnaireCartes;
+    }
+
+    /**
+     * Permet de récupérer la liste des joueurs.
+     * @return Liste des joueurs.
+     */
+    public ArrayList<Joueur> getJoueurs() {
+        return joueurs;
+    }
+
+    /**
      * Fonction main temporaire de test
      */
-    //public static void  main(String[] args)
+    public static void  main(String[] args) {
+        Jeu j = Jeu.getInstance();
+        j.run();
+    }
     public void run() {
         Scanner sc = new Scanner(System.in);
-        Jeu j = Jeu.getInstance();
+        Jeu j = this;
 
         j.initialisation();
         Joueur j1 = new Humain("Yan");

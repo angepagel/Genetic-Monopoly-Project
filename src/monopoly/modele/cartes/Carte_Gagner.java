@@ -5,7 +5,7 @@ import monopoly.modele.Joueur;
 public class Carte_Gagner extends Carte {
     private int montant;
 
-    public Carte_Gagner(String texte, int montant) {
+    public Carte_Gagner(int montant, String texte) {
         super(texte);
         this.montant = montant;
     }
