@@ -9,7 +9,7 @@ import java.util.Objects;
 /**
  * Classe représentant un joueur.
  */
-public abstract class Joueur {
+    public abstract class Joueur {
     private String nom;
     private boolean faillite;
     private int nbDoubles;

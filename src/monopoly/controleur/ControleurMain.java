@@ -91,4 +91,11 @@ public class ControleurMain extends Controleur {
         new DialogueVoirDetailsPropriete(2);
     }
 
+    public void actionVoirPropriété(String nomCase) throws IOException {
+        System.out.println((Case_Achat) Jeu.getInstance().getPlateau().getCase( nomCase));
+
+        new DialogueVoirDetailsPropriete();
+
+    }
+
 }
