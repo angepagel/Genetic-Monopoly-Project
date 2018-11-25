@@ -3,23 +3,54 @@ package monopoly.modele;
 import monopoly.modele.cases.Case;
 import monopoly.modele.cases.ECase;
 
+/**
+ * Représente le pion du joueur, donc sa position sur la map.
+ */
 public class Pion {
+    /**
+     * Case sur laquelle est situé le pion.
+     */
     private Case position;
+
+    /**
+     * Nom du pion.
+     */
     private String nom;
+
+    /**
+     * Joueur à qui le pion appartient.
+     */
     private Joueur joueur;
+
+    /**
+     * Permet de savoir si on vient de passer par la case départ.
+     */
     private boolean caseDepartLast;
 
+    /**
+     * Permet de créer un nouveau pion
+     * @param position Position de base du pion.
+     * @param nom Nom du pion.
+     */
     public Pion(Case position, String nom) {
         this.position = position;
         this.nom = nom;
         caseDepartLast = false;
     }
 
+    /**
+     * Permet de créer un nouveau pion, par défaut, sur la case départ.
+     * @param nom Nom du pion.
+     */
     public Pion(String nom) {
         this.nom = nom;
         this.position = Jeu.getInstance().getPlateau().getCaseDepart();
     }
 
+    /**
+     * Permet de déplacer le pion d'un certain nombre de cases.
+     * @param nbCases Nombre de cases dont on veut avancer.
+     */
     public void deplacer(int nbCases) {
         caseDepartLast = false;
         for(int i = 0; i < nbCases; ++i) {
@@ -29,6 +60,10 @@ public class Pion {
         position.action(getJoueur());
     }
 
+    /**
+     * Permet de déplacer le pion jusqu'à une case
+     * @param objectif Nom de la case (ATTENTION : Doit exister sur le plateau, sinon boucle infinie).
+     */
     public void deplacer(String objectif) {
         caseDepartLast = false;
         while(!position.getNom().equals(objectif)) {
@@ -38,6 +73,10 @@ public class Pion {
         position.action(getJoueur());
     }
 
+    /**
+     * Permet de reculer d'un certain nombre de cases.
+     * @param nbCases Nombre de cases dont on veut reculer.
+     */
     public void reculer(int nbCases) {
         caseDepartLast = false;
         for(int i = 0; i < nbCases; ++i) {
@@ -47,6 +86,10 @@ public class Pion {
         position.action(getJoueur());
     }
 
+    /**
+     * Permet de reculer jusqu'à une case.
+     * @param objectif Nom de la case (ATTENTION : doit exister sur le plateau, sinon boucle infinie).
+     */
     public void reculer(String objectif) {
         caseDepartLast = false;
         while(!position.getNom().equals(objectif)) {
@@ -78,10 +121,18 @@ public class Pion {
         }
     }
 
+    /**
+     * Permet de récupérer la case sur laquelle est situé le pion.
+     * @return La case sur laquelle le pion se situe.
+     */
     public Case getPosition() {
         return position;
     }
 
+    /**
+     * Permet de mettre le pion sur une case définie.
+     * @param position Case sur laquelle on souhaite poser le pion.
+     */
     public void setPosition(Case position) {
         this.position = position;
     }
@@ -101,16 +152,26 @@ public class Pion {
         caseDepartLast = true;
     }
 
-
-
+    /**
+     * Permet de récupérer le nom du pion.
+     * @return Nom du pion.
+     */
     public String getNom() {
         return nom;
     }
 
+    /**
+     * Permet de récupérer le joueur associé au pion.
+     * @return Joueur associé.
+     */
     public Joueur getJoueur() {
         return joueur;
     }
 
+    /**
+     * Permet de changer le joueur associé au pion.
+     * @param joueur Joueur nouvellement associé.
+     */
     public void setJoueur(Joueur joueur) {
         this.joueur = joueur;
     }

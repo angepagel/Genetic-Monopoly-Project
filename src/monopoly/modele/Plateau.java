@@ -6,8 +6,19 @@ import monopoly.modele.cases.*;
 import java.util.ArrayList;
 
 public class Plateau {
+    /**
+     * Liste des cases du plateau.
+     */
     private ArrayList<Case> listeCases;
+
+    /**
+     * Case départ.
+     */
     private Case_Depart caseDepart;
+
+    /**
+     * Créé le plateau.
+     */
     public Plateau() {
         listeCases = new ArrayList<>();
 
@@ -151,6 +162,11 @@ public class Plateau {
         caseDepart.setSuivante(belleville);
     }
 
+    /**
+     * Permet de récupérer une case en fonction de son nom.
+     * @param nom Nom de la case qu'on souhaite récupérer.
+     * @return Case récupérée (ou null).
+     */
     public Case getCase(String nom) {
         Case res = null;
 
@@ -163,6 +179,10 @@ public class Plateau {
         return res;
     }
 
+    /**
+     * Permet de récupérer la case départ de la map.
+     * @return Case départ
+     */
     public Case_Depart getCaseDepart() {
         return caseDepart;
     }

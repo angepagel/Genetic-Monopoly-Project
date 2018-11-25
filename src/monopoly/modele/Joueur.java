@@ -1,6 +1,7 @@
 package monopoly.modele;
 
 import monopoly.modele.cases.Case_Achat;
+import monopoly.modele.cases.Case_Terrain;
 import monopoly.modele.cases.ECase;
 
 import java.util.ArrayList;
@@ -10,59 +11,137 @@ import java.util.Objects;
  * Classe représentant un joueur.
  */
 public abstract class Joueur {
+    /**
+     * Nom du joueur
+     */
     private String nom;
+
+    /**
+     * S'il est en faillite ou non.
+     */
     private boolean faillite;
+
+    /**
+     * Nombre de doubles effectués à la suite. Au bout de 3, le joueur va en prison.
+     */
     private int nbDoubles;
+
+    /**
+     * Nombre de tours passés en prison à la suite. Au bout de 3, le joueur doit obligatoirement payer pour sortir.
+     */
     private int toursEnPrison;
+
+    /**
+     * Pion du joueur, qui représente son emplacement sur le plateau.
+     */
     private Pion pion;
+
+    /**
+     * Représente le solde du joueur (son argent et toutes les opérations liées).
+     */
     private Solde solde;
+
+    /**
+     * Liste des propriétés possédées par le joueur.
+     */
     private ArrayList<Case_Achat> proprietes;
 
+    /**
+     * Permet d'initialiser le joueur.
+     * @param nom Nom du joueur.
+     */
     public Joueur(String nom) {
         this.nom = nom;
         solde = new Solde(this);
     }
 
+    /**
+     * Logique du tour du joueur.
+     */
     public void tour() {
         // TODO : Logique du tour du joueur.
     }
 
+    /**
+     * Permet de chosiir un pion.
+     * @param p Pion choisi.
+     */
     public void choisirPion(Pion p) {
         pion = p;
         p.setJoueur(this);
     }
 
+    /**
+     * Lorsqu'on a fait un double, on augmente le nombre de doubles.
+     */
     public void incNbDoubles() {
         nbDoubles++;
     }
 
+    /**
+     * Permet de récupérer le joueur sous forme de joueur.
+     * @return Le joueur.
+     */
     public abstract Joueur getJoueur();
+
+    /**
+     * Permet de récupérer le type du joueur
+     * @return Le type du joueur (Humain ou IA).
+     */
     public abstract EJoueur getType();
 
+    /**
+     * Permet de savoir si le joueur est en faillite.
+     * @return True s'il l'est. Faux sinon.
+     */
     public boolean isFaillite() {
         return faillite;
     }
 
+    /**
+     * Permet de mettre un joueur en faillite, ou l'inverse.
+     * @param faillite Indique si le joueur est en faillite.
+     */
     public void setFaillite(boolean faillite) {
         this.faillite = faillite;
     }
 
+    /**
+     * Permet de récupérer le nom du joueur.
+     * @return Nom du joueur.
+     */
     public String getNom() {
         return nom;
     }
 
+    /**
+     * Permet de récupérer le nombre de tours passés en prison.
+     * @return Nombre de tours passés en prison.
+     */
     public int getToursEnPrison() {
         return toursEnPrison;
     }
 
+    /**
+     * Permet de récupérer le solde du joueur.
+     * @return Solde.
+     */
     public Solde getSolde() {
         return solde;
     }
 
+    /**
+     * Permet de récupérer le pion du joueur.
+     * @return Pion.
+     */
     public Pion getPion() {
         return pion;
     }
 
+    /**
+     * Permet de récupérer le nombre de gares que possède le joueur.
+     * @return Nombre de gares possédé par le joueur.
+     */
     public int getNbGares() {
         int nbGares = 0;
         for(Case_Achat propriete : proprietes) {
@@ -74,6 +153,10 @@ public abstract class Joueur {
         return nbGares;
     }
 
+    /**
+     * Permet de récupérer le nombre de compagnies possédées par le joueur.
+     * @return Nombre de compagnies possédéespa le joueur.
+     */
     public int getNbCompagnies() {
         int nbCompagnies = 0;
         for(Case_Achat propriete: proprietes) {
@@ -85,10 +168,49 @@ public abstract class Joueur {
         return nbCompagnies;
     }
 
+    /**
+     * Permet de savoir si le joueur est en prison.
+     * @return Vrai si le joueur est en prison. Faux sinon.
+     */
     private boolean isEnPrison() {
         return pion.getPosition().getType() == ECase.Prison;
     }
 
+    /**
+     * Permet de récupérer le nombre de maisons sur les propriétés possédées par le joueur.
+     * @return Nombre de missions du joueur.
+     */
+    public int getNbMaisons() {
+        int nbMaisons = 0;
+
+        for(Case_Achat propriete: proprietes) {
+            if(propriete.getType() == ECase.Terrain) {
+                Case_Terrain terrain = (Case_Terrain) propriete;
+                nbMaisons = terrain.getNbMaisons();
+            }
+        }
+
+        return nbMaisons;
+    }
+
+    /**
+     * Permet de récupérer le nombre d'hôtels sur les propriétés possédées par le joueur.
+     * @return Nombre d'hôtels du joueur.
+     */
+    public int getNbHotels() {
+        int nbHotels = 0;
+
+        for(Case_Achat propriete : proprietes) {
+            if(propriete.getType() == ECase.Terrain) {
+                Case_Terrain terrain = (Case_Terrain) propriete;
+                if(terrain.isHotel()) {
+                    ++nbHotels;
+                }
+            }
+        }
+
+        return nbHotels;
+    }
 
     @Override
     public boolean equals(Object o) {
