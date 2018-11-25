@@ -7,13 +7,13 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import monopoly.modele.Des;
 
-public class Vue_Des {
+public class VueDes {
 
     private Des des;
     private ImageView imgDe1;
     private ImageView imgDe2;
 
-    public Vue_Des(Des des, ImageView imgDe1, ImageView imgDe2) {
+    public VueDes(Des des, ImageView imgDe1, ImageView imgDe2) {
         this.des = des;
         this.imgDe1 = imgDe1;
         this.imgDe2 = imgDe2;

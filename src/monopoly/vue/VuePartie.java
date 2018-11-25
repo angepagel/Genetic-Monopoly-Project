@@ -15,7 +15,7 @@ import javafx.stage.Stage;
  *
  * @author rg686289
  */
-public class Vue_Partie {
+public class VuePartie {
     
     public void start() throws Exception{
         Stage primaryStage = new Stage();

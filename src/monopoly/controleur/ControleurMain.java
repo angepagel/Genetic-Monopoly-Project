@@ -23,13 +23,13 @@ public class ControleurMain extends Controleur {
 
 
     private Jeu jeu;
-    private Controleur_ChangementTour controleur_Tour ;
-    private Controleur_De controleur_de;
+    private ControleurChangementTour controleur_Tour ;
+    private ControleurDe controleur_de;
 
 
     public void InitJeu(){
         jeu= getInstance();
-        controleur_Tour=  new Controleur_ChangementTour(jeu);
+        controleur_Tour=  new ControleurChangementTour(jeu);
     }
     
 
@@ -47,7 +47,7 @@ public class ControleurMain extends Controleur {
 
     @FXML
     public void actionLancerDes(ActionEvent action) {
-        this.controleur_de = new Controleur_De(de_1, de_2);
+        this.controleur_de = new ControleurDe(de_1, de_2);
         this.controleur_de.actionLancerDes(action);
     }
 

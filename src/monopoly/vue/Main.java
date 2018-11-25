@@ -12,7 +12,7 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("VueMain.fxml"));
-        //root.getChildrenUnmodifiable().addAll(new Panel_Case(0.0).getPane());
+        //root.getChildrenUnmodifiable().addAll(new PanelCase(0.0).getPane());
         primaryStage.setTitle("Monopoly Génétique");
         primaryStage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         primaryStage.setScene(new Scene(root, 650, 400));

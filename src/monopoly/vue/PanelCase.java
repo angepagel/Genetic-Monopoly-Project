@@ -10,7 +10,7 @@ import javafx.scene.text.TextAlignment;
 /**
  * Created by maxim on 23/11/2018.
  */
-public class Panel_Case extends FlowPane {
+public class PanelCase extends FlowPane {
 
     private FlowPane header;
     private Label nom;
@@ -24,18 +24,18 @@ public class Panel_Case extends FlowPane {
     private ImageView emplacementJoueur_8;
     private Label prix;
 
-    public Panel_Case() {
+    public PanelCase() {
 
         this.header = new FlowPane();
         this.nom = new Label();
-        this.emplacementJoueur_1 = new Panel_Case_EmplacementJoueur();
-        this.emplacementJoueur_2 = new Panel_Case_EmplacementJoueur();
-        this.emplacementJoueur_3 = new Panel_Case_EmplacementJoueur();
-        this.emplacementJoueur_4 = new Panel_Case_EmplacementJoueur();
-        this.emplacementJoueur_5 = new Panel_Case_EmplacementJoueur();
-        this.emplacementJoueur_6 = new Panel_Case_EmplacementJoueur();
-        this.emplacementJoueur_7 = new Panel_Case_EmplacementJoueur();
-        this.emplacementJoueur_8 = new Panel_Case_EmplacementJoueur();
+        this.emplacementJoueur_1 = new PanelCaseEmplacementJoueur();
+        this.emplacementJoueur_2 = new PanelCaseEmplacementJoueur();
+        this.emplacementJoueur_3 = new PanelCaseEmplacementJoueur();
+        this.emplacementJoueur_4 = new PanelCaseEmplacementJoueur();
+        this.emplacementJoueur_5 = new PanelCaseEmplacementJoueur();
+        this.emplacementJoueur_6 = new PanelCaseEmplacementJoueur();
+        this.emplacementJoueur_7 = new PanelCaseEmplacementJoueur();
+        this.emplacementJoueur_8 = new PanelCaseEmplacementJoueur();
         this.prix = new Label();
 
         this.getChildren().addAll(header, emplacementJoueur_1, emplacementJoueur_2,
