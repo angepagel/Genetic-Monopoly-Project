@@ -114,4 +114,10 @@ public class Pion {
     public void setJoueur(Joueur joueur) {
         this.joueur = joueur;
     }
+
+
+    @Override
+    public String toString(){
+        return nom;
+    }
 }

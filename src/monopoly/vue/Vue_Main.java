@@ -20,6 +20,8 @@ public class Vue_Main {
         
         if (!partieEnCours) {
             partieEnCours = true;
+           // Vue_LancementPartie initPartie = new Vue_LancementPartie();
+           // initPartie.start();
             Vue_Partie partie = new Vue_Partie();
             partie.start();
             partieEnCours = false;
