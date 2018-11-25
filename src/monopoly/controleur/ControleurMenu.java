@@ -9,7 +9,7 @@ public class ControleurMenu {
 
     @FXML
     public void actionPartieClassique() throws IOException {
-        new Partie().start();
+        new Partie();
     }
 
     @FXML

@@ -14,14 +14,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Partie {
-    
-    public void start() throws IOException {
-        Stage primaryStage = new Stage();
-        Parent root = FXMLLoader.load(getClass().getResource("partie.fxml"));
-        primaryStage.setTitle("Monopoly Génétique");
-        primaryStage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
-        primaryStage.setScene(new Scene(root, 1080, 720));
-        primaryStage.setResizable(false);
-        primaryStage.showAndWait();
-    } 
+
+    public Partie() throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("partie.fxml"));
+        Parent parent = loader.load();
+        Scene scene = new Scene(parent);
+        Stage stage = new Stage();
+        stage.setTitle("Partie Classique");
+        stage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
+        stage.setScene(scene);
+        stage.show();
+    }
+
 }
