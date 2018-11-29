@@ -52,7 +52,6 @@ public class Jeu {
     private Jeu() {
         joueurs = new ArrayList<>();
         des = new Des();
-        gestionnaireCartes = new GestionnaireCartes();
     }
 
     /**
@@ -105,6 +104,7 @@ public class Jeu {
     public void initialisation() {
         nbTours = 0;
         plateau = new Plateau();
+        gestionnaireCartes = new GestionnaireCartes();
     }
 
     /**
