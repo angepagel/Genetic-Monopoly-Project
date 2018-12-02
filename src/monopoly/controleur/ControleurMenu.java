@@ -1,7 +1,6 @@
 package monopoly.controleur;
 
 import javafx.fxml.FXML;
-import monopoly.vue.Partie;
 
 import java.io.IOException;
 import monopoly.vue.VueLancementPartie;

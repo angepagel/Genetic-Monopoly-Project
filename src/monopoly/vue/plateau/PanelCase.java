@@ -1,9 +1,12 @@
-package monopoly.vue;
+package monopoly.vue.plateau;
 
+import javafx.geometry.Insets;
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
-import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.*;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Region;
+import javafx.scene.paint.Color;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 
@@ -12,7 +15,7 @@ import javafx.scene.text.TextAlignment;
  */
 public class PanelCase extends FlowPane {
 
-    private FlowPane header;
+    private Rectangle header;
     private Label nom;
     private ImageView emplacementJoueur_1;
     private ImageView emplacementJoueur_2;
@@ -26,7 +29,26 @@ public class PanelCase extends FlowPane {
 
     public PanelCase() {
 
-        this.header = new FlowPane();
+        // Panel properties
+        this.setWidth(58);
+        this.setHeight(90);
+        this.setMinWidth(58);
+        this.setMinHeight(90);
+        this.setMaxWidth(58);
+        this.setMaxHeight(90);
+        this.setStyle("-fx-background-color: white");
+
+        this.setRotate(0);
+        this.setBorder(
+                new Border(new BorderStroke(
+                        Color.BLACK,
+                        BorderStrokeStyle.SOLID,
+                        CornerRadii.EMPTY,
+                        BorderWidths.DEFAULT))
+        );
+
+        // Component properties
+        this.header = new Rectangle(0,0,56,17);
         this.nom = new Label();
         this.emplacementJoueur_1 = new PanelCaseEmplacementJoueur();
         this.emplacementJoueur_2 = new PanelCaseEmplacementJoueur();
@@ -38,43 +60,31 @@ public class PanelCase extends FlowPane {
         this.emplacementJoueur_8 = new PanelCaseEmplacementJoueur();
         this.prix = new Label();
 
-        this.getChildren().addAll(header, emplacementJoueur_1, emplacementJoueur_2,
+        this.getChildren().addAll(header, nom, emplacementJoueur_1, emplacementJoueur_2,
                 emplacementJoueur_3, emplacementJoueur_4, emplacementJoueur_5,
                 emplacementJoueur_6, emplacementJoueur_7, emplacementJoueur_8,
                 prix);
 
-        this.setPrefWidth(58);
-        this.setPrefHeight(90);
-        this.setMinWidth(Region.USE_PREF_SIZE);
-        this.setMinHeight(Region.USE_PREF_SIZE);
-        this.setMaxWidth(Region.USE_PREF_SIZE);
-        this.setMaxHeight(Region.USE_PREF_SIZE);
-        this.setRotate(0);
-
         // Header parameters
-        this.header.setPrefWidth(56);
-        this.header.setPrefHeight(17);
-        this.header.setMinWidth(Region.USE_PREF_SIZE);
-        this.header.setMinHeight(Region.USE_PREF_SIZE);
-        this.header.setMaxWidth(Region.USE_PREF_SIZE);
-        this.header.setMaxHeight(Region.USE_PREF_SIZE);
-        this.header.setStyle("-fx-border-color: black;");
-        this.header.setStyle("-fx-background-color: #944828;");
-        this.header.setStyle("-fx-border-width:  0px 0px 1px 0px;");
+        this.header.setFill(Color.web("#944828"));
 
         // Paramètres du nom
-        this.nom.setPrefWidth(56);
-        this.nom.setPrefHeight(29);
-        this.nom.setText("");
-        this.nom.setFont(new Font("System", 7));
+        this.nom.setPrefWidth(58);
+        this.nom.setPrefHeight(16);
+        this.nom.setText("PROPRIETE");
+        this.nom.setFont(new Font("System", 8));
+        this.nom.setAlignment(Pos.CENTER);
         this.nom.setTextAlignment(TextAlignment.CENTER);
 
         // Paramètres du label de prix
-        this.prix.setPrefWidth(56);
+        this.prix.setPrefWidth(58);
         this.prix.setPrefHeight(16);
-        this.prix.setText("");
-        this.prix.setFont(new Font("System", 7));
+        this.prix.setText("$Prix");
+        this.prix.setFont(new Font("System", 8));
+        this.prix.setAlignment(Pos.CENTER);
         this.prix.setTextAlignment(TextAlignment.CENTER);
+
+
     }
 
 }

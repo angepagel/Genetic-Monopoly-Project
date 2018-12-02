@@ -1,4 +1,4 @@
-package monopoly.vue;
+package monopoly.vue.plateau;
 
 import javafx.scene.image.ImageView;
 

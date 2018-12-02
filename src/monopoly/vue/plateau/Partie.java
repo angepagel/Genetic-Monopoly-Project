@@ -3,10 +3,8 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package monopoly.vue;
+package monopoly.vue.plateau;
 
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.StackPane;
@@ -20,6 +18,13 @@ public class Partie {
         StackPane root = new StackPane();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
+
+        // Init components
+        root.getChildren().add(new PanelPlateau());
+        root.getChildren().add(new PanelAction());
+
+        root.setPrefSize(1080,720);
+
         stage.setTitle("Partie Classique");
         stage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         stage.setScene(scene);
