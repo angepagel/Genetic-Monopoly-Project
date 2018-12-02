@@ -9,6 +9,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.StackPane;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,9 +17,8 @@ import java.io.IOException;
 public class Partie {
 
     public Partie() throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("partie.fxml"));
-        Parent parent = loader.load();
-        Scene scene = new Scene(parent);
+        StackPane root = new StackPane();
+        Scene scene = new Scene(root);
         Stage stage = new Stage();
         stage.setTitle("Partie Classique");
         stage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
