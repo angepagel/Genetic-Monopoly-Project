@@ -7,15 +7,17 @@ package monopoly.vue.partieclassique;
 
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.StackPane;
+import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import monopoly.vue.partieclassique.action.PanelAction;
+import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
 import java.io.IOException;
 
 public class Partie {
 
     public Partie() throws IOException {
-        StackPane root = new StackPane();
+        HBox root = new HBox();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
 

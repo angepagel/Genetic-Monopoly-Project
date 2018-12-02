@@ -1,4 +1,4 @@
-package monopoly.vue.partieclassique;
+package monopoly.vue.partieclassique.action;
 
 import javafx.scene.layout.VBox;
 

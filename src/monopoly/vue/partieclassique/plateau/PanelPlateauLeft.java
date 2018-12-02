@@ -1,15 +1,16 @@
-package monopoly.vue.partieclassique;
+package monopoly.vue.partieclassique.plateau;
 
+import javafx.geometry.Pos;
 import javafx.scene.layout.HBox;
 
-public class PanelPlateauBottom extends HBox {
+public class PanelPlateauLeft extends HBox {
 
-    public PanelPlateauBottom() {
+    public PanelPlateauLeft() {
 
         this.setWidth(500);
         this.setHeight(500);
-        this.setRotate(0);
-        this.getChildren().add(new PanelCaseDepart());
+        this.setRotate(90);
+        this.setAlignment(Pos.BOTTOM_LEFT);
         this.getChildren().add(new PanelCase());
         this.getChildren().add(new PanelCase());
         this.getChildren().add(new PanelCase());
@@ -19,7 +20,6 @@ public class PanelPlateauBottom extends HBox {
         this.getChildren().add(new PanelCase());
         this.getChildren().add(new PanelCase());
         this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCaseDepart());
     }
 
 }
