@@ -10,8 +10,8 @@ public class ControleurMenu {
 
     @FXML
     public void actionPartieClassique() throws IOException {
-        //new VueLancementPartie();
-        new Partie();
+        new VueLancementPartie();
+        //new Partie();
         
     }
 

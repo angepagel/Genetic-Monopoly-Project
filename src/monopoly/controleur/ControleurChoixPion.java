@@ -8,17 +8,21 @@ import java.util.ArrayList;
 import java.util.Observable;
 import static monopoly.modele.EJoueur.IA;
 import monopoly.modele.Humain;
+import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 
 public class ControleurChoixPion {
 
     private ObservableList<Pion> listePions;
     private ArrayList<Joueur> joueurs;
+    private Jeu j;
     public ControleurChoixPion(){
-
+        j= Jeu.getInstance();
+        joueurs= j.getJoueurs();
     }
 
     public void InitPion() {
+        j.initialisation();
         Pion cheval = new Pion("cheval");
         Pion DeAcoudre = new Pion("DeAcoudre");
         Pion bateau = new Pion("bateau");
@@ -39,12 +43,14 @@ public class ControleurChoixPion {
     
 
     public void setPionJoueurs(Pion PjoueurOne, Pion PjoueurTwo) {
-        /*Joueur j1 = new Humain("random");
+        
+        Joueur j1 = new Humain("random");
         Joueur j2 = new Humain("random2");
-        j1.choisirPion(PjoueurOne);
-        j2.choisirPion(PjoueurTwo);
-        joueurs.add(j1);
-        joueurs.add(j2);*/
+        j.setJoueur(j1,PjoueurOne);
+        j.setJoueur(j2,PjoueurTwo);
+        
+        
+        
         
     }
 }

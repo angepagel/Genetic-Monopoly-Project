@@ -209,6 +209,12 @@ public class Jeu {
     public ArrayList<Joueur> getJoueurs() {
         return joueurs;
     }
+    
+    public void setJoueur(Joueur j,Pion p){
+        j.choisirPion(p);
+        joueurs.add(j);
+        
+    }
 
     /**
      * Fonction main temporaire de test
@@ -274,4 +280,6 @@ public class Jeu {
 
         System.out.println("Merci d'avoir joué !");
     }
+
+   
 }

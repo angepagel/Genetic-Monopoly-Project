@@ -88,11 +88,13 @@ public class VueLancementPartie {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                  // controleur.setPionJoueurs(listJOne.getSelectionModel().getSelectedItem(),listJTwo.getSelectionModel().getSelectedItem());
-                    new Partie();
-                    stage.close();
+                    if(listJOne.getSelectionModel().getSelectedItem()!=null && listJTwo.getSelectionModel().getSelectedItem()!=null ){
+                        controleur.setPionJoueurs(listJOne.getSelectionModel().getSelectedItem(),listJTwo.getSelectionModel().getSelectedItem());
+                        new Partie();
+                        stage.close();
+                    }
                     
-                } catch (IOException ex) {
+                }catch (IOException ex){
                     Logger.getLogger(VueLancementPartie.class.getName()).log(Level.SEVERE, null, ex);
                 }
             }
