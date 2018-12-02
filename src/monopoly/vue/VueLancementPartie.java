@@ -1,5 +1,6 @@
 package monopoly.vue;
 
+import com.sun.jnlp.ApiDialog.DialogResult;
 import javafx.geometry.Insets;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -23,6 +24,7 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import monopoly.controleur.ControleurChoixPion;
 import monopoly.modele.Pion;
 
@@ -88,10 +90,25 @@ public class VueLancementPartie {
             @Override
             public void handle(ActionEvent event) {
                 try {
+                    JOptionPane erreur = new JOptionPane();
                     if(listJOne.getSelectionModel().getSelectedItem()!=null && listJTwo.getSelectionModel().getSelectedItem()!=null ){
+                        
+                            
+                        if (listJOne.getSelectionModel().getSelectedItem()== listJTwo.getSelectionModel().getSelectedItem()){
+                            
+                            erreur.showMessageDialog( null, "le joueur 1 et le joueur 2 ne peuvent pas avoir le même pion", "Erreur", JOptionPane.ERROR_MESSAGE);
+                            
+                        }else{
+                            
                         controleur.setPionJoueurs(listJOne.getSelectionModel().getSelectedItem(),listJTwo.getSelectionModel().getSelectedItem());
                         new Partie();
                         stage.close();
+                        
+                        }
+                    }else{
+                        erreur.showMessageDialog( null, "Veuillez choisir un pion pour les 2 joueurs", "Erreur", JOptionPane.ERROR_MESSAGE);
+
+                        
                     }
                     
                 }catch (IOException ex){
