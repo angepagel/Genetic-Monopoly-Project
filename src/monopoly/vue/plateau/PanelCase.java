@@ -36,7 +36,7 @@ public class PanelCase extends FlowPane {
         this.setMinHeight(90);
         this.setMaxWidth(58);
         this.setMaxHeight(90);
-        this.setStyle("-fx-background-color: white");
+        this.setStyle("-fx-background-color: #DAE9D4");
 
         this.setRotate(0);
         this.setBorder(
