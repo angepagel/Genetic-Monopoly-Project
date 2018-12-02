@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package monopoly.vue.plateau;
+package monopoly.vue.partieclassique;
 
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
@@ -23,7 +23,7 @@ public class Partie {
         root.getChildren().add(new PanelPlateau());
         root.getChildren().add(new PanelAction());
 
-        root.setPrefSize(1080,720);
+        root.setPrefSize(1080,700);
 
         stage.setTitle("Partie Classique");
         stage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));

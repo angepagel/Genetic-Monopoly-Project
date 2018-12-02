@@ -18,7 +18,7 @@ import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import monopoly.controleur.ControleurChoixPion;
 import monopoly.modele.Pion;
-import monopoly.vue.plateau.Partie;
+import monopoly.vue.partieclassique.Partie;
 
 public class VueLancementPartie {
 

@@ -1,6 +1,5 @@
-package monopoly.vue.plateau;
+package monopoly.vue.partieclassique;
 
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.layout.*;

@@ -1,4 +1,4 @@
-package monopoly.vue.plateau;
+package monopoly.vue.partieclassique;
 
 import javafx.scene.layout.VBox;
 
@@ -9,6 +9,14 @@ import javafx.scene.layout.VBox;
 public class PanelAction extends VBox {
 
     public PanelAction() {
+
+        this.setWidth(380);
+        this.setHeight(700);
+        this.setMaxWidth(380);
+        this.setMaxHeight(700);
+        this.setMinWidth(380);
+        this.setMinHeight(700);
+
 
         //this.getChildren().add(new PanelInformationsJeu());
         //this.getChildren().add(new PanelJoueurs());

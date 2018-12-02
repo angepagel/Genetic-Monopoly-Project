@@ -1,15 +1,9 @@
-package monopoly.vue.plateau;
+package monopoly.vue.partieclassique;
 
-import javafx.scene.Node;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
+import javafx.geometry.Insets;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
-import javafx.scene.layout.FlowPane;
-import javafx.scene.layout.Region;
-import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 
 
 public class PanelPlateau extends BorderPane {
@@ -18,16 +12,28 @@ public class PanelPlateau extends BorderPane {
 
     public PanelPlateau() {
 
+        this.setWidth(700);
+        this.setHeight(700);
+        this.setMaxWidth(700);
+        this.setMaxHeight(700);
+        this.setMinWidth(700);
+        this.setMinHeight(700);
+
+        this.setPadding(Insets.EMPTY);
+
         // Init components
         this.imagePlateau = new ImageView(new Image("file:src/monopoly/vue/data/image/Plateau.jpg"));
         this.imagePlateau.setFitWidth(700);
         this.imagePlateau.setFitHeight(700);
 
         //this.getChildren().add(this.imagePlateau);
+        this.setCenter(new PanelCentre());
         this.setBottom(new PanelPlateauBottom());
+        this.setTop(new PanelPlateauTop());
         this.setLeft(new PanelPlateauLeft());
         this.setRight(new PanelPlateauRight());
-        this.setTop(new PanelPlateauTop());
+
+
 
 
     }

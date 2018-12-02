@@ -22,8 +22,8 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.shape.Rectangle?>
 
-<?import monopoly.vue.plateau.PanelCaseEmplacementJoueur?>
-<?import monopoly.vue.plateau.PanelCase?>
+<?import monopoly.vue.partieclassique.PanelCaseEmplacementJoueur?>
+<?import monopoly.vue.partieclassique.PanelCase?>
 <VBox prefHeight="720.0" prefWidth="1080.0" style="-fx-background-color: f9f9f9;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurMain">
    <children>
       <MenuBar style="-fx-background-color: white;" VBox.vgrow="NEVER">

@@ -1,4 +1,4 @@
-package monopoly.vue.plateau;
+package monopoly.vue.partieclassique;
 
 public class PanelInformationsJeu {
 }
