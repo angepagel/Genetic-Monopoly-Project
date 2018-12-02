@@ -78,10 +78,10 @@ public class VueLancementPartie {
         
         ListView<Pion> listJTwo;
         listJTwo = new ListView<>(listePions);
-        Label label = new Label("Veuillez choisir votre pion :");
+        Label label = new Label("Pion du joueur 1 :");
         root.getChildren().add(label);
         root.getChildren().add(listJOne);
-        Label label2 = new Label("Veuillez le pion du joueur 2 :");
+        Label label2 = new Label("Pion du joueur 2 :");
         root.getChildren().add(label2);
         root.getChildren().add(listJTwo);
         Button valider= new Button("Valider");
@@ -96,7 +96,7 @@ public class VueLancementPartie {
                             
                         if (listJOne.getSelectionModel().getSelectedItem()== listJTwo.getSelectionModel().getSelectedItem()){
                             
-                            erreur.showMessageDialog( null, "le joueur 1 et le joueur 2 ne peuvent pas avoir le même pion", "Erreur", JOptionPane.ERROR_MESSAGE);
+                            erreur.showMessageDialog( null, "Le joueur 1 et le joueur 2 ne peuvent pas avoir le même pion.", "Erreur", JOptionPane.ERROR_MESSAGE);
                             
                         }else{
                             
@@ -106,7 +106,7 @@ public class VueLancementPartie {
                         
                         }
                     }else{
-                        erreur.showMessageDialog( null, "Veuillez choisir un pion pour les 2 joueurs", "Erreur", JOptionPane.ERROR_MESSAGE);
+                        erreur.showMessageDialog( null, "Veuillez choisir un pion pour les 2 joueurs.", "Erreur", JOptionPane.ERROR_MESSAGE);
 
                         
                     }
