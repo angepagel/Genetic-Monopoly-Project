@@ -11,7 +11,7 @@ public class PanelCaseImage extends ImageView {
         this.setImage(new Image("file:src/monopoly/vue/data/image/Train.png"));
         this.setFitWidth(30);
         this.setFitHeight(20);
-        this.setLayoutX(20);
+        this.setX(15);
 
     }
 

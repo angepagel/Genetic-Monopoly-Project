@@ -4,6 +4,7 @@ import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.text.Font;
 import monopoly.modele.Jeu;
 import monopoly.modele.cases.Case_Gare;
 
@@ -20,6 +21,7 @@ public class PanelCaseGare extends PanelCase {
         this.modele = (Case_Gare) Jeu.getInstance().getPlateau().getCase(nom);
 
         this.nom = new PanelCaseLabel(this.modele.getNom().toUpperCase());
+        this.nom.setFont(new Font("System", 7));
         this.image = new PanelCaseImage("");
         this.emplacements = new PanelCaseConteneurEmplacement();
         this.prix = new PanelCaseLabel("$Prix");
