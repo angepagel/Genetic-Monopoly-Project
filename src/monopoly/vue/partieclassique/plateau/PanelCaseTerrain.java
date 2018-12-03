@@ -17,7 +17,7 @@ import monopoly.modele.cases.Case_Terrain;
  */
 public class PanelCaseTerrain extends FlowPane {
 
-    private Rectangle header;
+    private PanelCaseHeader header;
     private Label nom;
     private PanelCaseConteneurEmplacement emplacements;
     private Label prix;
@@ -47,11 +47,10 @@ public class PanelCaseTerrain extends FlowPane {
         );
 
         // Component properties
-        this.header = new Rectangle(0,0,56,17);
-        this.header.setFill(this.modele.getCouleur().getCouleur());
+        this.header = new PanelCaseHeader(this.modele.getCouleur().getCouleur());
         this.nom = new PanelCaseLabel(this.modele.getNom().toUpperCase());
         this.emplacements = new PanelCaseConteneurEmplacement();
-        this.prix = new PanelCaseLabel("Lol");
+        this.prix = new PanelCaseLabel("$Prix");
 
         this.getChildren().addAll(this.header, this.nom, this.emplacements, this.prix);
 
