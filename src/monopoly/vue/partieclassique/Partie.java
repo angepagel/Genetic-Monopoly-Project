@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import monopoly.modele.Jeu;
 import monopoly.vue.partieclassique.action.PanelAction;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
 

@@ -48,7 +48,7 @@ public class PanelCase extends FlowPane {
 
         // Component properties
         this.header = new Rectangle(0,0,56,17);
-        this.nom = new Label();
+        this.nom = new PanelCaseLabel("PROPRIETE");
         this.emplacementJoueur_1 = new PanelCaseEmplacementJoueur();
         this.emplacementJoueur_2 = new PanelCaseEmplacementJoueur();
         this.emplacementJoueur_3 = new PanelCaseEmplacementJoueur();
@@ -57,7 +57,7 @@ public class PanelCase extends FlowPane {
         this.emplacementJoueur_6 = new PanelCaseEmplacementJoueur();
         this.emplacementJoueur_7 = new PanelCaseEmplacementJoueur();
         this.emplacementJoueur_8 = new PanelCaseEmplacementJoueur();
-        this.prix = new Label();
+        this.prix = new PanelCaseLabel("$PRIX");
 
         this.getChildren().addAll(header, nom, emplacementJoueur_1, emplacementJoueur_2,
                 emplacementJoueur_3, emplacementJoueur_4, emplacementJoueur_5,
@@ -65,23 +65,9 @@ public class PanelCase extends FlowPane {
                 prix);
 
         // Header parameters
+
         this.header.setFill(Color.web("#944828"));
 
-        // Paramètres du nom
-        this.nom.setPrefWidth(58);
-        this.nom.setPrefHeight(16);
-        this.nom.setText("PROPRIETE");
-        this.nom.setFont(new Font("System", 8));
-        this.nom.setAlignment(Pos.CENTER);
-        this.nom.setTextAlignment(TextAlignment.CENTER);
-
-        // Paramètres du label de prix
-        this.prix.setPrefWidth(58);
-        this.prix.setPrefHeight(16);
-        this.prix.setText("$Prix");
-        this.prix.setFont(new Font("System", 8));
-        this.prix.setAlignment(Pos.CENTER);
-        this.prix.setTextAlignment(TextAlignment.CENTER);
 
 
     }
