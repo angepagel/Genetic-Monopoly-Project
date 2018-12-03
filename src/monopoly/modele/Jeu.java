@@ -223,6 +223,7 @@ public class Jeu {
         Jeu j = Jeu.getInstance();
         j.run();
     }
+
     public void run() {
         Scanner sc = new Scanner(System.in);
         Jeu j = this;

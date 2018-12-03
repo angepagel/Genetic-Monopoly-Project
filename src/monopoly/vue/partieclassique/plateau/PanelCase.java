@@ -16,14 +16,7 @@ public class PanelCase extends FlowPane {
 
     private Rectangle header;
     private Label nom;
-    private ImageView emplacementJoueur_1;
-    private ImageView emplacementJoueur_2;
-    private ImageView emplacementJoueur_3;
-    private ImageView emplacementJoueur_4;
-    private ImageView emplacementJoueur_5;
-    private ImageView emplacementJoueur_6;
-    private ImageView emplacementJoueur_7;
-    private ImageView emplacementJoueur_8;
+    private PanelCaseConteneurEmplacement emplacements;
     private Label prix;
 
     public PanelCase() {
@@ -49,20 +42,10 @@ public class PanelCase extends FlowPane {
         // Component properties
         this.header = new Rectangle(0,0,56,17);
         this.nom = new PanelCaseLabel("PROPRIETE");
-        this.emplacementJoueur_1 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_2 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_3 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_4 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_5 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_6 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_7 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_8 = new PanelCaseEmplacementJoueur();
+        this.emplacements = new PanelCaseConteneurEmplacement();
         this.prix = new PanelCaseLabel("$PRIX");
 
-        this.getChildren().addAll(header, nom, emplacementJoueur_1, emplacementJoueur_2,
-                emplacementJoueur_3, emplacementJoueur_4, emplacementJoueur_5,
-                emplacementJoueur_6, emplacementJoueur_7, emplacementJoueur_8,
-                prix);
+        this.getChildren().addAll(header, nom, emplacements, prix);
 
         // Header parameters
 
