@@ -13,12 +13,13 @@ public class PanelCaseLabel extends Label {
     public PanelCaseLabel(String text) {
 
         // Paramètres du label de prix
-        this.setPrefWidth(58);
-        this.setPrefHeight(16);
+        this.setPrefWidth(54);
+        this.setPrefHeight(32);
         this.setText(text);
         this.setFont(new Font("System", 8));
         this.setAlignment(Pos.CENTER);
         this.setTextAlignment(TextAlignment.CENTER);
+        this.setWrapText(true);
 
     }
 

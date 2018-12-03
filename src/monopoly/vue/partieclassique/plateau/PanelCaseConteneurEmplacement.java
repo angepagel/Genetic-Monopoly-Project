@@ -18,6 +18,8 @@ public class PanelCaseConteneurEmplacement extends FlowPane {
     private ImageView emplacementJoueur_8;
 
     public PanelCaseConteneurEmplacement() {
+        // TODO : Ajouter des getters et setters dans le futur, ou convertir ces attributs en un tableau
+
         this.emplacementJoueur_1 = new PanelCaseEmplacementJoueur();
         this.emplacementJoueur_2 = new PanelCaseEmplacementJoueur();
         this.emplacementJoueur_3 = new PanelCaseEmplacementJoueur();

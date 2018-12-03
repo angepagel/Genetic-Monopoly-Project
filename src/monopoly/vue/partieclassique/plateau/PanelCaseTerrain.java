@@ -8,18 +8,25 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
+import monopoly.modele.Jeu;
+import monopoly.modele.cases.Case;
+import monopoly.modele.cases.Case_Terrain;
 
 /**
  * Created by maxim on 23/11/2018.
  */
-public class PanelCase extends FlowPane {
+public class PanelCaseTerrain extends FlowPane {
 
     private Rectangle header;
     private Label nom;
     private PanelCaseConteneurEmplacement emplacements;
     private Label prix;
 
-    public PanelCase() {
+    private Case_Terrain modele;
+
+    public PanelCaseTerrain(String nom) {
+
+        this.modele = (Case_Terrain) Jeu.getInstance().getPlateau().getCase(nom);
 
         // Panel properties
         this.setWidth(58);
@@ -41,15 +48,12 @@ public class PanelCase extends FlowPane {
 
         // Component properties
         this.header = new Rectangle(0,0,56,17);
-        this.nom = new PanelCaseLabel("PROPRIETE");
+        this.header.setFill(this.modele.getCouleur().getCouleur());
+        this.nom = new PanelCaseLabel(this.modele.getNom().toUpperCase());
         this.emplacements = new PanelCaseConteneurEmplacement();
-        this.prix = new PanelCaseLabel("$PRIX");
+        this.prix = new PanelCaseLabel("Lol");
 
-        this.getChildren().addAll(header, nom, emplacements, prix);
-
-        // Header parameters
-
-        this.header.setFill(Color.web("#944828"));
+        this.getChildren().addAll(this.header, this.nom, this.emplacements, this.prix);
 
 
 

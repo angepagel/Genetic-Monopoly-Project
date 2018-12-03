@@ -126,7 +126,7 @@ public class VueLancementPartie {
         choixPion.show();*/
        
       
-        //root.getChildrenUnmodifiable().addAll(new PanelCase(0.0).getPane());
+        //root.getChildrenUnmodifiable().addAll(new PanelCaseTerrain(0.0).getPane());
        
 
     }

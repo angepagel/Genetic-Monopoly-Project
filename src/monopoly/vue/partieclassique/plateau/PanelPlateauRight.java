@@ -11,15 +11,17 @@ public class PanelPlateauRight extends HBox {
         this.setHeight(500);
         this.setRotate(270);
         this.setAlignment(Pos.BOTTOM_RIGHT);
-        this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCase());
-        this.getChildren().add(new PanelCase());
+        /*
+        this.getChildren().add(new PanelCaseTerrain());
+        this.getChildren().add(new PanelCaseTerrain());
+        this.getChildren().add(new PanelCaseTerrain());
+        this.getChildren().add(new PanelCaseTerrain());
+        this.getChildren().add(new PanelCaseTerrain());
+        this.getChildren().add(new PanelCaseTerrain());
+        this.getChildren().add(new PanelCaseTerrain());
+        this.getChildren().add(new PanelCaseTerrain());
+        this.getChildren().add(new PanelCaseTerrain());
+        */
     }
 
 }
