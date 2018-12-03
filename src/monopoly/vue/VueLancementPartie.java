@@ -1,5 +1,6 @@
 package monopoly.vue;
 
+import com.sun.jnlp.ApiDialog.DialogResult;
 import javafx.geometry.Insets;
 import java.io.IOException;
 import java.util.logging.Level;
@@ -16,6 +17,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.HBox;
 
 import javafx.stage.Stage;
+import javax.swing.JOptionPane;
 import monopoly.controleur.ControleurChoixPion;
 import monopoly.modele.Pion;
 import monopoly.vue.partieclassique.Partie;
@@ -70,10 +72,10 @@ public class VueLancementPartie {
         
         ListView<Pion> listJTwo;
         listJTwo = new ListView<>(listePions);
-        Label label = new Label("Veuillez choisir votre pion :");
+        Label label = new Label("Pion du joueur 1 :");
         root.getChildren().add(label);
         root.getChildren().add(listJOne);
-        Label label2 = new Label("Veuillez le pion du joueur 2 :");
+        Label label2 = new Label("Pion du joueur 2 :");
         root.getChildren().add(label2);
         root.getChildren().add(listJTwo);
         Button valider= new Button("Valider");
@@ -82,10 +84,25 @@ public class VueLancementPartie {
             @Override
             public void handle(ActionEvent event) {
                 try {
+                    JOptionPane erreur = new JOptionPane();
                     if(listJOne.getSelectionModel().getSelectedItem()!=null && listJTwo.getSelectionModel().getSelectedItem()!=null ){
+                        
+                            
+                        if (listJOne.getSelectionModel().getSelectedItem()== listJTwo.getSelectionModel().getSelectedItem()){
+                            
+                            erreur.showMessageDialog( null, "Le joueur 1 et le joueur 2 ne peuvent pas avoir le même pion.", "Erreur", JOptionPane.ERROR_MESSAGE);
+                            
+                        }else{
+                            
                         controleur.setPionJoueurs(listJOne.getSelectionModel().getSelectedItem(),listJTwo.getSelectionModel().getSelectedItem());
                         new Partie();
                         stage.close();
+                        
+                        }
+                    }else{
+                        erreur.showMessageDialog( null, "Veuillez choisir un pion pour les 2 joueurs.", "Erreur", JOptionPane.ERROR_MESSAGE);
+
+                        
                     }
                     
                 }catch (IOException ex){
