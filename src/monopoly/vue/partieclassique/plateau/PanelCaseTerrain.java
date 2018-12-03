@@ -15,7 +15,7 @@ import monopoly.modele.cases.Case_Terrain;
 /**
  * Created by maxim on 23/11/2018.
  */
-public class PanelCaseTerrain extends FlowPane {
+public class PanelCaseTerrain extends PanelCase {
 
     private PanelCaseHeader header;
     private Label nom;
@@ -27,24 +27,6 @@ public class PanelCaseTerrain extends FlowPane {
     public PanelCaseTerrain(String nom) {
 
         this.modele = (Case_Terrain) Jeu.getInstance().getPlateau().getCase(nom);
-
-        // Panel properties
-        this.setWidth(58);
-        this.setHeight(90);
-        this.setMinWidth(58);
-        this.setMinHeight(90);
-        this.setMaxWidth(58);
-        this.setMaxHeight(90);
-        this.setStyle("-fx-background-color: #DAE9D4");
-
-        this.setRotate(0);
-        this.setBorder(
-                new Border(new BorderStroke(
-                        Color.BLACK,
-                        BorderStrokeStyle.SOLID,
-                        CornerRadii.EMPTY,
-                        BorderWidths.DEFAULT))
-        );
 
         // Component properties
         this.header = new PanelCaseHeader(this.modele.getCouleur().getCouleur());

@@ -20,8 +20,8 @@ public class PanelCaseHeader extends FlowPane {
         this.line.setStroke(Color.BLACK);
         this.line.setStrokeWidth(2);
         this.line.toFront();
-
-        this.getChildren().addAll(this.rectangle, this.line);
+        // Ajouter la ligne, plus tard
+        this.getChildren().addAll(this.rectangle);
 
     }
 

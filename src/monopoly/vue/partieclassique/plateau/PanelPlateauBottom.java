@@ -14,7 +14,7 @@ public class PanelPlateauBottom extends HBox {
         this.getChildren().add(new PanelCaseTerrain("Rue de Courcelles"));
         //this.getChildren().add(new PanelCaseTerrain());
         this.getChildren().add(new PanelCaseTerrain("Rue de Vaugirard"));
-        //this.getChildren().add(new PanelCaseTerrain("Gare Montparnasse"));
+        this.getChildren().add(new PanelCaseGare("Gare Montparnasse"));
         //this.getChildren().add(new PanelCaseTerrain("Impôts sur le revenu"));
         this.getChildren().add(new PanelCaseTerrain("Rue Lecourbe"));
         //this.getChildren().add(new PanelCaseTerrain());
