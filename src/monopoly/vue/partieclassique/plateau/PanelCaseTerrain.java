@@ -36,8 +36,6 @@ public class PanelCaseTerrain extends PanelCase {
 
         this.getChildren().addAll(this.header, this.nom, this.emplacements, this.prix);
 
-
-
     }
 
 }

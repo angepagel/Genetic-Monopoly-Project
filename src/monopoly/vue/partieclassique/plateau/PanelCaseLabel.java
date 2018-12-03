@@ -27,6 +27,4 @@ public class PanelCaseLabel extends Label {
         this("");
     }
 
-
-
 }

@@ -15,10 +15,6 @@ public class PanelCaseDepart extends ImageView {
 
         this.setFitWidth(width);
         this.setFitHeight(height);
-        //this.maxHeight(height);
-        //this.maxWidth(width);
-        //this.minHeight(height);
-        //this.minWidth(width);
 
     }
 
