@@ -11,17 +11,17 @@ public class PanelPlateauRight extends HBox {
         this.setHeight(500);
         this.setRotate(270);
         this.setAlignment(Pos.BOTTOM_RIGHT);
-        /*
-        this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain());
-        */
+        this.getChildren().addAll(
+                new PanelCaseTerrain("Rue de la paix"),
+                new PanelCaseSpeciale("Taxe de luxe", "Luxe", true),
+                new PanelCaseTerrain("Avenue des Champs-Élysées"),
+                new PanelCaseSpeciale("Chance", "InterrogationOrange", false),
+                new PanelCaseSpeciale("Gare Saint-Lazare", "Gare", true),
+                new PanelCaseTerrain("Boulevard des Capucines"),
+                new PanelCaseSpeciale("Caisse de communauté", "Caisse", false),
+                new PanelCaseTerrain("Avenue Foch"),
+                new PanelCaseTerrain("Avenue de Breteuil")
+        );
     }
 
 }

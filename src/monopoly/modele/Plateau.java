@@ -25,12 +25,12 @@ public class Plateau {
         caseDepart = new Case_Depart(null);
         listeCases.add(caseDepart);
 
-        CouleurTerrain bleuFinal = new CouleurTerrain(Color.web("1FA54C"), 200);
+        CouleurTerrain bleuFinal = new CouleurTerrain(Color.web("0369B3"), 200);
         Case_Terrain rueDeLaPaix = new Case_Terrain("Rue de la paix", bleuFinal, new Tarifs(400,50,200,600,1400,1700,2000),caseDepart);
         listeCases.add(rueDeLaPaix);
 
         Case_Impots taxeDeLuxe = new Case_Impots("Taxe de luxe", 100, rueDeLaPaix);
-        listeCases.add(rueDeLaPaix);
+        listeCases.add(taxeDeLuxe);
 
         Case_Terrain avenueCA = new Case_Terrain("Avenue des Champs-Élysées", bleuFinal, new Tarifs(350, 35, 175, 500, 1100, 1300, 1500), taxeDeLuxe);
         listeCases.add(avenueCA);
@@ -56,7 +56,7 @@ public class Plateau {
         listeCases.add(breteuil);
 
         CouleurTerrain jaune = new CouleurTerrain(Color.web("FEED00"), 150);
-        Case_Terrain laFayette = new Case_Terrain("Rue La Fayette", jaune, new Tarifs(280,24, 120, 360, 850, 1020,1200), null);
+        Case_Terrain laFayette = new Case_Terrain("Rue la Fayette", jaune, new Tarifs(280,24, 120, 360, 850, 1020,1200), null);
         listeCases.add(laFayette);
 
         Case_Compagnie compagnieEau = new Case_Compagnie("Compagnie de distribution des eaux", laFayette);

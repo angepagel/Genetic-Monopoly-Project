@@ -17,7 +17,7 @@ public class PanelCaseLabel extends Label {
         this.setPrefHeight(32);
         this.setText(text);
         this.setFont(new Font("System", 8));
-        this.setAlignment(Pos.CENTER);
+        this.setAlignment(Pos.TOP_CENTER);
         this.setTextAlignment(TextAlignment.CENTER);
         this.setWrapText(true);
 

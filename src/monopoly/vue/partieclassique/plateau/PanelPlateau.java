@@ -29,9 +29,9 @@ public class PanelPlateau extends BorderPane {
         //this.getChildren().add(this.imagePlateau);
         this.setCenter(new PanelCentre());
         this.setBottom(new PanelPlateauBottom());
-        //this.setTop(new PanelPlateauTop());
-        //this.setLeft(new PanelPlateauLeft());
-        //this.setRight(new PanelPlateauRight());
+        this.setTop(new PanelPlateauTop());
+        this.setLeft(new PanelPlateauLeft());
+        this.setRight(new PanelPlateauRight());
 
 
 

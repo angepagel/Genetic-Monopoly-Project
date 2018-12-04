@@ -9,17 +9,18 @@ public class PanelPlateauBottom extends HBox {
         this.setWidth(500);
         this.setHeight(500);
         this.setRotate(0);
-        this.getChildren().add(new PanelCaseDepart());
-        this.getChildren().add(new PanelCaseTerrain("Avenue de la République"));
-        this.getChildren().add(new PanelCaseTerrain("Rue de Courcelles"));
-        //this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain("Rue de Vaugirard"));
-        this.getChildren().add(new PanelCaseGare("Gare Montparnasse"));
-        //this.getChildren().add(new PanelCaseTerrain("Impôts sur le revenu"));
-        this.getChildren().add(new PanelCaseTerrain("Rue Lecourbe"));
-        //this.getChildren().add(new PanelCaseTerrain());
-        this.getChildren().add(new PanelCaseTerrain("Boulevard de Belleville"));
-        this.getChildren().add(new PanelCaseDepart());
+        this.getChildren().addAll(
+            new PanelCaseDepart(),
+            new PanelCaseTerrain("Avenue de la République"),
+            new PanelCaseTerrain("Rue de Courcelles"),
+            new PanelCaseSpeciale("Chance", "InterrogationRose", false),
+            new PanelCaseTerrain("Rue de Vaugirard"),
+            new PanelCaseSpeciale("Gare Montparnasse", "Gare", true),
+            new PanelCaseSpeciale("Impôts sur le revenu", "Impots", true),
+            new PanelCaseTerrain("Rue Lecourbe"),
+            new PanelCaseSpeciale("Caisse de communauté", "Caisse", true),
+            new PanelCaseTerrain("Boulevard de Belleville"),
+            new PanelCaseDepart());
     }
 
 }
