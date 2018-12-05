@@ -13,15 +13,15 @@ public class PanelPlateauTop extends HBox {
         this.setAlignment(Pos.TOP_RIGHT);
         this.getChildren().addAll(
             new PanelCaseDepart(),
-            new PanelCaseTerrain("Avenue Matignon"),
-            new PanelCaseSpeciale("Chance", "InterrogationBleue", false),
-            new PanelCaseTerrain("Boulevard Malesherbes"),
-            new PanelCaseTerrain("Avenue Henri-Martin"),
-            new PanelCaseSpeciale("Gare du Nord", "Gare", true),
-            new PanelCaseTerrain("Faubourg Saint-Honoré"),
-            new PanelCaseTerrain("Place de la Bourse"),
-            new PanelCaseSpeciale("Compagnie de distribution des eaux", "DistributionEaux", true),
             new PanelCaseTerrain("Rue la Fayette"),
+            new PanelCaseSpeciale("Compagnie de distribution des eaux", "DistributionEaux", true),
+            new PanelCaseTerrain("Place de la Bourse"),
+            new PanelCaseTerrain("Faubourg Saint-Honoré"),
+            new PanelCaseSpeciale("Gare du Nord", "Gare", true),
+            new PanelCaseTerrain("Avenue Henri-Martin"),
+            new PanelCaseTerrain("Boulevard Malesherbes"),
+            new PanelCaseSpeciale("Chance", "InterrogationBleue", false),
+            new PanelCaseTerrain("Avenue Matignon"),
             new PanelCaseDepart()
         );
     }

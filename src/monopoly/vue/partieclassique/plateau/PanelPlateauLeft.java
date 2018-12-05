@@ -12,15 +12,23 @@ public class PanelPlateauLeft extends HBox {
         this.setRotate(90);
         this.setAlignment(Pos.BOTTOM_LEFT);
         this.getChildren().addAll(
-                new PanelCaseTerrain("Boulevard de la Villette"),
-                new PanelCaseSpeciale("Compagnie de distribution d'électricité", "Electricite", true),
-                new PanelCaseTerrain("Avenue de Neuilly"),
-                new PanelCaseTerrain("Rue de Paradis"),
-                new PanelCaseSpeciale("Gare de Lyon", "Gare", true),
-                new PanelCaseTerrain("Avenue Mozart"),
-                new PanelCaseSpeciale("Caisse de communauté", "Caisse", false),
+                new PanelCaseTerrain("Place Pigalle"),
                 new PanelCaseTerrain("Boulevard Saint-Michel"),
-                new PanelCaseTerrain("Place Pigalle"));
+                new PanelCaseSpeciale("Caisse de communauté", "Caisse", false),
+                new PanelCaseTerrain("Avenue Mozart"),
+                new PanelCaseSpeciale("Gare de Lyon", "Gare", true),
+                new PanelCaseTerrain("Rue de Paradis"),
+                new PanelCaseTerrain("Avenue de Neuilly"),
+                new PanelCaseSpeciale("Compagnie de distribution d'électricité", "Electricite", true),
+                new PanelCaseTerrain("Boulevard de la Villette"));
+
+
+
+
+
+
+
+
     }
 
 }
