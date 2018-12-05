@@ -13,12 +13,16 @@ public class PanelInformationsJeu extends Pane {
     public PanelInformationsJeu() {
 
         this.titre = new PanelActionLabel("Informations de jeu", 20);
-        this.tempsJeuTitre = new PanelActionLabel("Temps de jeu : ", 10);
-        this.tempsJeuValeur = new PanelActionLabel("02:38", 10);
-        this.nbToursTitre = new PanelActionLabel("Nombre de tours : ", 10);
-        this.nbToursValeur = new PanelActionLabel("27", 10);
+        this.tempsJeuTitre = new PanelActionLabel("Temps de jeu : ", 12);
+        this.tempsJeuValeur = new PanelActionLabel("02:38", 12);
+        this.nbToursTitre = new PanelActionLabel("Nombre de tours : ", 12);
+        this.nbToursValeur = new PanelActionLabel("27", 12);
 
-        this.getChildren().addAll(this.titre);
+        this.getChildren().addAll(this.titre,
+                this.tempsJeuTitre,
+                this.tempsJeuValeur,
+                this.nbToursTitre,
+                this.nbToursValeur);
 
     }
 
