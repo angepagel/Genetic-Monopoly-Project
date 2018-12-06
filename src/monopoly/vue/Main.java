@@ -8,7 +8,8 @@ import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 public class Main extends Application {
-
+     
+    private VueLancementPartie menuChoix = VueLancementPartie.getInstance();
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
@@ -18,11 +19,13 @@ public class Main extends Application {
         primaryStage.setScene(new Scene(root, 650, 400));
         primaryStage.setResizable(false);
         primaryStage.show();
+        menuChoix.setParent(primaryStage);
+        
     }
 
 
     public static void main(String[] args) {
         launch(args);
     }
-    
+   
 }
