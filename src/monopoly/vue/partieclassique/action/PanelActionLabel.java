@@ -1,7 +1,12 @@
 package monopoly.vue.partieclassique.action;
 
+import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Label;
+import javafx.scene.layout.Background;
+import javafx.scene.layout.BackgroundFill;
+import javafx.scene.layout.CornerRadii;
+import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import javafx.scene.text.TextAlignment;
 
@@ -21,6 +26,10 @@ public class PanelActionLabel extends Label {
         this.setTextAlignment(TextAlignment.CENTER);
         this.setWrapText(true);
 
+    }
+
+    public void setBackgroundColor(Color color) {
+        this.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
     }
 
     public PanelActionLabel() {

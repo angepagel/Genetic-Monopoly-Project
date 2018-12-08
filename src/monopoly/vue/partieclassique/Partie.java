@@ -7,6 +7,7 @@ package monopoly.vue.partieclassique;
 
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
+import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 import monopoly.modele.Jeu;
@@ -17,8 +18,13 @@ import java.io.IOException;
 
 public class Partie {
 
+    private HBox root;
+    private static Partie instance = null;
+
     public Partie() throws IOException {
-        HBox root = new HBox();
+        instance = this;
+
+        root = new HBox();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
 
@@ -32,6 +38,10 @@ public class Partie {
         stage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         stage.setScene(scene);
         stage.show();
+    }
+
+    public static Background getBackground() {
+        return instance.root.getBackground();
     }
 
 }

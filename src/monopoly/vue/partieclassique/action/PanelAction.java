@@ -17,10 +17,9 @@ public class PanelAction extends VBox {
         this.setMinWidth(380);
         this.setMinHeight(700);
 
-
         this.getChildren().add(new PanelInformationsJeu());
-        //this.getChildren().add(new PanelJoueurs());
-        //this.getChildren().add(new PanelTour());
+        this.getChildren().add(new PanelJoueurs());
+        this.getChildren().add(new PanelTour());
 
     }
 
