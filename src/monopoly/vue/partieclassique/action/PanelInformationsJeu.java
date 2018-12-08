@@ -25,7 +25,7 @@ public class PanelInformationsJeu extends Pane {
         this.setMinWidth(380);
         this.setMaxWidth(380);
 
-        this.rect = new PanelActionRectangle(20, 15, 300, 70);
+        this.rect = new PanelActionRectangle(20, 15, 330, 70);
 
         // Titre
         this.titre = new PanelActionLabel("Informations de jeu", 20);
@@ -59,8 +59,6 @@ public class PanelInformationsJeu extends Pane {
         this.nbToursValeur.setLayoutX(140);
         this.nbToursValeur.setLayoutY(30);
         this.nbToursValeur.setTextFill(Color.BLUE);
-
-
 
 
         this.getChildren().addAll(
