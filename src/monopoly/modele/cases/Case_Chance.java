@@ -2,7 +2,7 @@ package monopoly.modele.cases;
 
 import monopoly.modele.Joueur;
 
-public class Case_Chance extends Case {
+public class Case_Chance extends Case_Pioche {
     public Case_Chance(Case suivante) {
         super("Chance", suivante);
     }

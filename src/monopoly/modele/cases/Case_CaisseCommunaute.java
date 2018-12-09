@@ -2,7 +2,7 @@ package monopoly.modele.cases;
 
 import monopoly.modele.Joueur;
 
-public class Case_CaisseCommunaute extends Case {
+public class Case_CaisseCommunaute extends Case_Pioche {
 
     public Case_CaisseCommunaute(Case suivante) {
         super("Caisse de communauté", suivante);

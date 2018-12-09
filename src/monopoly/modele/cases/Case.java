@@ -62,6 +62,14 @@ public abstract class Case {
     }
 
     /**
+     * Permet d'obtenir l'identifiant de la case. Vaut le nom pour la plupart.
+     * @return Identifiant unique
+     */
+    public String getId() {
+        return getNom();
+    }
+
+    /**
      * Permet de récupérer la case précédente.
      * @return Case précédente.
      */
