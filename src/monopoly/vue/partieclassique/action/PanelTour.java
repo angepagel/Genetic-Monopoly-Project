@@ -18,7 +18,7 @@ public class PanelTour extends Pane {
 
         this.titre = new PanelActionLabel("Tour", 20);
         this.titre.setBackgroundColor(Color.web("F4F4F4"));
-        this.titre.setPrefWidth(50);
+        this.titre.setPrefWidth(44);
         this.titre.setPrefHeight(30);
         this.titre.setPadding(Insets.EMPTY);
         this.titre.setLayoutX(30);

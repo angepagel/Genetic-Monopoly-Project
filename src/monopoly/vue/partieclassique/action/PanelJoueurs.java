@@ -4,10 +4,13 @@ import javafx.geometry.Insets;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 
+import java.util.ArrayList;
+
 public class PanelJoueurs extends Pane {
 
     private PanelActionRectangle rect;
     private PanelActionLabel titre;
+    private ArrayList<PanelInfosJoueur> joueurs;
 
     public PanelJoueurs() {
 
@@ -27,6 +30,24 @@ public class PanelJoueurs extends Pane {
         this.titre.setPadding(Insets.EMPTY);
         this.titre.setLayoutX(30);
         this.titre.setLayoutY(0);
+
+        this.joueurs = new ArrayList<>();
+
+        for (int i = 1; i <=8; i++) {
+
+            // If factorisable avec des mathématiques (mais moins intuitif)
+            if (i <= 4) {
+                this.joueurs.add(new PanelInfosJoueur(40, 22+((i-1)*25)));
+            }
+            else {
+                this.joueurs.add(new PanelInfosJoueur(200, 22+((i-5)*25)));
+            }
+
+            this.joueurs.get(i-1).setPrefWidth(70);
+            this.getChildren().add(this.joueurs.get(i-1));
+        }
+
+
 
         this.getChildren().addAll(
                 this.rect,
