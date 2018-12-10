@@ -24,14 +24,12 @@ import java.io.IOException;
 public class Partie implements IVuePartie {
 
     private HBox root;
-    private static Partie instance = null;
     private ControleurPlateau controleurPlateau;
 
     private PanelPlateau panelPlateau;
     private PanelAction panelAction;
 
     public Partie() throws IOException {
-        instance = this;
 
         root = new HBox();
         Scene scene = new Scene(root);
@@ -75,9 +73,5 @@ public class Partie implements IVuePartie {
     public PanelPlateau getPanelPlateau() {
         return this.panelPlateau;
     }
-
-    public static Background getBackground() {
-        return instance.root.getBackground();
-    }
-
+    
 }

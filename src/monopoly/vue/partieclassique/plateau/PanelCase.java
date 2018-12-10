@@ -38,4 +38,8 @@ public class PanelCase extends FlowPane {
     public Case getModele() {
         return modele;
     }
+
+    public void vider() {
+
+    }
 }

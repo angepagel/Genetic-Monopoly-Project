@@ -4,6 +4,7 @@ import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Plateau;
 import monopoly.modele.cases.Case;
+import monopoly.vue.partieclassique.plateau.PanelCase;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
 public class ControleurPlateau {
@@ -24,6 +25,8 @@ public class ControleurPlateau {
 
         for (Joueur joueur : Jeu.getInstance().getJoueurs()) {
             Case caseAVider = joueur.getPion().getPosition();
+            PanelCase panel = this.vue.getPanelCase(caseAVider.getId());
+
         }
 
     }
