@@ -28,11 +28,6 @@ public class ControleurChoixPion {
         Pion bateau = new Pion("bateau");
         Pion canon = new Pion("canon");
         listePions = FXCollections.observableArrayList(cheval, DeAcoudre, bateau,canon);
-   
-
-
-
-
     }
 
     public ObservableList<Pion> getListePions(){
