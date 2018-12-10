@@ -2,6 +2,9 @@ package monopoly.vue.partieclassique.plateau;
 
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
+import monopoly.vue.data.image.GestionnaireImage;
+
+import java.util.ArrayList;
 
 /**
  * Created by maxim on 03/12/2018.
@@ -17,22 +20,20 @@ public class PanelCaseConteneurEmplacement extends FlowPane {
     private ImageView emplacementJoueur_7;
     private ImageView emplacementJoueur_8;
 
+    private ArrayList<PanelCaseEmplacementJoueur> listeEmplacements;
+
     public PanelCaseConteneurEmplacement() {
         // TODO : Ajouter des getters et setters dans le futur, ou convertir ces attributs en un tableau
 
-        this.emplacementJoueur_1 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_2 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_3 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_4 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_5 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_6 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_7 = new PanelCaseEmplacementJoueur();
-        this.emplacementJoueur_8 = new PanelCaseEmplacementJoueur();
+        // Init liste
+        this.listeEmplacements = new ArrayList<>();
+        for (int i = 0; i < 7; i++) {
+            this.listeEmplacements.add(new PanelCaseEmplacementJoueur());
+            this.getChildren().add(this.listeEmplacements.get(i));
+        }
 
-        this.getChildren().addAll(this.emplacementJoueur_1, this.emplacementJoueur_2,
-                this.emplacementJoueur_3, this.emplacementJoueur_4,
-                this.emplacementJoueur_5, this.emplacementJoueur_6,
-                this.emplacementJoueur_7, this.emplacementJoueur_8);
     }
+
+
 
 }

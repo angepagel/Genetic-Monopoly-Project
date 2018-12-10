@@ -1,4 +1,9 @@
 package monopoly.vue.partieclassique.action;
 
-public class PanelCaseActuelle {
+import javafx.scene.layout.Pane;
+
+public class PanelCaseActuelle extends Pane {
+
+
+
 }

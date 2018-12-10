@@ -2,33 +2,21 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox prefHeight="400.0" prefWidth="650.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurMenu">
+<VBox maxHeight="400" maxWidth="644.0" prefHeight="333.0" prefWidth="644.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurMenu">
   <children>
-    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="400.0" prefWidth="650.0" VBox.vgrow="ALWAYS">
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="320.0" prefWidth="594.0" VBox.vgrow="ALWAYS">
       <children>
         
-            <Button fx:id="boutonPartieClassique" layoutX="266.0" layoutY="272.0" mnemonicParsing="false" onAction="#actionPartieClassique" prefHeight="25.0" prefWidth="113.0" text="Classique" />
-            <Button fx:id="boutonPartieIA" layoutX="266.0" layoutY="314.0" mnemonicParsing="false" onAction="#actionPartieIA" prefHeight="25.0" prefWidth="113.0" text="I.A. contre I.A." />
-            <ImageView fitHeight="117.0" fitWidth="453.0" layoutX="138.0" layoutY="44.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@data/image/IconeSombre.png" />
-               </image>
-            </ImageView>
-            <Label alignment="CENTER" layoutX="196.0" layoutY="77.0" prefHeight="50.0" prefWidth="368.0" text="onopoly Génétique">
+            <Button fx:id="boutonPartieClassique" layoutX="242.0" layoutY="174.0" mnemonicParsing="false" onAction="#actionPartieClassique" text="Lancer une partie classique" />
+            <Button fx:id="boutonPartieIA" layoutX="235.0" layoutY="224.0" mnemonicParsing="false" onAction="#actionPartieIA" text="Lancer une partie IA contre IA" />
+            <Label alignment="CENTER" layoutX="138.0" layoutY="61.0" prefHeight="50.0" prefWidth="368.0" text="Monopoly Génétique">
                <font>
                   <Font size="33.0" />
                </font></Label>
-            <Label alignment="CENTER" layoutX="221.0" layoutY="225.0" text="Sélectionner un mode de jeu" textAlignment="CENTER">
-               <font>
-                  <Font size="16.0" />
-               </font>
-            </Label>
       </children>
     </AnchorPane>
   </children>

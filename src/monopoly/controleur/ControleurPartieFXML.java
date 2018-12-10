@@ -1,10 +1,19 @@
+/*
+
+=====================
+------ OBSOLETE -----
+=====================
+
+ */
+
+
+
 package monopoly.controleur;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.image.ImageView;
 import monopoly.modele.Jeu;
-import monopoly.modele.cases.Case_Achat;
 import monopoly.vue.dialogue.*;
 
 import javax.swing.*;
@@ -12,7 +21,7 @@ import java.io.IOException;
 
 import static monopoly.modele.Jeu.getInstance;
 
-public class ControleurPartie extends Controleur {
+public class ControleurPartieFXML extends Controleur {
 
     // Attributs
 
@@ -49,7 +58,7 @@ public class ControleurPartie extends Controleur {
     @FXML
     public void actionLancerDes(ActionEvent action) {
         //this.controleur_de = new ControleurDe(de_1, de_2);
-        //this.controleur_de.actionLancerDes(action);
+        //this.controleur_de.lancerDes(action);
     }
 
     @FXML
