@@ -1,5 +1,6 @@
 package monopoly.modele;
 
+import monopoly.controleur.ControleurDeplacementPion;
 import monopoly.modele.cases.Case;
 import monopoly.modele.cases.ECase;
 
@@ -28,6 +29,11 @@ public class Pion {
      * Permet de savoir si on vient de passer par la case départ.
      */
     private boolean caseDepartLast;
+
+    /**
+     * Contrôleur gérant le déplacement du pion.
+     */
+    private ControleurDeplacementPion controleurDeplacement;
 
     /**
      * Permet de créer un nouveau pion
@@ -60,6 +66,7 @@ public class Pion {
         }
 
         position.action(getJoueur());
+        this.controleurDeplacement.deplacer();
     }
 
     /**
@@ -73,6 +80,7 @@ public class Pion {
         }
 
         position.action(getJoueur());
+        this.controleurDeplacement.deplacer();
     }
 
     /**
@@ -86,6 +94,7 @@ public class Pion {
         }
 
         position.action(getJoueur());
+        this.controleurDeplacement.deplacer();
     }
 
     /**
@@ -99,6 +108,7 @@ public class Pion {
         }
 
         position.action(getJoueur());
+        this.controleurDeplacement.deplacer();
     }
 
     /**
@@ -110,6 +120,7 @@ public class Pion {
         if(declencheDepart && position.getType() == ECase.Depart) {
             position.action(getJoueur());
         }
+        this.controleurDeplacement.deplacer();
     }
 
     /**
@@ -121,6 +132,7 @@ public class Pion {
         if(declencheDepart && position.getType() == ECase.Depart) {
             position.action(getJoueur());
         }
+        this.controleurDeplacement.deplacer();
     }
 
     /**
@@ -137,6 +149,7 @@ public class Pion {
      */
     public void setPosition(Case position) {
         this.position = position;
+        this.controleurDeplacement.deplacer();
     }
 
     /**
@@ -176,6 +189,22 @@ public class Pion {
      */
     public void setJoueur(Joueur joueur) {
         this.joueur = joueur;
+    }
+
+    /**
+     * Getter du contrôleur de déplacement.
+     * @return Contrôleur de déplacement.
+     */
+    public ControleurDeplacementPion getControleur() {
+        return controleurDeplacement;
+    }
+
+    /**
+     * Setter du contrôleur de déplacement.
+     * @param controleurDeplacement Contrôleur de déplacement.
+     */
+    public void setControleur(ControleurDeplacementPion controleurDeplacement) {
+        this.controleurDeplacement = controleurDeplacement;
     }
 
     @Override

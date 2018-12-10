@@ -12,6 +12,7 @@ public class PanelCaseEmplacementJoueur extends Pane {
 
     private boolean occupe;
     private ImageView image;
+    private VuePion vuePion;
 
     public PanelCaseEmplacementJoueur() {
 
@@ -27,7 +28,7 @@ public class PanelCaseEmplacementJoueur extends Pane {
         this.image.setFitWidth(14);
         this.getChildren().add(image);
 
-        this.occupe = false;
+        this.vuePion = null;
     }
 
     /**
@@ -35,17 +36,21 @@ public class PanelCaseEmplacementJoueur extends Pane {
      * @return true si l'emplacement est déjà occupé par un pion, et false si autrement.
      */
     public boolean estOccupe() {
-        return this.occupe;
+        return (this.vuePion != null);
     }
 
     public void ajouterPion(VuePion vuePion) {
+        this.vuePion = vuePion;
         this.image.setImage(vuePion.getImageView().getImage());
-        this.occupe = true;
     }
 
     public void vider() {
+        this.vuePion = null;
         this.image.setImage(null);
-        this.occupe = false;
+    }
+
+    public boolean pionIdentique(VuePion vuePion) {
+        return this.vuePion.equals(vuePion);
     }
 
 }

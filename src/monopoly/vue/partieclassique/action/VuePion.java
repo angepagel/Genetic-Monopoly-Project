@@ -2,6 +2,7 @@ package monopoly.vue.partieclassique.action;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import monopoly.controleur.ControleurDeplacementPion;
 import monopoly.modele.Pion;
 import monopoly.vue.data.image.GestionnaireImage;
 
@@ -10,10 +11,13 @@ import java.util.Objects;
 public class VuePion {
 
     private Pion pion;
+    private ControleurDeplacementPion controleurDeplacementPion;
     private ImageView imageView;
 
     public VuePion(Pion pion) {
         this.pion = pion;
+        this.controleurDeplacementPion = new ControleurDeplacementPion(pion, this);
+        this.pion.setControleur(this.controleurDeplacementPion);
         this.imageView = new ImageView(GestionnaireImage.getImage("PionRouge"));
     }
 
