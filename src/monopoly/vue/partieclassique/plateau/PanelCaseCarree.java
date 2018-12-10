@@ -3,12 +3,11 @@ package monopoly.vue.partieclassique.plateau;
 
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.*;
 import monopoly.vue.data.image.GestionnaireImage;
 
 public class PanelCaseCarree extends PanelCase {
 
-    private ImageView image;
     private PanelCaseConteneurEmplacement conteneurEmplacement;
 
     public PanelCaseCarree(String nomCase, String nomImage) {
@@ -18,14 +17,15 @@ public class PanelCaseCarree extends PanelCase {
         this.setMaxSize(90,90);
         this.setMinSize(90,90);
 
-        this.image = new ImageView(GestionnaireImage.getImage(nomImage));
-        this.image.setFitWidth(90);
-        this.image.setFitHeight(90);
+        this.setBackground(new Background(new BackgroundImage(GestionnaireImage.getImage(nomImage),
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundRepeat.NO_REPEAT,
+                BackgroundPosition.CENTER,
+                new BackgroundSize(90, 90, true, true, true, true))));
 
         this.conteneurEmplacement = new PanelCaseConteneurEmplacement();
 
         this.getChildren().addAll(
-                this.image,
                 this.conteneurEmplacement
         );
 

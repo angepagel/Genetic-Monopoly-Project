@@ -17,6 +17,7 @@ import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
 import monopoly.vue.IVuePartie;
 import monopoly.vue.partieclassique.action.PanelAction;
+import monopoly.vue.partieclassique.action.VuePion;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
 import java.io.IOException;
@@ -57,12 +58,17 @@ public class Partie implements IVuePartie {
         Joueur j1 = new Humain("Yan");
         j.getJoueurs().add(j1);
         j1.choisirPion(new Pion("Canon"));
+        VuePion vuePionJ1 = new VuePion(j.getJoueurs().get(2).getPion(), this.panelPlateau);
+        vuePionJ1.miseAJour();
 
         Joueur j2 = new Humain("Ange");
         j.getJoueurs().add(j2);
         j2.choisirPion(new Pion("Cheval"));
+        VuePion vuePionJ2 = new VuePion(j.getJoueurs().get(3).getPion(), this.panelPlateau);
+        vuePionJ2.miseAJour();
 
         j.setJoueurEnCours(j1);
+        System.out.println(j1.getPion());
 
 
         // Instanciation de controleurs

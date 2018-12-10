@@ -33,7 +33,7 @@ public class PanelCaseSpeciale extends PanelCase {
 
         if (prix) {
             this.prix = new PanelCaseLabel("$Prix");
-            this.prix.setPadding(new Insets(27,0,0,0));
+            this.prix.setPadding(new Insets(17,0,0,0));
             this.getChildren().add(this.prix);
         }
 

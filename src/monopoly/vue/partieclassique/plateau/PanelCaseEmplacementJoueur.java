@@ -3,6 +3,7 @@ package monopoly.vue.partieclassique.plateau;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import monopoly.vue.data.image.GestionnaireImage;
 import monopoly.vue.partieclassique.action.VuePion;
 
 /**

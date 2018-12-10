@@ -28,9 +28,13 @@ public class PanelCaseConteneurEmplacement extends FlowPane {
     public PanelCaseConteneurEmplacement() {
         // TODO : Ajouter des getters et setters dans le futur, ou convertir ces attributs en un tableau
 
+        this.setPrefSize(56,28);
+        this.setMaxSize(56,28);
+        this.setMinSize(56,28);
+
         // Init liste
         this.listeEmplacements = new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i <= 7; i++) {
             this.listeEmplacements.add(new PanelCaseEmplacementJoueur());
             this.getChildren().add(this.listeEmplacements.get(i));
         }
@@ -42,11 +46,12 @@ public class PanelCaseConteneurEmplacement extends FlowPane {
         ArrayList<PanelCaseEmplacementJoueur> emplacementsLibres = new ArrayList<>();
 
         // On constitue la liste des emplacements libres
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i <= 7; i++) {
             if (!this.listeEmplacements.get(i).estOccupe()) {
                 emplacementsLibres.add(this.listeEmplacements.get(i));
             }
         }
+
 
         // Aléatoire
         Collections.shuffle(emplacementsLibres);
@@ -56,7 +61,7 @@ public class PanelCaseConteneurEmplacement extends FlowPane {
 
     public void enleverPion(VuePion vuePion) {
 
-        for (int i = 0; i < 7; i++) {
+        for (int i = 0; i <= 7; i++) {
             if (!this.listeEmplacements.get(i).pionIdentique(vuePion)) {
                 this.listeEmplacements.get(i).vider();
             }

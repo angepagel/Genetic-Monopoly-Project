@@ -41,6 +41,7 @@ public class Des {
         de2 = random.nextInt(5) + 1;
 
         this.controleur.lancer();
+        Jeu.getInstance().getJoueurEnCours().getPion().deplacer(sommeDes());
         return sommeDes();
     }
 

@@ -5,6 +5,7 @@ import javafx.scene.image.ImageView;
 import monopoly.controleur.ControleurDeplacementPion;
 import monopoly.modele.Pion;
 import monopoly.vue.data.image.GestionnaireImage;
+import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
 import java.util.Objects;
 
@@ -13,16 +14,19 @@ public class VuePion {
     private Pion pion;
     private ControleurDeplacementPion controleurDeplacementPion;
     private ImageView imageView;
+    private PanelPlateau panelPlateau;
 
-    public VuePion(Pion pion) {
+    public VuePion(Pion pion, PanelPlateau panelPlateau) {
         this.pion = pion;
         this.controleurDeplacementPion = new ControleurDeplacementPion(pion, this);
         this.pion.setControleur(this.controleurDeplacementPion);
+        System.out.println(this.pion);
+        this.panelPlateau = panelPlateau;
         this.imageView = new ImageView(GestionnaireImage.getImage("PionRouge"));
     }
 
     public void miseAJour() {
-
+        this.panelPlateau.getPanelCase(this.pion.getPosition().getId()).getConteneurEmplacements().insererPion(this);
     }
 
     public ImageView getImageView() {

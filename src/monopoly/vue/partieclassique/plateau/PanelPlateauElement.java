@@ -11,7 +11,7 @@ public class PanelPlateauElement extends HBox {
 
         for (Node panelCase : this.getChildren()) {
 
-            if (id.equals( ((PanelCase)panelCase).getId())) {
+            if (id.equals( ((PanelCase)panelCase).getModele().getId())) {
                 res = (PanelCase) panelCase;
             }
 
