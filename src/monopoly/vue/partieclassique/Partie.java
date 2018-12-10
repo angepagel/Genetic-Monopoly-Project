@@ -26,6 +26,9 @@ public class Partie {
     private static Partie instance = null;
     private ControleurPlateau controleurPlateau;
 
+    private PanelPlateau panelPlateau;
+    private PanelAction panelAction;
+
     public Partie() throws IOException {
         instance = this;
 
@@ -34,8 +37,8 @@ public class Partie {
         Stage stage = new Stage();
 
         // Init components
-        PanelPlateau panelPlateau = new PanelPlateau();
-        PanelAction panelAction = new PanelAction();
+        this.panelPlateau = new PanelPlateau();
+        this.panelAction = new PanelAction();
 
         root.getChildren().add(panelPlateau);
         root.getChildren().add(panelAction);
@@ -66,6 +69,10 @@ public class Partie {
         // Instanciation de controleurs
         this.controleurPlateau = new ControleurPlateau(panelPlateau);
 
+    }
+
+    public PanelPlateau getPanelPlateau() {
+        return this.panelPlateau;
     }
 
     public static Background getBackground() {
