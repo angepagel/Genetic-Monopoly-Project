@@ -11,7 +11,7 @@ public class PanelCaseActuelle extends Pane {
 
     public PanelCaseActuelle() {
 
-        this.rect = new PanelActionRectangle(10, 10, 275, 130);
+        this.rect = new PanelActionRectangle(10, 10, 275, 120);
 
         this.titre = new PanelActionLabel("Case actuelle", 15);
         this.titre.setBackgroundColor(Color.web("F4F4F4"));

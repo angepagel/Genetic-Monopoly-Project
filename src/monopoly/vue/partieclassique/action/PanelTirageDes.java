@@ -28,7 +28,7 @@ public class PanelTirageDes extends Pane {
     public PanelTirageDes() {
         PanelTirageDes self = this;
 
-        this.rect = new PanelActionRectangle(10, 10, 275, 130);
+        this.rect = new PanelActionRectangle(10, 10, 275, 120);
 
         this.titre = new PanelActionLabel("Tirage des dés", 15);
         this.titre.setBackgroundColor(Color.web("F4F4F4"));
