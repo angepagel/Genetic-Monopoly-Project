@@ -1,5 +1,7 @@
 package monopoly.modele;
 
+import monopoly.controleur.ControleurMiseAJourDe;
+
 import java.util.Random;
 
 public class Des {
@@ -19,6 +21,11 @@ public class Des {
     private Random random;
 
     /**
+     * Contrôleur qui met à jour les dés.
+     */
+    private ControleurMiseAJourDe controleur;
+
+    /**
      * Initialisation des dés.
      */
     public Des() {
@@ -32,6 +39,8 @@ public class Des {
     public int lancer() {
         de1 = random.nextInt(5) + 1;
         de2 = random.nextInt(5) + 1;
+
+        this.controleur.lancer();
         return sommeDes();
     }
 
@@ -66,4 +75,21 @@ public class Des {
     public boolean estDouble() {
         return (de1 == de2);
     }
+
+    /**
+     * Setter du contrôleur.
+     * @param controleur Contrôleur du dé.
+     */
+    public void setControleur(ControleurMiseAJourDe controleur) {
+        this.controleur = controleur;
+    }
+
+    /**
+     * Getter du contrôleur.
+     * @return Contrôleur de mise à jour du dé.
+     */
+    public ControleurMiseAJourDe getControleur() {
+        return this.controleur;
+    }
+
 }

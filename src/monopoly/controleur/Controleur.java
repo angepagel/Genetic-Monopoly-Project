@@ -1,6 +1,6 @@
 package monopoly.controleur;
 
-public class Controleur {
+public abstract class Controleur {
 
     public Controleur() {
 

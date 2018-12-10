@@ -31,4 +31,9 @@ public class PanelCaseCarree extends PanelCase {
 
     }
 
+    @Override
+    public PanelCaseConteneurEmplacement getConteneurEmplacements() {
+        return this.conteneurEmplacement;
+    }
+
 }

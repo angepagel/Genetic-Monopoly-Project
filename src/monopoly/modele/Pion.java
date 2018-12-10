@@ -3,6 +3,8 @@ package monopoly.modele;
 import monopoly.modele.cases.Case;
 import monopoly.modele.cases.ECase;
 
+import java.util.Objects;
+
 /**
  * Représente le pion du joueur, donc sa position sur la map.
  */
@@ -176,9 +178,24 @@ public class Pion {
         this.joueur = joueur;
     }
 
-
     @Override
     public String toString(){
         return nom;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pion pion = (Pion) o;
+        return caseDepartLast == pion.caseDepartLast &&
+                Objects.equals(position, pion.position) &&
+                Objects.equals(nom, pion.nom) &&
+                Objects.equals(joueur, pion.joueur);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(position, nom, joueur, caseDepartLast);
     }
 }

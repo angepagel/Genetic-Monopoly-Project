@@ -7,7 +7,7 @@ import javafx.scene.control.Button;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import monopoly.controleur.ControleurDe;
+import monopoly.controleur.ControleurBoutonDe;
 import monopoly.controleur.ControleurJoueurs;
 import monopoly.modele.Jeu;
 import monopoly.vue.data.image.GestionnaireImage;
@@ -22,7 +22,7 @@ public class PanelTirageDes extends Pane {
     private VueDes vueDes;
     private Button lancerDes;
 
-    private ControleurDe controleurDe;
+    private ControleurBoutonDe controleurBoutonDe;
     private ControleurJoueurs controleurJoueurs;
 
     public PanelTirageDes() {
@@ -37,9 +37,6 @@ public class PanelTirageDes extends Pane {
         this.titre.setPadding(Insets.EMPTY);
         this.titre.setLayoutX(30);
         this.titre.setLayoutY(0);
-
-
-
 
         // Image dés
         this.de_1 = new ImageView(GestionnaireImage.getImage("De_4"));
@@ -57,8 +54,7 @@ public class PanelTirageDes extends Pane {
         this.de_2.setY(50);
 
         // Instanciation des contrôleurs
-        this.controleurDe = new ControleurDe(this.vueDes);
-        this.controleurJoueurs = new ControleurJoueurs();
+        this.controleurBoutonDe = new ControleurBoutonDe();
 
         // Bouton de lancer des dés
         this.lancerDes = new Button("Lancer de dés");
@@ -69,8 +65,7 @@ public class PanelTirageDes extends Pane {
 
             @Override
             public void handle(ActionEvent e) {
-                self.controleurDe.lancerDes();
-                self.controleurJoueurs.deplacer();
+                self.controleurBoutonDe.lancerDes();
             }
 
         });

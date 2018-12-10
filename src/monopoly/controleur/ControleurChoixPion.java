@@ -11,7 +11,7 @@ import monopoly.modele.Humain;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 
-public class ControleurChoixPion {
+public class ControleurChoixPion extends Controleur {
 
     private ObservableList<Pion> listePions;
     private ArrayList<Joueur> joueurs;

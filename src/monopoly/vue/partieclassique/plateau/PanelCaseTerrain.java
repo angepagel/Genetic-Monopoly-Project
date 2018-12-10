@@ -41,4 +41,9 @@ public class PanelCaseTerrain extends PanelCase {
 
     }
 
+    @Override
+    public PanelCaseConteneurEmplacement getConteneurEmplacements() {
+        return this.emplacements;
+    }
+
 }

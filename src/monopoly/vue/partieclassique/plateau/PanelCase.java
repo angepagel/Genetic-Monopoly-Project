@@ -6,7 +6,7 @@ import javafx.scene.paint.Color;
 import monopoly.modele.Jeu;
 import monopoly.modele.cases.Case;
 
-public class PanelCase extends FlowPane {
+public abstract class PanelCase extends FlowPane {
 
     private Case modele;
 
@@ -38,6 +38,8 @@ public class PanelCase extends FlowPane {
     public Case getModele() {
         return modele;
     }
+
+    public abstract PanelCaseConteneurEmplacement getConteneurEmplacements();
 
     public void vider() {
 

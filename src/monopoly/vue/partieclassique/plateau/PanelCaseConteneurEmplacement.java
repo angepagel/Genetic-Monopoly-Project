@@ -3,8 +3,11 @@ package monopoly.vue.partieclassique.plateau;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.FlowPane;
 import monopoly.vue.data.image.GestionnaireImage;
+import monopoly.vue.partieclassique.action.VuePion;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Random;
 
 /**
  * Created by maxim on 03/12/2018.
@@ -31,6 +34,29 @@ public class PanelCaseConteneurEmplacement extends FlowPane {
             this.listeEmplacements.add(new PanelCaseEmplacementJoueur());
             this.getChildren().add(this.listeEmplacements.get(i));
         }
+
+    }
+
+    public void insererPion(VuePion vuePion) {
+
+        ArrayList<PanelCaseEmplacementJoueur> emplacementsLibres = new ArrayList<>();
+
+        // On constitue la liste des emplacements libres
+        for (int i = 0; i < 7; i++) {
+            if (!this.listeEmplacements.get(i).estOccupe()) {
+                emplacementsLibres.add(this.listeEmplacements.get(i));
+            }
+        }
+
+        // Aléatoire
+        Collections.shuffle(emplacementsLibres);
+        emplacementsLibres.get(0).ajouterPion(vuePion);
+
+    }
+
+    public void enleverPion(VuePion vuePion) {
+
+
 
     }
 

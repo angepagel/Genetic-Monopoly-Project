@@ -18,7 +18,7 @@ public class PanelTourBoutons extends HBox {
         this.echanger.setAlignment(Pos.CENTER_RIGHT);
 
         this.getChildren().addAll(
-            this.gererProprietes,
+                this.gererProprietes,
                 this.echanger
         );
 

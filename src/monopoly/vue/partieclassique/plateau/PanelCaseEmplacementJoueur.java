@@ -3,6 +3,7 @@ package monopoly.vue.partieclassique.plateau;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
+import monopoly.vue.partieclassique.action.VuePion;
 
 /**
  * Created by maxim on 23/11/2018.
@@ -37,9 +38,8 @@ public class PanelCaseEmplacementJoueur extends Pane {
         return this.occupe;
     }
 
-
-    public void setImage(Image image) {
-        this.image.setImage(image);
+    public void ajouterPion(VuePion vuePion) {
+        this.image.setImage(vuePion.getImageView().getImage());
         this.occupe = true;
     }
 

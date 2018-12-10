@@ -37,7 +37,10 @@ public class PanelCaseSpeciale extends PanelCase {
             this.getChildren().add(this.prix);
         }
 
-
     }
 
+    @Override
+    public PanelCaseConteneurEmplacement getConteneurEmplacements() {
+        return this.emplacements;
+    }
 }

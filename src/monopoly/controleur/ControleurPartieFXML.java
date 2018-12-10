@@ -34,7 +34,7 @@ public class ControleurPartieFXML extends Controleur {
 
     private Jeu jeu;
     private ControleurChangementTour controleur_Tour ;
-    private ControleurDe controleur_de;
+    private ControleurBoutonDe controleur_de;
 
 
     public void InitJeu(){
@@ -57,7 +57,7 @@ public class ControleurPartieFXML extends Controleur {
 
     @FXML
     public void actionLancerDes(ActionEvent action) {
-        //this.controleur_de = new ControleurDe(de_1, de_2);
+        //this.controleur_de = new ControleurBoutonDe(de_1, de_2);
         //this.controleur_de.lancerDes(action);
     }
 
