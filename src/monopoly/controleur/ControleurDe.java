@@ -2,7 +2,6 @@ package monopoly.controleur;
 
 import javafx.event.ActionEvent;
 import monopoly.modele.Des;
-import monopoly.modele.Jeu;
 import monopoly.vue.VueDes;
 
 import javafx.scene.image.ImageView;
@@ -10,14 +9,15 @@ import javafx.scene.image.ImageView;
 public class ControleurDe extends Controleur {
 
     private Des des;
+
     private VueDes vueDes;
 
-    public ControleurDe(VueDes vueDes)  {
-        this.des = Jeu.getInstance().getDes();
-        this.vueDes = vueDes;
+    public ControleurDe(ImageView de1, ImageView de2) {
+        this.des = new Des();
+        this.vueDes = new VueDes(this.des, de1, de2);
     }
 
-    public void lancerDes() {
+    public void actionLancerDes(ActionEvent action) {
         // TODO : Lancer les dés
         this.des.lancer();
         this.vueDes.miseAJour();

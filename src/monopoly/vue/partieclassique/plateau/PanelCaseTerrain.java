@@ -26,9 +26,8 @@ public class PanelCaseTerrain extends PanelCase {
     private Case_Terrain modele;
 
     public PanelCaseTerrain(String nom) {
-        super(nom);
 
-        this.modele = (Case_Terrain) this.getModele();
+        this.modele = (Case_Terrain) Jeu.getInstance().getPlateau().getCase(nom);
 
         // Component properties
         this.header = new PanelCaseHeader(this.modele.getCouleur().getCouleur());

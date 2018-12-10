@@ -15,17 +15,19 @@ public class PanelCaseSpeciale extends PanelCase {
     private PanelCaseLabel nom;
     private PanelCaseConteneurEmplacement emplacements;
     private Label prix;
+    private Case modele;
 
-    public PanelCaseSpeciale(String id, String image, boolean prix) {
-        super(id);
+    public PanelCaseSpeciale(String nom, String image, boolean prix) {
+        super();
 
         this.setBackground(new Background(new BackgroundImage(
                 GestionnaireImage.getImage(image),
                 BackgroundRepeat.NO_REPEAT, BackgroundRepeat.NO_REPEAT,
                 BackgroundPosition.CENTER, new BackgroundSize(100,100,true,true,true, false))));
 
+        this.modele = Jeu.getInstance().getPlateau().getCase(nom);
 
-        this.nom = new PanelCaseLabel(this.getModele().getNom().toUpperCase());
+        this.nom = new PanelCaseLabel(this.modele.getNom().toUpperCase());
         this.nom.setFont(new Font("System", 7));
         this.emplacements = new PanelCaseConteneurEmplacement();
         this.getChildren().addAll(this.nom, this.emplacements);

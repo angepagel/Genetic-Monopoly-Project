@@ -1,18 +1,13 @@
 package monopoly.vue.partieclassique.action;
 
 import javafx.geometry.Insets;
-import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
-import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
-import monopoly.vue.partieclassique.plateau.PanelTourBoutons;
-import monopoly.vue.partieclassique.plateau.PanelTourInterne;
 
 public class PanelTour extends Pane {
 
     private PanelActionRectangle rect;
     private PanelActionLabel titre;
-
 
     public PanelTour() {
 
@@ -29,10 +24,10 @@ public class PanelTour extends Pane {
         this.titre.setLayoutX(30);
         this.titre.setLayoutY(0);
 
+
         this.getChildren().addAll(
                 this.rect,
-                this.titre,
-                new PanelTourInterne()
+                this.titre
         );
 
     }

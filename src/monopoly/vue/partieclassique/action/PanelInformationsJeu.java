@@ -68,7 +68,7 @@ public class PanelInformationsJeu extends Pane {
                 this.tempsJeuValeur,
                 this.nbToursTitre,
                 this.nbToursValeur
-        );
+                );
 
     }
 

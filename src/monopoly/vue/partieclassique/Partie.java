@@ -10,11 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import monopoly.controleur.ControleurPlateau;
-import monopoly.modele.Humain;
 import monopoly.modele.Jeu;
-import monopoly.modele.Joueur;
-import monopoly.modele.Pion;
 import monopoly.vue.partieclassique.action.PanelAction;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
@@ -24,7 +20,6 @@ public class Partie {
 
     private HBox root;
     private static Partie instance = null;
-    private ControleurPlateau controleurPlateau;
 
     public Partie() throws IOException {
         instance = this;
@@ -34,11 +29,8 @@ public class Partie {
         Stage stage = new Stage();
 
         // Init components
-        PanelPlateau panelPlateau = new PanelPlateau();
-        PanelAction panelAction = new PanelAction();
-
-        root.getChildren().add(panelPlateau);
-        root.getChildren().add(panelAction);
+        root.getChildren().add(new PanelPlateau());
+        root.getChildren().add(new PanelAction());
 
         root.setPrefSize(1080,700);
 
@@ -46,26 +38,6 @@ public class Partie {
         stage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         stage.setScene(scene);
         stage.show();
-
-
-        // Initialisation de la partie (a déplacer ?)
-        Jeu j = Jeu.getInstance();
-        //j.initialisation();
-
-        Joueur j1 = new Humain("Yan");
-        j.getJoueurs().add(j1);
-        j1.choisirPion(new Pion("Canon"));
-
-        Joueur j2 = new Humain("Ange");
-        j.getJoueurs().add(j2);
-        j2.choisirPion(new Pion("Cheval"));
-
-        j.setJoueurEnCours(j1);
-
-
-        // Instanciation de controleurs
-        this.controleurPlateau = new ControleurPlateau(panelPlateau);
-
     }
 
     public static Background getBackground() {

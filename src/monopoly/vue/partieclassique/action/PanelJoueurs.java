@@ -60,7 +60,7 @@ public class PanelJoueurs extends Pane {
         this.lesProprietes = new Button("Voir les propriétés");
         this.lesProprietes.setLayoutX(200);
         this.lesProprietes.setLayoutY(122);
-
+        
 
         this.getChildren().addAll(
                 this.rect,

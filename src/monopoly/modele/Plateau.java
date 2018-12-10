@@ -156,7 +156,6 @@ public class Plateau {
         Case_CaisseCommunaute cc3 = new Case_CaisseCommunaute(lecourbe);
         listeCases.add(cc3);
 
-
         Case_Terrain belleville = new Case_Terrain("Boulevard de Belleville", marron, new Tarifs(60,2,10,30,90,160,250), cc3);
         listeCases.add(belleville);
 
@@ -172,7 +171,7 @@ public class Plateau {
         Case res = null;
 
         for(Case c : listeCases) {
-            if (c.getId().equals(nom)) {
+            if (c.getNom() == nom) {
                 res = c;
             }
         }
