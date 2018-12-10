@@ -24,6 +24,21 @@ public class GestionnaireImage {
         this.addImage("InterrogationOrange", "InterrogationOrange.png");
         this.addImage("InterrogationRose", "InterrogationRose.png");
         this.addImage("Luxe", "Luxe.png");
+
+        this.addImage("De_1", "dice_1.png");
+        this.addImage("De_2", "dice_2.png");
+        this.addImage("De_3", "dice_3.png");
+        this.addImage("De_4", "dice_4.png");
+        this.addImage("De_5", "dice_5.png");
+        this.addImage("De_6", "dice_6.png");
+
+        this.addImage("CaseDepart", "CaseDepart.png");
+        this.addImage("CaseParcGratuit", "CaseParcGratuit.png");
+        this.addImage("CaseVisite", "CaseVisite.png");
+        this.addImage("CaseAllezEnPrison", "CaseAllezEnPrison.png");
+
+        this.addImage("PionRouge", "PionRouge.png");
+
     }
 
     private String getFolder() {

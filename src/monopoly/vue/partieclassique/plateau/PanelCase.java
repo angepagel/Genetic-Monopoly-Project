@@ -3,10 +3,16 @@ package monopoly.vue.partieclassique.plateau;
 import javafx.geometry.Insets;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
+import monopoly.modele.Jeu;
+import monopoly.modele.cases.Case;
 
 public class PanelCase extends FlowPane {
 
-    public PanelCase() {
+    private Case modele;
+
+    public PanelCase(String id) {
+
+        this.modele = Jeu.getInstance().getPlateau().getCase(id);
 
         // Panel properties
         this.setWidth(58);
@@ -29,4 +35,7 @@ public class PanelCase extends FlowPane {
 
     }
 
+    public Case getModele() {
+        return modele;
+    }
 }
