@@ -15,12 +15,13 @@ import monopoly.modele.Humain;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
+import monopoly.vue.IVuePartie;
 import monopoly.vue.partieclassique.action.PanelAction;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
 import java.io.IOException;
 
-public class Partie {
+public class Partie implements IVuePartie {
 
     private HBox root;
     private static Partie instance = null;
