@@ -8,7 +8,6 @@ import javafx.scene.layout.Pane;
 import monopoly.controleur.ControleurDe;
 import monopoly.controleur.ControleurJoueurs;
 import monopoly.modele.Jeu;
-import monopoly.vue.VueDes;
 import monopoly.vue.data.image.GestionnaireImage;
 
 public class PanelTirageDes extends Pane {

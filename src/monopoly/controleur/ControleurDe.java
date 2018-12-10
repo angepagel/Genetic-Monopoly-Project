@@ -1,11 +1,8 @@
 package monopoly.controleur;
 
-import javafx.event.ActionEvent;
 import monopoly.modele.Des;
 import monopoly.modele.Jeu;
-import monopoly.vue.VueDes;
-
-import javafx.scene.image.ImageView;
+import monopoly.vue.partieclassique.action.VueDes;
 
 public class ControleurDe extends Controleur {
 

@@ -1,4 +1,4 @@
-package monopoly.vue;
+package monopoly.vue.partieclassique.action;
 
 
 import javafx.fxml.FXMLLoader;
