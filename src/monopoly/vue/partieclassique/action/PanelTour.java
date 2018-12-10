@@ -27,6 +27,8 @@ public class PanelTour extends Pane {
         this.titre.setLayoutY(0);
 
         panelTourInterne = new PanelTourInterne();
+        this.panelTourInterne.setLayoutX(30);
+        this.panelTourInterne.setLayoutY(30);
 
         this.getChildren().addAll(
                 this.rect,

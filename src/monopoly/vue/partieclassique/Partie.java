@@ -73,5 +73,5 @@ public class Partie implements IVuePartie {
     public PanelPlateau getPanelPlateau() {
         return this.panelPlateau;
     }
-    
+
 }
