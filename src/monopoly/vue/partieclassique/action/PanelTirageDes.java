@@ -64,5 +64,7 @@ public class PanelTirageDes extends Pane {
 
     }
 
-
+    public VueDes getVueDes() {
+        return vueDes;
+    }
 }

@@ -1,4 +1,4 @@
-package monopoly.vue.partieclassique.plateau;
+package monopoly.vue.partieclassique.action;
 
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;

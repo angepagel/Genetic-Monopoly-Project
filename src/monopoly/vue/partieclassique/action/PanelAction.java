@@ -8,6 +8,10 @@ import javafx.scene.layout.VBox;
  */
 public class PanelAction extends VBox {
 
+    private PanelTour panelTour;
+    private PanelJoueurs panelJoueurs;
+    private PanelInformationsJeu panelInformationsJeu;
+
     public PanelAction() {
 
         this.setWidth(380);
@@ -17,10 +21,24 @@ public class PanelAction extends VBox {
         this.setMinWidth(380);
         this.setMinHeight(700);
 
-        this.getChildren().add(new PanelInformationsJeu());
-        this.getChildren().add(new PanelJoueurs());
-        this.getChildren().add(new PanelTour());
+        panelInformationsJeu = new PanelInformationsJeu();
+        panelJoueurs = new PanelJoueurs();
+        panelTour = new PanelTour();
 
+        this.getChildren().add(panelInformationsJeu);
+        this.getChildren().add(panelJoueurs);
+        this.getChildren().add(panelTour);
     }
 
+    public PanelTour getPanelTour() {
+        return panelTour;
+    }
+
+    public PanelJoueurs getPanelJoueurs() {
+        return panelJoueurs;
+    }
+
+    public PanelInformationsJeu getPanelInformationsJeu() {
+        return panelInformationsJeu;
+    }
 }
