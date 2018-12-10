@@ -48,8 +48,8 @@ public class ControleurPartie extends Controleur {
 
     @FXML
     public void actionLancerDes(ActionEvent action) {
-        this.controleur_de = new ControleurDe(de_1, de_2);
-        this.controleur_de.actionLancerDes(action);
+        //this.controleur_de = new ControleurDe(de_1, de_2);
+        //this.controleur_de.actionLancerDes(action);
     }
 
     @FXML
