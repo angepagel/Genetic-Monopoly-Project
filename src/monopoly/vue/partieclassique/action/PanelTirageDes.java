@@ -28,7 +28,7 @@ public class PanelTirageDes extends Pane {
     public PanelTirageDes() {
         PanelTirageDes self = this;
 
-        this.rect = new PanelActionRectangle(10, 10, 275, 100);
+        this.rect = new PanelActionRectangle(10, 10, 275, 130);
 
         this.titre = new PanelActionLabel("Tirage des dés", 15);
         this.titre.setBackgroundColor(Color.web("F4F4F4"));
@@ -52,9 +52,9 @@ public class PanelTirageDes extends Pane {
         this.de_2.setFitHeight(65);
 
         this.de_1.setX(25);
-        this.de_1.setY(35);
+        this.de_1.setY(50);
         this.de_2.setX(105);
-        this.de_2.setY(35);
+        this.de_2.setY(50);
 
         // Instanciation des contrôleurs
         this.controleurDe = new ControleurDe(this.vueDes);
@@ -63,7 +63,7 @@ public class PanelTirageDes extends Pane {
         // Bouton de lancer des dés
         this.lancerDes = new Button("Lancer de dés");
         this.lancerDes.setLayoutX(175);
-        this.lancerDes.setLayoutY(35);
+        this.lancerDes.setLayoutY(70);
         //this.lancerDes.setOnAction(new EventLancerDes());
         this.lancerDes.setOnAction(new EventHandler<ActionEvent>() {
 
