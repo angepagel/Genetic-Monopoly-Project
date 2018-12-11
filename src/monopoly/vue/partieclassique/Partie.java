@@ -32,6 +32,10 @@ public class Partie implements IVuePartie {
 
     public Partie() throws IOException {
 
+        // Initialisation de la partie
+        Jeu j = Jeu.getInstance();
+        j.initialisation();
+
         root = new HBox();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -49,11 +53,6 @@ public class Partie implements IVuePartie {
         stage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         stage.setScene(scene);
         stage.show();
-
-
-        // Initialisation de la partie (a déplacer ?)
-        Jeu j = Jeu.getInstance();
-        //j.initialisation();
 
         Joueur j1 = new Humain("Yan");
         j.getJoueurs().add(j1);

@@ -1,20 +1,14 @@
 package monopoly.controleur;
 
 import javafx.fxml.FXML;
-
 import java.io.IOException;
-import monopoly.vue.VueLancementPartie;
+import monopoly.vue.AjoutJoueurs;
 
 public class ControleurMenu {
-    
-    
-    private VueLancementPartie partie;
+
     @FXML
     public void actionPartieClassique() throws IOException {
-         partie = VueLancementPartie.getInstance(); 
-         partie.initWindow();
-        //new Partie();
-        
+        new AjoutJoueurs(); // Ouvre la fenêtre de configuration de la partie
     }
 
     @FXML
