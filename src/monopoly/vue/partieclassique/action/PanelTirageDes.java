@@ -65,7 +65,7 @@ public class PanelTirageDes extends Pane {
 
             @Override
             public void handle(ActionEvent e) {
-                //self.controleurBoutonDe.lancerDes();
+                self.controleurBoutonDe.lancerDes();
             }
 
         });

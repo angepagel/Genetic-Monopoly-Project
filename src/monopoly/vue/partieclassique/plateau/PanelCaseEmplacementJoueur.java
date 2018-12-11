@@ -51,6 +51,8 @@ public class PanelCaseEmplacementJoueur extends Pane {
     }
 
     public boolean pionIdentique(VuePion vuePion) {
+        if(this.vuePion == null)
+            return false;
         return this.vuePion.equals(vuePion);
     }
 

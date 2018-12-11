@@ -62,7 +62,7 @@ public class PanelCaseConteneurEmplacement extends FlowPane {
     public void enleverPion(VuePion vuePion) {
 
         for (int i = 0; i <= 7; i++) {
-            if (!this.listeEmplacements.get(i).pionIdentique(vuePion)) {
+            if (this.listeEmplacements.get(i).pionIdentique(vuePion)) {
                 this.listeEmplacements.get(i).vider();
             }
         }

@@ -3,7 +3,10 @@ package monopoly.vue.partieclassique.action;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import monopoly.controleur.ControleurDeplacementPion;
+import monopoly.modele.Jeu;
 import monopoly.modele.Pion;
+import monopoly.modele.Plateau;
+import monopoly.modele.cases.Case;
 import monopoly.vue.data.image.GestionnaireImage;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
@@ -15,6 +18,7 @@ public class VuePion {
     private ControleurDeplacementPion controleurDeplacementPion;
     private ImageView imageView;
     private PanelPlateau panelPlateau;
+    private String casePresente;
 
     public VuePion(Pion pion, PanelPlateau panelPlateau) {
         this.pion = pion;
@@ -23,10 +27,15 @@ public class VuePion {
         System.out.println(this.pion);
         this.panelPlateau = panelPlateau;
         this.imageView = new ImageView(GestionnaireImage.getImage("PionRouge"));
+        casePresente = pion.getPosition().getId();
     }
 
     public void miseAJour() {
-        this.panelPlateau.getPanelCase(this.pion.getPosition().getId()).getConteneurEmplacements().insererPion(this);
+        if(casePresente != null) {
+            this.panelPlateau.getPanelCase(casePresente).getConteneurEmplacements().enleverPion(this);
+        }
+        casePresente = pion.getPosition().getId();
+        this.panelPlateau.getPanelCase(casePresente).getConteneurEmplacements().insererPion(this);
     }
 
     public ImageView getImageView() {
