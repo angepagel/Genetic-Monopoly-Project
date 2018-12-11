@@ -68,7 +68,8 @@ public class Partie implements IVuePartie {
         vuePionJ2.miseAJour();
 
         j.setJoueurEnCours(j1);
-        System.out.println(j1.getPion());
+
+        // La case prison ne possède pas de panel, il y a donc un plantage quand on tombe dessus
 
 
         // Instanciation de controleurs

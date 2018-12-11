@@ -60,7 +60,6 @@ public class Pion {
      * @param nbCases Nombre de cases dont on veut avancer.
      */
     public void deplacer(int nbCases) {
-        System.out.println(this);
         caseDepartLast = false;
         for(int i = 0; i < nbCases; ++i) {
             avancerUneCase(i+1 < nbCases);
