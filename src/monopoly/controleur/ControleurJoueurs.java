@@ -17,7 +17,15 @@ public class ControleurJoueurs {
         Joueur joueur = Jeu.getInstance().getJoueurEnCours();
 
         // On déplace le pion.
-        joueur.getPion().deplacer(Jeu.getInstance().getDes().sommeDes());
+        if(Jeu.getInstance().getDes().estDouble()) {
+            if(!joueur.incNbDoubles()) {
+                joueur.getPion().deplacer(Jeu.getInstance().getDes().sommeDes());
+            }
+        }
+        else {
+            joueur.getPion().deplacer(Jeu.getInstance().getDes().sommeDes());
+            joueur.resetNbDoubles();
+        }
 
         // On affiche sa position dans la console. (A enlever.)
         String nom = joueur.getNom();
