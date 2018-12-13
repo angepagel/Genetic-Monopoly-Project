@@ -270,6 +270,7 @@ public class Jeu {
 
         nbTours++;
         this.controleurInformationsJeu.actualiser();
+        this.joueurEnCours.getPion().getControleurCaseActuelle().actualiser();
     }
 
     /**
