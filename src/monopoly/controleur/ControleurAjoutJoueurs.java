@@ -1,5 +1,7 @@
 package monopoly.controleur;
 
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
@@ -17,6 +19,7 @@ public class ControleurAjoutJoueurs {
     @FXML private TableColumn colPion;
     @FXML private Button boutonRetirer;
     @FXML private Button boutonLancerPartie;
+    private ObservableList<String> listePions;
 
     /*
     Il est important de tenir compte des informations suivantes pour coder ce contrôleur:
@@ -27,6 +30,20 @@ public class ControleurAjoutJoueurs {
         - Éventuellement, les couleurs disponibles dans le comboPion sont gérées dynamiquement, compte tenu des
           couleurs déjà prises ?
      */
+
+    // JOptionPane.showMessageDialog(null,"msg");
+
+
+    @FXML
+    public void initialize() {
+        listePions = FXCollections.observableArrayList("Rouge", "Bleu", "Vert", "Jaune", "Rose", "Violet", "Cyan", "Orange");
+
+        for (String couleur : listePions) {
+            comboPions.getItems().add(couleur);
+        }
+
+        comboPions.setValue("Rouge");
+    }
 
     @FXML
     public void ajouterJoueur() {
