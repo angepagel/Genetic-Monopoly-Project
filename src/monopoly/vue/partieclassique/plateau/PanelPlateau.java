@@ -43,7 +43,12 @@ public class PanelPlateau extends BorderPane {
 
         PanelCase res = null;
 
-        res = ((PanelPlateauBottom)this.getBottom()).getPanelCase(id);
+        if (id.equals("Prison")) {
+            res = ((PanelPlateauBottom)this.getBottom()).getPanelCase("Visite en prison");
+        }
+        else {
+            res = ((PanelPlateauBottom)this.getBottom()).getPanelCase(id);
+        }
 
         if (res == null) {
             res = ((PanelPlateauTop)this.getTop()).getPanelCase(id);
