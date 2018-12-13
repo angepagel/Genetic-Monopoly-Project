@@ -7,10 +7,12 @@ public class Chronometre {
 
     private int secondes;
     private int minutes;
+    private int heures;
 
     public Chronometre() {
         this.secondes = 0;
         this.minutes = 0;
+        this.heures = 0;
     }
 
     public void addSeconde() {
@@ -23,6 +25,14 @@ public class Chronometre {
 
     private void addMinute() {
         this.minutes++;
+        if (this.minutes == 60) {
+            this.minutes = 0;
+            this.addHeure();
+        }
+    }
+
+    private void addHeure() {
+        this.heures++;
     }
 
     public int getSecondes() {
@@ -41,7 +51,17 @@ public class Chronometre {
         this.minutes = minutes;
     }
 
+    public int getHeures() {
+        return heures;
+    }
+
+    public void setHeures(int heures) {
+        this.heures = heures;
+    }
+
     public String afficher() {
+        String res;
+
         String affichageSecondes = Integer.toString(this.secondes);
         if (this.secondes < 10) {
             affichageSecondes = "0"+this.secondes;
@@ -52,7 +72,14 @@ public class Chronometre {
             affichageMinutes = "0"+this.minutes;
         }
 
-        return affichageMinutes+":"+affichageSecondes;
+        if (this.heures == 0) {
+            res = affichageMinutes+":"+affichageSecondes;
+        }
+        else {
+            res = Integer.toString(this.heures)+":"+affichageMinutes+":"+affichageSecondes;
+        }
+
+        return res;
     }
 
     @Override
