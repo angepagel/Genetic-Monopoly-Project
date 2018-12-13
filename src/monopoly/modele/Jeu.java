@@ -1,5 +1,6 @@
 package monopoly.modele;
 
+import monopoly.controleur.ControleurInformationsJeu;
 import monopoly.controleur.ControleurTerminerTour;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -48,9 +49,12 @@ public class Jeu {
     private GestionnaireCartes gestionnaireCartes;
 
     /**
-     * Contrôleur permettant de gérer la fin d'un tour.
+     * Contrôleur prenant en charge les informations du jeu sur l'IHM.
      */
-    private ControleurTerminerTour controleurTerminerTour;
+    private ControleurInformationsJeu controleurInformationsJeu;
+
+
+    // ----------- Methodes -----------
 
 
     /**
@@ -199,6 +203,9 @@ public class Jeu {
     public void prochainJoueur() {
         int nextIndex = (joueurs.indexOf(joueurEnCours) + 1) % joueurs.size();
         setJoueurEnCours(joueurs.get(nextIndex));
+
+        nbTours++;
+        this.controleurInformationsJeu.actualiser();
     }
 
     /**
@@ -224,12 +231,9 @@ public class Jeu {
         
     }
 
-    /**
-     * Mutateur du contrôleur de fin de tour.
-     * @param controleurTerminerTour Contrôleur de fin de tour.
-     */
-    public void setControleurTerminerTour(ControleurTerminerTour controleurTerminerTour) {
-        this.controleurTerminerTour = controleurTerminerTour;
+
+    public void setControleurInformationsJeu(ControleurInformationsJeu controleurInformationsJeu) {
+        this.controleurInformationsJeu = controleurInformationsJeu;
     }
 
     /**

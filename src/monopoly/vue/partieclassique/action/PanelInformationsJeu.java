@@ -5,6 +5,8 @@ import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import monopoly.controleur.ControleurInformationsJeu;
+import monopoly.modele.Jeu;
 import monopoly.vue.partieclassique.Partie;
 
 public class PanelInformationsJeu extends Pane {
@@ -15,6 +17,8 @@ public class PanelInformationsJeu extends Pane {
     private PanelActionLabel tempsJeuValeur;
     private PanelActionLabel nbToursValeur;
     private PanelActionRectangle rect;
+
+    private ControleurInformationsJeu controleurInformationsJeu;
 
     public PanelInformationsJeu() {
 
@@ -70,6 +74,13 @@ public class PanelInformationsJeu extends Pane {
                 this.nbToursValeur
         );
 
+        this.controleurInformationsJeu = new ControleurInformationsJeu(this);
+
+    }
+
+    public void actualiser() {
+        int nbTours = Jeu.getInstance().getNbTours();
+        this.nbToursValeur.setText(Integer.toString(nbTours));
     }
 
 }
