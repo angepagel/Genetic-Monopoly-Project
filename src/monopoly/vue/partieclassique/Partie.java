@@ -39,11 +39,15 @@ public class Partie implements IVuePartie {
 
         Joueur j1 = new Humain("Yan");
         j.getJoueurs().add(j1);
-        j1.choisirPion(new Pion("Canon"));
+        j1.choisirPion(new Pion("Rouge"));
 
         Joueur j2 = new Humain("Ange");
         j.getJoueurs().add(j2);
-        j2.choisirPion(new Pion("Cheval"));
+        j2.choisirPion(new Pion("Jaune"));
+
+        Joueur j3 = new Humain("Kévin");
+        j.getJoueurs().add(j3);
+        j3.choisirPion(new Pion("Bleu"));
 
 
         j.setJoueurEnCours(j1);
@@ -68,11 +72,16 @@ public class Partie implements IVuePartie {
 
         // Initialisation des vues
         VuePion vuePionJ1 = new VuePion(j.getJoueurs().get(0).getPion(), this.panelPlateau);
+        vuePionJ1.getImageView().setImage(GestionnaireImage.getImage("PionRouge"));
         vuePionJ1.miseAJour();
 
         VuePion vuePionJ2 = new VuePion(j.getJoueurs().get(1).getPion(), this.panelPlateau);
-        vuePionJ2.getImageView().setImage(GestionnaireImage.getImage("PionBleu"));
+        vuePionJ2.getImageView().setImage(GestionnaireImage.getImage("PionJaune"));
         vuePionJ2.miseAJour();
+
+        VuePion vuePionJ3 = new VuePion(j.getJoueurs().get(2).getPion(), this.panelPlateau);
+        vuePionJ3.getImageView().setImage(GestionnaireImage.getImage("PionBleu"));
+        vuePionJ3.miseAJour();
 
 
 
