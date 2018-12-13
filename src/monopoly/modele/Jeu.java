@@ -1,5 +1,6 @@
 package monopoly.modele;
 
+import monopoly.controleur.ControleurTerminerTour;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.lang.reflect.Array;
@@ -45,6 +46,12 @@ public class Jeu {
      * Gestionnaire des cartes du jeu.
      */
     private GestionnaireCartes gestionnaireCartes;
+
+    /**
+     * Contrôleur permettant de gérer la fin d'un tour.
+     */
+    private ControleurTerminerTour controleurTerminerTour;
+
 
     /**
      * Constructeur du jeu, ne prenant pas de paramètres puisqu'il s'agit d'un singleton.
@@ -209,11 +216,20 @@ public class Jeu {
     public ArrayList<Joueur> getJoueurs() {
         return joueurs;
     }
-    
+
+
     public void setJoueur(Joueur j,Pion p){
         j.choisirPion(p);
         joueurs.add(j);
         
+    }
+
+    /**
+     * Mutateur du contrôleur de fin de tour.
+     * @param controleurTerminerTour Contrôleur de fin de tour.
+     */
+    public void setControleurTerminerTour(ControleurTerminerTour controleurTerminerTour) {
+        this.controleurTerminerTour = controleurTerminerTour;
     }
 
     /**

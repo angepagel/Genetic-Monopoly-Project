@@ -42,7 +42,7 @@ public class PanelCaseActuelle extends Pane {
         this.titreCase.setLayoutX(25);
         this.titreCase.setLayoutY(25);
         this.titreCase.setMaxWidth(100);
-        this.titreCase.setAlignment(Pos.CENTER_LEFT);
+        this.titreCase.setAlignment(Pos.CENTER);
         this.prixCase = new PanelActionLabel("$Prix", 14);
         this.prixCase.setLayoutX(50);
         this.prixCase.setLayoutY(65);

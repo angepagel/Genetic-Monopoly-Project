@@ -44,7 +44,7 @@ public class Partie implements IVuePartie {
         j.getJoueurs().add(j2);
         j2.choisirPion(new Pion("Cheval"));
 
-
+        j.setJoueurEnCours(j1);
 
         root = new HBox();
         Scene scene = new Scene(root);
@@ -71,7 +71,6 @@ public class Partie implements IVuePartie {
         VuePion vuePionJ2 = new VuePion(j.getJoueurs().get(1).getPion(), this.panelPlateau);
         vuePionJ2.miseAJour();
 
-        j.setJoueurEnCours(j1);
 
 
         // Instanciation de controleurs
