@@ -38,7 +38,7 @@ public class PanelCaseActuelle extends Pane {
         this.titre.setLayoutX(30);
         this.titre.setLayoutY(0);
 
-        this.titreCase = new PanelActionLabel("Titre case", 14);
+        this.titreCase = new PanelActionLabel("Départ", 14);
         this.titreCase.setLayoutX(25);
         this.titreCase.setLayoutY(25);
         this.titreCase.setMaxWidth(100);

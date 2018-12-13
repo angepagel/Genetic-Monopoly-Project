@@ -42,7 +42,7 @@ public class PanelInformationsJeu extends Pane {
         this.tempsJeuTitre.setLayoutX(40);
         this.tempsJeuTitre.setLayoutY(15);
 
-        this.tempsJeuValeur = new PanelActionLabel("02:38", 12);
+        this.tempsJeuValeur = new PanelActionLabel("00:00", 12);
         this.tempsJeuValeur.setAlignment(null);
         this.tempsJeuValeur.setLayoutX(120);
         this.tempsJeuValeur.setLayoutY(15);
@@ -54,7 +54,7 @@ public class PanelInformationsJeu extends Pane {
         this.nbToursTitre.setLayoutX(40);
         this.nbToursTitre.setLayoutY(30);
 
-        this.nbToursValeur = new PanelActionLabel("27", 12);
+        this.nbToursValeur = new PanelActionLabel("0", 12);
         this.nbToursValeur.setAlignment(null);
         this.nbToursValeur.setLayoutX(140);
         this.nbToursValeur.setLayoutY(30);

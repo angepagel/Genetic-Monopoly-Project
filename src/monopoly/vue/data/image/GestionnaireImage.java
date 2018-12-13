@@ -38,6 +38,8 @@ public class GestionnaireImage {
         this.addImage("CaseAllezEnPrison", "CaseAllezEnPrison.png");
 
         this.addImage("PionRouge", "PionRouge.png");
+        this.addImage("PionJaune", "PionJaune.png");
+        this.addImage("PionBleu", "PionBleu.png");
 
     }
 

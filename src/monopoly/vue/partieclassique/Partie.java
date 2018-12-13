@@ -16,6 +16,7 @@ import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
 import monopoly.vue.IVuePartie;
+import monopoly.vue.data.image.GestionnaireImage;
 import monopoly.vue.partieclassique.action.PanelAction;
 import monopoly.vue.partieclassique.action.VuePion;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
@@ -44,6 +45,7 @@ public class Partie implements IVuePartie {
         j.getJoueurs().add(j2);
         j2.choisirPion(new Pion("Cheval"));
 
+
         j.setJoueurEnCours(j1);
 
         root = new HBox();
@@ -69,6 +71,7 @@ public class Partie implements IVuePartie {
         vuePionJ1.miseAJour();
 
         VuePion vuePionJ2 = new VuePion(j.getJoueurs().get(1).getPion(), this.panelPlateau);
+        vuePionJ2.getImageView().setImage(GestionnaireImage.getImage("PionBleu"));
         vuePionJ2.miseAJour();
 
 
