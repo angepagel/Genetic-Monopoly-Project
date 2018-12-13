@@ -32,9 +32,19 @@ public class Partie implements IVuePartie {
 
     public Partie() throws IOException {
 
-        // Initialisation de la partie
+        // Initialisation de la partie (a modifier pour synchroniser avec le menu de choix des joueurs)
         Jeu j = Jeu.getInstance();
         j.initialisation();
+
+        Joueur j1 = new Humain("Yan");
+        j.getJoueurs().add(j1);
+        j1.choisirPion(new Pion("Canon"));
+
+        Joueur j2 = new Humain("Ange");
+        j.getJoueurs().add(j2);
+        j2.choisirPion(new Pion("Cheval"));
+
+
 
         root = new HBox();
         Scene scene = new Scene(root);
@@ -54,21 +64,14 @@ public class Partie implements IVuePartie {
         stage.setScene(scene);
         stage.show();
 
-        Joueur j1 = new Humain("Yan");
-        j.getJoueurs().add(j1);
-        j1.choisirPion(new Pion("Canon"));
+        // Initialisation des vues
         VuePion vuePionJ1 = new VuePion(j.getJoueurs().get(0).getPion(), this.panelPlateau);
         vuePionJ1.miseAJour();
 
-        Joueur j2 = new Humain("Ange");
-        j.getJoueurs().add(j2);
-        j2.choisirPion(new Pion("Cheval"));
         VuePion vuePionJ2 = new VuePion(j.getJoueurs().get(1).getPion(), this.panelPlateau);
         vuePionJ2.miseAJour();
 
         j.setJoueurEnCours(j1);
-
-        // La case prison ne possède pas de panel, il y a donc un plantage quand on tombe dessus
 
 
         // Instanciation de controleurs

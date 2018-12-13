@@ -1,5 +1,6 @@
 package monopoly.modele;
 
+import monopoly.controleur.ControleurCaseActuelle;
 import monopoly.controleur.ControleurDeplacementPion;
 import monopoly.modele.cases.Case;
 import monopoly.modele.cases.ECase;
@@ -36,6 +37,11 @@ public class Pion {
     private ControleurDeplacementPion controleurDeplacement;
 
     /**
+     * Contrôleur du panel de case actuelle, indiquant la dernière case atteinte.
+     */
+    private ControleurCaseActuelle controleurCaseActuelle;
+
+    /**
      * Permet de créer un nouveau pion
      * @param position Position de base du pion.
      * @param nom Nom du pion.
@@ -66,7 +72,7 @@ public class Pion {
         }
 
         position.action(getJoueur());
-        this.controleurDeplacement.deplacer();
+        this.appelerControleurs();
     }
 
     /**
@@ -80,7 +86,7 @@ public class Pion {
         }
 
         position.action(getJoueur());
-        this.controleurDeplacement.deplacer();
+        this.appelerControleurs();
     }
 
     /**
@@ -94,7 +100,7 @@ public class Pion {
         }
 
         position.action(getJoueur());
-        this.controleurDeplacement.deplacer();
+        this.appelerControleurs();
     }
 
     /**
@@ -108,7 +114,7 @@ public class Pion {
         }
 
         position.action(getJoueur());
-        this.controleurDeplacement.deplacer();
+        this.appelerControleurs();
     }
 
     /**
@@ -133,6 +139,11 @@ public class Pion {
             position.action(getJoueur());
         }
         this.controleurDeplacement.deplacer();
+    }
+
+    private void appelerControleurs() {
+        this.controleurDeplacement.deplacer();
+        this.controleurCaseActuelle.actualiser();
     }
 
     /**
@@ -203,8 +214,24 @@ public class Pion {
      * Setter du contrôleur de déplacement.
      * @param controleurDeplacement Contrôleur de déplacement.
      */
-    public void setControleur(ControleurDeplacementPion controleurDeplacement) {
+    public void setControleurDeplacement(ControleurDeplacementPion controleurDeplacement) {
         this.controleurDeplacement = controleurDeplacement;
+    }
+
+    /**
+     * Accesseur du contrôleur de case actuelle.
+     * @return Contrôleur de case actuelle.
+     */
+    public ControleurCaseActuelle getControleurCaseActuelle() {
+        return controleurCaseActuelle;
+    }
+
+    /**
+     * Mutateur du contrôleur de case actuelle.
+     * @param controleurCaseActuelle Contrôleur de case actuelle.
+     */
+    public void setControleurCaseActuelle(ControleurCaseActuelle controleurCaseActuelle) {
+        this.controleurCaseActuelle = controleurCaseActuelle;
     }
 
     @Override
