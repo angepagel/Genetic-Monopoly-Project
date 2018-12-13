@@ -1,5 +1,6 @@
 package monopoly.modele;
 
+import javafx.application.Platform;
 import monopoly.controleur.ControleurInformationsJeu;
 import monopoly.controleur.ControleurTerminerTour;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
@@ -126,11 +127,33 @@ public class Jeu {
      * Permet d'initialiser la partie.
      */
     public void initialisation() {
-        Jeu self = this;
-
         nbTours = 0;
         plateau = new Plateau();
         gestionnaireCartes = new GestionnaireCartes();
+    }
+
+    /**
+     * Initialise le timer.
+     */
+    public void initialiserTimer() {
+        /*
+        Cette méthode est séparée de la fonction initialisation()
+        car le chronomètre a besoin du contrôleur d'informations du jeu
+        pour s'initialiser; or ce contrôleur n'existe pas encore dans initialisation().
+
+        Pour comprendre le code de cette méthode, se reférer aux pages suivantes :
+        - https://stackoverflow.com/questions/35512648/adding-a-timer-to-my-program-javafx
+        - https://stackoverflow.com/questions/17850191/why-am-i-getting-java-lang-illegalstateexception-not-on-fx-application-thread
+
+        Dû à l'utilisation de la méthode Platform.runLater, on peut supposer que le timer n'est pas exact,
+        puisque le moment ou run() est exécuté diffère du moment ou run() est appelé, ceci étant dû
+        au fonctionnement des threads.
+
+        Cette méthode pourra éventuellement être recodée avec un AnimationTimer de JavaFX,
+        pour laquelle nous ne pouvons nous heurter à ce type de problèmes.
+        */
+
+        Jeu self = this;
 
         this.chronometre = new Chronometre();
         this.timer = new Timer();
@@ -138,11 +161,17 @@ public class Jeu {
 
             @Override
             public void run() {
-                self.chronometre.addSeconde();
+                Platform.runLater(new Runnable() {
+                    @Override
+                    public void run() {
+                        self.chronometre.addSeconde();
+                        self.controleurInformationsJeu.actualiser();
+                    }
+                });
             }
 
         };
-        this.timer.schedule(timerTask, 0,1000l);
+        this.timer.schedule(timerTask, 1000l,1000l);
     }
 
     /**
@@ -209,6 +238,14 @@ public class Jeu {
     }
 
     /**
+     * Accesseur du chronomètre.
+     * @return Chronomètre.
+     */
+    public Chronometre getChronometre() {
+        return chronometre;
+    }
+
+    /**
      * Permet de récupérer le joueur dont c'est le tour.
      * @return Joueur dont c'est le tour
      */
@@ -258,7 +295,10 @@ public class Jeu {
         
     }
 
-
+    /**
+     * Mutateur du contrôleur d'informations du jeu.
+     * @param controleurInformationsJeu Mutateur du contrôleur d'informations du jeu.
+     */
     public void setControleurInformationsJeu(ControleurInformationsJeu controleurInformationsJeu) {
         this.controleurInformationsJeu = controleurInformationsJeu;
     }
@@ -270,6 +310,7 @@ public class Jeu {
         Jeu j = Jeu.getInstance();
         j.run();
     }
+
 
     public void run() {
         Scanner sc = new Scanner(System.in);

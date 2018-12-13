@@ -49,16 +49,15 @@ public class Partie implements IVuePartie {
         j.getJoueurs().add(j3);
         j3.choisirPion(new Pion("Bleu"));
 
-
         j.setJoueurEnCours(j1);
-
-        root = new HBox();
-        Scene scene = new Scene(root);
-        Stage stage = new Stage();
 
         // Init components
         this.panelPlateau = new PanelPlateau();
         this.panelAction = new PanelAction();
+
+        root = new HBox();
+        Scene scene = new Scene(root);
+        Stage stage = new Stage();
 
         root.getChildren().add(panelPlateau);
         root.getChildren().add(panelAction);
@@ -82,8 +81,6 @@ public class Partie implements IVuePartie {
         VuePion vuePionJ3 = new VuePion(j.getJoueurs().get(2).getPion(), this.panelPlateau);
         vuePionJ3.getImageView().setImage(GestionnaireImage.getImage("PionBleu"));
         vuePionJ3.miseAJour();
-
-
 
         // Instanciation de controleurs
         this.controleurPlateau = new ControleurPlateau(panelPlateau);
