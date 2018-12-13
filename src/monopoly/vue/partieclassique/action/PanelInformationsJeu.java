@@ -53,12 +53,12 @@ public class PanelInformationsJeu extends Pane {
         this.tempsJeuValeur.setTextFill(Color.BLUE);
 
         // Nombre de tours
-        this.nbToursTitre = new PanelActionLabel("Nombre de tours : ", 12);
+        this.nbToursTitre = new PanelActionLabel("Numéro du tour : ", 12);
         this.nbToursTitre.setAlignment(null);
         this.nbToursTitre.setLayoutX(40);
         this.nbToursTitre.setLayoutY(30);
 
-        this.nbToursValeur = new PanelActionLabel("0", 12);
+        this.nbToursValeur = new PanelActionLabel("1", 12);
         this.nbToursValeur.setAlignment(null);
         this.nbToursValeur.setLayoutX(140);
         this.nbToursValeur.setLayoutY(30);
@@ -83,7 +83,7 @@ public class PanelInformationsJeu extends Pane {
     public void actualiser() {
         this.tempsJeuValeur.setText(Jeu.getInstance().getChronometre().afficher());
         int nbTours = Jeu.getInstance().getNbTours();
-        this.nbToursValeur.setText(Integer.toString(nbTours));
+        this.nbToursValeur.setText(Integer.toString(nbTours+1));
     }
 
 }
