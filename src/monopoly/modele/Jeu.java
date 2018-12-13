@@ -7,6 +7,8 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
+import java.util.Timer;
+import java.util.TimerTask;
 
 /**
  * Représente le jeu
@@ -49,9 +51,20 @@ public class Jeu {
     private GestionnaireCartes gestionnaireCartes;
 
     /**
+     * Timer permettant de compter le temps du jeu.
+     */
+    private Timer timer;
+
+    /**
+     * Chronomètre interne du jeu.
+     */
+    private Chronometre chronometre;
+
+    /**
      * Contrôleur prenant en charge les informations du jeu sur l'IHM.
      */
     private ControleurInformationsJeu controleurInformationsJeu;
+
 
 
     // ----------- Methodes -----------
@@ -113,9 +126,23 @@ public class Jeu {
      * Permet d'initialiser la partie.
      */
     public void initialisation() {
+        Jeu self = this;
+
         nbTours = 0;
         plateau = new Plateau();
         gestionnaireCartes = new GestionnaireCartes();
+
+        this.chronometre = new Chronometre();
+        this.timer = new Timer();
+        TimerTask timerTask = new TimerTask() {
+
+            @Override
+            public void run() {
+                self.chronometre.addSeconde();
+            }
+
+        };
+        this.timer.schedule(timerTask, 0,1000l);
     }
 
     /**
