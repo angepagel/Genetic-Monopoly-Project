@@ -25,9 +25,7 @@ public class PanelCaseActuelle extends Pane {
         // On définit le contrôleur de case actuelle pour tous les pions du jeu
         for (Joueur joueur : Jeu.getInstance().getJoueurs()) {
             joueur.getPion().setControleurCaseActuelle(new ControleurCaseActuelle(joueur.getPion(), this));
-            System.out.println("lmaoKappa");
         }
-        System.out.println("lmaoKappa2");
 
 
         this.rect = new PanelActionRectangle(10, 10, 275, 120);
@@ -40,12 +38,12 @@ public class PanelCaseActuelle extends Pane {
         this.titre.setLayoutX(30);
         this.titre.setLayoutY(0);
 
-        this.titreCase = new PanelActionLabel("Titre case", 15);
+        this.titreCase = new PanelActionLabel("Titre case", 14);
         this.titreCase.setLayoutX(25);
         this.titreCase.setLayoutY(25);
         this.titreCase.setMaxWidth(100);
         this.titreCase.setAlignment(Pos.CENTER_LEFT);
-        this.prixCase = new PanelActionLabel("$Prix", 15);
+        this.prixCase = new PanelActionLabel("$Prix", 14);
         this.prixCase.setLayoutX(50);
         this.prixCase.setLayoutY(65);
         this.prixCase.setAlignment(Pos.CENTER_LEFT);

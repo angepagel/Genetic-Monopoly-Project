@@ -20,7 +20,6 @@ public class VuePion {
         this.pion = pion;
         this.controleurDeplacementPion = new ControleurDeplacementPion(pion, this);
         this.pion.setControleurDeplacement(this.controleurDeplacementPion);
-        System.out.println(this.pion);
         this.panelPlateau = panelPlateau;
         this.imageView = new ImageView(GestionnaireImage.getImage("PionRouge"));
         casePresente = pion.getPosition().getId();
