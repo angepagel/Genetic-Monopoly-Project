@@ -1,10 +1,15 @@
 package monopoly.vue.partieclassique.action;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import monopoly.vue.dialogue.DialogueVoirLesProprietes;
+import monopoly.vue.dialogue.DialogueVoirMesProprietes;
 
+import java.io.IOException;
 import java.util.ArrayList;
 
 public class PanelJoueurs extends Pane {
@@ -56,11 +61,32 @@ public class PanelJoueurs extends Pane {
         this.mesProprietes = new Button("Voir mes propriétés");
         this.mesProprietes.setLayoutX(40);
         this.mesProprietes.setLayoutY(122);
+        this.mesProprietes.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    new DialogueVoirMesProprietes();
+                }
+                catch (IOException e) {
+                    return;
+                }
+            }
+        });
 
         this.lesProprietes = new Button("Voir les propriétés");
         this.lesProprietes.setLayoutX(200);
         this.lesProprietes.setLayoutY(122);
-
+        this.lesProprietes.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    new DialogueVoirLesProprietes();
+                }
+                catch (IOException e) {
+                    return;
+                }
+            }
+        });
 
         this.getChildren().addAll(
                 this.rect,
