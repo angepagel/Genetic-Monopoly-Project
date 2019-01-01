@@ -95,12 +95,15 @@ public class PanelInformationsJeu extends Pane {
 
         Jeu.getInstance().initialiserTimer();
 
+        this.actualiser();
+
     }
 
     public void actualiser() {
         this.tempsJeuValeur.setText(Jeu.getInstance().getChronometre().afficher());
         int nbTours = Jeu.getInstance().getNbTours();
         this.nbToursValeur.setText(Integer.toString(nbTours+1));
+        this.nomJoueurValeur.setText(Jeu.getInstance().getJoueurEnCours().getNom());
     }
 
 }

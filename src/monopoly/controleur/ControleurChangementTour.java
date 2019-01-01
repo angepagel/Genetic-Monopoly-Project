@@ -15,12 +15,16 @@ public class ControleurChangementTour extends Controleur {
 
     ArrayList<Joueur> joueurs;
     private Jeu modele;
-    public ControleurChangementTour(Jeu modele){
+
+    public ControleurChangementTour(Jeu modele) {
+
         joueurs= new ArrayList<Joueur>();
         this.modele=modele;
         InitJoueur();
-        
+
     }
+
+
     public void InitJoueur(){
         Joueur j1 = new Humain("Yan");
         joueurs.add(j1);
