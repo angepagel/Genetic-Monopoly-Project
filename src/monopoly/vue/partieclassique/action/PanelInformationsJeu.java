@@ -16,6 +16,8 @@ public class PanelInformationsJeu extends Pane {
     private PanelActionLabel nbToursTitre;
     private PanelActionLabel tempsJeuValeur;
     private PanelActionLabel nbToursValeur;
+    private PanelActionLabel nomJoueurTitre;
+    private PanelActionLabel nomJoueurValeur;
     private PanelActionRectangle rect;
 
     private ControleurInformationsJeu controleurInformationsJeu;
@@ -64,6 +66,19 @@ public class PanelInformationsJeu extends Pane {
         this.nbToursValeur.setLayoutY(30);
         this.nbToursValeur.setTextFill(Color.BLUE);
 
+        // Nom du joueur
+        this.nomJoueurTitre = new PanelActionLabel("Nom du joueur :", 12);
+        this.nomJoueurTitre.setAlignment(null);
+        this.nomJoueurTitre.setLayoutX(200);
+        this.nomJoueurTitre.setLayoutY(15);
+
+        this.nomJoueurValeur = new PanelActionLabel("[NomJoueur]", 12);
+        this.nomJoueurValeur.setAlignment(null);
+        this.nomJoueurValeur.setLayoutX(200);
+        this.nomJoueurValeur.setLayoutY(30);
+        this.nomJoueurValeur.setTextFill(Color.BLUE);
+
+
 
         this.getChildren().addAll(
                 this.rect,
@@ -71,7 +86,9 @@ public class PanelInformationsJeu extends Pane {
                 this.tempsJeuTitre,
                 this.tempsJeuValeur,
                 this.nbToursTitre,
-                this.nbToursValeur
+                this.nbToursValeur,
+                this.nomJoueurTitre,
+                this.nomJoueurValeur
         );
 
         this.controleurInformationsJeu = new ControleurInformationsJeu(this);
