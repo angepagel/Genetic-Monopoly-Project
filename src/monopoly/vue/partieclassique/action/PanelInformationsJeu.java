@@ -78,8 +78,6 @@ public class PanelInformationsJeu extends Pane {
         this.nomJoueurValeur.setLayoutY(30);
         this.nomJoueurValeur.setTextFill(Color.BLUE);
 
-
-
         this.getChildren().addAll(
                 this.rect,
                 this.titre,
@@ -92,9 +90,7 @@ public class PanelInformationsJeu extends Pane {
         );
 
         this.controleurInformationsJeu = new ControleurInformationsJeu(this);
-
         Jeu.getInstance().initialiserTimer();
-
         this.actualiser();
 
     }
