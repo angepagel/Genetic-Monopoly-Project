@@ -3,6 +3,7 @@ package monopoly.modele;
 import monopoly.modele.cartes.Carte_SortiePrison_Caisse;
 import monopoly.modele.cartes.Carte_SortiePrison_Chance;
 import monopoly.modele.cases.Case_Achat;
+import monopoly.modele.cases.Case_Prison;
 import monopoly.modele.cases.Case_Terrain;
 import monopoly.modele.cases.ECase;
 
@@ -229,8 +230,25 @@ public abstract class Joueur {
      * Permet de savoir si le joueur est en prison.
      * @return Vrai si le joueur est en prison. Faux sinon.
      */
-    private boolean isEnPrison() {
+    public boolean isEnPrison() {
         return pion.getPosition().getType() == ECase.Prison;
+    }
+
+    /**
+     * Permet de sortir de prison.
+     */
+    public void sortirPrison() {
+        if(pion.getPosition().getType() == ECase.Prison) {
+            Case_Prison prison = (Case_Prison)(pion.getPosition());
+            prison.sortir(this);
+        }
+    }
+
+    /**
+     * Permet d'augmenter le nombre de tours en prison.
+     */
+    public void incToursEnPrison() {
+        ++toursEnPrison;
     }
 
     /**
