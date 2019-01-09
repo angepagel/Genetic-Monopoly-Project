@@ -28,4 +28,17 @@ public abstract class Carte {
     public boolean usageImmediat() {
         return true;
     }
+
+    /**
+     * Permet de  récupérer le texte de la carte.
+     * @return Texte de la carte.
+     */
+    public String getTexte() {
+        return texte;
+    }
+
+    @Override
+    public String toString() {
+        return getTexte();
+    }
 }

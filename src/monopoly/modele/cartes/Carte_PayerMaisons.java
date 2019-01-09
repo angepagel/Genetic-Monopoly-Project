@@ -26,6 +26,6 @@ public class Carte_PayerMaisons extends Carte {
     public void action(Joueur j) {
         int prix = (prixParMaison * j.getNbMaisons()) + (prixParHotel * j.getNbHotels());
 
-        j.getSolde().payer(prix);
+        j.getSolde().payerImpots(prix);
     }
 }

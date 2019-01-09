@@ -1,6 +1,8 @@
 package monopoly.modele.cases;
 
+import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
+import monopoly.modele.cartes.Carte;
 
 public class Case_CaisseCommunaute extends Case_Pioche {
 
@@ -10,7 +12,11 @@ public class Case_CaisseCommunaute extends Case_Pioche {
 
     @Override
     public void action(Joueur j) {
-        // TODO : Piocher une carte Caisse de communauté
+        Carte cc = Jeu.getInstance().getGestionnaireCartes().piocherCaisseCommunaute();
+        cc.action(j);
+        if(cc.usageImmediat()) {
+            Jeu.getInstance().getGestionnaireCartes().remettreCaisseCommunaute(cc);
+        }
     }
 
     @Override

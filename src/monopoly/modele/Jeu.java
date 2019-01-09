@@ -66,7 +66,10 @@ public class Jeu {
      */
     private ControleurInformationsJeu controleurInformationsJeu;
 
-
+    /**
+     * Argent touché au parc gratuit.
+     */
+    private int argentParcGratuit;
 
     // ----------- Methodes -----------
 
@@ -75,6 +78,7 @@ public class Jeu {
      * Constructeur du jeu, ne prenant pas de paramètres puisqu'il s'agit d'un singleton.
      */
     private Jeu() {
+        argentParcGratuit = 0;
         joueurs = new ArrayList<>();
         des = new Des();
     }
@@ -310,6 +314,29 @@ public class Jeu {
     public static void  main(String[] args) {
         Jeu j = Jeu.getInstance();
         j.run();
+    }
+
+    /**
+     * Permet de savoir combien d'argent il y a dans le parc gratuit.
+     * @return L'argent contenu dans le parc gratuit
+     */
+    public int getArgentParcGratuit() {
+        return argentParcGratuit;
+    }
+
+    /**
+     * Permet de réinitialiser l'argent qui se trouve dans le parc gratuit.
+     */
+    public void resetArgentParcGratuit() {
+        argentParcGratuit = 0;
+    }
+
+    /**
+     * Permet d'ajouter de l'argent dans le parc gratuit.
+     * @param argent Montant à ajouter.
+     */
+    public void addArgentParcGratuit(int argent) {
+        argentParcGratuit += argent;
     }
 
 

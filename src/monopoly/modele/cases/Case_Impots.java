@@ -1,5 +1,6 @@
 package monopoly.modele.cases;
 
+import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 
 public class Case_Impots extends Case_Paiement {
@@ -17,7 +18,7 @@ public class Case_Impots extends Case_Paiement {
 
     @Override
     public void action(Joueur j) {
-        j.getSolde().payer(getPrix());
+        j.getSolde().payerImpots(getPrix());
     }
 
     @Override

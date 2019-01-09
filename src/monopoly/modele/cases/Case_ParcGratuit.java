@@ -1,6 +1,8 @@
 package monopoly.modele.cases;
 
+import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
+import monopoly.modele.Plateau;
 
 public class Case_ParcGratuit extends Case {
     public Case_ParcGratuit(Case suivante) {
@@ -9,7 +11,8 @@ public class Case_ParcGratuit extends Case {
 
     @Override
     public void action(Joueur j) {
-        return;
+        j.getSolde().ajouter(Jeu.getInstance().getArgentParcGratuit());
+        Jeu.getInstance().resetArgentParcGratuit();
     }
 
     @Override

@@ -32,7 +32,7 @@ public class Carte_AmendeOuChance extends Carte {
      * @param j Le joueur qui a choisi l'amende.
      */
     public void amende(Joueur j) {
-        j.getSolde().payer(montant);
+        j.getSolde().payerImpots(montant);
     }
 
     /**

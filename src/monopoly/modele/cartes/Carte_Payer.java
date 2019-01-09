@@ -7,7 +7,7 @@ public class Carte_Payer extends Carte {
 
     @Override
     public void action(Joueur j) {
-        j.getSolde().payer(montant);
+        j.getSolde().payerImpots(montant);
     }
 
     public Carte_Payer(int montant, String texte) {
