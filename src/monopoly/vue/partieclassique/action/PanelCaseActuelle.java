@@ -90,7 +90,7 @@ public class PanelCaseActuelle extends Pane {
                     new Alert(Alert.AlertType.WARNING, "Cette case ne peut pas être achetée.").show();
                 }
                 catch (Exception e) {
-                    new Alert(Alert.AlertType.WARNING, e.getClass().toString()).show();
+                    new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
                 }
             }
         });
