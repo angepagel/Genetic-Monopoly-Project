@@ -37,10 +37,10 @@ public class Des {
      * @return Somme des valeurs des dés.
      */
     public int lancer() {
-//        de1 = random.nextInt(5) + 1;
-//        de2 = random.nextInt(5) + 1;
-        de1 = 5;
-        de2 = 5;
+        de1 = random.nextInt(5) + 1;
+        de2 = random.nextInt(5) + 1;
+//        de1 = 5;
+//        de2 = 5;
 
         this.controleur.lancer();
         Joueur j = Jeu.getInstance().getJoueurEnCours();
