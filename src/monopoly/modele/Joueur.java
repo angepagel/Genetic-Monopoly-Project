@@ -21,6 +21,11 @@ public abstract class Joueur {
     private SimpleStringProperty nom;
 
     /**
+     * Le joueur a déjà joué
+     */
+    private boolean dejaJoue;
+
+    /**
      * S'il est en faillite ou non.
      */
     private boolean faillite;
@@ -249,8 +254,24 @@ public abstract class Joueur {
     public void sortirPrison() {
         if(pion.getPosition().getType() == ECase.Prison) {
             Case_Prison prison = (Case_Prison)(pion.getPosition());
+            toursEnPrison = 0;
             prison.sortir(this);
         }
+    }
+
+    /**
+     * Permet de savoir combien de doubles ont été effectués ce tour-ci.
+     * @return Le nombre de doubles de ce tour.
+     */
+    public int getNbDoubles() {
+        return nbDoubles;
+    }
+
+    /**
+     * Le joueur va en prison.
+     */
+    public void allerEnPrison() {
+        getPion().setPosition(Jeu.getInstance().getPlateau().getPrison());
     }
 
     /**
@@ -294,6 +315,37 @@ public abstract class Joueur {
         }
 
         return nbHotels;
+    }
+
+    /**
+     * Permet de savoir si le joueur a déjà joué.
+     * @return Vrai s'il a déjà joué.
+     */
+    public boolean aDejaJoue() {
+        return dejaJoue;
+    }
+
+    /**
+     * Permet de définir si le joueur a déjà joué.
+     * @param dj Vrai si le joueur doit avoir déjà joué.
+     */
+    public void setDejaJoue(boolean dj) {
+        dejaJoue = dj;
+    }
+
+    /**
+     * Permet d'acheter une case.
+     * @param achat Case à acheter
+     * @throws Exception Lorsque la propriété appartient déjà à un joueur.
+     */
+    public void acheterCase(Case_Achat achat) throws Exception {
+        if(achat.getProprietaire() != null) {
+            throw new Exception("La propriété appartient déjà à quelqu'un.");
+        }
+        else {
+            solde.payer(achat.getPrix());
+            achat.setProprietaire(this);
+        }
     }
 
     @Override

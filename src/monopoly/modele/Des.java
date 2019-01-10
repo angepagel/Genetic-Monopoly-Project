@@ -37,11 +37,38 @@ public class Des {
      * @return Somme des valeurs des dés.
      */
     public int lancer() {
-        de1 = random.nextInt(5) + 1;
-        de2 = random.nextInt(5) + 1;
+//        de1 = random.nextInt(5) + 1;
+//        de2 = random.nextInt(5) + 1;
+        de1 = 5;
+        de2 = 5;
 
         this.controleur.lancer();
-        Jeu.getInstance().getJoueurEnCours().getPion().deplacer(sommeDes());
+        Joueur j = Jeu.getInstance().getJoueurEnCours();
+
+        if(j.isEnPrison()) {
+            if(estDouble()) {
+                j.sortirPrison();
+            }
+            else {
+                j.incToursEnPrison();
+                j.setDejaJoue(true);
+            }
+        }
+        else {
+            if(estDouble()) {
+                j.incNbDoubles();
+            }
+            else {
+                j.resetNbDoubles();
+                j.setDejaJoue(true);
+            }
+            if(j.getNbDoubles() >= 3) {
+                j.allerEnPrison();
+            }
+            else {
+                j.getPion().deplacer(sommeDes());
+            }
+        }
         return sommeDes();
     }
 

@@ -17,6 +17,11 @@ public class Plateau {
     private Case_Depart caseDepart;
 
     /**
+     * Case prison.
+     */
+    private Case_Prison prison;
+
+    /**
      * Créé le plateau.
      */
     public Plateau() {
@@ -122,9 +127,9 @@ public class Plateau {
 
         Case_VisitePrison vep = new Case_VisitePrison(vilette);
         listeCases.add(vep);
-        Case_Prison prison = new Case_Prison(vep);
+        prison = new Case_Prison(vep);
         listeCases.add(prison);
-        Case_AllerEnPrison aep = new Case_AllerEnPrison(breteuil, prison);
+        Case_AllerEnPrison aep = new Case_AllerEnPrison(breteuil);
         listeCases.add(aep);
 
         laFayette.setSuivante(aep);
@@ -178,6 +183,14 @@ public class Plateau {
         }
 
         return res;
+    }
+
+    /**
+     * Permet de récupérer la prison.
+     * @return Case prison.
+     */
+    public Case_Prison getPrison() {
+        return prison;
     }
 
     /**
