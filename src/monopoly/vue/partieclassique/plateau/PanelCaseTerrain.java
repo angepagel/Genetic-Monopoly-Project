@@ -34,7 +34,7 @@ public class PanelCaseTerrain extends PanelCase {
         this.header = new PanelCaseHeader(this.modele.getCouleur().getCouleur());
         this.nom = new PanelCaseLabel(this.modele.getNom().toUpperCase());
         this.emplacements = new PanelCaseConteneurEmplacement();
-        this.prix = new PanelCaseLabel("$Prix");
+        this.prix = new PanelCaseLabel("$ "+Integer.toString(this.modele.getPrix()));
         this.prix.setPadding(new Insets(0,0,0,0));
 
         this.getChildren().addAll(this.header, this.nom, this.emplacements, this.prix);

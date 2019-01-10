@@ -8,6 +8,8 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 import monopoly.modele.Jeu;
 import monopoly.modele.cases.Case;
+import monopoly.modele.cases.Case_CaisseCommunaute;
+import monopoly.modele.cases.Case_Paiement;
 import monopoly.vue.data.image.GestionnaireImage;
 
 public class PanelCaseSpeciale extends PanelCase {
@@ -31,8 +33,13 @@ public class PanelCaseSpeciale extends PanelCase {
         this.getChildren().addAll(this.nom, this.emplacements);
 
 
-        if (prix) {
-            this.prix = new PanelCaseLabel("$Prix");
+        if (prix){
+            if(this.getModele().aUnPrix()){
+                Case_Paiement casePrix = (Case_Paiement) this.getModele();
+                this.prix = new PanelCaseLabel("$ "+Integer.toString(casePrix.getPrix()));
+            }else{
+                this.prix = new PanelCaseLabel("");
+            }
             this.prix.setPadding(new Insets(17,0,0,0));
             this.getChildren().add(this.prix);
         }
