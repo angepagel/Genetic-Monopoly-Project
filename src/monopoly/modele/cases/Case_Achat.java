@@ -31,10 +31,7 @@ public abstract class Case_Achat extends Case_Paiement {
 
     @Override
     public void action(Joueur j) {
-        if(proprietaire == null) {
-            // TODO : Possibilité d'acheter
-        }
-        else {
+        if(proprietaire != null && proprietaire != j) {
             payerLoyer(j);
         }
     }
