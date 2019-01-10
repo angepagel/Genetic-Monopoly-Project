@@ -9,6 +9,7 @@ import monopoly.controleur.ControleurCaseActuelle;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
+import monopoly.modele.cases.Case_Paiement;
 
 public class PanelCaseActuelle extends Pane {
 
@@ -43,7 +44,7 @@ public class PanelCaseActuelle extends Pane {
         this.titreCase.setLayoutY(25);
         this.titreCase.setMaxWidth(100);
         this.titreCase.setAlignment(Pos.CENTER);
-        this.prixCase = new PanelActionLabel("$Prix", 14);
+        this.prixCase = new PanelActionLabel("", 14);
         this.prixCase.setLayoutX(50);
         this.prixCase.setLayoutY(65);
         this.prixCase.setAlignment(Pos.CENTER_LEFT);
@@ -75,6 +76,13 @@ public class PanelCaseActuelle extends Pane {
 
     public void actualiser(Pion pion) {
         this.titreCase.setText(pion.getPosition().getNom());
+        if(pion.getPosition().aUnPrix()){
+            Case_Paiement casePrix = (Case_Paiement) pion.getPosition();
+            this.prixCase.setText("$ "+Integer.toString(casePrix.getPrix()));
+        }else{
+            this.prixCase.setText("");
+        }
+        
     }
 
 }

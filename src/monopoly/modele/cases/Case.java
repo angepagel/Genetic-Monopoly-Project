@@ -68,6 +68,14 @@ public abstract class Case {
     public String getId() {
         return getNom();
     }
+    
+    /**
+     * Permet de savoir si la case a un prix.
+     * @return Vrai si elle en a un.
+     */
+    public boolean aUnPrix() {
+        return false;
+    }
 
     /**
      * Permet de récupérer la case précédente.

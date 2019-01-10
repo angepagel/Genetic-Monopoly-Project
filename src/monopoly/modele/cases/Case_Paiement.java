@@ -6,4 +6,9 @@ public abstract class Case_Paiement extends Case {
     }
 
     public abstract int getPrix();
+    
+    @Override
+    public boolean aUnPrix() {
+        return true;
+    }
 }
