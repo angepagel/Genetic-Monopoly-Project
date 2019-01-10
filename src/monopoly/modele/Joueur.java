@@ -126,16 +126,9 @@ public abstract class Joueur {
 
     /**
      * Lorsqu'on a fait un double, on augmente le nombre de doubles.
-     * @return Vrai si on a été en prison.
      */
-    public boolean incNbDoubles() {
+    public void incNbDoubles() {
         nbDoubles++;
-        if(nbDoubles >= 3) {
-            pion.deplacer("Prison");
-            return true;
-        }
-
-        return false;
     }
 
     public void resetNbDoubles() {

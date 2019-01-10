@@ -39,8 +39,8 @@ public class Des {
     public int lancer() {
         de1 = random.nextInt(5) + 1;
         de2 = random.nextInt(5) + 1;
-//        de1 = 5;
-//        de2 = 5;
+//        de1 = 1;
+//        de2 = 1;
 
         this.controleur.lancer();
         Joueur j = Jeu.getInstance().getJoueurEnCours();
@@ -48,10 +48,13 @@ public class Des {
         if(j.isEnPrison()) {
             if(estDouble()) {
                 j.sortirPrison();
+                j.incNbDoubles();
+                j.getPion().deplacer(sommeDes());
             }
             else {
                 j.incToursEnPrison();
                 j.setDejaJoue(true);
+                j.resetNbDoubles();
             }
         }
         else {
@@ -64,6 +67,8 @@ public class Des {
             }
             if(j.getNbDoubles() >= 3) {
                 j.allerEnPrison();
+                j.resetNbDoubles();
+                j.setDejaJoue(true);
             }
             else {
                 j.getPion().deplacer(sommeDes());

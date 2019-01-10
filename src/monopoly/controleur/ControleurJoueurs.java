@@ -19,9 +19,9 @@ public class ControleurJoueurs {
         if(!joueur.isEnPrison()) {
             // On déplace le pion.
             if (Jeu.getInstance().getDes().estDouble()) {
-                if (!joueur.incNbDoubles()) {
-                    avancer(joueur);
-                }
+//                if (!joueur.incNbDoubles()) {
+//                    avancer(joueur);
+//                }
             } else {
                 avancer(joueur);
                 joueur.resetNbDoubles();
