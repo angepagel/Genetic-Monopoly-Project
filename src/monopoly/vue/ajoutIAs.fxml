@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
@@ -7,8 +11,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurAjoutIAs">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurAjoutIAs">
    <children>
       <ListView fx:id="listeIAs" layoutX="309.0" layoutY="83.0" prefHeight="200.0" prefWidth="200.0" />
       <TextField fx:id="textFieldNom" layoutX="30.0" layoutY="93.0" prefHeight="25.0" prefWidth="165.0" />
@@ -20,7 +23,9 @@
       </Label>
       <Label layoutX="309.0" layoutY="60.0" text="Liste des IAs :" />
       <Label layoutX="30.0" layoutY="69.0" prefHeight="17.0" prefWidth="157.0" text="Entrez le nom de l'IA à créer :" />
-      <Button fx:id="boutonLancerPartie" layoutX="228.0" layoutY="353.0" mnemonicParsing="false" onAction="#lancerPartie" text="commencer la partie" />
-      <Button fx:id="boutonRetirer" layoutX="310.0" layoutY="292.0" mnemonicParsing="false" onAction="#supprimerIAs" text="supprimer" />
+      <Button fx:id="boutonLancerPartie" layoutX="228.0" layoutY="353.0" mnemonicParsing="false" onAction="#lancerPartie" text="Lancer la partie" />
+      <Button fx:id="boutonRetirer" layoutX="310.0" layoutY="292.0" mnemonicParsing="false" onAction="#supprimerIAs" prefHeight="25.0" prefWidth="63.0" text="Retirer" />
+      <Label layoutX="30.0" layoutY="138.0" prefHeight="17.0" prefWidth="157.0" text="Nombre maximal de tours :" />
+      <TextField layoutX="200.0" layoutY="134.0" prefHeight="25.0" prefWidth="55.0" text="200" />
    </children>
 </AnchorPane>
