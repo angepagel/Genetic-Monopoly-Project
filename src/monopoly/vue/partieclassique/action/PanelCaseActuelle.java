@@ -1,5 +1,6 @@
 package monopoly.vue.partieclassique.action;
 
+import com.sun.corba.se.impl.io.TypeMismatchException;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -82,10 +83,14 @@ public class PanelCaseActuelle extends Pane {
                 try {
                     Case_Achat caseCourante = (Case_Achat) joueurCourant.getPion().getPosition();
                     joueurCourant.acheterCase(caseCourante);
-                    new Alert(Alert.AlertType.CONFIRMATION, "La case " + caseCourante.getNom() + " est achetée par " + joueurCourant.getNom() + " !").show();
+                    new Alert(Alert.AlertType.INFORMATION, "La case " + caseCourante.getNom() + " est achetée par " + joueurCourant.getNom() + ".").show();
+                }
+                catch (ClassCastException e)
+                {
+                    new Alert(Alert.AlertType.WARNING, "Cette case ne peut pas être achetée.").show();
                 }
                 catch (Exception e) {
-                    new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
+                    new Alert(Alert.AlertType.WARNING, e.getClass().toString()).show();
                 }
             }
         });
