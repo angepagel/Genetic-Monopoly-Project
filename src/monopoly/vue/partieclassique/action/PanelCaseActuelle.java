@@ -1,7 +1,10 @@
 package monopoly.vue.partieclassique.action;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
@@ -9,6 +12,7 @@ import monopoly.controleur.ControleurCaseActuelle;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
+import monopoly.modele.cases.Case_Achat;
 import monopoly.modele.cases.Case_Paiement;
 
 public class PanelCaseActuelle extends Pane {
@@ -70,7 +74,21 @@ public class PanelCaseActuelle extends Pane {
                 this.encherir
         );
 
+        this.acheter.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                Joueur joueurCourant = Jeu.getInstance().getJoueurEnCours();
 
+                try {
+                    Case_Achat caseCourante = (Case_Achat) joueurCourant.getPion().getPosition();
+                    joueurCourant.acheterCase(caseCourante);
+                    new Alert(Alert.AlertType.CONFIRMATION, "La case " + caseCourante.getNom() + " est achetée par " + joueurCourant.getNom() + " !").show();
+                }
+                catch (Exception e) {
+                    new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
+                }
+            }
+        });
 
     }
 
@@ -84,5 +102,7 @@ public class PanelCaseActuelle extends Pane {
         }
         
     }
+
+
 
 }
