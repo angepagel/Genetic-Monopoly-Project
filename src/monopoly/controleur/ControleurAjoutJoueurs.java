@@ -58,6 +58,7 @@ public class ControleurAjoutJoueurs {
     @FXML
     public void ajouterJoueur() {
         String nom = textFieldNom.getText().trim();
+        int maxSize = 20;
 
         if(nom.equals("")) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
@@ -66,7 +67,13 @@ public class ControleurAjoutJoueurs {
             alert.show();
             return;
         }
-        
+
+        else if (nom.length() > maxSize)
+        {
+            new Alert(Alert.AlertType.WARNING, "Le nom du joueur ne peut pas contenir plus de " + maxSize + " caractères.").show();
+            return;
+        }
+
         for(Joueur jTest : tableauJoueurs.getItems()) {
             if(jTest.getNom().equals(nom)) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
