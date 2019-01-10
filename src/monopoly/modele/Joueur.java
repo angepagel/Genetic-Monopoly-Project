@@ -1,5 +1,6 @@
 package monopoly.modele;
 
+import javafx.beans.property.SimpleStringProperty;
 import monopoly.modele.cartes.Carte_SortiePrison_Caisse;
 import monopoly.modele.cartes.Carte_SortiePrison_Chance;
 import monopoly.modele.cases.Case_Achat;
@@ -17,7 +18,7 @@ public abstract class Joueur {
     /**
      * Nom du joueur
      */
-    private String nom;
+    private SimpleStringProperty nom;
 
     /**
      * S'il est en faillite ou non.
@@ -64,7 +65,7 @@ public abstract class Joueur {
      * @param nom Nom du joueur.
      */
     public Joueur(String nom) {
-        this.nom = nom;
+        this.nom = new SimpleStringProperty(nom);
         solde = new Solde(this);
         sortiePrisonChance = null;
     }
@@ -169,6 +170,14 @@ public abstract class Joueur {
      * @return Nom du joueur.
      */
     public String getNom() {
+        return nom.get();
+    }
+
+    /**
+     * Permet de récupérer la propriété correspondant au nom du joueur observable.
+     * @return Nom du joueur observable.
+     */
+    public SimpleStringProperty getNomProperty() {
         return nom;
     }
 

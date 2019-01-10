@@ -22,6 +22,7 @@ import monopoly.vue.partieclassique.action.VuePion;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
 import java.io.IOException;
+import java.util.Random;
 
 public class Partie implements IVuePartie {
 
@@ -37,23 +38,39 @@ public class Partie implements IVuePartie {
         Jeu j = Jeu.getInstance();
         j.initialisation();
 
-        Joueur j1 = new Humain("Yan");
-        j.getJoueurs().add(j1);
-        j1.choisirPion(new Pion("Rouge"));
+//        Joueur j1 = new Humain("Yan");
+//        j.getJoueurs().add(j1);
+//        j1.choisirPion(new Pion("Rouge"));
+//
+//        Joueur j2 = new Humain("Ange");
+//        j.getJoueurs().add(j2);
+//        j2.choisirPion(new Pion("Jaune"));
+//
+//        Joueur j3 = new Humain("Kévin");
+//        j.getJoueurs().add(j3);
+//        j3.choisirPion(new Pion("Bleu"));
 
-        Joueur j2 = new Humain("Ange");
-        j.getJoueurs().add(j2);
-        j2.choisirPion(new Pion("Jaune"));
+//        j.setJoueurEnCours(j1);
 
-        Joueur j3 = new Humain("Kévin");
-        j.getJoueurs().add(j3);
-        j3.choisirPion(new Pion("Bleu"));
+        j.initPositions();
 
-        j.setJoueurEnCours(j1);
+        int maxJoueurs = j.getJoueurs().size() - 1;
+        Random r = new Random();
+        int joueurEnCours = (r.nextInt(maxJoueurs));
+        j.setJoueurEnCours(j.getJoueurs().get(joueurEnCours));
 
-        // Init components
         this.panelPlateau = new PanelPlateau();
         this.panelAction = new PanelAction();
+
+        for(Joueur joueur : j.getJoueurs()) {
+            VuePion vp = new VuePion(joueur.getPion(), this.panelPlateau);
+            vp.getImageView().setImage(GestionnaireImage.getImage("Pion" + joueur.getPion().getNom()));
+            vp.miseAJour();
+        }
+
+
+        // Init components
+
 
         root = new HBox();
         Scene scene = new Scene(root);
@@ -70,17 +87,17 @@ public class Partie implements IVuePartie {
         stage.show();
 
         // Initialisation des vues
-        VuePion vuePionJ1 = new VuePion(j.getJoueurs().get(0).getPion(), this.panelPlateau);
-        vuePionJ1.getImageView().setImage(GestionnaireImage.getImage("PionRouge"));
-        vuePionJ1.miseAJour();
-
-        VuePion vuePionJ2 = new VuePion(j.getJoueurs().get(1).getPion(), this.panelPlateau);
-        vuePionJ2.getImageView().setImage(GestionnaireImage.getImage("PionJaune"));
-        vuePionJ2.miseAJour();
-
-        VuePion vuePionJ3 = new VuePion(j.getJoueurs().get(2).getPion(), this.panelPlateau);
-        vuePionJ3.getImageView().setImage(GestionnaireImage.getImage("PionBleu"));
-        vuePionJ3.miseAJour();
+//        VuePion vuePionJ1 = new VuePion(j.getJoueurs().get(0).getPion(), this.panelPlateau);
+//        vuePionJ1.getImageView().setImage(GestionnaireImage.getImage("PionRouge"));
+//        vuePionJ1.miseAJour();
+//
+//        VuePion vuePionJ2 = new VuePion(j.getJoueurs().get(1).getPion(), this.panelPlateau);
+//        vuePionJ2.getImageView().setImage(GestionnaireImage.getImage("PionJaune"));
+//        vuePionJ2.miseAJour();
+//
+//        VuePion vuePionJ3 = new VuePion(j.getJoueurs().get(2).getPion(), this.panelPlateau);
+//        vuePionJ3.getImageView().setImage(GestionnaireImage.getImage("PionBleu"));
+//        vuePionJ3.miseAJour();
 
         // Instanciation de controleurs
         this.controleurPlateau = new ControleurPlateau(panelPlateau);

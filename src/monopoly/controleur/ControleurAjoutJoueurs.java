@@ -6,6 +6,11 @@ import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import monopoly.modele.Humain;
+import monopoly.modele.Jeu;
+import monopoly.modele.Joueur;
+import monopoly.modele.Pion;
 import monopoly.vue.partieclassique.Partie;
 import java.io.IOException;
 
@@ -14,9 +19,9 @@ public class ControleurAjoutJoueurs {
     @FXML private TextField textFieldNom;
     @FXML private ComboBox comboPions;
     @FXML private Button boutonAjouter;
-    @FXML private TableView tableauJoueurs;
-    @FXML private TableColumn colNom;
-    @FXML private TableColumn colPion;
+    @FXML private TableView<Joueur> tableauJoueurs;
+    @FXML private TableColumn<Joueur, String> colNom;
+    @FXML private TableColumn<Joueur, String> colPion;
     @FXML private Button boutonRetirer;
     @FXML private Button boutonLancerPartie;
     private ObservableList<String> listePions;
@@ -36,29 +41,68 @@ public class ControleurAjoutJoueurs {
 
     @FXML
     public void initialize() {
+//        tableauJoueurs = new TableView<>();
+//        colNom = new TableColumn<>("Nom");
+//        colPion = new TableColumn<>("Pion");
+        colNom.setCellValueFactory(param -> param.getValue().getNomProperty());
+        colPion.setCellValueFactory(param -> param.getValue().getPion().getNomProperty());
         listePions = FXCollections.observableArrayList("Rouge", "Bleu", "Vert", "Jaune", "Rose", "Violet", "Cyan", "Orange");
 
         for (String couleur : listePions) {
             comboPions.getItems().add(couleur);
         }
 
-        comboPions.setValue("Rouge");
+        comboPions.getSelectionModel().selectFirst();
     }
 
     @FXML
     public void ajouterJoueur() {
-        // TODO : Ajouter un joueur dans le tableauJoueurs avec les informations du textFieldNom et du comboPions
+        String nom = textFieldNom.getText().trim();
+        if(nom.equals(""))
+        {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Ajout impossible");
+            alert.setContentText("Vous devez donner un nom à votre joueur..");
+            alert.show();
+            return;
+        }
+        for(Joueur jTest : tableauJoueurs.getItems())
+        {
+            if(jTest.getNom().equals(nom)) {
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Ajout impossible");
+                alert.setContentText("Vous ne pouvez pas ajouter un joueur portant le nom \"" + textFieldNom.getText() + "\" car il existe déjà un joueur portant ce nom.");
+                alert.show();
+                return;
+            }
+        }
+        Joueur j = new Humain(nom);
+        j.choisirPion(new Pion(comboPions.getValue().toString(), true));
+        tableauJoueurs.getItems().addAll(j);
+        comboPions.getItems().remove(comboPions.getValue());
+        comboPions.getSelectionModel().selectFirst();
+        if(comboPions.getItems().size() == 0)
+        {
+            boutonAjouter.setDisable(true);
+        }
+        textFieldNom.setText("");
     }
 
     @FXML
     public void retirerJoueur() {
-        // TODO : Retirer un joueur du tableauJoueurs
+        int focusedIndex = tableauJoueurs.getSelectionModel().getFocusedIndex();
+        Joueur j = tableauJoueurs.getItems().get(focusedIndex);
+        tableauJoueurs.getItems().remove(j);
+        comboPions.getItems().addAll(j.getPion().getNom());
+        boutonAjouter.setDisable(false);
     }
 
     @FXML
     public void lancerPartie() throws IOException {
         // TODO : Créer les joueurs de la partie à partir du tableauJoueurs (colNom & colPion)
+        Jeu.getInstance().getJoueurs().addAll(tableauJoueurs.getItems());
         new Partie();
+        ((Stage)boutonLancerPartie.getScene().getWindow()).close();
     }
 
 }

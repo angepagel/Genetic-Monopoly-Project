@@ -194,13 +194,6 @@ public class Jeu {
     }
 
     /**
-     * Permet d'initialiser les joueurs.
-     */
-    public void creerJoueurs() {
-        // TODO : Implémenter la création des joueurs
-    }
-
-    /**
      * Permet de savoir le nombre maximal de doubles autorisé avant d'aller en prison.
      * @return Le nombre maximal de doubles autorisés.
      */
@@ -314,6 +307,21 @@ public class Jeu {
     public static void  main(String[] args) {
         Jeu j = Jeu.getInstance();
         j.run();
+    }
+
+    /**
+     * Permet d'initialiser la position des pions.
+     */
+    public void initPositions() {
+        for(Joueur j : joueurs)
+        {
+            Pion p;
+            if((p = j.getPion()) != null) {
+                if(p.getPosition() == null) {
+                    p.setPositionSansVue(plateau.getCaseDepart());
+                }
+            }
+        }
     }
 
     /**

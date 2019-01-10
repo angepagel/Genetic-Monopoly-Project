@@ -1,9 +1,11 @@
 package monopoly.modele;
 
+import javafx.beans.property.SimpleStringProperty;
 import monopoly.controleur.ControleurCaseActuelle;
 import monopoly.controleur.ControleurDeplacementPion;
 import monopoly.modele.cases.Case;
 import monopoly.modele.cases.ECase;
+import sun.java2d.pipe.SpanShapeRenderer;
 
 import java.util.Objects;
 
@@ -19,7 +21,7 @@ public class Pion {
     /**
      * Nom du pion.
      */
-    private String nom;
+    private SimpleStringProperty nom;
 
     /**
      * Joueur à qui le pion appartient.
@@ -48,7 +50,7 @@ public class Pion {
      */
     public Pion(Case position, String nom) {
         this.position = position;
-        this.nom = nom;
+        this.nom = new SimpleStringProperty(nom);
         caseDepartLast = false;
     }
 
@@ -57,8 +59,23 @@ public class Pion {
      * @param nom Nom du pion.
      */
     public Pion(String nom) {
-        this.nom = nom;
+        this.nom = new SimpleStringProperty(nom);
         this.position = Jeu.getInstance().getPlateau().getCaseDepart();
+    }
+
+    /**
+     * Permet de créer un pion sans position
+     * @param nom Nom du pion
+     * @param sansCase Vrai si le pion ne doit pas avoir de position. Doit être initialisée ensuite.
+     */
+    public Pion(String nom, boolean sansCase) {
+        this.nom = new SimpleStringProperty(nom);
+        if(sansCase) {
+            this.position = null;
+        }
+        else {
+            this.position = Jeu.getInstance().getPlateau().getCaseDepart();
+        }
     }
 
     /**
@@ -164,6 +181,14 @@ public class Pion {
     }
 
     /**
+     * Permet de déplacer le pion sur une case différente sans déclencher le contrôleur.
+     * @param position Case sur laquelle on souhaite poser le pion.
+     */
+    public void setPositionSansVue(Case position) {
+        this.position = position;
+    }
+
+    /**
      * Permet de savoir si le dernier déplacement est passé par la case départ (pour l'affichage)
      * @return Vrai si on est passé par la case départ.
      */
@@ -183,7 +208,7 @@ public class Pion {
      * @return Nom du pion.
      */
     public String getNom() {
-        return nom;
+        return nom.get();
     }
 
     /**
@@ -234,9 +259,17 @@ public class Pion {
         this.controleurCaseActuelle = controleurCaseActuelle;
     }
 
+    /**
+     * Retourne la propriété observable.
+     * @return Propriété observable correspondant au nom.
+     */
+    public SimpleStringProperty getNomProperty() {
+        return nom;
+    }
+
     @Override
     public String toString(){
-        return nom;
+        return getNom();
     }
 
     @Override
