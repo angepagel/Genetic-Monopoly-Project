@@ -90,11 +90,18 @@ public class ControleurAjoutJoueurs {
 
     @FXML
     public void retirerJoueur() {
-        int focusedIndex = tableauJoueurs.getSelectionModel().getFocusedIndex();
-        Joueur j = tableauJoueurs.getItems().get(focusedIndex);
-        tableauJoueurs.getItems().remove(j);
-        comboPions.getItems().addAll(j.getPion().getNom());
-        boutonAjouter.setDisable(false);
+        try {
+            int focusedIndex = tableauJoueurs.getSelectionModel().getFocusedIndex();
+            Joueur j = tableauJoueurs.getItems().get(focusedIndex);
+            tableauJoueurs.getItems().remove(j);
+            comboPions.getItems().addAll(j.getPion().getNom());
+            boutonAjouter.setDisable(false);
+        }
+        catch (Exception e)
+        {
+            new Alert(Alert.AlertType.WARNING, "Il n'y a aucun joueur à retirer.").show();
+        }
+
     }
 
     @FXML
