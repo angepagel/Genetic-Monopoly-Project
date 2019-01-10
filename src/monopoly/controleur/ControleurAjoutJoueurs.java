@@ -99,7 +99,13 @@ public class ControleurAjoutJoueurs {
 
     @FXML
     public void lancerPartie() throws IOException {
-        // TODO : Créer les joueurs de la partie à partir du tableauJoueurs (colNom & colPion)
+        if(tableauJoueurs.getItems().size() < 2) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Impossible de lancer la partie.");
+            alert.setContentText("Une partie nécessite 2 joueurs au minimum pour démarrer.");
+            alert.show();
+            return;
+        }
         Jeu.getInstance().getJoueurs().addAll(tableauJoueurs.getItems());
         new Partie();
         ((Stage)boutonLancerPartie.getScene().getWindow()).close();
