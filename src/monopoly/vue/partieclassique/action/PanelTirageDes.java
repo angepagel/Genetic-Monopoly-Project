@@ -11,6 +11,8 @@ import monopoly.controleur.ControleurBoutonDe;
 import monopoly.controleur.ControleurJoueurs;
 import monopoly.modele.Jeu;
 import monopoly.vue.data.image.GestionnaireImage;
+import javafx.scene.control.Alert;
+
 
 public class PanelTirageDes extends Pane {
 
@@ -65,7 +67,13 @@ public class PanelTirageDes extends Pane {
 
             @Override
             public void handle(ActionEvent e) {
-                self.controleurBoutonDe.lancerDes();
+                if (!Jeu.getInstance().getJoueurEnCours().aDejaJoue() ) {
+                    self.controleurBoutonDe.lancerDes();
+                }
+                else {
+                    new Alert(Alert.AlertType.WARNING, " Vous ne pouvez plus lancer vos dés !").show();
+                }
+
             }
 
         });
