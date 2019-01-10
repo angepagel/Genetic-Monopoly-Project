@@ -58,16 +58,16 @@ public class ControleurAjoutJoueurs {
     @FXML
     public void ajouterJoueur() {
         String nom = textFieldNom.getText().trim();
-        if(nom.equals(""))
-        {
+
+        if(nom.equals("")) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ajout impossible");
             alert.setContentText("Vous devez donner un nom à votre joueur..");
             alert.show();
             return;
         }
-        for(Joueur jTest : tableauJoueurs.getItems())
-        {
+        
+        for(Joueur jTest : tableauJoueurs.getItems()) {
             if(jTest.getNom().equals(nom)) {
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Ajout impossible");
@@ -76,15 +76,17 @@ public class ControleurAjoutJoueurs {
                 return;
             }
         }
+
         Joueur j = new Humain(nom);
         j.choisirPion(new Pion(comboPions.getValue().toString(), true));
         tableauJoueurs.getItems().addAll(j);
         comboPions.getItems().remove(comboPions.getValue());
         comboPions.getSelectionModel().selectFirst();
-        if(comboPions.getItems().size() == 0)
-        {
+
+        if(comboPions.getItems().size() == 0) {
             boutonAjouter.setDisable(true);
         }
+
         textFieldNom.setText("");
     }
 
@@ -96,6 +98,7 @@ public class ControleurAjoutJoueurs {
             tableauJoueurs.getItems().remove(j);
             comboPions.getItems().addAll(j.getPion().getNom());
             boutonAjouter.setDisable(false);
+            comboPions.getSelectionModel().selectFirst();
         }
         catch (Exception e)
         {
