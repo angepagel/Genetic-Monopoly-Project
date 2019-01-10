@@ -40,6 +40,11 @@ public class GestionnaireImage {
         this.addImage("PionRouge", "PionRouge.png");
         this.addImage("PionJaune", "PionJaune.png");
         this.addImage("PionBleu", "PionBleu.png");
+        this.addImage("PionVert", "PionVert.png");
+        this.addImage("PionCyan", "PionCyan.png");
+        this.addImage("PionOrange", "PionOrange.png");
+        this.addImage("PionViolet", "PionViolet.png");
+        this.addImage("PionRose", "PionRose.png");
 
     }
 
