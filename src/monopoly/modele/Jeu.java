@@ -32,6 +32,16 @@ public class Jeu {
     private ArrayList<Joueur> joueurs;
 
     /**
+     * Condition de victoire du jeu.
+     */
+    private EConditionVictoire conditionVictoire;
+
+    /**
+     * Nombre de tours ou de minutes que durera la partie.
+     */
+    private int fin;
+
+    /**
      * Joueur dont c'est le tour.
      */
     private Joueur joueurEnCours;
@@ -81,6 +91,8 @@ public class Jeu {
         argentParcGratuit = 0;
         joueurs = new ArrayList<>();
         des = new Des();
+        conditionVictoire = EConditionVictoire.Faillite;
+        fin = -1;
     }
 
     /**
@@ -408,5 +420,36 @@ public class Jeu {
         System.out.println("Merci d'avoir joué !");
     }
 
-   
+
+    /**
+     * Permet de savoir quelle est la condition de victoire de la partie en cours.
+     * @return Condition de victoire de la partie en cours.
+     */
+    public EConditionVictoire getConditionVictoire() {
+        return conditionVictoire;
+    }
+
+    /**
+     * Permet de définir la condition de victoire de la partie, par défaut, la faillite.
+     * @param conditionVictoire Condition de victoire à définir.
+     */
+    public void setConditionVictoire(EConditionVictoire conditionVictoire) {
+        this.conditionVictoire = conditionVictoire;
+    }
+
+    /**
+     * Permet de savoir quel est la durée de la partie avant la fin programmée (en minutes ou en tours), inuile si c'est la faillite.
+     * @return Durée de la partie.
+     */
+    public int getFin() {
+        return fin;
+    }
+
+    /**
+     * Permet de définir quelle est la durée de la parti en cours, avant la fin programmée (minutes ou tours), inutile si faillite.
+     * @param fin Durée de la partie.
+     */
+    public void setFin(int fin) {
+        this.fin = fin;
+    }
 }
