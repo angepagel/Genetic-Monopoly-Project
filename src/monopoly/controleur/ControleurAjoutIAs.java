@@ -21,6 +21,8 @@ public class ControleurAjoutIAs {
 
     @FXML private ListView listeIAs;
 
+    @FXML private TextField textFieldNbTour;
+
 
     @FXML
     public void ajouterIAs() {
@@ -38,9 +40,16 @@ public class ControleurAjoutIAs {
             new Alert(Alert.AlertType.WARNING, "Le nom de l'IA ne peut pas contenir plus de " + maxSize + " caractères.").show();
             return;
         }
-       /* for(Object n:listeIAs.getItems()){
+        for(Object n:listeIAs.getItems()){
+            if(n.equals(nom)){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Ajout impossible");
+                alert.setContentText("Vous ne pouvez pas ajouter une IA portant le nom \"" + textFieldNom.getText() + "\" car il existe déjà une IA portant ce nom.");
+                alert.show();
+                return;
+            }
 
-        }*/
+        }
         if(listeIAs.getItems().size()<8){
             listeIAs.getItems().add(nom);
             textFieldNom.clear();

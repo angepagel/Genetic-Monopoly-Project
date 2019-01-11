@@ -26,6 +26,6 @@
       <Button fx:id="boutonLancerPartie" layoutX="228.0" layoutY="353.0" mnemonicParsing="false" onAction="#lancerPartie" text="Lancer la partie" />
       <Button fx:id="boutonRetirer" layoutX="310.0" layoutY="292.0" mnemonicParsing="false" onAction="#supprimerIAs" prefHeight="25.0" prefWidth="63.0" text="Retirer" />
       <Label layoutX="30.0" layoutY="138.0" prefHeight="17.0" prefWidth="157.0" text="Nombre maximal de tours :" />
-      <TextField layoutX="200.0" layoutY="134.0" prefHeight="25.0" prefWidth="55.0" text="200" />
+      <TextField fx:id="textFieldNbTour" layoutX="200.0" layoutY="134.0" prefHeight="25.0" prefWidth="55.0"  />
    </children>
 </AnchorPane>
