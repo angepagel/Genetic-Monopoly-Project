@@ -7,11 +7,8 @@
 
 <AnchorPane prefHeight="348.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurVoirDetailsPropriete">
    <children>
-      <Label fx:id="labelNom" alignment="CENTER" layoutX="63.0" layoutY="40.0" prefWidth="174.0" text="Nom de la propriété">
-         <font>
-            <Font size="18.0" />
-         </font>
-      </Label>
+      <Label fx:id="labelNom" alignment="CENTER" layoutX="63.0" layoutY="40.0" prefWidth="174.0" text="Nom de la propriété" />
+      <Label layoutX="71.0" layoutY="101.0" prefHeight="17.0" prefWidth="74.0" text="Propriétaire :" />
       <Label layoutX="39.0" layoutY="144.0" prefHeight="17.0" prefWidth="135.0" text="Loyer" />
       <Label layoutX="39.0" layoutY="184.0" prefHeight="17.0" prefWidth="135.0" text="Loyer avec 1 maison" />
       <Label layoutX="39.0" layoutY="201.0" prefHeight="17.0" prefWidth="135.0" text="------------ 2 maisons" />
@@ -19,14 +16,13 @@
       <Label layoutX="39.0" layoutY="235.0" prefHeight="17.0" prefWidth="135.0" text="------------ 4 maisons" />
       <Label layoutX="39.0" layoutY="252.0" prefHeight="17.0" prefWidth="135.0" text="------------ un hôtel" />
       <Label layoutX="39.0" layoutY="294.0" prefHeight="17.0" prefWidth="135.0" text="Hypothèque" />
-      <Label fx:id="labelLoyer" layoutX="226.0" layoutY="144.0" prefHeight="17.0" prefWidth="74.0" text="\$PRIX" textFill="#3b7ef2" />
-      <Label fx:id="labelLoyerAmelioration1" layoutX="226.0" layoutY="184.0" prefHeight="17.0" prefWidth="74.0" text="\$PRIX" textFill="#3b7ef2" />
-      <Label fx:id="labelLoyerAmelioration2" layoutX="226.0" layoutY="201.0" prefHeight="17.0" prefWidth="74.0" text="\$PRIX" textFill="#3b7ef2" />
-      <Label fx:id="labelLoyerAmelioration3" layoutX="226.0" layoutY="218.0" prefHeight="17.0" prefWidth="74.0" text="\$PRIX" textFill="#3b7ef2" />
-      <Label fx:id="labelLoyerAmelioration5" layoutX="226.0" layoutY="252.0" prefHeight="17.0" prefWidth="74.0" text="\$PRIX" textFill="#3b7ef2" />
-      <Label fx:id="labelLoyerAmelioration4" layoutX="226.0" layoutY="235.0" prefHeight="17.0" prefWidth="74.0" text="\$PRIX" textFill="#3b7ef2" />
-      <Label fx:id="labelHypotheque" layoutX="226.0" layoutY="294.0" prefHeight="17.0" prefWidth="74.0" text="\$PRIX" textFill="#3b7ef2" />
-      <Label layoutX="71.0" layoutY="101.0" prefHeight="17.0" prefWidth="74.0" text="Propriétaire :" />
-      <Label fx:id="labelProprietaire" layoutX="155.0" layoutY="101.0" prefHeight="17.0" prefWidth="74.0" text="Propriétaire" textFill="#3b7ef2" />
+      <Label fx:id="labelProprietaire" layoutX="155.0" layoutY="101.0" prefHeight="17.0" prefWidth="74.0" text="Aucun" textFill="#3b7ef2" />
+      <Label fx:id="labelLoyer" layoutX="226.0" layoutY="144.0" prefHeight="17.0" prefWidth="74.0" text="Inconnu" textFill="#3b7ef2" />
+      <Label fx:id="labelLoyerAmelioration1" layoutX="226.0" layoutY="184.0" prefHeight="17.0" prefWidth="74.0" text="Inconnu" textFill="#3b7ef2" />
+      <Label fx:id="labelLoyerAmelioration2" layoutX="226.0" layoutY="201.0" prefHeight="17.0" prefWidth="74.0" text="Inconnu" textFill="#3b7ef2" />
+      <Label fx:id="labelLoyerAmelioration3" layoutX="226.0" layoutY="218.0" prefHeight="17.0" prefWidth="74.0" text="Inconnu" textFill="#3b7ef2" />
+      <Label fx:id="labelLoyerAmelioration5" layoutX="226.0" layoutY="252.0" prefHeight="17.0" prefWidth="74.0" text="Inconnu" textFill="#3b7ef2" />
+      <Label fx:id="labelLoyerAmelioration4" layoutX="226.0" layoutY="235.0" prefHeight="17.0" prefWidth="74.0" text="Inconnu" textFill="#3b7ef2" />
+      <Label fx:id="labelHypotheque" layoutX="226.0" layoutY="294.0" prefHeight="17.0" prefWidth="74.0" text="Inconnu" textFill="#3b7ef2" />
    </children>
 </AnchorPane>
