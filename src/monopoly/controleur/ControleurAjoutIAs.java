@@ -1,5 +1,6 @@
 package monopoly.controleur;
 
+import com.sun.prism.shader.Texture_LinearGradient_REFLECT_AlphaTest_Loader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -23,6 +24,7 @@ public class ControleurAjoutIAs {
 
     @FXML private TextField textFieldNbTour;
 
+    @FXML private TextField textFieldNbPartie;
 
     @FXML
     public void ajouterIAs() {
