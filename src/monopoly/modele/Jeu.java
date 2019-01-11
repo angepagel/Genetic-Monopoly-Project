@@ -3,10 +3,8 @@ package monopoly.modele;
 import javafx.application.Platform;
 import monopoly.controleur.ControleurInformationsJeu;
 import monopoly.controleur.ControleurJoueurs;
-import monopoly.controleur.ControleurTerminerTour;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Scanner;
 import java.util.Timer;
@@ -492,7 +490,7 @@ public class Jeu {
     private boolean joueursRestants() {
         int nbJoueurs = 0;
         for(Joueur j : joueurs) {
-            if(!j.testFaillite()) {
+            if(!j.isFaillite()) {
                 ++nbJoueurs;
             }
         }
@@ -501,7 +499,7 @@ public class Jeu {
     }
 
     private Joueur choisirVainqueur() {
-        ArrayList<Joueur> joueurs = listeJoueursRestants();
+        ArrayList<Joueur> joueurs = getJoueursRestants();
         if(joueurs.size() < 2) {
             if(joueurs.size() >= 1) {
                 vainqueur = joueurs.get(0);
@@ -526,10 +524,10 @@ public class Jeu {
         return vainqueur;
     }
 
-    private ArrayList<Joueur> listeJoueursRestants() {
+    private ArrayList<Joueur> getJoueursRestants() {
         ArrayList<Joueur> joueursRetour = new ArrayList<>();
         for(Joueur j : joueurs) {
-            if(!j.testFaillite()) {
+            if(!j.isFaillite()) {
                 joueursRetour.add(j);
             }
         }

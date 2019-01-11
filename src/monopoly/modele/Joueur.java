@@ -164,11 +164,18 @@ public abstract class Joueur {
 //    }
 
     /**
-     * Permet de savoir si le joueur est en faillite et d'actualiser ce statut.
-     * @return Indique si le joueur est en faillite.
+     * Permet de mettre le joueur en faillite.
      */
-    public boolean testFaillite() {
-        return faillite;
+    public void faireFaillite() {
+        faillite = true;
+        for(Case_Achat achat : proprietes) {
+            achat.abandonPropriete();
+        }
+
+        if(sortiePrisonCaisse != null) Jeu.getInstance().getGestionnaireCartes().remettreCaisseCommunaute(sortiePrisonCaisse);
+        if(sortiePrisonChance != null) Jeu.getInstance().getGestionnaireCartes().remettreChance(sortiePrisonChance);
+
+        proprietes.clear();
     }
 
     /**

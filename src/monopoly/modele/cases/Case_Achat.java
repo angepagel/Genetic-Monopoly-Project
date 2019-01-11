@@ -19,6 +19,14 @@ public abstract class Case_Achat extends Case_Paiement {
         this.proprietaire = proprietaire;
     }
 
+    /**
+     * La propriété est abandonnée par son possesseur, parce qu'il fait faillite.
+     */
+    public void abandonPropriete() {
+        setHypothequeSansVerif(false);
+        setProprietaire(null);
+    }
+
     public void payerLoyer(Joueur joueur) {
         if(proprietaire == null) {
             return;
@@ -51,6 +59,10 @@ public abstract class Case_Achat extends Case_Paiement {
         if(hypotheque && proprietaire == null) {
             throw new Exception("Une case a besoin d'un propriétaire pour être hypothéquée.");
         }
+        setHypothequeSansVerif(hypotheque);
+    }
+
+    private void setHypothequeSansVerif(boolean hypotheque) {
         this.hypotheque = hypotheque;
     }
 
