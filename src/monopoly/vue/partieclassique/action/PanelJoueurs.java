@@ -47,14 +47,14 @@ public class PanelJoueurs extends Pane {
         // Joueurs
         this.joueurs = new ArrayList<>();
 
-        for (int i = 1; i <=8; i++) {
+        for (int i = 1; i <= Jeu.getInstance().getNbJoueurs(); i++) {
 
             // If factorisable avec des mathématiques (mais moins intuitif)
             if (i <= 4) {
-                this.joueurs.add(new PanelInfosJoueur(40, 22+((i-1)*20)));
+                this.joueurs.add(new PanelInfosJoueur(40, 22+((i-1)*20), i));
             }
             else {
-                this.joueurs.add(new PanelInfosJoueur(200, 22+((i-5)*20)));
+                this.joueurs.add(new PanelInfosJoueur(200, 22+((i-5)*20), i));
             }
 
             this.joueurs.get(i-1).setPrefWidth(70);
