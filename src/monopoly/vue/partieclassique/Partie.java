@@ -54,10 +54,7 @@ public class Partie implements IVuePartie {
 
         j.initPositions();
 
-        int maxJoueurs = j.getJoueurs().size() - 1;
-        Random r = new Random();
-        int joueurEnCours = (r.nextInt(maxJoueurs));
-        j.setJoueurEnCours(j.getJoueurs().get(joueurEnCours));
+        j.setJoueurAleatoire();
 
         this.panelPlateau = new PanelPlateau();
         this.panelAction = new PanelAction();

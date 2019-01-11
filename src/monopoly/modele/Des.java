@@ -32,18 +32,39 @@ public class Des {
         random = new Random();
     }
 
+    private int lancerSimple() {
+        de1 = random.nextInt(5) + 1;
+        de2 = random.nextInt(5) + 1;
+
+        return sommeDes();
+    }
+
+    /**
+     * Permet de lancer les dés afin de savoir qui est le premier joueur.
+     * @return Retourne le résultat obtenu.
+     */
+    public int lancerTestPremierJoueur() {
+        lancerSimple();
+
+        return sommeDes();
+    }
+
     /**
      * Permet de lancer les dés.
      * @return Somme des valeurs des dés.
      */
     public int lancer() {
-        de1 = random.nextInt(5) + 1;
-        de2 = random.nextInt(5) + 1;
+        lancerSimple();
+        Joueur j = Jeu.getInstance().getJoueurEnCours();
 //        de1 = 1;
 //        de2 = 1;
+//
+//        if(j.isEnPrison() || j.getNom().equals("Test")) {
+//            de1 = 3;
+//            de2 = 4;
+//        }
 
         this.controleur.lancer();
-        Joueur j = Jeu.getInstance().getJoueurEnCours();
 
         if(j.isEnPrison()) {
             if(estDouble()) {
@@ -53,6 +74,11 @@ public class Des {
             }
             else {
                 j.incToursEnPrison();
+                if(j.getToursEnPrison() >= 3) {
+                    j.getSolde().payerImpots(50);
+                    j.sortirPrison();
+                    j.getPion().deplacer(sommeDes());
+                }
                 j.setDejaJoue(true);
                 j.resetNbDoubles();
             }

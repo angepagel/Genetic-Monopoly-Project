@@ -71,6 +71,7 @@ public abstract class Joueur {
      */
     public Joueur(String nom) {
         this.nom = new SimpleStringProperty(nom);
+        this.proprietes = new ArrayList<>();
         solde = new Solde(this);
         sortiePrisonChance = null;
     }
@@ -352,6 +353,7 @@ public abstract class Joueur {
         }
         else {
             solde.payer(achat.getPrix());
+            proprietes.add(achat);
             achat.setProprietaire(this);
         }
     }
@@ -387,13 +389,12 @@ public abstract class Joueur {
                 nbDoubles == joueur.nbDoubles &&
                 toursEnPrison == joueur.toursEnPrison &&
                 Objects.equals(nom, joueur.nom) &&
-                Objects.equals(pion, joueur.pion) &&
                 Objects.equals(solde, joueur.solde) &&
                 Objects.equals(proprietes, joueur.proprietes);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nom, faillite, nbDoubles, toursEnPrison, pion, solde, proprietes);
+        return Objects.hash(nom, faillite, nbDoubles, toursEnPrison, solde, proprietes);
     }
 }
