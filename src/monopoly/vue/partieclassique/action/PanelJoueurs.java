@@ -6,6 +6,8 @@ import javafx.geometry.Insets;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import monopoly.controleur.ControleurJoueurs;
+import monopoly.modele.Jeu;
 import monopoly.vue.dialogue.DialogueVoirLesProprietes;
 import monopoly.vue.dialogue.DialogueVoirMesProprietes;
 
@@ -19,6 +21,8 @@ public class PanelJoueurs extends Pane {
     private ArrayList<PanelInfosJoueur> joueurs;
     private Button mesProprietes;
     private Button lesProprietes;
+
+    private ControleurJoueurs controleurJoueurs;
 
     public PanelJoueurs() {
 
@@ -95,6 +99,16 @@ public class PanelJoueurs extends Pane {
                 this.lesProprietes
         );
 
+
+        // Ajout des contrôleurs
+        this.controleurJoueurs = new ControleurJoueurs(this);
+
+    }
+
+    public void actualiser() {
+        for (int i = 0; i < Jeu.getInstance().getNbJoueurs(); i++) {
+            this.joueurs.get(i).setText("$ "+Jeu.getInstance().getJoueurs().get(i).getSolde().getMonnaie());
+        }
     }
 
 }

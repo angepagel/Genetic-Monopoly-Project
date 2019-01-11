@@ -47,6 +47,7 @@ public class Solde {
      */
     public void ajouter(int monnaie) {
         this.monnaie += monnaie;
+        Jeu.getInstance().getControleurJoueurs().actualiser();
     }
 
     /**
@@ -55,6 +56,7 @@ public class Solde {
      */
     public void payer(int monnaie) {
         this.monnaie -= monnaie;
+        Jeu.getInstance().getControleurJoueurs().actualiser();
     }
 
     /**

@@ -30,5 +30,9 @@ public class PanelInfosJoueur extends Pane {
 
     }
 
+    public void setText(String text) {
+        this.argent.setText(text);
+    }
+
     
 }

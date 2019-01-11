@@ -2,6 +2,7 @@ package monopoly.modele;
 
 import javafx.application.Platform;
 import monopoly.controleur.ControleurInformationsJeu;
+import monopoly.controleur.ControleurJoueurs;
 import monopoly.controleur.ControleurTerminerTour;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
@@ -65,6 +66,11 @@ public class Jeu {
      * Contrôleur prenant en charge les informations du jeu sur l'IHM.
      */
     private ControleurInformationsJeu controleurInformationsJeu;
+
+    /**
+     * Contrôleur prenant en charge les informations sur le joueur.
+     */
+    private ControleurJoueurs controleurJoueurs;
 
     /**
      * Argent touché au parc gratuit.
@@ -292,7 +298,6 @@ public class Jeu {
     public void setJoueur(Joueur j,Pion p){
         j.choisirPion(p);
         joueurs.add(j);
-        
     }
 
     /**
@@ -301,6 +306,21 @@ public class Jeu {
      */
     public void setControleurInformationsJeu(ControleurInformationsJeu controleurInformationsJeu) {
         this.controleurInformationsJeu = controleurInformationsJeu;
+    }
+
+    /**
+     * Mutateur du contrôleur de joueurs.
+     * @param c Contrôleur de joueur.
+     */
+    public void setControleurJoueurs(ControleurJoueurs c) {
+        this.controleurJoueurs = c;
+    }
+
+    /**
+     * Accesseur du contrôleur de joueurs.
+     */
+    public ControleurJoueurs getControleurJoueurs() {
+        return this.controleurJoueurs;
     }
 
     /**

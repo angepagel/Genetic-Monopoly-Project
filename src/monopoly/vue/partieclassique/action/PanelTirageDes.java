@@ -8,7 +8,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import monopoly.controleur.ControleurBoutonDe;
-import monopoly.controleur.ControleurJoueurs;
 import monopoly.modele.Jeu;
 import monopoly.vue.data.image.GestionnaireImage;
 import javafx.scene.control.Alert;
@@ -25,7 +24,6 @@ public class PanelTirageDes extends Pane {
     private Button lancerDes;
 
     private ControleurBoutonDe controleurBoutonDe;
-    private ControleurJoueurs controleurJoueurs;
 
     public PanelTirageDes() {
         PanelTirageDes self = this;
