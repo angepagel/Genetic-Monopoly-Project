@@ -4,9 +4,11 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
 import monopoly.controleur.ControleurTerminerTour;
+import monopoly.modele.Jeu;
 
 public class PanelTourInterne extends VBox {
 
@@ -43,6 +45,10 @@ public class PanelTourInterne extends VBox {
             @Override
             public void handle(ActionEvent event) {
                 self.controleurTerminerTour.terminerTour();
+                Alert alert = new Alert(Alert.AlertType.INFORMATION, "C'est à " + Jeu.getInstance().getJoueurEnCours().getNom() + " de jouer !");
+                alert.setHeaderText("Changement de tour : " + Jeu.getInstance().getJoueurEnCours().getNom());
+                alert.setTitle("Changement de tour");
+                alert.show();
             }
 
         });
