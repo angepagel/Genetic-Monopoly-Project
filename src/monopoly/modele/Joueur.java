@@ -155,12 +155,20 @@ public abstract class Joueur {
         return faillite;
     }
 
+//    /**
+//     * Permet de mettre un joueur en faillite, ou l'inverse.
+//     * @param faillite Indique si le joueur est en faillite.
+//     */
+//    public void setFaillite(boolean faillite) {
+//        this.faillite = faillite;
+//    }
+
     /**
-     * Permet de mettre un joueur en faillite, ou l'inverse.
-     * @param faillite Indique si le joueur est en faillite.
+     * Permet de savoir si le joueur est en faillite et d'actualiser ce statut.
+     * @return Indique si le joueur est en faillite.
      */
-    public void setFaillite(boolean faillite) {
-        this.faillite = faillite;
+    public boolean testFaillite() {
+        return faillite;
     }
 
     /**
@@ -339,6 +347,28 @@ public abstract class Joueur {
             solde.payer(achat.getPrix());
             achat.setProprietaire(this);
         }
+    }
+
+    /**
+     * Permet de savoir la valeur amassée par le joueur.
+     * @return Valeur des propriétés du joueur.
+     */
+    public int getValeur() {
+        int valeur = solde.getMonnaie();
+        for(Case_Achat caseAchat : proprietes) {
+            if(caseAchat.isHypotheque()) {
+                valeur += caseAchat.getValeurHypotheque();
+            }
+            else {
+                valeur += caseAchat.getPrix();
+                if(caseAchat.getType() == ECase.Terrain) {
+                    Case_Terrain terrain = (Case_Terrain)caseAchat;
+                    valeur += terrain.getNbMaisons() * terrain.getPrixMaison();
+                    valeur += (terrain.isHotel()) ? terrain.getPrixMaison(): 0;
+                }
+            }
+        }
+        return valeur;
     }
 
     @Override

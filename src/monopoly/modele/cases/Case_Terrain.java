@@ -53,6 +53,15 @@ public class Case_Terrain extends Case_Achat {
         return hotel;
     }
 
+    @Override
+    public void setHypotheque(boolean hypotheque) throws Exception {
+        if(hypotheque && (nbMaisons > 0 || hotel))
+        {
+            throw new Exception("Il est impossible d'hypothéquer une propriété qui a une maison ou un hôtel.");
+        }
+        super.setHypotheque(hypotheque);
+    }
+
     public CouleurTerrain getCouleur() {
         return couleur;
     }

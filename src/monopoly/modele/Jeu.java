@@ -48,6 +48,11 @@ public class Jeu {
     private Joueur joueurEnCours;
 
     /**
+     * Vaut vrai si la partie est finie.
+     */
+    private boolean partieFinie;
+
+    /**
      * Plateau de jeu
      */
     private Plateau plateau;
@@ -86,6 +91,11 @@ public class Jeu {
      * Argent touché au parc gratuit.
      */
     private int argentParcGratuit;
+
+    /**
+     * Vainqueur de la partie.
+     */
+    private Joueur vainqueur;
 
     // ----------- Methodes -----------
 
@@ -320,6 +330,7 @@ public class Jeu {
         this.controleurInformationsJeu = controleurInformationsJeu;
     }
 
+
     /**
      * Mutateur du contrôleur de joueurs.
      * @param c Contrôleur de joueur.
@@ -471,5 +482,83 @@ public class Jeu {
      */
     public void setFin(int fin) {
         this.fin = fin;
+    }
+
+    private void finirPartie() {
+        partieFinie = true;
+        choisirVainqueur();
+    }
+
+    private boolean joueursRestants() {
+        int nbJoueurs = 0;
+        for(Joueur j : joueurs) {
+            if(!j.testFaillite()) {
+                ++nbJoueurs;
+            }
+        }
+
+        return nbJoueurs >= 2;
+    }
+
+    private Joueur choisirVainqueur() {
+        ArrayList<Joueur> joueurs = listeJoueursRestants();
+        if(joueurs.size() < 2) {
+            if(joueurs.size() >= 1) {
+                vainqueur = joueurs.get(0);
+            }
+            else {
+                vainqueur = null;
+            }
+        }
+
+        int valeurArgent = -1;
+        Joueur meilleurJoueur = null;
+
+        for(Joueur j : joueurs) {
+            if(j.getValeur() > valeurArgent) {
+                meilleurJoueur = j;
+                valeurArgent = j.getValeur();
+            }
+        }
+
+        vainqueur = meilleurJoueur;
+
+        return vainqueur;
+    }
+
+    private ArrayList<Joueur> listeJoueursRestants() {
+        ArrayList<Joueur> joueursRetour = new ArrayList<>();
+        for(Joueur j : joueurs) {
+            if(!j.testFaillite()) {
+                joueursRetour.add(j);
+            }
+        }
+
+        return joueursRetour;
+    }
+
+    /**
+     * Permet de tester si la partie est finie.
+     * @return Définit si la partie est finie.
+     */
+    public boolean isPartieFinie() {
+        if(!partieFinie) {
+            switch(conditionVictoire) {
+                case NbTours:
+                    if(fin > nbTours) {
+                        finirPartie();
+                    }
+                    break;
+                case Temps:
+                    if(chronometre.getMinutes() <= fin) {
+                        finirPartie();
+                    }
+                    break;
+            }
+            if(!joueursRestants()) {
+                finirPartie();
+            }
+        }
+        return partieFinie;
     }
 }
