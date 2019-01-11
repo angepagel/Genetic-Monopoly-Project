@@ -44,11 +44,20 @@ public class PanelTourInterne extends VBox {
 
             @Override
             public void handle(ActionEvent event) {
-                self.controleurTerminerTour.terminerTour();
-                Alert alert = new Alert(Alert.AlertType.INFORMATION, "C'est à " + Jeu.getInstance().getJoueurEnCours().getNom() + " de jouer !");
-                alert.setHeaderText("Changement de tour : " + Jeu.getInstance().getJoueurEnCours().getNom());
-                alert.setTitle("Changement de tour");
-                alert.show();
+
+                if(Jeu.getInstance().getJoueurEnCours().aDejaJoue()){
+                    self.controleurTerminerTour.terminerTour();
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION, "C'est à " + Jeu.getInstance().getJoueurEnCours().getNom() + " de jouer !");
+                    alert.setHeaderText("Changement de tour : " + Jeu.getInstance().getJoueurEnCours().getNom());
+                    alert.setTitle("Changement de tour");
+                    alert.show();
+                }else{
+                    Alert alert = new Alert(Alert.AlertType.WARNING, "Votre tour n'est pas terminé");
+                    alert.setHeaderText("Changement de tour : " + Jeu.getInstance().getJoueurEnCours().getNom());
+                    alert.setTitle("Changement de tour");
+                    alert.show();
+                }
+
             }
 
         });
