@@ -353,6 +353,7 @@ public abstract class Joueur {
         }
         else {
             solde.payer(achat.getPrix());
+            proprietes.add(achat);
             achat.setProprietaire(this);
         }
     }
