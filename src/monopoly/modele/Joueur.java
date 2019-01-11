@@ -387,13 +387,12 @@ public abstract class Joueur {
                 nbDoubles == joueur.nbDoubles &&
                 toursEnPrison == joueur.toursEnPrison &&
                 Objects.equals(nom, joueur.nom) &&
-                Objects.equals(pion, joueur.pion) &&
                 Objects.equals(solde, joueur.solde) &&
                 Objects.equals(proprietes, joueur.proprietes);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(nom, faillite, nbDoubles, toursEnPrison, pion, solde, proprietes);
+        return Objects.hash(nom, faillite, nbDoubles, toursEnPrison, solde, proprietes);
     }
 }

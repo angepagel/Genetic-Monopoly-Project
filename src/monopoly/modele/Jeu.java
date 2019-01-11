@@ -5,10 +5,7 @@ import monopoly.controleur.ControleurInformationsJeu;
 import monopoly.controleur.ControleurJoueurs;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-import java.util.Timer;
-import java.util.TimerTask;
+import java.util.*;
 
 /**
  * Représente le jeu
@@ -160,6 +157,39 @@ public class Jeu {
         nbTours = 0;
         plateau = new Plateau();
         gestionnaireCartes = new GestionnaireCartes();
+    }
+
+    /**
+     * Permet de définir un joueur aléatoire qui commence.
+     * @return Joueur aléatoire à qui c'est maintenant le tour.
+     */
+    public Joueur setJoueurAleatoire() {
+        ArrayList<Joueur> joueurs = getJoueursRestants();
+        HashMap<Joueur, Integer> joueursScore = new HashMap<>();
+        while(joueurs.size() > 1) {
+            for(Joueur j : joueurs) {
+                joueursScore.put(j, des.lancerTestPremierJoueur());
+            }
+            Collection <Integer> scores = joueursScore.values();
+            int max = 0;
+            for(Integer i : scores) {
+                if(i > max) {
+                    max = i;
+                }
+            }
+
+            for(Joueur j : joueursScore.keySet()) {
+                if(joueursScore.get(j) != max) {
+                    joueurs.remove(j);
+                }
+            }
+
+            joueursScore.clear();
+        }
+
+        joueurEnCours = joueurs.get(0);
+
+        return joueurEnCours;
     }
 
     /**
