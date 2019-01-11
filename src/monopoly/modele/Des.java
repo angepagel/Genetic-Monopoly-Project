@@ -55,11 +55,16 @@ public class Des {
      */
     public int lancer() {
         lancerSimple();
+        Joueur j = Jeu.getInstance().getJoueurEnCours();
 //        de1 = 1;
 //        de2 = 1;
+//
+//        if(j.isEnPrison() || j.getNom().equals("Test")) {
+//            de1 = 3;
+//            de2 = 4;
+//        }
 
         this.controleur.lancer();
-        Joueur j = Jeu.getInstance().getJoueurEnCours();
 
         if(j.isEnPrison()) {
             if(estDouble()) {
@@ -69,6 +74,11 @@ public class Des {
             }
             else {
                 j.incToursEnPrison();
+                if(j.getToursEnPrison() >= 3) {
+                    j.getSolde().payerImpots(50);
+                    j.sortirPrison();
+                    j.getPion().deplacer(sommeDes());
+                }
                 j.setDejaJoue(true);
                 j.resetNbDoubles();
             }

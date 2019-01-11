@@ -71,6 +71,7 @@ public abstract class Joueur {
      */
     public Joueur(String nom) {
         this.nom = new SimpleStringProperty(nom);
+        this.proprietes = new ArrayList<>();
         solde = new Solde(this);
         sortiePrisonChance = null;
     }
