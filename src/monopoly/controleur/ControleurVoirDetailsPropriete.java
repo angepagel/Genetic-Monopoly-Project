@@ -2,8 +2,9 @@ package monopoly.controleur;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
+import monopoly.modele.cases.Case_Achat;
 
-public class ControleurVoirDetailsPropriete {
+public class ControleurVoirDetailsPropriete extends Controleur {
 
     @FXML
     private Label labelNom;

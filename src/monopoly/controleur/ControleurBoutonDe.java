@@ -2,8 +2,9 @@ package monopoly.controleur;
 
 import monopoly.modele.Des;
 import monopoly.modele.Jeu;
+import monopoly.vue.partieclassique.action.VueDes;
 
-public class ControleurBoutonDe {
+public class ControleurBoutonDe extends Controleur {
 
     private Des des;
 
