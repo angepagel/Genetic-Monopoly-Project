@@ -32,7 +32,6 @@ public class PanelTourBoutons extends HBox {
             }
         });
 
-
         this.echanger = new Button("Echanger");
         this.echanger.setAlignment(Pos.CENTER_RIGHT);
         this.echanger.setOnAction(new EventHandler<ActionEvent>() {

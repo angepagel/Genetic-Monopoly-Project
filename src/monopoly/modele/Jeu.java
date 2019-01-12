@@ -323,7 +323,7 @@ public class Jeu {
 
         nbTours++;
         this.controleurInformationsJeu.actualiser();
-        this.joueurEnCours.getPion().getControleurCaseActuelle().actualiser();
+        this.joueurEnCours.getPion().getControleurCaseJoueur().actualiserCase();
 
         this.joueurEnCours.setDejaJoue(false);
     }

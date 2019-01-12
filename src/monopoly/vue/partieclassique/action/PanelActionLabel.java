@@ -16,7 +16,6 @@ import javafx.scene.text.TextAlignment;
 public class PanelActionLabel extends Label {
 
     public PanelActionLabel(String text, double size) {
-
         // Paramètres du label de prix
         this.setPrefWidth(200);
         this.setPrefHeight(50);
@@ -25,15 +24,14 @@ public class PanelActionLabel extends Label {
         this.setAlignment(Pos.TOP_CENTER);
         this.setTextAlignment(TextAlignment.CENTER);
         this.setWrapText(true);
-
-    }
-
-    public void setBackgroundColor(Color color) {
-        this.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
     }
 
     public PanelActionLabel() {
         this("", 20);
+    }
+
+    public void setBackgroundColor(Color color) {
+        this.setBackground(new Background(new BackgroundFill(color, CornerRadii.EMPTY, Insets.EMPTY)));
     }
 
 }

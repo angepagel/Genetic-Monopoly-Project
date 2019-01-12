@@ -2,7 +2,6 @@ package monopoly.vue.controleurFXML;
 
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
-import monopoly.controleur.Controleur;
 import monopoly.modele.cases.Case_Terrain;
 
 public class ControleurVoirDetailsPropriete extends Controleur {

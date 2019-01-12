@@ -1,4 +1,4 @@
-package monopoly.controleur;
+package monopoly.vue.controleurFXML;
 
 public abstract class Controleur {
 

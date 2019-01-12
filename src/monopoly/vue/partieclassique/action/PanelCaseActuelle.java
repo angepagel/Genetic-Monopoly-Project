@@ -1,6 +1,5 @@
 package monopoly.vue.partieclassique.action;
 
-import com.sun.corba.se.impl.io.TypeMismatchException;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
@@ -9,7 +8,8 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
-import monopoly.controleur.ControleurCaseActuelle;
+import monopoly.controleur.ControleurCaseJoueur;
+import monopoly.controleur.ControleurPanelCaseActuelle;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
@@ -26,13 +26,14 @@ public class PanelCaseActuelle extends Pane {
     private Button acheter;
     private Button encherir;
 
+    private ControleurPanelCaseActuelle controleurPanelCaseActuelle;
+
     public PanelCaseActuelle() {
 
         // On définit le contrôleur de case actuelle pour tous les pions du jeu
         for (Joueur joueur : Jeu.getInstance().getJoueurs()) {
-            joueur.getPion().setControleurCaseActuelle(new ControleurCaseActuelle(joueur.getPion(), this));
+            joueur.getPion().setControleurCaseJoueur(new ControleurCaseJoueur(joueur.getPion(), this));
         }
-
 
         this.rect = new PanelActionRectangle(10, 10, 275, 120);
 
@@ -65,7 +66,6 @@ public class PanelCaseActuelle extends Pane {
         this.encherir.setLayoutY(75);
         this.encherir.setPrefWidth(90);
 
-
         this.getChildren().addAll(
                 this.rect,
                 this.titre,
@@ -75,34 +75,33 @@ public class PanelCaseActuelle extends Pane {
                 this.encherir
         );
 
+        // Définition du contrôleur du panel
+        this.controleurPanelCaseActuelle = new ControleurPanelCaseActuelle(this);
+
+        // Attribut self utilisé pour référencer la classe PanelCaseActuelle dans le EventHandler des boutons
+        PanelCaseActuelle self = this;
+
         this.acheter.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Joueur joueurCourant = Jeu.getInstance().getJoueurEnCours();
-
-                try {
-                    Case_Achat caseCourante = (Case_Achat) joueurCourant.getPion().getPosition();
-                    joueurCourant.acheterCase(caseCourante);
-                    new Alert(Alert.AlertType.INFORMATION, "La case " + caseCourante.getNom() + " est achetée par " + joueurCourant.getNom() + ".").show();
-                }
-                catch (ClassCastException e)
-                {
-                    new Alert(Alert.AlertType.WARNING, "Cette case ne peut pas être achetée.").show();
-                }
-                catch (Exception e) {
-                    new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
-                }
+                self.controleurPanelCaseActuelle.acheter();
             }
         });
 
     }
 
-    public void actualiser(Pion pion) {
+    /**
+     * Met à jour la case actuelle du joueur.
+     * @param pion Pion utilisé pour mettre à jour la case actuelle.
+     */
+    public void actualiserCase(Pion pion) {
+
         this.titreCase.setText(pion.getPosition().getNom());
         if(pion.getPosition().aUnPrix()){
             Case_Paiement casePrix = (Case_Paiement) pion.getPosition();
             this.prixCase.setText("$ "+Integer.toString(casePrix.getPrix()));
-        }else{
+        }
+        else{
             this.prixCase.setText("");
         }
         

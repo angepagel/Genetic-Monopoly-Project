@@ -13,7 +13,6 @@ public class PanelAction extends VBox {
     private PanelInformationsJeu panelInformationsJeu;
 
     public PanelAction() {
-
         this.setWidth(380);
         this.setHeight(700);
         this.setMaxWidth(380);

@@ -5,7 +5,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import monopoly.controleur.Controleur;
+import monopoly.vue.controleurFXML.Controleur;
 
 import java.io.IOException;
 

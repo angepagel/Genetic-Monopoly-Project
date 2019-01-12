@@ -1,11 +1,10 @@
 package monopoly.modele;
 
 import javafx.beans.property.SimpleStringProperty;
-import monopoly.controleur.ControleurCaseActuelle;
+import monopoly.controleur.ControleurCaseJoueur;
 import monopoly.controleur.ControleurDeplacementPion;
 import monopoly.modele.cases.Case;
 import monopoly.modele.cases.ECase;
-import sun.java2d.pipe.SpanShapeRenderer;
 
 import java.util.Objects;
 
@@ -41,7 +40,7 @@ public class Pion {
     /**
      * Contrôleur du panel de case actuelle, indiquant la dernière case atteinte.
      */
-    private ControleurCaseActuelle controleurCaseActuelle;
+    private ControleurCaseJoueur controleurCaseJoueur;
 
     /**
      * Permet de créer un nouveau pion
@@ -160,7 +159,7 @@ public class Pion {
 
     private void appelerControleurs() {
         this.controleurDeplacement.deplacer();
-        this.controleurCaseActuelle.actualiser();
+        this.controleurCaseJoueur.actualiserCase();
     }
 
     /**
@@ -247,16 +246,16 @@ public class Pion {
      * Accesseur du contrôleur de case actuelle.
      * @return Contrôleur de case actuelle.
      */
-    public ControleurCaseActuelle getControleurCaseActuelle() {
-        return controleurCaseActuelle;
+    public ControleurCaseJoueur getControleurCaseJoueur() {
+        return controleurCaseJoueur;
     }
 
     /**
      * Mutateur du contrôleur de case actuelle.
-     * @param controleurCaseActuelle Contrôleur de case actuelle.
+     * @param controleurCaseJoueur Contrôleur de case actuelle.
      */
-    public void setControleurCaseActuelle(ControleurCaseActuelle controleurCaseActuelle) {
-        this.controleurCaseActuelle = controleurCaseActuelle;
+    public void setControleurCaseJoueur(ControleurCaseJoueur controleurCaseJoueur) {
+        this.controleurCaseJoueur = controleurCaseJoueur;
     }
 
     /**

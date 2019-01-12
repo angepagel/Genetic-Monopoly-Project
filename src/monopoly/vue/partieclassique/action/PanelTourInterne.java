@@ -4,11 +4,9 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.geometry.Insets;
 import javafx.geometry.Pos;
-import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
-import monopoly.controleur.ControleurTerminerTour;
-import monopoly.modele.Jeu;
+import monopoly.controleur.ControleurPanelTourInterne;
 
 public class PanelTourInterne extends VBox {
 
@@ -16,7 +14,7 @@ public class PanelTourInterne extends VBox {
     private PanelTirageDes panelTirageDes;
     private PanelTourBoutons panelTourBoutons;
     private PanelCaseActuelle panelCaseActuelle;
-    private ControleurTerminerTour controleurTerminerTour;
+    private ControleurPanelTourInterne controleurPanelTourInterne;
 
 
     public PanelTourInterne() {
@@ -24,7 +22,6 @@ public class PanelTourInterne extends VBox {
         PanelTourInterne self = this;
 
         this.setAlignment(Pos.CENTER);
-
 
         this.panelTirageDes = new PanelTirageDes();
 
@@ -38,30 +35,16 @@ public class PanelTourInterne extends VBox {
         this.terminerTour = new Button("Terminer mon tour");
         this.terminerTour.setPrefSize(295, 50);
         this.terminerTour.setAlignment(Pos.CENTER);
-        this.controleurTerminerTour = new ControleurTerminerTour();
+        this.controleurPanelTourInterne = new ControleurPanelTourInterne();
 
         this.terminerTour.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent event) {
-
-                if(Jeu.getInstance().getJoueurEnCours().aDejaJoue()){
-                    self.controleurTerminerTour.terminerTour();
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION, "C'est à " + Jeu.getInstance().getJoueurEnCours().getNom() + " de jouer !");
-                    alert.setHeaderText("Changement de tour : " + Jeu.getInstance().getJoueurEnCours().getNom());
-                    alert.setTitle("Changement de tour");
-                    alert.show();
-                }else{
-                    Alert alert = new Alert(Alert.AlertType.WARNING, "Votre tour n'est pas terminé");
-                    alert.setHeaderText("Changement de tour : " + Jeu.getInstance().getJoueurEnCours().getNom());
-                    alert.setTitle("Changement de tour");
-                    alert.show();
-                }
-
+                self.controleurPanelTourInterne.terminerTour();
             }
 
         });
-
 
         this.getChildren().addAll(
                 this.panelTirageDes,

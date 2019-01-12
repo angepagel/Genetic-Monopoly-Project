@@ -13,8 +13,6 @@ public class PanelActionRectangle extends Rectangle {
         this.setStrokeWidth(1);
         this.setArcHeight(5);
         this.setArcWidth(5);
-
-
     }
 
 

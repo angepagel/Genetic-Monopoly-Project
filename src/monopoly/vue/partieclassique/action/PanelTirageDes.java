@@ -60,22 +60,14 @@ public class PanelTirageDes extends Pane {
         this.lancerDes = new Button("Lancer de dés");
         this.lancerDes.setLayoutX(175);
         this.lancerDes.setLayoutY(70);
-        //this.lancerDes.setOnAction(new EventLancerDes());
         this.lancerDes.setOnAction(new EventHandler<ActionEvent>() {
 
             @Override
             public void handle(ActionEvent e) {
-                if (!Jeu.getInstance().getJoueurEnCours().aDejaJoue() ) {
-                    self.controleurBoutonDe.lancerDes();
-                }
-                else {
-                    new Alert(Alert.AlertType.WARNING, " Vous ne pouvez plus lancer vos dés !").show();
-                }
-
+                self.controleurBoutonDe.lancerDes();
             }
 
         });
-
 
         this.getChildren().addAll(
                 rect,
