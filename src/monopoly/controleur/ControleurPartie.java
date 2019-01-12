@@ -11,7 +11,7 @@ import java.io.IOException;
 
 import static monopoly.modele.Jeu.getInstance;
 
-public class ControleurPartie extends Controleur {
+public class ControleurPartie {
 
     // Attributs
 

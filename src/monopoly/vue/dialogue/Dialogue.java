@@ -6,7 +6,6 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 import monopoly.controleur.Controleur;
-import monopoly.controleur.ControleurVoirDetailsPropriete;
 
 import java.io.IOException;
 

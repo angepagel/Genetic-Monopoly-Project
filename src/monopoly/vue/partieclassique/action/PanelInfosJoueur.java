@@ -23,7 +23,6 @@ public class PanelInfosJoueur extends Pane {
         this.nom.setMaxSize(50, 30);
         this.nom.setMinSize(50, 30);
 
-
         this.argent = new PanelActionLabel("$ "+ Jeu.getInstance().getMontantInitial(), 12);
         this.argent.setAlignment(null);
         this.argent.setLayoutX(55);

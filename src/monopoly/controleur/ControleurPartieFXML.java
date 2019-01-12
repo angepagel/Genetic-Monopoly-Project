@@ -21,7 +21,7 @@ import java.io.IOException;
 
 import static monopoly.modele.Jeu.getInstance;
 
-public class ControleurPartieFXML extends Controleur {
+public class ControleurPartieFXML {
 
     // Attributs
 
