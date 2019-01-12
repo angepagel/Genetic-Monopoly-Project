@@ -23,7 +23,7 @@ public class Des {
     /**
      * Contrôleur qui met à jour les dés.
      */
-    private ControleurMiseAJourDe controleur;
+    private ControleurMiseAJourDe controleurMiseAJourDe;
 
     /**
      * Initialisation des dés.
@@ -64,7 +64,7 @@ public class Des {
 //            de2 = 4;
 //        }
 
-        this.controleur.lancer();
+        this.controleurMiseAJourDe.lancer();
 
         if(j.isEnPrison()) {
             if(estDouble()) {
@@ -137,18 +137,18 @@ public class Des {
 
     /**
      * Setter du contrôleur.
-     * @param controleur Contrôleur du dé.
+     * @param controleurMiseAJourDe Contrôleur du dé.
      */
-    public void setControleur(ControleurMiseAJourDe controleur) {
-        this.controleur = controleur;
+    public void setControleurMiseAJourDe(ControleurMiseAJourDe controleurMiseAJourDe) {
+        this.controleurMiseAJourDe = controleurMiseAJourDe;
     }
 
     /**
      * Getter du contrôleur.
      * @return Contrôleur de mise à jour du dé.
      */
-    public ControleurMiseAJourDe getControleur() {
-        return this.controleur;
+    public ControleurMiseAJourDe getControleurMiseAJourDe() {
+        return this.controleurMiseAJourDe;
     }
 
 }

@@ -16,7 +16,7 @@ public class VueDes {
     public VueDes(Des des, ImageView imgDe1, ImageView imgDe2) {
         this.des = des;
         this.controleurMiseAJourDe = new ControleurMiseAJourDe(this.des, this);
-        this.des.setControleur(this.controleurMiseAJourDe);
+        this.des.setControleurMiseAJourDe(this.controleurMiseAJourDe);
         this.imgDe1 = imgDe1;
         this.imgDe2 = imgDe2;
     }

@@ -9,11 +9,9 @@ public class ControleurCaseActuelle {
     private PanelCaseActuelle vue;
 
     public ControleurCaseActuelle(Pion pion, PanelCaseActuelle vue) {
-
         this.modele = pion;
         this.modele.setControleurCaseActuelle(this);
         this.vue = vue;
-
     }
 
     public void actualiser() {

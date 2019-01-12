@@ -7,14 +7,10 @@ package monopoly.vue.partieclassique;
 
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
-import javafx.scene.layout.Background;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
-import monopoly.controleur.ControleurPlateau;
-import monopoly.modele.Humain;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
-import monopoly.modele.Pion;
 import monopoly.vue.IVuePartie;
 import monopoly.vue.data.image.GestionnaireImage;
 import monopoly.vue.partieclassique.action.PanelAction;
@@ -22,36 +18,19 @@ import monopoly.vue.partieclassique.action.VuePion;
 import monopoly.vue.partieclassique.plateau.PanelPlateau;
 
 import java.io.IOException;
-import java.util.Random;
 
 public class Partie implements IVuePartie {
 
     private HBox root;
-    private ControleurPlateau controleurPlateau;
 
     private PanelPlateau panelPlateau;
     private PanelAction panelAction;
 
     public Partie() throws IOException {
 
-        // Initialisation de la partie (a modifier pour synchroniser avec le menu de choix des joueurs)
+        // Initialisation de la partie
         Jeu j = Jeu.getInstance();
         j.initialisation();
-
-//        Joueur j1 = new Humain("Yan");
-//        j.getJoueurs().add(j1);
-//        j1.choisirPion(new Pion("Rouge"));
-//
-//        Joueur j2 = new Humain("Ange");
-//        j.getJoueurs().add(j2);
-//        j2.choisirPion(new Pion("Jaune"));
-//
-//        Joueur j3 = new Humain("Kévin");
-//        j.getJoueurs().add(j3);
-//        j3.choisirPion(new Pion("Bleu"));
-
-//        j.setJoueurEnCours(j1);
-
         j.initPositions();
 
         j.setJoueurAleatoire();
@@ -65,10 +44,7 @@ public class Partie implements IVuePartie {
             vp.miseAJour();
         }
 
-
-        // Init components
-
-
+        // Initialisation des composants
         root = new HBox();
         Scene scene = new Scene(root);
         Stage stage = new Stage();
@@ -95,9 +71,6 @@ public class Partie implements IVuePartie {
 //        VuePion vuePionJ3 = new VuePion(j.getJoueurs().get(2).getPion(), this.panelPlateau);
 //        vuePionJ3.getImageView().setImage(GestionnaireImage.getImage("PionBleu"));
 //        vuePionJ3.miseAJour();
-
-        // Instanciation de controleurs
-        this.controleurPlateau = new ControleurPlateau(panelPlateau);
 
     }
 
