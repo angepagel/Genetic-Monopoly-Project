@@ -51,10 +51,10 @@ public class PanelJoueurs extends Pane {
 
             // If factorisable avec des mathématiques (mais moins intuitif)
             if (i <= 4) {
-                this.joueurs.add(new PanelInfosJoueur(40, 22+((i-1)*20), i));
+                this.joueurs.add(new PanelInfosJoueur(40, 22+((i-1)*20), Jeu.getInstance().getJoueurs().get(i-1).getNom()));
             }
             else {
-                this.joueurs.add(new PanelInfosJoueur(200, 22+((i-5)*20), i));
+                this.joueurs.add(new PanelInfosJoueur(200, 22+((i-5)*20), Jeu.getInstance().getJoueurs().get(i-1).getNom()));
             }
 
             this.joueurs.get(i-1).setPrefWidth(70);
