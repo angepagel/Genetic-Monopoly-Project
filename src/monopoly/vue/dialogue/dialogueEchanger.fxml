@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="583.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurEchanger">
+<AnchorPane prefHeight="583.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.vue.controleurFXML.ControleurEchanger">
    <children>
       <TableView fx:id="tableauEchanger1" layoutX="11.0" layoutY="95.0" prefHeight="187.0" prefWidth="577.0">
          <columns>

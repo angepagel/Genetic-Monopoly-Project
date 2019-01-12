@@ -9,10 +9,8 @@ public class ControleurMiseAJourDe {
     private VueDes vueDes;
 
     public ControleurMiseAJourDe(Des des, VueDes vueDes) {
-
         this.des = des;
         this.vueDes = vueDes;
-
     }
 
     public void lancer() {

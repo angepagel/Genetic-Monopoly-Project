@@ -18,22 +18,16 @@ public class ControleurPlateau {
 
         // Vue
         this.vue = vue;
-
     }
 
     public void vider() {
-
         for (Joueur joueur : Jeu.getInstance().getJoueurs()) {
             Case caseAVider = joueur.getPion().getPosition();
             PanelCase panel = this.vue.getPanelCase(caseAVider.getId());
-
         }
-
     }
 
     public void miseAJour() {
-
-
 
     }
 

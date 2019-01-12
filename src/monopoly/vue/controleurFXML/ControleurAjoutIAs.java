@@ -1,14 +1,10 @@
-package monopoly.controleur;
+package monopoly.vue.controleurFXML;
 
-import com.sun.prism.shader.Texture_LinearGradient_REFLECT_AlphaTest_Loader;
 import javafx.fxml.FXML;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
-import monopoly.modele.Joueur;
-
-import static monopoly.modele.EJoueur.IA;
 
 public class ControleurAjoutIAs {
 
@@ -60,7 +56,6 @@ public class ControleurAjoutIAs {
             return;
         }
 
-
         //Joueur j = new IA(nom);
 
     }
@@ -71,7 +66,6 @@ public class ControleurAjoutIAs {
 
     public void supprimerIAs(){
         listeIAs.getItems().remove(listeIAs.getSelectionModel().getSelectedItem());
-
     }
 
 

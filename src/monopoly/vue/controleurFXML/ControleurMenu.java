@@ -1,4 +1,4 @@
-package monopoly.controleur;
+package monopoly.vue.controleurFXML;
 
 import javafx.fxml.FXML;
 import java.io.IOException;
@@ -7,7 +7,6 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 import monopoly.vue.AjoutIAs;
 import monopoly.vue.AjoutJoueurs;
-import monopoly.vue.Menu;
 
 public class ControleurMenu {
 

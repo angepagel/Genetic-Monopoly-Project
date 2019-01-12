@@ -1,4 +1,4 @@
-package monopoly.controleur;
+package monopoly.vue.controleurFXML;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -8,12 +8,12 @@ import monopoly.vue.dialogue.DialogueVoirDetailsPropriete;
 
 import java.io.IOException;
 
-public class ControleurGererMesProprietes {
+public class ControleurVoirMesProprietes {
 
     // TODO : Remplir le tableau
 
     @FXML
-    private TableView tableauGererMesProprietes;
+    private TableView tableauVoirMesProprietes;
 
     @FXML
     private TableColumn colNom;
@@ -31,21 +31,6 @@ public class ControleurGererMesProprietes {
     public void actionDetailsPropriete(ActionEvent event) throws IOException {
         new DialogueVoirDetailsPropriete();
         // TODO : Passer une propriété en paramètre
-    }
-
-    @FXML
-    public void actionConstruire(ActionEvent event) {
-        // TODO : Gérer l'amélioration de la propriété sélectionnée
-    }
-
-    @FXML
-    public void actionVendre(ActionEvent event) {
-        // TODO : Gérer la vente de la propriété sélectionnée
-    }
-
-    @FXML
-    public void actionHypothequer(ActionEvent event) {
-        // TODO : Gérer l'hypothèque de la propriété sélectionnée
     }
 
 }

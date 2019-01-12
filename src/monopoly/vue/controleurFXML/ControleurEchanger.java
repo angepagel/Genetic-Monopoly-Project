@@ -1,4 +1,4 @@
-package monopoly.controleur;
+package monopoly.vue.controleurFXML;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;

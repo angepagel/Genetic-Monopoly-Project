@@ -1,4 +1,4 @@
-package monopoly.controleur;
+package monopoly.vue.controleurFXML;
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;

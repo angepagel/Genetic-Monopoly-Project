@@ -5,7 +5,7 @@
 <?import javafx.scene.text.Font?>
 
 
-<AnchorPane prefHeight="348.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurVoirDetailsPropriete">
+<AnchorPane prefHeight="348.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.vue.controleurFXML.ControleurVoirDetailsPropriete">
    <children>
       <Label fx:id="labelNom" alignment="CENTER" layoutX="63.0" layoutY="40.0" prefWidth="174.0" text="Nom de la propriété" />
       <Label layoutX="71.0" layoutY="101.0" prefHeight="17.0" prefWidth="74.0" text="Propriétaire :" />

@@ -5,7 +5,7 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.controleur.ControleurGererMesProprietes">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.vue.controleurFXML.ControleurGererMesProprietes">
    <children>
       <TableView fx:id="tableauGererMesProprietes" layoutX="12.0" layoutY="52.0" prefHeight="334.0" prefWidth="577.0">
          <columns>

@@ -9,10 +9,8 @@ public class ControleurDeplacementPion {
     private VuePion vuePion;
 
     public ControleurDeplacementPion(Pion pion, VuePion vuePion) {
-
         this.pion = pion;
         this.vuePion = vuePion;
-
     }
 
     public void deplacer() {

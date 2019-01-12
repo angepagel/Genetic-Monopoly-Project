@@ -1,6 +1,6 @@
 package monopoly.vue.dialogue;
 
-import monopoly.controleur.ControleurVoirDetailsPropriete;
+import monopoly.vue.controleurFXML.ControleurVoirDetailsPropriete;
 import monopoly.modele.cases.Case_Terrain;
 
 import java.io.IOException;
