@@ -5,6 +5,10 @@ import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+import monopoly.vue.Menu;
+
+import java.io.IOException;
 
 public class ControleurAjoutIAs extends Controleur {
 
@@ -21,6 +25,8 @@ public class ControleurAjoutIAs extends Controleur {
     @FXML private TextField textFieldNbTour;
 
     @FXML private TextField textFieldNbPartie;
+
+    @FXML private Button boutonAnnuler;
 
     @FXML
     public void ajouterIAs() {
@@ -68,6 +74,10 @@ public class ControleurAjoutIAs extends Controleur {
         listeIAs.getItems().remove(listeIAs.getSelectionModel().getSelectedItem());
     }
 
+    public void annuler() throws IOException {
+        ((Stage)boutonAnnuler.getScene().getWindow()).close();
+        new Menu("Monopoly Génétique","menu.fxml");
+    }
 
 
 }

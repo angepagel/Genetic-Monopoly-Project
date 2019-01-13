@@ -19,11 +19,12 @@
       </Label>
       <Label layoutX="309.0" layoutY="60.0" text="Liste des IAs :" />
       <Label layoutX="30.0" layoutY="69.0" prefHeight="17.0" prefWidth="157.0" text="Entrez le nom de l'IA à créer :" />
-      <Button fx:id="boutonLancerPartie" layoutX="228.0" layoutY="353.0" mnemonicParsing="false" onAction="#lancerPartie" text="Lancer la partie" />
+      <Button fx:id="boutonLancerPartie" layoutX="56.0" layoutY="353.0" mnemonicParsing="false" onAction="#lancerPartie" prefHeight="25.0" prefWidth="221.0" text="Lancer la partie" />
       <Button fx:id="boutonRetirer" layoutX="310.0" layoutY="292.0" mnemonicParsing="false" onAction="#supprimerIAs" prefHeight="25.0" prefWidth="63.0" text="Retirer" />
       <Label layoutX="30.0" layoutY="138.0" prefHeight="17.0" prefWidth="157.0" text="Nombre maximal de tours :" />
       <TextField fx:id="textFieldNbTour" layoutX="187.0" layoutY="134.0" prefHeight="25.0" prefWidth="55.0" />
       <TextField fx:id="textFieldNbPartie" layoutX="187.0" layoutY="188.0" prefHeight="25.0" prefWidth="55.0" />
       <Label layoutX="30.0" layoutY="192.0" prefHeight="17.0" prefWidth="165.0" text="Nombre de parties de jeu:" />
+      <Button fx:id="boutonAnnuler" layoutX="300.0" layoutY="353.0" mnemonicParsing="false" text="Annuler et retourner à l'écran principal" onAction="#annuler" />
    </children>
 </AnchorPane>

@@ -11,6 +11,7 @@ import monopoly.modele.Humain;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.modele.Pion;
+import monopoly.vue.Menu;
 import monopoly.vue.partieclassique.Partie;
 import java.io.IOException;
 
@@ -25,6 +26,7 @@ public class ControleurAjoutJoueurs extends Controleur {
     @FXML private TableColumn<Joueur, String> colPion;
     @FXML private TableColumn<Joueur,String> colType;
     @FXML private Button boutonRetirer;
+    @FXML private Button boutonAnnuler;
     @FXML private Button boutonLancerPartie;
     private ObservableList<String> listePions;
     private ObservableList<String> listeType;
@@ -156,6 +158,12 @@ public class ControleurAjoutJoueurs extends Controleur {
         Jeu.getInstance().getJoueurs().addAll(tableauJoueurs.getItems());
         new Partie();
         ((Stage)boutonLancerPartie.getScene().getWindow()).close();
+    }
+
+
+    public void annuler() throws IOException {
+        ((Stage)boutonAnnuler.getScene().getWindow()).close();
+        new Menu("Monopoly Génétique","menu.fxml");
     }
 
 }
