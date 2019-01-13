@@ -1,5 +1,6 @@
 package monopoly.modele.cases;
 
+import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 
 public abstract class Case_Achat extends Case_Paiement {
@@ -37,6 +38,7 @@ public abstract class Case_Achat extends Case_Paiement {
 
         joueur.getSolde().payer(getLoyer());
         proprietaire.getSolde().ajouter(getLoyer());
+        Jeu.getInstance().getControleurJeuMessage().afficherMessage(joueur.getNom() + " est tombé sur la case " + this.getNom() + " qui est la propriété de " + proprietaire.getNom() + ", et lui a versé $" + this.getLoyer() + ".");
     }
 
     public abstract Integer getLoyer();
