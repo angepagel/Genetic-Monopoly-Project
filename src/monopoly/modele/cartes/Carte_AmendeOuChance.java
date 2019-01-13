@@ -19,7 +19,7 @@ public class Carte_AmendeOuChance extends Carte {
     }
 
     public Carte_AmendeOuChance(int montant) {
-        super(String.format("Payez une amende de %d€ ou piochez une carte Chance.", montant));
+        super(String.format("Payez une amende de %d$ ou piochez une carte Chance.", montant));
     }
 
     @Override

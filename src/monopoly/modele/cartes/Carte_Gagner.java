@@ -11,7 +11,7 @@ public class Carte_Gagner extends Carte {
     }
 
     public Carte_Gagner(int montant){
-        super(String.format("Gagnez %d€.", montant));
+        super(String.format("Gagnez %d$.", montant));
         this.montant = montant;
     }
 

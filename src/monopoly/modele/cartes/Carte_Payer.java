@@ -16,7 +16,7 @@ public class Carte_Payer extends Carte {
     }
 
     public Carte_Payer(int montant) {
-        super("Payez " + montant + "€.");
+        super("Payez " + montant + "$.");
         this.montant = montant;
     }
 }

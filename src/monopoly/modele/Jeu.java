@@ -473,11 +473,11 @@ public class Jeu {
             j.getJoueurEnCours().getPion().deplacer(j.getDes().sommeDes());
 
             if(j.getJoueurEnCours().getPion().isCaseDepartLast()) {
-                System.out.println("Vous êtes passé par la case départ ! Vous avez reçu " + j.getArgentCaseDepart() + "€. Vous avez donc " + j.getJoueurEnCours().getSolde().getMonnaie() + "€");
+                System.out.println("Vous êtes passé par la case départ ! Vous avez reçu " + j.getArgentCaseDepart() + "$. Vous avez donc " + j.getJoueurEnCours().getSolde().getMonnaie() + "$");
             }
 
             System.out.println("Vous arrivez sur la case " + j.getJoueurEnCours().getPion().getPosition().getNom() + ".");
-            System.out.println("Vous possédez maintenant " + j.getJoueurEnCours().getSolde().getMonnaie() + "€.");
+            System.out.println("Vous possédez maintenant " + j.getJoueurEnCours().getSolde().getMonnaie() + "$.");
 
             if(dbl) {
                 System.out.println(j.getJoueurEnCours().getNom() + " rejoue.");

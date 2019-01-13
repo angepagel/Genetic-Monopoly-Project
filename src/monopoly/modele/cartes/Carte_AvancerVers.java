@@ -9,7 +9,7 @@ public class Carte_AvancerVers extends Carte_DeplacementVers {
     }
 
     public Carte_AvancerVers(String objectif) {
-        super(objectif, "Avancez jusqu'à la case " + objectif + ".\nSi vous passez par la case \"Départ\", reçevez " + Jeu.getInstance().getArgentCaseDepart() + "€.");
+        super(objectif, "Avancez jusqu'à la case " + objectif + ".\nSi vous passez par la case \"Départ\", reçevez " + Jeu.getInstance().getArgentCaseDepart() + "$.");
     }
 
     @Override

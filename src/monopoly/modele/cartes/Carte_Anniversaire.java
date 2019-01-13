@@ -20,7 +20,7 @@ public class Carte_Anniversaire extends Carte {
     }
 
     public Carte_Anniversaire(int montant) {
-        super(String.format("C'est votre anniversaire.\nChaque joueur doit vous donner %d€.", montant));
+        super(String.format("C'est votre anniversaire.\nChaque joueur doit vous donner %d$.", montant));
         this.montant = montant;
     }
 

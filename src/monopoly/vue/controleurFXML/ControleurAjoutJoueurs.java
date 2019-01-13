@@ -52,6 +52,7 @@ public class ControleurAjoutJoueurs extends Controleur {
         colType.setCellValueFactory(param-> param.getValue().getTypeProperty());
         listePions = FXCollections.observableArrayList("Rouge", "Bleu", "Vert", "Jaune", "Rose", "Violet", "Cyan", "Orange");
         listeType = FXCollections.observableArrayList("Humain","IA");
+
         for (String couleur : listePions) {
             comboPions.getItems().add(couleur);
         }
@@ -60,6 +61,7 @@ public class ControleurAjoutJoueurs extends Controleur {
         }
 
         comboPions.getSelectionModel().selectFirst();
+        comboType.getSelectionModel().selectFirst();
     }
 
     @FXML
