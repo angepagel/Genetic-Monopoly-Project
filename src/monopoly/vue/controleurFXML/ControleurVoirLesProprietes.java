@@ -7,14 +7,10 @@ import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
-import monopoly.modele.cases.Case;
-import monopoly.modele.cases.Case_Achat;
-import monopoly.modele.cases.Case_Terrain;
-import monopoly.modele.cases.ECase;
+import monopoly.modele.cases.*;
 import monopoly.vue.dialogue.DialogueVoirDetailsPropriete;
 
 import java.io.IOException;
-import java.util.ArrayList;
 
 public class ControleurVoirLesProprietes extends Controleur {
 
@@ -28,31 +24,55 @@ public class ControleurVoirLesProprietes extends Controleur {
     @FXML
     public void initialize() {
         colNom.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getNom()));
-        colProprietaire.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getProprietaire().getNom()));
-        colAmelioration.setCellValueFactory(param -> {
+
+        colProprietaire.setCellValueFactory(param -> {
             Case caseParam = param.getValue();
-            SimpleStringProperty retour;
-            if(caseParam.getType() == ECase.Terrain) {
-                Case_Terrain terrain = (Case_Terrain)caseParam;
-                retour = new SimpleStringProperty(String.valueOf("$" + terrain.getPrixMaison()));
-            }
-            else {
-                retour = new SimpleStringProperty(String.valueOf("Non applicable"));
+            Joueur proprietaire = param.getValue().getProprietaire();
+            SimpleStringProperty retour = new SimpleStringProperty("Aucun");
+
+            if (caseParam instanceof Case_Achat) {
+                if (proprietaire != null) {
+                    retour = new SimpleStringProperty(proprietaire.getNom());
+                }
             }
 
             return retour;
         });
-        colLoyer.setCellValueFactory(param -> new SimpleStringProperty(String.valueOf(param.getValue().getLoyer())));
 
-        /*
-        ArrayList<Case> listeCases = Jeu.getInstance().getPlateau().getListeCases();
+        colAmelioration.setCellValueFactory(param -> {
+            Case caseParam = param.getValue();
+            SimpleStringProperty retour =  new SimpleStringProperty("Non applicable");
 
-        for (Case c : listeCases) {
-            if (c.getType() == ECase.Terrain || c.getType() == ECase.Gare || c.getType() == ECase.Compagnie) {
+            if(caseParam.getType() == ECase.Terrain) {
+                Case_Terrain terrain = (Case_Terrain)caseParam;
+                retour = new SimpleStringProperty("$" + terrain.getPrixMaison());
+            }
+
+            return retour;
+        });
+
+        colLoyer.setCellValueFactory(param -> {
+            Case caseParam = param.getValue();
+            SimpleStringProperty retour = new SimpleStringProperty("$0");
+
+            if (caseParam instanceof Case_Terrain) {
+                retour = new SimpleStringProperty("$" + param.getValue().getLoyer());
+            }
+            else if (caseParam instanceof Case_Gare || caseParam instanceof Case_Compagnie) {
+                if (((Case_Achat) caseParam).getProprietaire() != null) {
+                    retour = new SimpleStringProperty("$" + param.getValue().getLoyer());
+                }
+            }
+
+            return retour;
+        });
+
+        // Remplissage du tableau avec l'ensemble des Case_Achat du plateau
+        for (Case c : Jeu.getInstance().getPlateau().getListeCases()) {
+            if (c instanceof Case_Achat) {
                 tableauVoirLesProprietes.getItems().addAll(c);
             }
         }
-        */
     }
 
     @FXML
