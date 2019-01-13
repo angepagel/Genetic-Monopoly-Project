@@ -14,7 +14,7 @@ import monopoly.modele.Pion;
 import monopoly.vue.partieclassique.Partie;
 import java.io.IOException;
 
-public class ControleurAjoutJoueurs {
+public class ControleurAjoutJoueurs extends Controleur {
 
     @FXML private TextField textFieldNom;
     @FXML private ComboBox comboPions;

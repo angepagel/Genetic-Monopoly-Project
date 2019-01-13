@@ -24,7 +24,7 @@ public class ControleurPanelTourInterne {
             alert.show();
         }
         else {
-            Alert alert = new Alert(Alert.AlertType.WARNING, "Votre tour n'est pas terminé");
+            Alert alert = new Alert(Alert.AlertType.WARNING, "Votre tour n'est pas terminé.");
             alert.setHeaderText("Changement de tour : " + Jeu.getInstance().getJoueurEnCours().getNom());
             alert.setTitle("Changement de tour");
             alert.show();

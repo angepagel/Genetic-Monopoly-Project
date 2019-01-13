@@ -9,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
+import monopoly.controleur.ControleurJeuMessage;
 import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
 import monopoly.vue.IVuePartie;
@@ -32,8 +33,11 @@ public class Partie implements IVuePartie {
         Jeu j = Jeu.getInstance();
         j.initialisation();
         j.initPositions();
-
         j.setJoueurAleatoire();
+
+        // Contrôleurs
+        new ControleurJeuMessage();
+
 
         this.panelPlateau = new PanelPlateau();
         this.panelAction = new PanelAction();

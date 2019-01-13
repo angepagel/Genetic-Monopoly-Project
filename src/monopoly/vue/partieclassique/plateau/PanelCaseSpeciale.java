@@ -36,7 +36,7 @@ public class PanelCaseSpeciale extends PanelCase {
         if (prix){
             if(this.getModele().aUnPrix()){
                 Case_Paiement casePrix = (Case_Paiement) this.getModele();
-                this.prix = new PanelCaseLabel("$ "+Integer.toString(casePrix.getPrix()));
+                this.prix = new PanelCaseLabel("$"+Integer.toString(casePrix.getPrix()));
             }else{
                 this.prix = new PanelCaseLabel("");
             }

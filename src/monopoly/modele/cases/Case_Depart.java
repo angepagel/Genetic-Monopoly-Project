@@ -12,6 +12,7 @@ public class Case_Depart extends Case {
     public void action(Joueur j) {
         j.getSolde().ajouter(Jeu.getInstance().getArgentCaseDepart());
         j.getPion().passeCaseDepart();
+        Jeu.getInstance().getControleurJeuMessage().afficherMessage(Jeu.getInstance().getJoueurEnCours().getNom()+" obtient $"+Jeu.getInstance().getArgentCaseDepart()+" de la case Départ.");
     }
 
     @Override

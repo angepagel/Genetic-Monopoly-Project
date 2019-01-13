@@ -24,7 +24,7 @@ public class ControleurPanelCaseActuelle {
         try {
             Case_Achat caseCourante = (Case_Achat) joueurCourant.getPion().getPosition();
             joueurCourant.acheterCase(caseCourante);
-            new Alert(Alert.AlertType.INFORMATION, "La case " + caseCourante.getNom() + " est achetée par " + joueurCourant.getNom() + ".").show();
+            new Alert(Alert.AlertType.INFORMATION, "La case " + caseCourante.getNom() + " est achetée par " + joueurCourant.getNom() + " au prix de $" + caseCourante.getPrix()+ ".").show();
         }
         catch (ClassCastException e)
         {

@@ -4,11 +4,14 @@ import javafx.scene.control.Alert;
 import monopoly.modele.Des;
 import monopoly.modele.Jeu;
 
-public class ControleurBoutonDe {
+/**
+ * Contrôleur gérant les actions du panel de tirage des dés.
+ */
+public class ControleurPanelTirageDes {
 
     private Des des;
 
-    public ControleurBoutonDe()  {
+    public ControleurPanelTirageDes()  {
         this.des = Jeu.getInstance().getDes();
     }
 

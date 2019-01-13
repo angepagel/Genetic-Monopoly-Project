@@ -349,7 +349,7 @@ public abstract class Joueur {
      */
     public void acheterCase(Case_Achat achat) throws Exception {
         if(achat.getProprietaire() != null) {
-            throw new Exception("La propriété appartient déjà à quelqu'un.");
+            throw new Exception("La propriété appartient déjà à "+achat.getProprietaire().getNom()+" .");
         }
         else {
             solde.payer(achat.getPrix());

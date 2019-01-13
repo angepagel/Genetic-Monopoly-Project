@@ -6,7 +6,7 @@ import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
 import javafx.scene.control.TextField;
 
-public class ControleurAjoutIAs {
+public class ControleurAjoutIAs extends Controleur {
 
     @FXML private TextField textFieldNom;
 

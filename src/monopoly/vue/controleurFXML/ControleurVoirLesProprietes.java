@@ -8,7 +8,7 @@ import monopoly.vue.dialogue.DialogueVoirDetailsPropriete;
 
 import java.io.IOException;
 
-public class ControleurVoirLesProprietes {
+public class ControleurVoirLesProprietes extends Controleur {
 
     // TODO : Remplir le tableau
 

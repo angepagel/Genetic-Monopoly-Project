@@ -4,13 +4,13 @@ package monopoly.controleur;
 import monopoly.modele.Jeu;
 import monopoly.vue.partieclassique.action.PanelJoueurs;
 
-public class ControleurJoueurs {
+public class ControleurPanelJoueurs {
 
     private PanelJoueurs vue;
 
-    public ControleurJoueurs(PanelJoueurs v) {
+    public ControleurPanelJoueurs(PanelJoueurs v) {
         this.vue = v;
-        Jeu.getInstance().setControleurJoueurs(this);
+        Jeu.getInstance().setControleurPanelJoueurs(this);
     }
 
     public void actualiser() {

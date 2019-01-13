@@ -8,7 +8,7 @@ import javafx.stage.Stage;
 import monopoly.vue.AjoutIAs;
 import monopoly.vue.AjoutJoueurs;
 
-public class ControleurMenu {
+public class ControleurMenu extends Controleur {
 
     @FXML private Button boutonPartieClassique;
     @FXML private Button boutonPartieIA;

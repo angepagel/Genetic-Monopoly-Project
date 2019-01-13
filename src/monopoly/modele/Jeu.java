@@ -2,7 +2,8 @@ package monopoly.modele;
 
 import javafx.application.Platform;
 import monopoly.controleur.ControleurInformationsJeu;
-import monopoly.controleur.ControleurJoueurs;
+import monopoly.controleur.ControleurJeuMessage;
+import monopoly.controleur.ControleurPanelJoueurs;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.util.*;
@@ -12,6 +13,7 @@ import java.util.*;
  * @author Yan BUATOIS
  */
 public class Jeu {
+
     /**
      * Nombre de tours
      */
@@ -80,7 +82,12 @@ public class Jeu {
     /**
      * Contrôleur prenant en charge les informations sur le joueur.
      */
-    private ControleurJoueurs controleurJoueurs;
+    private ControleurPanelJoueurs controleurPanelJoueurs;
+
+    /**
+     * Contrôleur se chargeant d'afficher des messages sur le jeu.
+     */
+    private ControleurJeuMessage controleurJeuMessage;
 
     /**
      * Argent touché au parc gratuit.
@@ -358,20 +365,35 @@ public class Jeu {
         this.controleurInformationsJeu = controleurInformationsJeu;
     }
 
-
     /**
      * Mutateur du contrôleur de joueurs.
      * @param c Contrôleur de joueur.
      */
-    public void setControleurJoueurs(ControleurJoueurs c) {
-        this.controleurJoueurs = c;
+    public void setControleurPanelJoueurs(ControleurPanelJoueurs c) {
+        this.controleurPanelJoueurs = c;
+    }
+
+    /**
+     * Accesseur du contrôleur de messages du jeu.
+     * @return Contrôleur de messages du jeu.
+     */
+    public ControleurJeuMessage getControleurJeuMessage() {
+        return controleurJeuMessage;
+    }
+
+    /**
+     * Mutateur du contrôleur de messages du jeu.
+     * @param controleurJeuMessage Contrôleur de messages du jeu.
+     */
+    public void setControleurJeuMessage(ControleurJeuMessage controleurJeuMessage) {
+        this.controleurJeuMessage = controleurJeuMessage;
     }
 
     /**
      * Accesseur du contrôleur de joueurs.
      */
-    public ControleurJoueurs getControleurJoueurs() {
-        return this.controleurJoueurs;
+    public ControleurPanelJoueurs getControleurPanelJoueurs() {
+        return this.controleurPanelJoueurs;
     }
 
     /**
@@ -473,7 +495,7 @@ public class Jeu {
         } while(continuer);
 
         for(Joueur joueur : j.joueurs) {
-            System.out.println(joueur.getNom() + " a " + joueur.getSolde().getMonnaie() + "€.");
+            System.out.println(joueur.getNom() + " a " + joueur.getSolde().getMonnaie() + "$.");
         }
 
         System.out.println("Merci d'avoir joué !");

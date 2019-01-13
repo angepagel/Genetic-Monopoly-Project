@@ -12,7 +12,6 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
-        //root.getChildrenUnmodifiable().addAll(new PanelCaseTerrain(0.0).getPane());
         primaryStage.setTitle("Monopoly Génétique");
         primaryStage.getIcons().add(new Image("file:src/monopoly/vue/data/image/Icone.png"));
         primaryStage.setScene(new Scene(root, 650, 400));
