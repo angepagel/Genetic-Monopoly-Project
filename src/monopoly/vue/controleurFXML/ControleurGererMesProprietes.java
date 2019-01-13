@@ -34,7 +34,6 @@ public class ControleurGererMesProprietes extends Controleur {
     @FXML
     public void initialize() {
         colNom.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getNom()));
-        // TODO : Résoudre le problème de la colAmelioration pour les cases qui ne sont pas des Case_Achat
         colAmelioration.setCellValueFactory(param -> {
             Case caseParam = param.getValue();
             SimpleStringProperty retour;
@@ -54,11 +53,7 @@ public class ControleurGererMesProprietes extends Controleur {
 
     @FXML
     public void setJoueur(Joueur j) {
-        // tableauGererMesProprietes.getItems().addAll(j.getProprietes());
-        for (Case_Achat c : j.getProprietes()) {
-            // if (c instanceof Case_Terrain) {}
-            tableauGererMesProprietes.getItems().addAll(c);
-        }
+        tableauGererMesProprietes.getItems().addAll(j.getProprietes());
     }
 
     @FXML
