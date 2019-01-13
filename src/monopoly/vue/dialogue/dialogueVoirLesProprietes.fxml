@@ -8,7 +8,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.vue.controleurFXML.ControleurVoirLesProprietes">
    <children>
       <Button fx:id="boutonDetailsPropriete" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#actionDetailsPropriete" text="Détails sur la propriété" />
-      <TableView fx:id="tableauVoirMesProprietes1" layoutX="12.0" layoutY="52.0" prefHeight="334.0" prefWidth="577.0">
+      <TableView fx:id="tableauVoirLesProprietes" layoutX="12.0" layoutY="52.0" prefHeight="334.0" prefWidth="577.0">
          <columns>
             <TableColumn fx:id="colNom" prefWidth="172.0" text="Nom" />
             <TableColumn fx:id="colProprietaire" prefWidth="142.0" text="Propriétaire" />
