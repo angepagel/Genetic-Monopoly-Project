@@ -108,7 +108,7 @@ public class ControleurAjoutJoueurs extends Controleur {
             if(comboType.getSelectionModel().getSelectedItem()== "IA"){
                 Alert alert = new Alert(Alert.AlertType.WARNING);
                 alert.setTitle("Ajout impossible");
-                alert.setContentText("Ce type de joueur n'est pas encore disponible");
+                alert.setContentText("Ce type de joueur n'est pas encore disponible.");
                 alert.show();
                 return;
             }
@@ -116,7 +116,7 @@ public class ControleurAjoutJoueurs extends Controleur {
         }else{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ajout impossible");
-            alert.setContentText("Vous devez obligatoirement choisir un type pour le joueur");
+            alert.setContentText("Vous devez obligatoirement choisir un type pour le joueur.");
             alert.show();
             return;
         }
