@@ -41,4 +41,10 @@ public abstract class Carte {
     public String toString() {
         return getTexte();
     }
+
+    /**
+     * Vaut vrai s'il est inutile d'afficher une boîte de dialogue expliquant l'effet de la carte.
+     * @return Vrai s'il est inutile d'afficher une boîte de dialogue.
+     */
+    public boolean affichageInclus() {return false;}
 }

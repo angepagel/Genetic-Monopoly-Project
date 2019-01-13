@@ -28,20 +28,6 @@ public abstract class Case_Pioche extends Case {
         ++numCase;
     }
 
-    protected abstract Carte piocherCarte();
-
-    protected abstract void remettreCarte(Carte carte);
-
-    @Override
-    public void action(Joueur j) {
-        Carte carte = piocherCarte();
-        Jeu.getInstance().getControleurJeuMessage().afficherMessage("Carte", carte.getTexte());
-        carte.action(j);
-        if(carte.usageImmediat()) {
-            remettreCarte(carte);
-        }
-    }
-
     @Override
     public String getId() {
         return id;

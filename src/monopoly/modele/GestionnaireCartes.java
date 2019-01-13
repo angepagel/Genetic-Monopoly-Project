@@ -110,10 +110,13 @@ public class GestionnaireCartes {
      * @param j Le joueur qui effectue l'action.
      */
     public void actionChance(Joueur j) {
-        Carte c = piocherChance();
-        c.action(j);
-        if(c.usageImmediat()) {
-            remettreChance(c);
+        Carte carte = piocherChance();
+        if(!carte.affichageInclus()) {
+            Jeu.getInstance().getControleurJeuMessage().afficherMessage("Chance", carte.getTexte());
+        }
+        carte.action(j);
+        if(carte.usageImmediat()) {
+            remettreChance(carte);
         }
     }
 
@@ -122,10 +125,13 @@ public class GestionnaireCartes {
      * @param j Le joueur qui effectue l'action.
      */
     public void actionCaisseCommunaute(Joueur j) {
-        Carte c = piocherCaisseCommunaute();
-        c.action(j);
-        if(c.usageImmediat()) {
-            remettreCaisseCommunaute(c);
+        Carte carte = piocherCaisseCommunaute();
+        if(!carte.affichageInclus()) {
+            Jeu.getInstance().getControleurJeuMessage().afficherMessage("Caisse de communauté", carte.getTexte());
+        }
+        carte.action(j);
+        if(carte.usageImmediat()) {
+            remettreCaisseCommunaute(carte);
         }
     }
 }

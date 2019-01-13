@@ -19,12 +19,17 @@ public class Carte_AmendeOuChance extends Carte {
     }
 
     public Carte_AmendeOuChance(int montant) {
-        super(String.format("Payez une amende de %d$ ou piochez une carte Chance.", montant));
+        super("Payez une amende de $" + montant +" ou piochez une carte Chance.");
+        this.montant = montant;
+    }
+
+    public int getMontant() {
+        return montant;
     }
 
     @Override
     public void action(Joueur j) {
-        // TODO : On donne le choix au joueur.
+        Jeu.getInstance().getControleurJeuMessage().demanderPaiementPioche(this, j);
     }
 
     /**
@@ -32,6 +37,7 @@ public class Carte_AmendeOuChance extends Carte {
      * @param j Le joueur qui a choisi l'amende.
      */
     public void amende(Joueur j) {
+        Jeu.getInstance().getControleurJeuMessage().afficherMessage("Carte à choix", "Vous avez payé $" + montant + " d'amende.");
         j.getSolde().payerImpots(montant);
     }
 
@@ -39,7 +45,11 @@ public class Carte_AmendeOuChance extends Carte {
      * Le joueur a choisi de piocher.
      * @param j Le joueur qui a fait le choix.
      */
-    public void pioher(Joueur j) {
+    public void piocher(Joueur j) {
+        Jeu.getInstance().getControleurJeuMessage().afficherMessage("Carte à choix", "Vous piochez une carte chance.");
         Jeu.getInstance().getGestionnaireCartes().actionChance(j);
     }
+
+    @Override
+    public boolean affichageInclus() {return true;}
 }

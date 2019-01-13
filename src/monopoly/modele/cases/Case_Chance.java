@@ -10,13 +10,8 @@ public class Case_Chance extends Case_Pioche {
     }
 
     @Override
-    protected Carte piocherCarte() {
-        return Jeu.getInstance().getGestionnaireCartes().piocherChance();
-    }
-
-    @Override
-    protected void remettreCarte(Carte carte) {
-        Jeu.getInstance().getGestionnaireCartes().piocherCaisseCommunaute();
+    public void action(Joueur j) {
+        Jeu.getInstance().getGestionnaireCartes().actionChance(j);
     }
 
     @Override

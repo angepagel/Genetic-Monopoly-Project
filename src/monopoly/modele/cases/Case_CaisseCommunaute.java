@@ -11,13 +11,8 @@ public class Case_CaisseCommunaute extends Case_Pioche {
     }
 
     @Override
-    protected Carte piocherCarte() {
-        return Jeu.getInstance().getGestionnaireCartes().piocherCaisseCommunaute();
-    }
-
-    @Override
-    protected void remettreCarte(Carte carte) {
-        Jeu.getInstance().getGestionnaireCartes().remettreCaisseCommunaute(carte);
+    public void action(Joueur j) {
+        Jeu.getInstance().getGestionnaireCartes().actionCaisseCommunaute(j);
     }
 
     @Override
