@@ -2,10 +2,10 @@ package monopoly.vue.partieclassique.action;
 
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
-import javafx.geometry.Insets;
 import javafx.geometry.Pos;
 import javafx.scene.control.Button;
 import javafx.scene.layout.HBox;
+import monopoly.modele.Jeu;
 import monopoly.vue.dialogue.DialogueEchanger;
 import monopoly.vue.dialogue.DialogueGererMesProprietes;
 
@@ -24,7 +24,7 @@ public class PanelTourBoutons extends HBox {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    new DialogueGererMesProprietes();
+                    new DialogueGererMesProprietes(Jeu.getInstance().getJoueurEnCours());
                 }
                 catch (IOException e) {
                     return;
