@@ -1,7 +1,7 @@
 package monopoly.modele;
 
 import javafx.application.Platform;
-import monopoly.controleur.ControleurInformationsJeu;
+import monopoly.controleur.ControleurPanelInformationsJeu;
 import monopoly.controleur.ControleurJeuMessage;
 import monopoly.controleur.ControleurPanelJoueurs;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
@@ -77,7 +77,7 @@ public class Jeu {
     /**
      * Contrôleur prenant en charge les informations du jeu sur l'IHM.
      */
-    private ControleurInformationsJeu controleurInformationsJeu;
+    private ControleurPanelInformationsJeu controleurPanelInformationsJeu;
 
     /**
      * Contrôleur prenant en charge les informations sur le joueur.
@@ -232,7 +232,7 @@ public class Jeu {
                     @Override
                     public void run() {
                         self.chronometre.addSeconde();
-                        self.controleurInformationsJeu.actualiser();
+                        self.controleurPanelInformationsJeu.actualiser();
                     }
                 });
             }
@@ -329,7 +329,7 @@ public class Jeu {
         setJoueurEnCours(joueurs.get(nextIndex));
 
         nbTours++;
-        this.controleurInformationsJeu.actualiser();
+        this.controleurPanelInformationsJeu.actualiser();
         this.joueurEnCours.getPion().getControleurCaseJoueur().actualiserCase();
 
         this.joueurEnCours.setDejaJoue(false);
@@ -359,10 +359,10 @@ public class Jeu {
 
     /**
      * Mutateur du contrôleur d'informations du jeu.
-     * @param controleurInformationsJeu Mutateur du contrôleur d'informations du jeu.
+     * @param controleurPanelInformationsJeu Mutateur du contrôleur d'informations du jeu.
      */
-    public void setControleurInformationsJeu(ControleurInformationsJeu controleurInformationsJeu) {
-        this.controleurInformationsJeu = controleurInformationsJeu;
+    public void setControleurPanelInformationsJeu(ControleurPanelInformationsJeu controleurPanelInformationsJeu) {
+        this.controleurPanelInformationsJeu = controleurPanelInformationsJeu;
     }
 
     /**

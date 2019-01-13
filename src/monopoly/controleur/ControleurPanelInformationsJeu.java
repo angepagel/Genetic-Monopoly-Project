@@ -3,12 +3,12 @@ package monopoly.controleur;
 import monopoly.modele.Jeu;
 import monopoly.vue.partieclassique.action.PanelInformationsJeu;
 
-public class ControleurInformationsJeu {
+public class ControleurPanelInformationsJeu {
 
     private PanelInformationsJeu vue;
 
-    public ControleurInformationsJeu(PanelInformationsJeu vue) {
-        Jeu.getInstance().setControleurInformationsJeu(this);
+    public ControleurPanelInformationsJeu(PanelInformationsJeu vue) {
+        Jeu.getInstance().setControleurPanelInformationsJeu(this);
         this.vue = vue;
     }
 

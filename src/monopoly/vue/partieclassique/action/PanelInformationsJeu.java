@@ -1,13 +1,10 @@
 package monopoly.vue.partieclassique.action;
 
 import javafx.geometry.Insets;
-import javafx.scene.Scene;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
-import monopoly.controleur.ControleurInformationsJeu;
+import monopoly.controleur.ControleurPanelInformationsJeu;
 import monopoly.modele.Jeu;
-import monopoly.vue.partieclassique.Partie;
 
 public class PanelInformationsJeu extends Pane {
 
@@ -18,9 +15,11 @@ public class PanelInformationsJeu extends Pane {
     private PanelActionLabel nbToursValeur;
     private PanelActionLabel nomJoueurTitre;
     private PanelActionLabel nomJoueurValeur;
+    private PanelActionLabel couleurPionTitre;
+    private PanelActionLabel couleurPionValeur;
     private PanelActionRectangle rect;
 
-    private ControleurInformationsJeu controleurInformationsJeu;
+    private ControleurPanelInformationsJeu controleurPanelInformationsJeu;
 
     public PanelInformationsJeu() {
 
@@ -78,6 +77,20 @@ public class PanelInformationsJeu extends Pane {
         this.nomJoueurValeur.setLayoutY(30);
         this.nomJoueurValeur.setTextFill(Color.BLUE);
 
+        // Couleur du pion
+        this.couleurPionTitre = new PanelActionLabel("Couleur du pion :", 12);
+        this.couleurPionTitre.setAlignment(null);
+        this.couleurPionTitre.setLayoutX(40);
+        this.couleurPionTitre.setLayoutY(45);
+
+        this.couleurPionValeur = new PanelActionLabel("[Couleur]", 12);
+        this.couleurPionValeur.setAlignment(null);
+        this.couleurPionValeur.setLayoutX(140);
+        this.couleurPionValeur.setLayoutY(45);
+        this.couleurPionValeur.setTextFill(Color.BLUE);
+
+
+
         this.getChildren().addAll(
                 this.rect,
                 this.titre,
@@ -86,10 +99,12 @@ public class PanelInformationsJeu extends Pane {
                 this.nbToursTitre,
                 this.nbToursValeur,
                 this.nomJoueurTitre,
-                this.nomJoueurValeur
+                this.nomJoueurValeur,
+                this.couleurPionTitre,
+                this.couleurPionValeur
         );
 
-        this.controleurInformationsJeu = new ControleurInformationsJeu(this);
+        this.controleurPanelInformationsJeu = new ControleurPanelInformationsJeu(this);
         Jeu.getInstance().initialiserTimer();
         this.actualiser();
 
@@ -100,6 +115,7 @@ public class PanelInformationsJeu extends Pane {
         int nbTours = Jeu.getInstance().getNbTours();
         this.nbToursValeur.setText(Integer.toString(nbTours+1));
         this.nomJoueurValeur.setText(Jeu.getInstance().getJoueurEnCours().getNom());
+        this.couleurPionValeur.setText(Jeu.getInstance().getJoueurEnCours().getPion().getNom());
     }
 
 }
