@@ -20,7 +20,6 @@ public abstract class Joueur {
      */
     private SimpleStringProperty nom;
 
-
     private SimpleStringProperty type;
 
     /**
@@ -160,14 +159,6 @@ public abstract class Joueur {
         return faillite;
     }
 
-//    /**
-//     * Permet de mettre un joueur en faillite, ou l'inverse.
-//     * @param faillite Indique si le joueur est en faillite.
-//     */
-//    public void setFaillite(boolean faillite) {
-//        this.faillite = faillite;
-//    }
-
     /**
      * Permet de mettre le joueur en faillite.
      */
@@ -230,6 +221,14 @@ public abstract class Joueur {
      */
     public Pion getPion() {
         return pion;
+    }
+
+    /**
+     * Permet de récupérer les propriétés du joueur.
+     * @return Liste de Case_Achat.
+     */
+    public ArrayList<Case_Achat> getProprietes() {
+        return proprietes;
     }
 
     /**
