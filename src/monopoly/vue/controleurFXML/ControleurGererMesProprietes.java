@@ -8,8 +8,10 @@ import javafx.scene.control.ButtonType;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import monopoly.modele.Joueur;
+import monopoly.modele.cases.Case;
 import monopoly.modele.cases.Case_Achat;
 import monopoly.modele.cases.Case_Terrain;
+import monopoly.modele.cases.ECase;
 import monopoly.vue.dialogue.DialogueVoirDetailsPropriete;
 
 import java.io.IOException;
@@ -33,7 +35,19 @@ public class ControleurGererMesProprietes extends Controleur {
     public void initialize() {
         colNom.setCellValueFactory(param -> new SimpleStringProperty(param.getValue().getNom()));
         // TODO : Résoudre le problème de la colAmelioration pour les cases qui ne sont pas des Case_Achat
-        colAmelioration.setCellValueFactory(param ->new SimpleStringProperty(String.valueOf(param.getValue().getNom())));
+        colAmelioration.setCellValueFactory(param -> {
+            Case caseParam = param.getValue();
+            SimpleStringProperty retour;
+            if(caseParam.getType() == ECase.Terrain) {
+                Case_Terrain terrain = (Case_Terrain)caseParam;
+                retour = new SimpleStringProperty(String.valueOf("$" + terrain.getPrixMaison()));
+            }
+            else {
+                retour = new SimpleStringProperty(String.valueOf("Non applicable"));
+            }
+
+            return retour;
+        });
         colLoyer.setCellValueFactory(param -> new SimpleStringProperty(String.valueOf(param.getValue().getLoyer())));
         colHypotheque.setCellValueFactory(param -> new SimpleStringProperty(String.valueOf(param.getValue().getValeurHypotheque())));
     }
