@@ -90,18 +90,29 @@ public class ControleurAjoutJoueurs extends Controleur {
                 return;
             }
         }
-        if(comboType.getSelectionModel().getSelectedItem()== "Humain"){
-            Joueur j = new Humain(nom);
-            j.choisirPion(new Pion(comboPions.getValue().toString(), true));
-            tableauJoueurs.getItems().addAll(j);
-            comboPions.getItems().remove(comboPions.getValue());
-            comboPions.getSelectionModel().selectFirst();
+        if(comboType.getSelectionModel().getSelectedItem()!= null ){
+            if(comboType.getSelectionModel().getSelectedItem() == "Humain" ){
+                Joueur j = new Humain(nom);
+                j.choisirPion(new Pion(comboPions.getValue().toString(), true));
+                tableauJoueurs.getItems().addAll(j);
+                comboPions.getItems().remove(comboPions.getValue());
+                comboPions.getSelectionModel().selectFirst();
 
-            if(comboPions.getItems().size() == 0) {
-                boutonAjouter.setDisable(true);
+                if(comboPions.getItems().size() == 0) {
+                    boutonAjouter.setDisable(true);
+                }
+
+                textFieldNom.setText("");
             }
 
-            textFieldNom.setText("");
+            if(comboType.getSelectionModel().getSelectedItem()== "IA"){
+                Alert alert = new Alert(Alert.AlertType.WARNING);
+                alert.setTitle("Ajout impossible");
+                alert.setContentText("Ce type de joueur n'est pas encore disponible");
+                alert.show();
+                return;
+            }
+
         }else{
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setTitle("Ajout impossible");
@@ -109,6 +120,8 @@ public class ControleurAjoutJoueurs extends Controleur {
             alert.show();
             return;
         }
+
+
 
     }
 
