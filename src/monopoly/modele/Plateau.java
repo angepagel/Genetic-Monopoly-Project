@@ -200,4 +200,12 @@ public class Plateau {
     public Case_Depart getCaseDepart() {
         return caseDepart;
     }
+
+    /**
+     * Permet de récupérer la liste des cases.
+     * @return La liste des cases du plateau
+     */
+    public ArrayList<Case> getListeCases() {
+        return listeCases;
+    }
 }
