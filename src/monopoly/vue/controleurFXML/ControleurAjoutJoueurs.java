@@ -51,7 +51,7 @@ public class ControleurAjoutJoueurs extends Controleur {
         colPion.setCellValueFactory(param -> param.getValue().getPion().getNomProperty());
         colType.setCellValueFactory(param-> param.getValue().getTypeProperty());
         listePions = FXCollections.observableArrayList("Rouge", "Bleu", "Vert", "Jaune", "Rose", "Violet", "Cyan", "Orange");
-        listeType = FXCollections.observableArrayList("Humain");
+        listeType = FXCollections.observableArrayList("Humain","IA");
         for (String couleur : listePions) {
             comboPions.getItems().add(couleur);
         }
