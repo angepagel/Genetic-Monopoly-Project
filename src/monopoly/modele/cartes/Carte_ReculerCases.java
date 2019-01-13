@@ -12,6 +12,7 @@ public class Carte_ReculerCases extends Carte {
 
     public Carte_ReculerCases(int nbCases) {
         super("Reculez de " + nbCases + ((nbCases > 1) ? " cases" : " case") + ".");
+        this.nbCases = nbCases;
     }
 
     @Override
