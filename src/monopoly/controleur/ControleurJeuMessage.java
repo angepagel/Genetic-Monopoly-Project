@@ -9,8 +9,15 @@ public class ControleurJeuMessage {
         Jeu.getInstance().setControleurJeuMessage(this);
     }
 
+    public void afficherMessage(String titre, String message) {
+        Alert a = new Alert(Alert.AlertType.INFORMATION, message);
+        a.setHeaderText(null);
+        a.setTitle(titre);
+        a.show();
+    }
+
     public void afficherMessage(String message) {
-        new Alert(Alert.AlertType.INFORMATION, message).show();
+        afficherMessage("message", message);
     }
 
 }

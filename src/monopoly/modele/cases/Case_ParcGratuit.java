@@ -11,8 +11,15 @@ public class Case_ParcGratuit extends Case {
 
     @Override
     public void action(Joueur j) {
-        j.getSolde().ajouter(Jeu.getInstance().getArgentParcGratuit());
+        int argent = Jeu.getInstance().getArgentParcGratuit();
+        j.getSolde().ajouter(argent);
         Jeu.getInstance().resetArgentParcGratuit();
+        if(argent > 0) {
+            Jeu.getInstance().getControleurJeuMessage().afficherMessage("Parc gratuit", "Vous avez gagné $" + argent + " sur le parc gratuit.");
+        }
+        else {
+            Jeu.getInstance().getControleurJeuMessage().afficherMessage("Parc gratuit", "Le parc gratuit est vide.");
+        }
     }
 
     @Override

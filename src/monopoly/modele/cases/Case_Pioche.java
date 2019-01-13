@@ -1,6 +1,8 @@
 package monopoly.modele.cases;
 
+import monopoly.modele.Jeu;
 import monopoly.modele.Joueur;
+import monopoly.modele.cartes.Carte;
 
 public abstract class Case_Pioche extends Case {
 
@@ -24,6 +26,20 @@ public abstract class Case_Pioche extends Case {
         super(nom, suivante);
         id = nom + numCase;
         ++numCase;
+    }
+
+    protected abstract Carte piocherCarte();
+
+    protected abstract void remettreCarte(Carte carte);
+
+    @Override
+    public void action(Joueur j) {
+        Carte carte = piocherCarte();
+        Jeu.getInstance().getControleurJeuMessage().afficherMessage("Carte", carte.getTexte());
+        carte.action(j);
+        if(carte.usageImmediat()) {
+            remettreCarte(carte);
+        }
     }
 
     @Override

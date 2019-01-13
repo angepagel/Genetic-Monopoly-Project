@@ -66,6 +66,5 @@ public class Solde {
     public void payerImpots(int monnaie) {
         payer(monnaie);
         Jeu.getInstance().addArgentParcGratuit(monnaie);
-        Jeu.getInstance().getControleurJeuMessage().afficherMessage(this.joueur.getNom()+" a payé $"+monnaie+" d'impôts.");
     }
 }

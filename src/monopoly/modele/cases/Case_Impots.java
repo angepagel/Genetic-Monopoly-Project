@@ -19,6 +19,7 @@ public class Case_Impots extends Case_Paiement {
     @Override
     public void action(Joueur j) {
         j.getSolde().payerImpots(getPrix());
+        Jeu.getInstance().getControleurJeuMessage().afficherMessage("Impôts", j.getNom()+" a payé $"+getPrix()+" d'impôts.");
     }
 
     @Override
