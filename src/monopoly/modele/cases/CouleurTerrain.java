@@ -72,16 +72,10 @@ public class CouleurTerrain {
      *
      * @return Le maximum de maisons que l'on peut construire.
      */
-    public int getMaxMaisons() {
-        int maximum = 0;
+    public int getMaxMaisonsConstruction() {
+        int maximum = getMaxMaisons();
         // Si un même propriétaire ne possède pas l'entièreté du groupe, on ne peut construir aucune maison.
         if(aUnProprietaire()) {
-            for(Case_Terrain c : proprietes) {
-                if(maximum < c.getNbMaisons()) {
-                    maximum = c.getNbMaisons();
-                }
-            }
-
             // Toutes les propriétés ont le même nombre de maisons. On peut donc monter au pallier suivant.
             if(getMinMaisons() == getMaxMaisons()) {
                 ++maximum;
@@ -89,6 +83,34 @@ public class CouleurTerrain {
         }
 
         return maximum;
+    }
+
+    public int getMaxMaisons() {
+        int maximum = 0;
+        if(aUnProprietaire()){
+            for(Case_Terrain c : proprietes) {
+                if(maximum < c.getNbMaisons()) {
+                    maximum = c.getNbMaisons();
+                }
+            }
+        }
+
+        return maximum;
+    }
+
+    /**
+     *
+     * @return Le minimum de maisons auquel on peut actuellement abaisser les propriétés du groupe.
+     */
+    public int getMinVenteMaisons() {
+        int minimum = getMinMaisons();
+        if(aUnProprietaire()) {
+            if(getMinMaisons() == getMaxMaisons()) {
+                --minimum;
+            }
+        }
+
+        return minimum;
     }
 
     public Color getCouleur() {

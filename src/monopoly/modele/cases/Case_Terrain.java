@@ -1,8 +1,9 @@
 package monopoly.modele.cases;
 
+import monopoly.modele.Jeu;
+
 public class Case_Terrain extends Case_Achat {
     private int nbMaisons;
-    private boolean hotel;
     private CouleurTerrain couleur;
     private Tarifs tarifs;
 
@@ -11,7 +12,6 @@ public class Case_Terrain extends Case_Achat {
         this.couleur = couleur;
         couleur.ajouterPropriete(this);
         this.tarifs = tarifs;
-        hotel = false;
         nbMaisons = 0;
     }
 
@@ -21,7 +21,7 @@ public class Case_Terrain extends Case_Achat {
         if(nbMaisons == 0 && couleur.aUnProprietaire()) {
             loyer *= 2;
         }
-        else if(!hotel) {
+        else if(nbMaisons > Jeu.getInstance().getNbMaxMaisons()) {
             loyer = tarifs.getPrixMaison(nbMaisons);
         }
         else {
@@ -50,20 +50,43 @@ public class Case_Terrain extends Case_Achat {
     }
 
     public boolean isHotel() {
-        return hotel;
+        return nbMaisons > Jeu.getInstance().getNbMaxMaisons();
     }
 
     public void setNbMaisons(int nbMaisons) {
         this.nbMaisons = nbMaisons;
     }
 
-    public void setHotel(boolean hotel) {
-        this.hotel = hotel;
+    public void ameliorer() throws Exception {
+        if(!couleur.aUnProprietaire()) {
+            throw new Exception("Vous devez posséder toutes les propriétés d'un groupe pour pouvoir construire.");
+        }
+        int nbMaisons = getNbMaisons() + 1;
+        int max = Jeu.getInstance().getNbMaxMaisons() + 1;
+        if(nbMaisons > max) {
+            throw new Exception("Le niveau d'amélioration maximal est déjà atteint.");
+        }
+        if(isHypotheque()) {
+            throw new Exception("Vous ne pouvez pas construire sur une propriété déjà hypothéquée.");
+        }
+        if(nbMaisons > couleur.getMaxMaisonsConstruction()) {
+            throw new Exception("Vous devez construire un nombre égal de maisons dans chaque propriété avant de pouvoir passer au pallier suivant.");
+        }
+        this.setNbMaisons(nbMaisons);
+    }
+
+    public void vendreAmelioration() throws Exception {
+        int newNbMaisons = getNbMaisons()-1;
+        if(newNbMaisons < couleur.getMinMaisons()) {
+            throw new Exception("Vous devez vendre des maisons sur d'autres propriétés de ce groupe avant de pouvoir passer au pallier en dessous.");
+        }
+
+        this.setNbMaisons(nbMaisons);
     }
 
     @Override
     public void setHypotheque(boolean hypotheque) throws Exception {
-        if(hypotheque && (nbMaisons > 0 || hotel))
+        if(hypotheque && (nbMaisons > 0))
         {
             throw new Exception("Il est impossible d'hypothéquer une propriété qui a une maison ou un hôtel.");
         }
@@ -73,7 +96,6 @@ public class Case_Terrain extends Case_Achat {
     @Override
     public void abandonPropriete() {
         setNbMaisons(0);
-        setHotel(false);
 
         super.abandonPropriete();
     }
