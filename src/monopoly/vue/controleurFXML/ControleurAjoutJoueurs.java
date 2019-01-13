@@ -18,13 +18,16 @@ public class ControleurAjoutJoueurs extends Controleur {
 
     @FXML private TextField textFieldNom;
     @FXML private ComboBox comboPions;
+    @FXML private ComboBox comboType;
     @FXML private Button boutonAjouter;
     @FXML private TableView<Joueur> tableauJoueurs;
     @FXML private TableColumn<Joueur, String> colNom;
     @FXML private TableColumn<Joueur, String> colPion;
+    @FXML private TableColumn<Joueur,String> colType;
     @FXML private Button boutonRetirer;
     @FXML private Button boutonLancerPartie;
     private ObservableList<String> listePions;
+    private ObservableList<String> listeType;
 
     /*
     Il est important de tenir compte des informations suivantes pour coder ce contrôleur:
@@ -46,10 +49,14 @@ public class ControleurAjoutJoueurs extends Controleur {
 //        colPion = new TableColumn<>("Pion");
         colNom.setCellValueFactory(param -> param.getValue().getNomProperty());
         colPion.setCellValueFactory(param -> param.getValue().getPion().getNomProperty());
+        colType.setCellValueFactory(param-> param.getValue().getTypeProperty());
         listePions = FXCollections.observableArrayList("Rouge", "Bleu", "Vert", "Jaune", "Rose", "Violet", "Cyan", "Orange");
-
+        listeType = FXCollections.observableArrayList("Humain");
         for (String couleur : listePions) {
             comboPions.getItems().add(couleur);
+        }
+        for(String type: listeType){
+            comboType.getItems().add(type);
         }
 
         comboPions.getSelectionModel().selectFirst();
@@ -83,18 +90,26 @@ public class ControleurAjoutJoueurs extends Controleur {
                 return;
             }
         }
+        if(comboType.getSelectionModel().getSelectedItem()== "Humain"){
+            Joueur j = new Humain(nom);
+            j.choisirPion(new Pion(comboPions.getValue().toString(), true));
+            tableauJoueurs.getItems().addAll(j);
+            comboPions.getItems().remove(comboPions.getValue());
+            comboPions.getSelectionModel().selectFirst();
 
-        Joueur j = new Humain(nom);
-        j.choisirPion(new Pion(comboPions.getValue().toString(), true));
-        tableauJoueurs.getItems().addAll(j);
-        comboPions.getItems().remove(comboPions.getValue());
-        comboPions.getSelectionModel().selectFirst();
+            if(comboPions.getItems().size() == 0) {
+                boutonAjouter.setDisable(true);
+            }
 
-        if(comboPions.getItems().size() == 0) {
-            boutonAjouter.setDisable(true);
+            textFieldNom.setText("");
+        }else{
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setTitle("Ajout impossible");
+            alert.setContentText("Vous devez obligatoirement choisir un type pour le joueur");
+            alert.show();
+            return;
         }
 
-        textFieldNom.setText("");
     }
 
     @FXML

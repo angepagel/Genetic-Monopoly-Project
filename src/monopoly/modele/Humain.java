@@ -1,5 +1,7 @@
 package monopoly.modele;
 
+import javafx.beans.property.SimpleStringProperty;
+
 /**
  * Représente un joueur humain (par opposition aux IAs).
  */
@@ -17,4 +19,8 @@ public class Humain extends Joueur {
     public EJoueur getType() {
         return EJoueur.Humain;
     }
+
+
+
+
 }

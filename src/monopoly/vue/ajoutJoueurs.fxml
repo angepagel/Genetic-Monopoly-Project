@@ -7,21 +7,30 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="470.0" prefWidth="540.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.vue.controleurFXML.ControleurAjoutJoueurs">
+<AnchorPane prefHeight="484.0" prefWidth="689.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="monopoly.vue.controleurFXML.ControleurAjoutJoueurs">
    <children>
       <TextField fx:id="textFieldNom" layoutX="21.0" layoutY="83.0" />
-      <ComboBox fx:id="comboPions" layoutX="21.0" layoutY="125.0" prefWidth="150.0" />
-      <Button fx:id="boutonAjouter" layoutX="21.0" layoutY="168.0" mnemonicParsing="false" onAction="#ajouterJoueur" prefHeight="25.0" prefWidth="149.0" text="Ajouter" />
-      <TableView fx:id="tableauJoueurs" layoutX="224.0" layoutY="81.0" prefHeight="239.0" prefWidth="289.0">
+      <ComboBox fx:id="comboPions" layoutX="21.0" layoutY="150.0" prefWidth="150.0" />
+      <Button fx:id="boutonAjouter" layoutX="22.0" layoutY="256.0" mnemonicParsing="false" onAction="#ajouterJoueur" prefHeight="25.0" prefWidth="149.0" text="Ajouter" />
+      <TableView fx:id="tableauJoueurs" layoutX="224.0" layoutY="81.0" prefHeight="239.0" prefWidth="399.0">
         <columns>
           <TableColumn fx:id="colNom" prefWidth="153.0" text="Nom" />
           <TableColumn fx:id="colPion" prefWidth="134.0" text="Pion" />
+            <TableColumn fx:id="colType" prefWidth="111.0" text="type" />
         </columns>
       </TableView>
-      <Label layoutX="21.0" layoutY="52.0" text="Ajouter un joueur" />
+      <Label layoutX="22.0" layoutY="22.0" text="Ajouter un joueur">
+         <font>
+            <Font size="14.0" />
+         </font></Label>
       <Label layoutX="224.0" layoutY="52.0" text="Liste des joueurs" />
       <Button fx:id="boutonRetirer" layoutX="224.0" layoutY="338.0" mnemonicParsing="false" onAction="#retirerJoueur" prefHeight="25.0" prefWidth="149.0" text="Retirer" />
-      <Button fx:id="boutonLancerPartie" layoutX="146.0" layoutY="403.0" mnemonicParsing="false" onAction="#lancerPartie" prefHeight="25.0" prefWidth="249.0" text="Lancer la partie" />
+      <Button fx:id="boutonLancerPartie" layoutX="220.0" layoutY="402.0" mnemonicParsing="false" onAction="#lancerPartie" prefHeight="25.0" prefWidth="249.0" text="Lancer la partie" />
+      <Label layoutX="24.0" layoutY="124.0" text="Pion :" />
+      <Label layoutX="23.0" layoutY="61.0" text="Nom :" />
+      <Label layoutX="23.0" layoutY="192.0" text="Type :" />
+      <ComboBox fx:id="comboType" layoutX="22.0" layoutY="217.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

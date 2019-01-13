@@ -20,6 +20,9 @@ public abstract class Joueur {
      */
     private SimpleStringProperty nom;
 
+
+    private SimpleStringProperty type;
+
     /**
      * Le joueur a déjà joué
      */
@@ -71,6 +74,7 @@ public abstract class Joueur {
      */
     public Joueur(String nom) {
         this.nom = new SimpleStringProperty(nom);
+        this.type = new SimpleStringProperty(this.getType().toString());
         this.proprietes = new ArrayList<>();
         solde = new Solde(this);
         sortiePrisonChance = null;
@@ -194,6 +198,15 @@ public abstract class Joueur {
     public SimpleStringProperty getNomProperty() {
         return nom;
     }
+
+    /**
+     * Permet de récupérer la propriété correspondant au type du joueur observable.
+     * @return Type du joueur observable
+     */
+    public  SimpleStringProperty getTypeProperty(){
+        return type;
+    }
+
 
     /**
      * Permet de récupérer le nombre de tours passés en prison.
@@ -397,4 +410,6 @@ public abstract class Joueur {
     public int hashCode() {
         return Objects.hash(nom, faillite, nbDoubles, toursEnPrison, solde, proprietes);
     }
+
+
 }
