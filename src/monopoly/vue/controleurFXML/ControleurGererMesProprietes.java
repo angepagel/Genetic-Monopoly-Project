@@ -53,7 +53,7 @@ public class ControleurGererMesProprietes extends Controleur {
 
     @FXML
     public void actionDetailsPropriete(ActionEvent event) throws IOException {
-        Case_Terrain c = (Case_Terrain) tableauGererMesProprietes.getSelectionModel().getSelectedItem();
+        Case_Achat c = (Case_Achat) tableauGererMesProprietes.getSelectionModel().getSelectedItem();
         if (c == null) {
             new Alert(Alert.AlertType.WARNING, "Aucune propriété sélectionnée.").show();
         }
