@@ -99,7 +99,7 @@ public class PanelCaseActuelle extends Pane {
         this.titreCase.setText(pion.getPosition().getNom());
         if(pion.getPosition().aUnPrix()){
             Case_Paiement casePrix = (Case_Paiement) pion.getPosition();
-            this.prixCase.setText("$ "+Integer.toString(casePrix.getPrix()));
+            this.prixCase.setText("$"+Integer.toString(casePrix.getPrix()));
         }
         else{
             this.prixCase.setText("");

@@ -47,8 +47,8 @@ public class ControleurGererMesProprietes extends Controleur {
 
             return retour;
         });
-        colLoyer.setCellValueFactory(param -> new SimpleStringProperty(String.valueOf(param.getValue().getLoyer())));
-        colHypotheque.setCellValueFactory(param -> new SimpleStringProperty(String.valueOf(param.getValue().getValeurHypotheque())));
+        colLoyer.setCellValueFactory(param -> new SimpleStringProperty("$" + param.getValue().getLoyer()));
+        colHypotheque.setCellValueFactory(param -> new SimpleStringProperty("$" + param.getValue().getValeurHypotheque()));
     }
 
     @FXML

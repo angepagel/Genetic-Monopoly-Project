@@ -22,13 +22,13 @@ public class ControleurVoirDetailsPropriete extends Controleur {
         if (c.getProprietaire() != null) {
             labelProprietaire.setText(c.getProprietaire().getNom());
         }
-        labelLoyer.setText("$ " + c.getLoyer());
-        labelLoyerAmelioration1.setText("$ " + c.getPrixMaison());
-        labelLoyerAmelioration2.setText("$ " + c.getPrixMaison()*2);
-        labelLoyerAmelioration3.setText("$ " + c.getPrixMaison()*3);
-        labelLoyerAmelioration4.setText("$ " + c.getPrixMaison()*4);
-        labelLoyerAmelioration5.setText("$ " + c.getPrixMaison()*5);
-        labelHypotheque.setText("$ " + c.getValeurHypotheque());
+        labelLoyer.setText("$" + c.getLoyer());
+        labelLoyerAmelioration1.setText("$" + c.getPrixMaison());
+        labelLoyerAmelioration2.setText("$" + c.getPrixMaison()*2);
+        labelLoyerAmelioration3.setText("$" + c.getPrixMaison()*3);
+        labelLoyerAmelioration4.setText("$" + c.getPrixMaison()*4);
+        labelLoyerAmelioration5.setText("$" + c.getPrixMaison()*5);
+        labelHypotheque.setText("$" + c.getValeurHypotheque());
     }
 
 }
