@@ -25,11 +25,6 @@ public class ControleurGererMesProprietes extends Controleur {
     @FXML private TableColumn<Case_Achat, String> colLoyer;
     @FXML private TableColumn<Case_Achat, String> colHypotheque;
 
-    @FXML
-    public void actionDetailsPropriete(ActionEvent event) throws IOException {
-        Case_Terrain c = (Case_Terrain) tableauGererMesProprietes.getSelectionModel().getSelectedItem();
-        new DialogueVoirDetailsPropriete(c);
-    }
 
     @FXML
     public void initialize() {
@@ -57,57 +52,78 @@ public class ControleurGererMesProprietes extends Controleur {
     }
 
     @FXML
+    public void actionDetailsPropriete(ActionEvent event) throws IOException {
+        Case_Terrain c = (Case_Terrain) tableauGererMesProprietes.getSelectionModel().getSelectedItem();
+        if (c == null) {
+            new Alert(Alert.AlertType.WARNING, "Aucune propriété sélectionnée.").show();
+        }
+        else {
+            new DialogueVoirDetailsPropriete(c);
+        }
+    }
+
+    @FXML
     public void actionConstruire(ActionEvent event) {
         Case_Achat c = (Case_Achat) tableauGererMesProprietes.getSelectionModel().getSelectedItem();
-        try {
-            if (c instanceof Case_Terrain) {
-                Optional<ButtonType> confirmation = new Alert(Alert.AlertType.CONFIRMATION, "Souhaitez-vous vraiment construire sur " + c.getNom() + " ?").showAndWait();
-                if (confirmation.get() == ButtonType.OK) {
-                    ((Case_Terrain) c).ameliorer();
-                    new Alert(Alert.AlertType.INFORMATION, "Terrain amélioré.").show();
-                }
-            }
-            else {
-                throw new Exception("Vous ne pouvez pas construire sur ce type de case.");
-            }
+        if (c == null) {
+            new Alert(Alert.AlertType.WARNING, "Aucun terrain sélectionné.").show();
         }
-        catch (Exception e) {
-            new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
+        else {
+            try {
+                if (c instanceof Case_Terrain) {
+                    Optional<ButtonType> confirmation = new Alert(Alert.AlertType.CONFIRMATION, "Souhaitez-vous vraiment construire sur " + c.getNom() + " ?").showAndWait();
+                    if (confirmation.get() == ButtonType.OK) {
+                        ((Case_Terrain) c).ameliorer();
+                        new Alert(Alert.AlertType.INFORMATION, "Terrain amélioré.").show();
+                    }
+                } else {
+                    throw new Exception("Vous ne pouvez pas construire sur ce type de case.");
+                }
+            } catch (Exception e) {
+                new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
+            }
         }
     }
 
     @FXML
     public void actionVendre(ActionEvent event) {
         Case_Achat c = (Case_Achat) tableauGererMesProprietes.getSelectionModel().getSelectedItem();
-        try {
-            if (c instanceof Case_Terrain) {
-                Optional<ButtonType> confirmation = new Alert(Alert.AlertType.CONFIRMATION, "Souhaitez-vous vraiment vendre une construction sur " + c.getNom() + " ?").showAndWait();
-                if (confirmation.get() == ButtonType.OK) {
-                    ((Case_Terrain) c).vendreAmelioration();
-                    new Alert(Alert.AlertType.INFORMATION, "Construction vendue.").show();
-                }
-            }
-            else {
-                throw new Exception("Il est impossible de construire sur ce type de case.");
-            }
+        if (c == null) {
+            new Alert(Alert.AlertType.WARNING, "Aucun terrain sélectionné.").show();
         }
-        catch (Exception e) {
-            new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
+        else {
+            try {
+                if (c instanceof Case_Terrain) {
+                    Optional<ButtonType> confirmation = new Alert(Alert.AlertType.CONFIRMATION, "Souhaitez-vous vraiment vendre une construction sur " + c.getNom() + " ?").showAndWait();
+                    if (confirmation.get() == ButtonType.OK) {
+                        ((Case_Terrain) c).vendreAmelioration();
+                        new Alert(Alert.AlertType.INFORMATION, "Construction vendue.").show();
+                    }
+                } else {
+                    throw new Exception("Il est impossible de construire sur ce type de case.");
+                }
+            } catch (Exception e) {
+                new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
+            }
         }
     }
 
     @FXML
     public void actionHypothequer(ActionEvent event) {
         Case_Achat c = (Case_Achat) tableauGererMesProprietes.getSelectionModel().getSelectedItem();
-        try {
-            Optional<ButtonType> confirmation = new Alert(Alert.AlertType.CONFIRMATION, "Souhaitez-vous vraiment hypothéquer " + c.getNom() + " ?").showAndWait();
-            if (confirmation.get() == ButtonType.OK) {
-                c.setHypotheque(true);
-                new Alert(Alert.AlertType.INFORMATION, "Propriété hypothéquée.").show();
-            }
+        if (c == null) {
+            new Alert(Alert.AlertType.WARNING, "Aucune propriété sélectionnée.").show();
         }
-        catch (Exception e) {
-            new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
+        else {
+            try {
+                Optional<ButtonType> confirmation = new Alert(Alert.AlertType.CONFIRMATION, "Souhaitez-vous vraiment hypothéquer " + c.getNom() + " ?").showAndWait();
+                if (confirmation.get() == ButtonType.OK) {
+                    c.setHypotheque(true);
+                    new Alert(Alert.AlertType.INFORMATION, "Propriété hypothéquée.").show();
+                }
+            } catch (Exception e) {
+                new Alert(Alert.AlertType.WARNING, e.getMessage()).show();
+            }
         }
     }
 

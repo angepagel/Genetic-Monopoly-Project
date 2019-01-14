@@ -3,6 +3,7 @@ package monopoly.vue.controleurFXML;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import monopoly.modele.Jeu;
@@ -78,7 +79,12 @@ public class ControleurVoirLesProprietes extends Controleur {
     @FXML
     public void actionDetailsPropriete(ActionEvent event) throws IOException {
         Case_Terrain c = (Case_Terrain) tableauVoirLesProprietes.getSelectionModel().getSelectedItem();
-        new DialogueVoirDetailsPropriete(c);
+        if (c == null) {
+            new Alert(Alert.AlertType.WARNING, "Aucune propriété sélectionnée.").show();
+        }
+        else {
+            new DialogueVoirDetailsPropriete(c);
+        }
     }
 
 }
