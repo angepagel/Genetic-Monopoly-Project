@@ -31,10 +31,8 @@ public class ControleurVoirLesProprietes extends Controleur {
             Joueur proprietaire = param.getValue().getProprietaire();
             SimpleStringProperty retour = new SimpleStringProperty("Aucun");
 
-            if (caseParam instanceof Case_Achat) {
-                if (proprietaire != null) {
-                    retour = new SimpleStringProperty(proprietaire.getNom());
-                }
+            if (proprietaire != null) {
+                retour = new SimpleStringProperty(proprietaire.getNom());
             }
 
             return retour;
@@ -78,7 +76,7 @@ public class ControleurVoirLesProprietes extends Controleur {
 
     @FXML
     public void actionDetailsPropriete(ActionEvent event) throws IOException {
-        Case_Terrain c = (Case_Terrain) tableauVoirLesProprietes.getSelectionModel().getSelectedItem();
+        Case_Achat c = (Case_Achat) tableauVoirLesProprietes.getSelectionModel().getSelectedItem();
         if (c == null) {
             new Alert(Alert.AlertType.WARNING, "Aucune propriété sélectionnée.").show();
         }
