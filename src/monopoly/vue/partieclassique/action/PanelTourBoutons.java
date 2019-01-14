@@ -38,7 +38,7 @@ public class PanelTourBoutons extends HBox {
             @Override
             public void handle(ActionEvent event) {
                 try {
-                    new DialogueEchanger();
+                    new DialogueEchanger(Jeu.getInstance().getJoueurEnCours());
                 }
                 catch (IOException e) {
                     return;
