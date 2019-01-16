@@ -22,10 +22,10 @@ public class Case_Terrain extends Case_Achat {
             loyer *= 2;
         }
         else if(nbMaisons > Jeu.getInstance().getNbMaxMaisons()) {
-            loyer = tarifs.getPrixMaison(nbMaisons);
+            loyer = tarifs.getPrixHotel();
         }
         else {
-            loyer = tarifs.getPrixHotel();
+            loyer = tarifs.getPrixMaison(nbMaisons);
         }
 
         return loyer;
