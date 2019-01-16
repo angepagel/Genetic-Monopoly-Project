@@ -56,13 +56,12 @@ public class Des {
     public int lancer() {
         lancerSimple();
         Joueur j = Jeu.getInstance().getJoueurEnCours();
-        de1 = 1;
-        de2 = 1;
-//
-        if(j.isEnPrison()) {
-            de1 = 3;
-            de2 = 4;
-        }
+//        de1 = 1;
+//        de2 = 1;
+//        if(j.isEnPrison()) {
+//            de1 = 3;
+//            de2 = 4;
+//        }
 
         this.controleurMiseAJourDe.lancer();
 
@@ -80,21 +79,6 @@ public class Des {
         if(j.isEnPrison()) {
             Jeu.getInstance().getControleurJeuMessage().demanderSortiePrison(j);
         }
-//
-//        if(j.isEnPrison()) {
-//            if(estDouble()) {
-//                j.sortirPrison();
-//                j.getPion().deplacer(sommeDes());
-//            }
-//            else {
-//                j.incToursEnPrison();
-//                if(j.getToursEnPrison() >= 3) {
-//                    j.getSolde().payerImpots(50);
-//                    j.sortirPrison();
-//                    j.getPion().deplacer(sommeDes());
-//                }
-//            }
-//        }
         if(!j.isEnPrison()) {
             if(j.getNbDoubles() >= 3) {
                 j.allerEnPrison();
