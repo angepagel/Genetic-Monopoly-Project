@@ -47,4 +47,46 @@ public class ControleurJeuMessage {
             }
         }while(nonSorti);
     }
+
+    public void demanderSortiePrison(Joueur j) {
+        boolean nonSorti;
+        j.incToursEnPrison();
+        Alert a = new Alert(Alert.AlertType.CONFIRMATION, "C'est le " + j.getToursEnPrison() + "° tour que vous passez en prison. Souhaitez-vous payer pour en sortir ?");
+        a.setHeaderText(null);
+        a.setTitle("Sortir de prison");
+        ButtonType buttonRester = new ButtonType("Rester en prison");
+        ButtonType buttonPayer = new ButtonType("Payer $50");
+        ButtonType buttonCarteChance = new ButtonType("Carte chance");
+        ButtonType buttonCarteCaisse = new ButtonType("Carte caisse de communauté");
+        do {
+            nonSorti = false;
+            a.getButtonTypes().setAll();
+            if(j.getToursEnPrison() < 3) {
+                a.getButtonTypes().add(buttonRester);
+            }
+            a.getButtonTypes().add(buttonPayer);
+            if(j.aSortiePrisonChance()) {
+                a.getButtonTypes().add(buttonCarteChance);
+            }
+            if(j.aSortiePrisonCaisse()) {
+                a.getButtonTypes().add(buttonCarteCaisse);
+            }
+            Optional<ButtonType> result = a.showAndWait();
+            if(!result.isPresent()) {
+                nonSorti = true;
+            }
+            else if(result.get() == buttonRester) {
+                j.resterEnPrison();
+            }
+            else if(result.get() == buttonPayer) {
+                j.payerPrison();
+            }
+            else if(result.get() == buttonCarteChance) {
+                j.sortirPrisonChance();
+            }
+            else if(result.get() == buttonCarteCaisse) {
+                j.sortirPrisonCaisse();
+            }
+        } while(nonSorti);
+    }
 }

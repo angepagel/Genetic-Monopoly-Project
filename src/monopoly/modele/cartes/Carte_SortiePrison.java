@@ -47,14 +47,9 @@ public abstract class Carte_SortiePrison extends Carte {
      * Ce qui se passe quand on décide d'utiliser la carte.
      */
     public void utiliser() {
-        if(proprietaire != null) {
-            if(proprietaire.getPion().getPosition().getType() == ECase.Prison) {
-                Case_Prison c = (Case_Prison) proprietaire.getPion().getPosition();
-                c.sortir(proprietaire);
-                retirerAJoueur(proprietaire);
-                proprietaire = null;
-            }
-        }
+        retirerAJoueur(proprietaire);
+        proprietaire = null;
+        remettreSousPile();
     }
 
     /**

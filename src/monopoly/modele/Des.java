@@ -56,41 +56,46 @@ public class Des {
     public int lancer() {
         lancerSimple();
         Joueur j = Jeu.getInstance().getJoueurEnCours();
-//        de1 = 1;
-//        de2 = 1;
+        de1 = 1;
+        de2 = 1;
 //
-//        if(j.isEnPrison() || j.getNom().equals("Test")) {
-//            de1 = 3;
-//            de2 = 4;
-//        }
+        if(j.isEnPrison()) {
+            de1 = 3;
+            de2 = 4;
+        }
 
         this.controleurMiseAJourDe.lancer();
 
-        if(j.isEnPrison()) {
-            if(estDouble()) {
-                j.sortirPrison();
-                j.incNbDoubles();
-                j.getPion().deplacer(sommeDes());
-            }
-            else {
-                j.incToursEnPrison();
-                if(j.getToursEnPrison() >= 3) {
-                    j.getSolde().payerImpots(50);
-                    j.sortirPrison();
-                    j.getPion().deplacer(sommeDes());
-                }
-                j.setDejaJoue(true);
-                j.resetNbDoubles();
+        if(estDouble()) {
+            j.incNbDoubles();
+            if(j.isEnPrison()) {
+                j.sortirPrisonDouble();
             }
         }
         else {
-            if(estDouble()) {
-                j.incNbDoubles();
-            }
-            else {
-                j.resetNbDoubles();
-                j.setDejaJoue(true);
-            }
+            j.setDejaJoue(true);
+            j.resetNbDoubles();
+        }
+
+        if(j.isEnPrison()) {
+            Jeu.getInstance().getControleurJeuMessage().demanderSortiePrison(j);
+        }
+//
+//        if(j.isEnPrison()) {
+//            if(estDouble()) {
+//                j.sortirPrison();
+//                j.getPion().deplacer(sommeDes());
+//            }
+//            else {
+//                j.incToursEnPrison();
+//                if(j.getToursEnPrison() >= 3) {
+//                    j.getSolde().payerImpots(50);
+//                    j.sortirPrison();
+//                    j.getPion().deplacer(sommeDes());
+//                }
+//            }
+//        }
+        if(!j.isEnPrison()) {
             if(j.getNbDoubles() >= 3) {
                 j.allerEnPrison();
                 j.resetNbDoubles();

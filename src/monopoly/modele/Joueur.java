@@ -1,6 +1,7 @@
 package monopoly.modele;
 
 import javafx.beans.property.SimpleStringProperty;
+import monopoly.modele.cartes.Carte_SortiePrison;
 import monopoly.modele.cartes.Carte_SortiePrison_Caisse;
 import monopoly.modele.cartes.Carte_SortiePrison_Chance;
 import monopoly.modele.cases.Case_Achat;
@@ -392,6 +393,13 @@ public abstract class Joueur {
         return valeur;
     }
 
+    /**
+     * Le joueur a choisi de rester en prison.
+     */
+    public void resterEnPrison() {
+        return;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -410,5 +418,38 @@ public abstract class Joueur {
         return Objects.hash(nom, faillite, nbDoubles, toursEnPrison, solde, proprietes);
     }
 
+    /**
+     * Le joueur a choisi de payer la prison.
+     */
+    public void payerPrison() {
+        solde.payerImpots(50);
+        sortirPrison();
+    }
 
+    /**
+     * Le joueur a fait un double et sort donc de prison.
+     */
+    public void sortirPrisonDouble() {
+        sortirPrison();
+    }
+
+    /**
+     * Lorsque le joueur choisit d'utiliser la carte chance pour sortir de prison.
+     */
+    public void sortirPrisonChance() {
+        sortirPrisonCarte(getSortiePrisonChance());
+        sortirPrison();
+    }
+
+    /**
+     * Lorsque le joueur choisit d'utiliser la carte caisse de communauté pour sortir de prison.
+     */
+    public void sortirPrisonCaisse() {
+        sortirPrisonCarte(getSortiePrisonCaisse());
+        sortirPrison();
+    }
+
+    private void sortirPrisonCarte(Carte_SortiePrison carte) {
+        carte.utiliser();
+    }
 }
